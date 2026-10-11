@@ -1,0 +1,15 @@
+{
+  "sample_token": "e93e98b63d3b40209056d129dc53ceee",
+  "speed_mps": 4.1688763951334185,
+  "navigation": "turn left",
+  "images": [
+    "/data/qh/nuscenes/v1.0-trainval/samples/CAM_FRONT/n015-2018-07-18-11-07-57+0800__CAM_FRONT__1531883530412470.jpg",
+    "/data/qh/nuscenes/v1.0-trainval/samples/CAM_FRONT_RIGHT/n015-2018-07-18-11-07-57+0800__CAM_FRONT_RIGHT__1531883530420339.jpg",
+    "/data/qh/nuscenes/v1.0-trainval/samples/CAM_FRONT_LEFT/n015-2018-07-18-11-07-57+0800__CAM_FRONT_LEFT__1531883530404844.jpg",
+    "/data/qh/nuscenes/v1.0-trainval/samples/CAM_BACK/n015-2018-07-18-11-07-57+0800__CAM_BACK__1531883530437525.jpg",
+    "/data/qh/nuscenes/v1.0-trainval/samples/CAM_BACK_LEFT/n015-2018-07-18-11-07-57+0800__CAM_BACK_LEFT__1531883530447423.jpg",
+    "/data/qh/nuscenes/v1.0-trainval/samples/CAM_BACK_RIGHT/n015-2018-07-18-11-07-57+0800__CAM_BACK_RIGHT__1531883530427893.jpg"
+  ],
+  "question": "<FRONT VIEW>:\n<image>\n<FRONT LEFT VIEW>:\n<image>\n<FRONT RIGHT VIEW>:\n<image>\n<BACK LEFT VIEW>:\n<image>\n<BACK RIGHT VIEW>:\n<image>\n<BACK VIEW>:\n<image>\nYour current speed is 4 m/s, the navigation command is 'turn left', based on the understanding of the driving scene and the navigation information, what is your plan for the next three seconds? Please answer your SPEED plan and your PATH plan. SPEED includes KEEP, ACCELERATE and DECELERATE, and STOP, PATH includes STRAIGHT, RIGHT_CHANGE, LEFT_CHANGE, RIGHT_TURN, LEFT_TURN. For example, a correct answer format is like 'KEEP, LEFT_CHANGE'.",
+  "answer": "KEEP, LEFT_TURN"
+}

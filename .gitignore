@@ -1,0 +1,45 @@
+# Python caches and local environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+*.egg-info/
+build/
+dist/
+
+# Local datasets, model weights, and training checkpoints
+/data/
+/weights/
+/models/
+/checkpoints/
+/outputs/senna_lora_*/
+*.bin
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+
+# Raw profiler traces, logs, and runtime files
+/outputs/**/profiler_trace/
+*.log
+*.log.*
+*.lock
+events.out.tfevents.*
+wandb/
+
+# Local configuration and credentials
+/.aris/
+/.agents/
+/.codex/
+/.aws/
+.env
+.env.*
+!.env.example
+
+# Editors and operating systems
+.idea/
+.vscode/
+*.swp
+.DS_Store

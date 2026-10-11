@@ -1,0 +1,1463 @@
+{
+  "summary": "Total Number: 127\nCorrect Number: 41\nPlanning Accuracy: 32.28%\nSpeed Accuracy: 51.18%\nPath Accuracy: 74.02%\nInvalid Outputs: 0\nACCELERATE_LEFT_TURN: num: 4, correct num: 0, 0.00%\nACCELERATE_RIGHT_TURN: num: 3, correct num: 0, 0.00%\nACCELERATE_STRAIGHT: num: 20, correct num: 0, 0.00%\nDECELERATE_STRAIGHT: num: 20, correct num: 0, 0.00%\nKEEP_LEFT_TURN: num: 20, correct num: 8, 40.00%\nKEEP_RIGHT_TURN: num: 20, correct num: 3, 15.00%\nKEEP_STRAIGHT: num: 20, correct num: 15, 75.00%\nSTOP_STRAIGHT: num: 20, correct num: 15, 75.00%",
+  "f1_score": {
+    "KEEP": 0.6944444444444444,
+    "ACCELERATE": 0.0,
+    "DECELERATE": 0.0,
+    "STOP": 0.5084745762711864,
+    "RIGHT_TURN": 0.23076923076923078,
+    "RIGHT_CHANGE": 0,
+    "LEFT_TURN": 0.6111111111111112,
+    "LEFT_CHANGE": 0,
+    "STRAIGHT": 0.8333333333333334
+  },
+  "metrics": {
+    "total": 127,
+    "correct": 41,
+    "planning_accuracy": 0.3228346456692913,
+    "speed_accuracy": 0.5118110236220472,
+    "path_accuracy": 0.7401574803149606,
+    "invalid_outputs": 0,
+    "class_metrics": {
+      "KEEP": {
+        "support": 60,
+        "predicted": 84,
+        "tp": 50,
+        "fp": 34,
+        "fn": 10,
+        "precision": 0.5952380952380952,
+        "recall": 0.8333333333333334,
+        "f1": 0.6944444444444444
+      },
+      "ACCELERATE": {
+        "support": 27,
+        "predicted": 3,
+        "tp": 0,
+        "fp": 3,
+        "fn": 27,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "DECELERATE": {
+        "support": 20,
+        "predicted": 1,
+        "tp": 0,
+        "fp": 1,
+        "fn": 20,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "STOP": {
+        "support": 20,
+        "predicted": 39,
+        "tp": 15,
+        "fp": 24,
+        "fn": 5,
+        "precision": 0.38461538461538464,
+        "recall": 0.75,
+        "f1": 0.5084745762711864
+      },
+      "RIGHT_TURN": {
+        "support": 23,
+        "predicted": 3,
+        "tp": 3,
+        "fp": 0,
+        "fn": 20,
+        "precision": 1.0,
+        "recall": 0.13043478260869565,
+        "f1": 0.23076923076923078
+      },
+      "RIGHT_CHANGE": {
+        "support": 0,
+        "predicted": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0,
+        "recall": 0,
+        "f1": 0
+      },
+      "LEFT_TURN": {
+        "support": 24,
+        "predicted": 12,
+        "tp": 11,
+        "fp": 1,
+        "fn": 13,
+        "precision": 0.9166666666666666,
+        "recall": 0.4583333333333333,
+        "f1": 0.6111111111111112
+      },
+      "LEFT_CHANGE": {
+        "support": 0,
+        "predicted": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0,
+        "recall": 0,
+        "f1": 0
+      },
+      "STRAIGHT": {
+        "support": 80,
+        "predicted": 112,
+        "tp": 80,
+        "fp": 32,
+        "fn": 0,
+        "precision": 0.7142857142857143,
+        "recall": 1.0,
+        "f1": 0.8333333333333334
+      }
+    },
+    "speed_confusion": {
+      "KEEP": {
+        "KEEP": 50,
+        "ACCELERATE": 2,
+        "DECELERATE": 1,
+        "STOP": 7,
+        "INVALID": 0
+      },
+      "ACCELERATE": {
+        "KEEP": 14,
+        "ACCELERATE": 0,
+        "DECELERATE": 0,
+        "STOP": 13,
+        "INVALID": 0
+      },
+      "DECELERATE": {
+        "KEEP": 16,
+        "ACCELERATE": 0,
+        "DECELERATE": 0,
+        "STOP": 4,
+        "INVALID": 0
+      },
+      "STOP": {
+        "KEEP": 4,
+        "ACCELERATE": 1,
+        "DECELERATE": 0,
+        "STOP": 15,
+        "INVALID": 0
+      }
+    },
+    "path_confusion": {
+      "RIGHT_TURN": {
+        "RIGHT_TURN": 3,
+        "RIGHT_CHANGE": 0,
+        "LEFT_TURN": 1,
+        "LEFT_CHANGE": 0,
+        "STRAIGHT": 19,
+        "INVALID": 0
+      },
+      "RIGHT_CHANGE": {
+        "RIGHT_TURN": 0,
+        "RIGHT_CHANGE": 0,
+        "LEFT_TURN": 0,
+        "LEFT_CHANGE": 0,
+        "STRAIGHT": 0,
+        "INVALID": 0
+      },
+      "LEFT_TURN": {
+        "RIGHT_TURN": 0,
+        "RIGHT_CHANGE": 0,
+        "LEFT_TURN": 11,
+        "LEFT_CHANGE": 0,
+        "STRAIGHT": 13,
+        "INVALID": 0
+      },
+      "LEFT_CHANGE": {
+        "RIGHT_TURN": 0,
+        "RIGHT_CHANGE": 0,
+        "LEFT_TURN": 0,
+        "LEFT_CHANGE": 0,
+        "STRAIGHT": 0,
+        "INVALID": 0
+      },
+      "STRAIGHT": {
+        "RIGHT_TURN": 0,
+        "RIGHT_CHANGE": 0,
+        "LEFT_TURN": 0,
+        "LEFT_CHANGE": 0,
+        "STRAIGHT": 80,
+        "INVALID": 0
+      }
+    },
+    "majority_joint_baseline": 0.15748031496062992
+  },
+  "errors": {
+    "5e4e25f87ec84942ac459a55fe064330": {
+      "gt": "KEEP, STRAIGHT",
+      "pred": "STOP, STRAIGHT"
+    },
+    "c0e4b1016c09468c9b1ce496462eb1ad": {
+      "gt": "ACCELERATE, STRAIGHT",
+      "pred": "KEEP, STRAIGHT"
+    },
+    "0f39f34febc84a6689f08599105d1421": {
+      "gt": "KEEP, LEFT_TURN",
+      "pred": "ACCELERATE, LEFT_TURN"
+    },
+    "5bb77a2ff3d44094b691ba239cbab83a": {
+      "gt": "KEEP, RIGHT_TURN",
+      "pred": "KEEP, LEFT_TURN"
+    },
+    "5c27958677604dc5ad254f69f31aaf85": {
+      "gt": "KEEP, RIGHT_TURN",
+      "pred": "DECELERATE, STRAIGHT"
+    },
+    "d0b2eb773b2a4f9c8a25c655d5deffbd": {
+      "gt": "ACCELERATE, STRAIGHT",
+      "pred": "STOP, STRAIGHT"
+    },
+    "05699704028c40708d98ab16374fd748": {
+      "gt": "DECELERATE, STRAIGHT",
+      "pred": "STOP, STRAIGHT"
+    },
+    "5f88b9a41f264ebbac7976bf4c796d21": {
+      "gt": "STOP, STRAIGHT",
+      "pred": "KEEP, STRAIGHT"
+    },
+    "b923744651764ed194ddf7526b9b2cf6": {
+      "gt": "KEEP, RIGHT_TURN",
+      "pred": "KEEP, STRAIGHT"
+    },
+    "c59e60042a8643e899008da2e446acca": {
+      "gt": "DECELERATE, STRAIGHT",
+      "pred": "KEEP, STRAIGHT"
+    },
+    "a98fba72bde9433fb882032d18aedb2e": {
+      "gt": "DECELERATE, STRAIGHT",
+      "pred": "KEEP, STRAIGHT"
+    },
+    "2e137fee62e241aca2966876af1e201f": {
+      "gt": "KEEP, RIGHT_TURN",
+      "pred": "KEEP, STRAIGHT"
+    },
+    "946040cd49c64a8f9e58d32175b9936f": {
+      "gt": "ACCELERATE, STRAIGHT",
+      "pred": "STOP, STRAIGHT"
+    },
+    "cc18fde20db74d30825b0b60ec511b7b": {
+      "gt": "KEEP, LEFT_TURN",
+      "pred": "KEEP, STRAIGHT"
+    },
+    "f2727eb072f7470b862601edee7250b3": {
+      "gt": "STOP, STRAIGHT",
+      "pred": "KEEP, STRAIGHT"
+    },
+    "f9b825f4020e4da8b6a182160e0b0705": {
+      "gt": "ACCELERATE, STRAIGHT",
+      "pred": "KEEP, STRAIGHT"
+    },
+    "80d7c172efb64b5296f2d22f942bc963": {
+      "gt": "KEEP, LEFT_TURN",
+      "pred": "KEEP, STRAIGHT"
+    },
+    "152db7f344954b7196402b92caa57e1c": {
+      "gt": "ACCELERATE, STRAIGHT",
+      "pred": "STOP, STRAIGHT"
+    },
+    "f4b5b6fc59e34da6bd18d4d8e299dab8": {
+      "gt": "DECELERATE, STRAIGHT",
+      "pred": "KEEP, STRAIGHT"
+    },
+    "cf7cdd43be9b4886bcb7b45af4d9d104": {
+      "gt": "DECELERATE, STRAIGHT",
+      "pred": "KEEP, STRAIGHT"
+    },
+    "10a3ee039c4c482ab220e69c1e420031": {
+      "gt": "KEEP, RIGHT_TURN",
+      "pred": "KEEP, STRAIGHT"
+    },
+    "18dfc351d10541f5bd12a9b434a4e771": {
+      "gt": "KEEP, LEFT_TURN",
+      "pred": "KEEP, STRAIGHT"
+    },
+    "795dceace16443a2a3a793971435f58c": {
+      "gt": "ACCELERATE, STRAIGHT",
+      "pred": "KEEP, STRAIGHT"
+    },
+    "7a80523f99c3434ba5f65a3ddad2b2ea": {
+      "gt": "ACCELERATE, RIGHT_TURN",
+      "pred": "KEEP, STRAIGHT"
+    },
+    "f777d3dbcc5547bc8adbfa529ab4fa3c": {
+      "gt": "ACCELERATE, STRAIGHT",
+      "pred": "STOP, STRAIGHT"
+    },
+    "f984bba40e134fb7ac6e7abf11a20b69": {
+      "gt": "STOP, STRAIGHT",
+      "pred": "ACCELERATE, STRAIGHT"
+    },
+    "0aaca2f368ea4089a3e025efcae32588": {
+      "gt": "ACCELERATE, STRAIGHT",
+      "pred": "STOP, STRAIGHT"
+    },
+    "d078f5c7222e4f08b54822118a284d6e": {
+      "gt": "KEEP, LEFT_TURN",
+      "pred": "KEEP, STRAIGHT"
+    },
+    "a1cf07ef81354a98907f962c260badb8": {
+      "gt": "DECELERATE, STRAIGHT",
+      "pred": "KEEP, STRAIGHT"
+    },
+    "4639543918e84082b89a8a3369c02353": {
+      "gt": "DECELERATE, STRAIGHT",
+      "pred": "KEEP, STRAIGHT"
+    },
+    "07905ddecd1e4ef6bc1e3f24fa950579": {
+      "gt": "KEEP, RIGHT_TURN",
+      "pred": "KEEP, STRAIGHT"
+    },
+    "47e1c5287177487a9782ba2d144384f2": {
+      "gt": "STOP, STRAIGHT",
+      "pred": "KEEP, STRAIGHT"
+    },
+    "e786b718ea6a4887bcb86639de62a1ce": {
+      "gt": "KEEP, STRAIGHT",
+      "pred": "STOP, STRAIGHT"
+    },
+    "e7bc8aeb620845efae293033f2e40196": {
+      "gt": "KEEP, RIGHT_TURN",
+      "pred": "KEEP, STRAIGHT"
+    },
+    "0775bcc755c148ef831dffe278b1bb94": {
+      "gt": "KEEP, LEFT_TURN",
+      "pred": "KEEP, STRAIGHT"
+    },
+    "f525764b424647e88f18f9d0ea9e41e9": {
+      "gt": "DECELERATE, STRAIGHT",
+      "pred": "STOP, STRAIGHT"
+    },
+    "d4b3a58594d848d49dbef38e2e6e2125": {
+      "gt": "DECELERATE, STRAIGHT",
+      "pred": "STOP, STRAIGHT"
+    },
+    "a38d06e080204b9c9c0b805375c8d6f9": {
+      "gt": "DECELERATE, STRAIGHT",
+      "pred": "STOP, STRAIGHT"
+    },
+    "72e83c660c194fc988a368cbbb928cac": {
+      "gt": "ACCELERATE, STRAIGHT",
+      "pred": "STOP, STRAIGHT"
+    },
+    "9454ea23d85241468b8757a0bd89964d": {
+      "gt": "KEEP, STRAIGHT",
+      "pred": "STOP, STRAIGHT"
+    },
+    "fe4272b3476c45c8a3704e977b85d409": {
+      "gt": "KEEP, RIGHT_TURN",
+      "pred": "KEEP, STRAIGHT"
+    },
+    "1b3e964e30c8439ba9ba83d43948a558": {
+      "gt": "KEEP, RIGHT_TURN",
+      "pred": "KEEP, STRAIGHT"
+    },
+    "56d2e0f573584ba1bb3446b1e0573fc7": {
+      "gt": "ACCELERATE, STRAIGHT",
+      "pred": "STOP, STRAIGHT"
+    },
+    "f3b10b3ae50a4ada8ad177f61b3138f5": {
+      "gt": "KEEP, LEFT_TURN",
+      "pred": "STOP, STRAIGHT"
+    },
+    "148a98a0b7ce45fcb92738418dd17a64": {
+      "gt": "KEEP, LEFT_TURN",
+      "pred": "KEEP, STRAIGHT"
+    },
+    "603c9225a5624229bae41a819d10c9cd": {
+      "gt": "KEEP, LEFT_TURN",
+      "pred": "KEEP, STRAIGHT"
+    },
+    "2d128c564cf14c05a442b91c1391cee6": {
+      "gt": "ACCELERATE, LEFT_TURN",
+      "pred": "STOP, STRAIGHT"
+    },
+    "28ce972b986d4dbb86ad9c96b3e4e34f": {
+      "gt": "DECELERATE, STRAIGHT",
+      "pred": "KEEP, STRAIGHT"
+    },
+    "4a0987ae93eb4cb7b77e94f8ab034a27": {
+      "gt": "DECELERATE, STRAIGHT",
+      "pred": "KEEP, STRAIGHT"
+    },
+    "15bdb20042cc43b8bf06fce36e9e501d": {
+      "gt": "KEEP, STRAIGHT",
+      "pred": "STOP, STRAIGHT"
+    },
+    "e693989d8ad141608999200df71aca71": {
+      "gt": "KEEP, RIGHT_TURN",
+      "pred": "STOP, STRAIGHT"
+    },
+    "5be9e033b43f46968d516ada3bd28fe2": {
+      "gt": "KEEP, STRAIGHT",
+      "pred": "STOP, STRAIGHT"
+    },
+    "ef6c3afa0306406790d7f7c21b4b6cc5": {
+      "gt": "KEEP, LEFT_TURN",
+      "pred": "KEEP, STRAIGHT"
+    },
+    "858a1ece22cf45d9bc71e42336604b78": {
+      "gt": "KEEP, RIGHT_TURN",
+      "pred": "KEEP, STRAIGHT"
+    },
+    "188fe79624af4474b8b720e2282b406a": {
+      "gt": "KEEP, LEFT_TURN",
+      "pred": "KEEP, STRAIGHT"
+    },
+    "caccb9f684a14ff0a17f35c9f822f259": {
+      "gt": "KEEP, RIGHT_TURN",
+      "pred": "KEEP, STRAIGHT"
+    },
+    "667256047cdc473caff95901be551788": {
+      "gt": "ACCELERATE, STRAIGHT",
+      "pred": "STOP, STRAIGHT"
+    },
+    "48ba767f9b8248a5b6f6921182e053b4": {
+      "gt": "KEEP, RIGHT_TURN",
+      "pred": "KEEP, STRAIGHT"
+    },
+    "c6c6bd12ff2c444aa8d5d41903ef1b6a": {
+      "gt": "KEEP, RIGHT_TURN",
+      "pred": "KEEP, STRAIGHT"
+    },
+    "b31c7ca5fea14690a214f7c93aba4166": {
+      "gt": "KEEP, LEFT_TURN",
+      "pred": "ACCELERATE, LEFT_TURN"
+    },
+    "a2229d223c19406f9f71cb7a92b9ef54": {
+      "gt": "ACCELERATE, STRAIGHT",
+      "pred": "STOP, STRAIGHT"
+    },
+    "42618734136040a6807f70b2d30fa562": {
+      "gt": "KEEP, RIGHT_TURN",
+      "pred": "KEEP, STRAIGHT"
+    },
+    "6cd3b92d02ba4cfea96acd3d8ca6c5f9": {
+      "gt": "KEEP, RIGHT_TURN",
+      "pred": "KEEP, STRAIGHT"
+    },
+    "913104aa7a4f4917a651fdc062c7fc30": {
+      "gt": "STOP, STRAIGHT",
+      "pred": "KEEP, STRAIGHT"
+    },
+    "949d5c6f5ebf4f88a5f63498eab9d953": {
+      "gt": "ACCELERATE, STRAIGHT",
+      "pred": "STOP, STRAIGHT"
+    },
+    "d1d38dddb8174acf9cb776ec6c941024": {
+      "gt": "ACCELERATE, STRAIGHT",
+      "pred": "KEEP, STRAIGHT"
+    },
+    "0d59bd91a1bc4098aa0d40b657641f4e": {
+      "gt": "DECELERATE, STRAIGHT",
+      "pred": "KEEP, STRAIGHT"
+    },
+    "b1432ecbe5f741d6b61b0663723f44b2": {
+      "gt": "KEEP, RIGHT_TURN",
+      "pred": "KEEP, STRAIGHT"
+    },
+    "dfed538b6d0840a398f5a2b6c286f0b2": {
+      "gt": "DECELERATE, STRAIGHT",
+      "pred": "KEEP, STRAIGHT"
+    },
+    "78d7c6d89c424c7a91a88d13c648fb4e": {
+      "gt": "DECELERATE, STRAIGHT",
+      "pred": "KEEP, STRAIGHT"
+    },
+    "44472e91e4904f67a5619e31e76db0ee": {
+      "gt": "ACCELERATE, STRAIGHT",
+      "pred": "KEEP, STRAIGHT"
+    },
+    "b615d1afcff44bbab1a3e34f76a64942": {
+      "gt": "ACCELERATE, STRAIGHT",
+      "pred": "KEEP, STRAIGHT"
+    },
+    "10ff71451f7245d392410e8575a68934": {
+      "gt": "DECELERATE, STRAIGHT",
+      "pred": "KEEP, STRAIGHT"
+    },
+    "46cf544f4ddc4125803d8ccd82874cc8": {
+      "gt": "DECELERATE, STRAIGHT",
+      "pred": "KEEP, STRAIGHT"
+    },
+    "b44e59e4a1e345b89940db8801b7e9d4": {
+      "gt": "ACCELERATE, STRAIGHT",
+      "pred": "KEEP, STRAIGHT"
+    },
+    "79a10e4d9e5b49e980a8897d6f09f450": {
+      "gt": "ACCELERATE, STRAIGHT",
+      "pred": "KEEP, STRAIGHT"
+    },
+    "0c4faeb94da6430f8c1c581ac5adbb79": {
+      "gt": "DECELERATE, STRAIGHT",
+      "pred": "KEEP, STRAIGHT"
+    },
+    "f3e8b54ec6254434a5c1c0051d94476f": {
+      "gt": "DECELERATE, STRAIGHT",
+      "pred": "KEEP, STRAIGHT"
+    },
+    "6f5c95dd443d41e18b793e0debd5dc3b": {
+      "gt": "DECELERATE, STRAIGHT",
+      "pred": "KEEP, STRAIGHT"
+    },
+    "1f73768be216451fa02caa38b04a62b3": {
+      "gt": "ACCELERATE, STRAIGHT",
+      "pred": "STOP, STRAIGHT"
+    },
+    "b9507f86eb3547bd9a5c387b42f156cc": {
+      "gt": "ACCELERATE, RIGHT_TURN",
+      "pred": "STOP, STRAIGHT"
+    },
+    "3e8da1f918d5488bb639d26fca75b8d8": {
+      "gt": "ACCELERATE, RIGHT_TURN",
+      "pred": "KEEP, STRAIGHT"
+    },
+    "1eeeb68791084aa7b2e5d05223796e1e": {
+      "gt": "ACCELERATE, LEFT_TURN",
+      "pred": "KEEP, STRAIGHT"
+    },
+    "ae52c4af95674bdc900000c161a5d95d": {
+      "gt": "ACCELERATE, LEFT_TURN",
+      "pred": "KEEP, STRAIGHT"
+    },
+    "c7200859948a4adb90ee4d0155a0105e": {
+      "gt": "ACCELERATE, LEFT_TURN",
+      "pred": "KEEP, LEFT_TURN"
+    },
+    "7a32eb7937e54e19b1cd7c58ec40f728": {
+      "gt": "ACCELERATE, STRAIGHT",
+      "pred": "KEEP, STRAIGHT"
+    }
+  },
+  "predictions": [
+    {
+      "token": "fd8420396768425eabec9bdddf7e64b6",
+      "gt": "STOP, STRAIGHT",
+      "pred": "STOP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.7354520380031317
+    },
+    {
+      "token": "5e4e25f87ec84942ac459a55fe064330",
+      "gt": "KEEP, STRAIGHT",
+      "pred": "STOP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6259738010121509
+    },
+    {
+      "token": "a6261bd83c5e4e1985012b6c6c51fce0",
+      "gt": "KEEP, LEFT_TURN",
+      "pred": "KEEP, LEFT_TURN",
+      "navigation": "go straight and turn left",
+      "elapsed_seconds": 0.6721308550331742
+    },
+    {
+      "token": "d64e599dc5c64226895649debdd49793",
+      "gt": "KEEP, LEFT_TURN",
+      "pred": "KEEP, LEFT_TURN",
+      "navigation": "go straight and turn left",
+      "elapsed_seconds": 0.6725605929968879
+    },
+    {
+      "token": "8b66733250b94940b0e7477c8b182512",
+      "gt": "KEEP, STRAIGHT",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6518136389786378
+    },
+    {
+      "token": "c0e4b1016c09468c9b1ce496462eb1ad",
+      "gt": "ACCELERATE, STRAIGHT",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6516259419731796
+    },
+    {
+      "token": "0f39f34febc84a6689f08599105d1421",
+      "gt": "KEEP, LEFT_TURN",
+      "pred": "ACCELERATE, LEFT_TURN",
+      "navigation": "go straight and turn left",
+      "elapsed_seconds": 0.7191834419500083
+    },
+    {
+      "token": "ead06ddfed704c82bdb77a1da54ca79e",
+      "gt": "KEEP, RIGHT_TURN",
+      "pred": "KEEP, RIGHT_TURN",
+      "navigation": "go straight and turn right",
+      "elapsed_seconds": 0.6971917530754581
+    },
+    {
+      "token": "5bb77a2ff3d44094b691ba239cbab83a",
+      "gt": "KEEP, RIGHT_TURN",
+      "pred": "KEEP, LEFT_TURN",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6756650049937889
+    },
+    {
+      "token": "c3ab884d58ff4822b6debfdbae4ef0a5",
+      "gt": "KEEP, STRAIGHT",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.65189990401268
+    },
+    {
+      "token": "5c27958677604dc5ad254f69f31aaf85",
+      "gt": "KEEP, RIGHT_TURN",
+      "pred": "DECELERATE, STRAIGHT",
+      "navigation": "go straight and turn right",
+      "elapsed_seconds": 0.6939212720608339
+    },
+    {
+      "token": "d0b2eb773b2a4f9c8a25c655d5deffbd",
+      "gt": "ACCELERATE, STRAIGHT",
+      "pred": "STOP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6263004039647058
+    },
+    {
+      "token": "05699704028c40708d98ab16374fd748",
+      "gt": "DECELERATE, STRAIGHT",
+      "pred": "STOP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6255126619944349
+    },
+    {
+      "token": "2a8c82989fcc4edca9772cd20bf34b07",
+      "gt": "STOP, STRAIGHT",
+      "pred": "STOP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6275506659876555
+    },
+    {
+      "token": "5f88b9a41f264ebbac7976bf4c796d21",
+      "gt": "STOP, STRAIGHT",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6513294079340994
+    },
+    {
+      "token": "604a8ce58d0b4f94a93db370813edf94",
+      "gt": "KEEP, STRAIGHT",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6525323159294203
+    },
+    {
+      "token": "b923744651764ed194ddf7526b9b2cf6",
+      "gt": "KEEP, RIGHT_TURN",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "go straight and turn right",
+      "elapsed_seconds": 0.6501318149967119
+    },
+    {
+      "token": "c59e60042a8643e899008da2e446acca",
+      "gt": "DECELERATE, STRAIGHT",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6501937849679962
+    },
+    {
+      "token": "a98fba72bde9433fb882032d18aedb2e",
+      "gt": "DECELERATE, STRAIGHT",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6552154700038955
+    },
+    {
+      "token": "9c9f22a58fdc45f2b8a119cda3554f1f",
+      "gt": "KEEP, STRAIGHT",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6523430739762262
+    },
+    {
+      "token": "2e137fee62e241aca2966876af1e201f",
+      "gt": "KEEP, RIGHT_TURN",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "go straight and turn right",
+      "elapsed_seconds": 0.648806873941794
+    },
+    {
+      "token": "946040cd49c64a8f9e58d32175b9936f",
+      "gt": "ACCELERATE, STRAIGHT",
+      "pred": "STOP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6288805659860373
+    },
+    {
+      "token": "5dd954d0ac0242a990ba35eef950c937",
+      "gt": "KEEP, LEFT_TURN",
+      "pred": "KEEP, LEFT_TURN",
+      "navigation": "turn left",
+      "elapsed_seconds": 0.6769159330287948
+    },
+    {
+      "token": "cc18fde20db74d30825b0b60ec511b7b",
+      "gt": "KEEP, LEFT_TURN",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "go straight and turn left",
+      "elapsed_seconds": 0.651965078082867
+    },
+    {
+      "token": "d492d47f5aba43249fe426f07a2911bf",
+      "gt": "KEEP, STRAIGHT",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6531967880437151
+    },
+    {
+      "token": "f2727eb072f7470b862601edee7250b3",
+      "gt": "STOP, STRAIGHT",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6520339018898085
+    },
+    {
+      "token": "f9b825f4020e4da8b6a182160e0b0705",
+      "gt": "ACCELERATE, STRAIGHT",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6538676120107993
+    },
+    {
+      "token": "f05e94332d124446a9b8df3917101615",
+      "gt": "KEEP, LEFT_TURN",
+      "pred": "KEEP, LEFT_TURN",
+      "navigation": "turn left",
+      "elapsed_seconds": 0.6779696930898353
+    },
+    {
+      "token": "80d7c172efb64b5296f2d22f942bc963",
+      "gt": "KEEP, LEFT_TURN",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6520441869506612
+    },
+    {
+      "token": "152db7f344954b7196402b92caa57e1c",
+      "gt": "ACCELERATE, STRAIGHT",
+      "pred": "STOP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.628255877061747
+    },
+    {
+      "token": "13af3da0edf14bfb8fa9d62fb654b455",
+      "gt": "KEEP, STRAIGHT",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6523439890006557
+    },
+    {
+      "token": "f4b5b6fc59e34da6bd18d4d8e299dab8",
+      "gt": "DECELERATE, STRAIGHT",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6551993140019476
+    },
+    {
+      "token": "cf7cdd43be9b4886bcb7b45af4d9d104",
+      "gt": "DECELERATE, STRAIGHT",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6556343690026551
+    },
+    {
+      "token": "10a3ee039c4c482ab220e69c1e420031",
+      "gt": "KEEP, RIGHT_TURN",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "go straight and turn right",
+      "elapsed_seconds": 0.651505823014304
+    },
+    {
+      "token": "3b195d69951a4207b2e0d0ad5e4411c7",
+      "gt": "STOP, STRAIGHT",
+      "pred": "STOP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6299125690711662
+    },
+    {
+      "token": "18dfc351d10541f5bd12a9b434a4e771",
+      "gt": "KEEP, LEFT_TURN",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "go straight and turn left",
+      "elapsed_seconds": 0.6534086050232872
+    },
+    {
+      "token": "795dceace16443a2a3a793971435f58c",
+      "gt": "ACCELERATE, STRAIGHT",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6545013260329142
+    },
+    {
+      "token": "0799844f6afa4ac1840181d0c8b26f08",
+      "gt": "STOP, STRAIGHT",
+      "pred": "STOP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6313043429981917
+    },
+    {
+      "token": "7a80523f99c3434ba5f65a3ddad2b2ea",
+      "gt": "ACCELERATE, RIGHT_TURN",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "go straight and turn right",
+      "elapsed_seconds": 0.6523388689383864
+    },
+    {
+      "token": "1a5aaf6004d64cd889d07fad3210717a",
+      "gt": "KEEP, RIGHT_TURN",
+      "pred": "KEEP, RIGHT_TURN",
+      "navigation": "go straight and turn right",
+      "elapsed_seconds": 0.701194601948373
+    },
+    {
+      "token": "f777d3dbcc5547bc8adbfa529ab4fa3c",
+      "gt": "ACCELERATE, STRAIGHT",
+      "pred": "STOP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6348994160071015
+    },
+    {
+      "token": "6123a0c091d24c39ab274cdbad994bc4",
+      "gt": "KEEP, STRAIGHT",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6568545700283721
+    },
+    {
+      "token": "f984bba40e134fb7ac6e7abf11a20b69",
+      "gt": "STOP, STRAIGHT",
+      "pred": "ACCELERATE, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.7029485079692677
+    },
+    {
+      "token": "0aaca2f368ea4089a3e025efcae32588",
+      "gt": "ACCELERATE, STRAIGHT",
+      "pred": "STOP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6370690000476316
+    },
+    {
+      "token": "d078f5c7222e4f08b54822118a284d6e",
+      "gt": "KEEP, LEFT_TURN",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "go straight and turn left",
+      "elapsed_seconds": 0.6547894759569317
+    },
+    {
+      "token": "704f3a805e16454aa3acade23171f2c3",
+      "gt": "STOP, STRAIGHT",
+      "pred": "STOP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6311271430458874
+    },
+    {
+      "token": "2878a9ab393f42a2bbb426d8a14690d9",
+      "gt": "KEEP, STRAIGHT",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.657712829997763
+    },
+    {
+      "token": "a1cf07ef81354a98907f962c260badb8",
+      "gt": "DECELERATE, STRAIGHT",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6550419749692082
+    },
+    {
+      "token": "4639543918e84082b89a8a3369c02353",
+      "gt": "DECELERATE, STRAIGHT",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6548461220227182
+    },
+    {
+      "token": "07905ddecd1e4ef6bc1e3f24fa950579",
+      "gt": "KEEP, RIGHT_TURN",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "turn right",
+      "elapsed_seconds": 0.655665390077047
+    },
+    {
+      "token": "47e1c5287177487a9782ba2d144384f2",
+      "gt": "STOP, STRAIGHT",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6572186319390312
+    },
+    {
+      "token": "c58788051c04425091cdaa705bd2c7aa",
+      "gt": "STOP, STRAIGHT",
+      "pred": "STOP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6341528989141807
+    },
+    {
+      "token": "e7956e3f3ec14f0191f612f9b6309729",
+      "gt": "KEEP, LEFT_TURN",
+      "pred": "KEEP, LEFT_TURN",
+      "navigation": "turn left",
+      "elapsed_seconds": 0.6798815620131791
+    },
+    {
+      "token": "e786b718ea6a4887bcb86639de62a1ce",
+      "gt": "KEEP, STRAIGHT",
+      "pred": "STOP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6327127129770815
+    },
+    {
+      "token": "e7bc8aeb620845efae293033f2e40196",
+      "gt": "KEEP, RIGHT_TURN",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "go straight and turn right",
+      "elapsed_seconds": 0.6567901599919423
+    },
+    {
+      "token": "0775bcc755c148ef831dffe278b1bb94",
+      "gt": "KEEP, LEFT_TURN",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "go straight and turn left",
+      "elapsed_seconds": 0.6512713689589873
+    },
+    {
+      "token": "f525764b424647e88f18f9d0ea9e41e9",
+      "gt": "DECELERATE, STRAIGHT",
+      "pred": "STOP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6323684079106897
+    },
+    {
+      "token": "d4b3a58594d848d49dbef38e2e6e2125",
+      "gt": "DECELERATE, STRAIGHT",
+      "pred": "STOP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6327008010121062
+    },
+    {
+      "token": "826a15deb9364faca537d635728a2ef8",
+      "gt": "STOP, STRAIGHT",
+      "pred": "STOP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.633294578990899
+    },
+    {
+      "token": "a38d06e080204b9c9c0b805375c8d6f9",
+      "gt": "DECELERATE, STRAIGHT",
+      "pred": "STOP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6320812570629641
+    },
+    {
+      "token": "72e83c660c194fc988a368cbbb928cac",
+      "gt": "ACCELERATE, STRAIGHT",
+      "pred": "STOP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6310580499703065
+    },
+    {
+      "token": "9454ea23d85241468b8757a0bd89964d",
+      "gt": "KEEP, STRAIGHT",
+      "pred": "STOP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6321258899988607
+    },
+    {
+      "token": "fe4272b3476c45c8a3704e977b85d409",
+      "gt": "KEEP, RIGHT_TURN",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "go straight and turn right",
+      "elapsed_seconds": 0.6528925310121849
+    },
+    {
+      "token": "1b3e964e30c8439ba9ba83d43948a558",
+      "gt": "KEEP, RIGHT_TURN",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "go straight and turn right",
+      "elapsed_seconds": 0.6535116569139063
+    },
+    {
+      "token": "56d2e0f573584ba1bb3446b1e0573fc7",
+      "gt": "ACCELERATE, STRAIGHT",
+      "pred": "STOP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6317504460457712
+    },
+    {
+      "token": "f3b10b3ae50a4ada8ad177f61b3138f5",
+      "gt": "KEEP, LEFT_TURN",
+      "pred": "STOP, STRAIGHT",
+      "navigation": "turn left",
+      "elapsed_seconds": 0.6303825450595468
+    },
+    {
+      "token": "148a98a0b7ce45fcb92738418dd17a64",
+      "gt": "KEEP, LEFT_TURN",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "turn left",
+      "elapsed_seconds": 0.6580294170416892
+    },
+    {
+      "token": "2fa2a2c26d174462a4847284e6b4dbd6",
+      "gt": "STOP, STRAIGHT",
+      "pred": "STOP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6322859460487962
+    },
+    {
+      "token": "7a8272865e4b4337a4b10a283f2fb0d9",
+      "gt": "STOP, STRAIGHT",
+      "pred": "STOP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.633523156051524
+    },
+    {
+      "token": "50c7c32fa4e446119d53d1deb289aa7f",
+      "gt": "STOP, STRAIGHT",
+      "pred": "STOP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6327084980439395
+    },
+    {
+      "token": "603c9225a5624229bae41a819d10c9cd",
+      "gt": "KEEP, LEFT_TURN",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6599635820602998
+    },
+    {
+      "token": "2d128c564cf14c05a442b91c1391cee6",
+      "gt": "ACCELERATE, LEFT_TURN",
+      "pred": "STOP, STRAIGHT",
+      "navigation": "turn left",
+      "elapsed_seconds": 0.6332636949373409
+    },
+    {
+      "token": "14d4567100c84c8686872077473f9877",
+      "gt": "STOP, STRAIGHT",
+      "pred": "STOP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6324684019200504
+    },
+    {
+      "token": "ee7b0788afbe44fd80d41c97813c9e7b",
+      "gt": "STOP, STRAIGHT",
+      "pred": "STOP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6341457589296624
+    },
+    {
+      "token": "9ab92b1a1ca94135a08c81a928a57ffd",
+      "gt": "KEEP, STRAIGHT",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.660350168007426
+    },
+    {
+      "token": "28ce972b986d4dbb86ad9c96b3e4e34f",
+      "gt": "DECELERATE, STRAIGHT",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6581166470423341
+    },
+    {
+      "token": "4a0987ae93eb4cb7b77e94f8ab034a27",
+      "gt": "DECELERATE, STRAIGHT",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6584445290500298
+    },
+    {
+      "token": "a364a98930634dd7b0885e922421e5fe",
+      "gt": "STOP, STRAIGHT",
+      "pred": "STOP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6346380079630762
+    },
+    {
+      "token": "e64806d2f67946fb9d0ed02bdd0cb616",
+      "gt": "STOP, STRAIGHT",
+      "pred": "STOP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6357802950078622
+    },
+    {
+      "token": "c70888e1f3d04580ae3343602b2b4d57",
+      "gt": "KEEP, STRAIGHT",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6608533899998292
+    },
+    {
+      "token": "15bdb20042cc43b8bf06fce36e9e501d",
+      "gt": "KEEP, STRAIGHT",
+      "pred": "STOP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6354028739733621
+    },
+    {
+      "token": "e693989d8ad141608999200df71aca71",
+      "gt": "KEEP, RIGHT_TURN",
+      "pred": "STOP, STRAIGHT",
+      "navigation": "turn right",
+      "elapsed_seconds": 0.6340494530741125
+    },
+    {
+      "token": "5be9e033b43f46968d516ada3bd28fe2",
+      "gt": "KEEP, STRAIGHT",
+      "pred": "STOP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6352667850442231
+    },
+    {
+      "token": "ef6c3afa0306406790d7f7c21b4b6cc5",
+      "gt": "KEEP, LEFT_TURN",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "go straight and turn left",
+      "elapsed_seconds": 0.6578216479392722
+    },
+    {
+      "token": "858a1ece22cf45d9bc71e42336604b78",
+      "gt": "KEEP, RIGHT_TURN",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "turn right",
+      "elapsed_seconds": 0.6585942199453712
+    },
+    {
+      "token": "9cbbb34ee37c4d4fbb22fc3d457faca8",
+      "gt": "KEEP, LEFT_TURN",
+      "pred": "KEEP, LEFT_TURN",
+      "navigation": "turn left",
+      "elapsed_seconds": 0.6865279990015551
+    },
+    {
+      "token": "188fe79624af4474b8b720e2282b406a",
+      "gt": "KEEP, LEFT_TURN",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6604670949745923
+    },
+    {
+      "token": "caccb9f684a14ff0a17f35c9f822f259",
+      "gt": "KEEP, RIGHT_TURN",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "turn right",
+      "elapsed_seconds": 0.6592361750081182
+    },
+    {
+      "token": "98db55f2b560424595f3b720122aa8fe",
+      "gt": "KEEP, STRAIGHT",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "go straight and turn right",
+      "elapsed_seconds": 0.6576042090309784
+    },
+    {
+      "token": "204ed03554974215b9345d58b09082f4",
+      "gt": "STOP, STRAIGHT",
+      "pred": "STOP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6356216579442844
+    },
+    {
+      "token": "667256047cdc473caff95901be551788",
+      "gt": "ACCELERATE, STRAIGHT",
+      "pred": "STOP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6392561329994351
+    },
+    {
+      "token": "48ba767f9b8248a5b6f6921182e053b4",
+      "gt": "KEEP, RIGHT_TURN",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "turn right",
+      "elapsed_seconds": 0.6594868790125474
+    },
+    {
+      "token": "f4e02ed64b444a2a98fa0eb784ebe20d",
+      "gt": "KEEP, STRAIGHT",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6616964309941977
+    },
+    {
+      "token": "c6c6bd12ff2c444aa8d5d41903ef1b6a",
+      "gt": "KEEP, RIGHT_TURN",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "turn right",
+      "elapsed_seconds": 0.6602995640132576
+    },
+    {
+      "token": "c56adbccfeff449f959f25cc41f8b1e5",
+      "gt": "KEEP, LEFT_TURN",
+      "pred": "KEEP, LEFT_TURN",
+      "navigation": "turn left",
+      "elapsed_seconds": 0.6818654160015285
+    },
+    {
+      "token": "b31c7ca5fea14690a214f7c93aba4166",
+      "gt": "KEEP, LEFT_TURN",
+      "pred": "ACCELERATE, LEFT_TURN",
+      "navigation": "go straight and turn left",
+      "elapsed_seconds": 0.7288848860189319
+    },
+    {
+      "token": "1a4bff6fb5ba4d04816886ab6fdce0ab",
+      "gt": "KEEP, STRAIGHT",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6584529599640518
+    },
+    {
+      "token": "a2229d223c19406f9f71cb7a92b9ef54",
+      "gt": "ACCELERATE, STRAIGHT",
+      "pred": "STOP, STRAIGHT",
+      "navigation": "turn right",
+      "elapsed_seconds": 0.6370054188882932
+    },
+    {
+      "token": "42618734136040a6807f70b2d30fa562",
+      "gt": "KEEP, RIGHT_TURN",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "turn right",
+      "elapsed_seconds": 0.659983318997547
+    },
+    {
+      "token": "6cd3b92d02ba4cfea96acd3d8ca6c5f9",
+      "gt": "KEEP, RIGHT_TURN",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "go straight and turn right",
+      "elapsed_seconds": 0.6559609830146655
+    },
+    {
+      "token": "cb4504edb87a40d4b650cd5860f6c3b7",
+      "gt": "KEEP, STRAIGHT",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6600032559363171
+    },
+    {
+      "token": "913104aa7a4f4917a651fdc062c7fc30",
+      "gt": "STOP, STRAIGHT",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6626160360174254
+    },
+    {
+      "token": "949d5c6f5ebf4f88a5f63498eab9d953",
+      "gt": "ACCELERATE, STRAIGHT",
+      "pred": "STOP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6366313620237634
+    },
+    {
+      "token": "5961c01ec5e04ee48959a30d2b337c57",
+      "gt": "KEEP, LEFT_TURN",
+      "pred": "KEEP, LEFT_TURN",
+      "navigation": "go straight and turn left",
+      "elapsed_seconds": 0.6847688280977309
+    },
+    {
+      "token": "84eb0d4946ea4990b8e9b9997e2173f2",
+      "gt": "KEEP, RIGHT_TURN",
+      "pred": "KEEP, RIGHT_TURN",
+      "navigation": "go straight and turn right",
+      "elapsed_seconds": 0.7079757869942114
+    },
+    {
+      "token": "d1d38dddb8174acf9cb776ec6c941024",
+      "gt": "ACCELERATE, STRAIGHT",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.661628131987527
+    },
+    {
+      "token": "0d59bd91a1bc4098aa0d40b657641f4e",
+      "gt": "DECELERATE, STRAIGHT",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6620719409547746
+    },
+    {
+      "token": "b1432ecbe5f741d6b61b0663723f44b2",
+      "gt": "KEEP, RIGHT_TURN",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "go straight and turn right",
+      "elapsed_seconds": 0.6574648829409853
+    },
+    {
+      "token": "dfed538b6d0840a398f5a2b6c286f0b2",
+      "gt": "DECELERATE, STRAIGHT",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6619536669459194
+    },
+    {
+      "token": "78d7c6d89c424c7a91a88d13c648fb4e",
+      "gt": "DECELERATE, STRAIGHT",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6627344379667193
+    },
+    {
+      "token": "44472e91e4904f67a5619e31e76db0ee",
+      "gt": "ACCELERATE, STRAIGHT",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6579163749702275
+    },
+    {
+      "token": "b615d1afcff44bbab1a3e34f76a64942",
+      "gt": "ACCELERATE, STRAIGHT",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6624182370724156
+    },
+    {
+      "token": "10ff71451f7245d392410e8575a68934",
+      "gt": "DECELERATE, STRAIGHT",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6639608399709687
+    },
+    {
+      "token": "46cf544f4ddc4125803d8ccd82874cc8",
+      "gt": "DECELERATE, STRAIGHT",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6623162350151688
+    },
+    {
+      "token": "b44e59e4a1e345b89940db8801b7e9d4",
+      "gt": "ACCELERATE, STRAIGHT",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.659711797023192
+    },
+    {
+      "token": "79a10e4d9e5b49e980a8897d6f09f450",
+      "gt": "ACCELERATE, STRAIGHT",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6628996069775894
+    },
+    {
+      "token": "0c4faeb94da6430f8c1c581ac5adbb79",
+      "gt": "DECELERATE, STRAIGHT",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6603467960376292
+    },
+    {
+      "token": "f3e8b54ec6254434a5c1c0051d94476f",
+      "gt": "DECELERATE, STRAIGHT",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6624623680254444
+    },
+    {
+      "token": "6f5c95dd443d41e18b793e0debd5dc3b",
+      "gt": "DECELERATE, STRAIGHT",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6621369130443782
+    },
+    {
+      "token": "1f73768be216451fa02caa38b04a62b3",
+      "gt": "ACCELERATE, STRAIGHT",
+      "pred": "STOP, STRAIGHT",
+      "navigation": "turn right",
+      "elapsed_seconds": 0.6373252929188311
+    },
+    {
+      "token": "b9507f86eb3547bd9a5c387b42f156cc",
+      "gt": "ACCELERATE, RIGHT_TURN",
+      "pred": "STOP, STRAIGHT",
+      "navigation": "turn right",
+      "elapsed_seconds": 0.6364487189566717
+    },
+    {
+      "token": "3e8da1f918d5488bb639d26fca75b8d8",
+      "gt": "ACCELERATE, RIGHT_TURN",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "go straight and turn right",
+      "elapsed_seconds": 0.6588702260050923
+    },
+    {
+      "token": "a29674e62b0b4cdbb20ae86eca8d3356",
+      "gt": "KEEP, STRAIGHT",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6601877419743687
+    },
+    {
+      "token": "1eeeb68791084aa7b2e5d05223796e1e",
+      "gt": "ACCELERATE, LEFT_TURN",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "go straight and turn left",
+      "elapsed_seconds": 0.6587492909748107
+    },
+    {
+      "token": "ae52c4af95674bdc900000c161a5d95d",
+      "gt": "ACCELERATE, LEFT_TURN",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "go straight and turn left",
+      "elapsed_seconds": 0.6614800289971754
+    },
+    {
+      "token": "c7200859948a4adb90ee4d0155a0105e",
+      "gt": "ACCELERATE, LEFT_TURN",
+      "pred": "KEEP, LEFT_TURN",
+      "navigation": "go straight and turn left",
+      "elapsed_seconds": 0.682811324018985
+    },
+    {
+      "token": "7a32eb7937e54e19b1cd7c58ec40f728",
+      "gt": "ACCELERATE, STRAIGHT",
+      "pred": "KEEP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6630652790190652
+    }
+  ],
+  "metadata": {
+    "schema_version": 2,
+    "eval_data_path": "/data/qh/phdCode/work4/Senna/data/senna_val_check127_navigation_only.json",
+    "eval_data_sha256": "40111d8124849bd50ee4634b0d9d46bc03b548e4ff36bc4f5f20d6f33b346ea4",
+    "model_path": "/data/qh/phdCode/work4/models/Senna",
+    "model_config_sha256": "4360f459f0db97c2facde2aeae4d1e77059d8dec95181bae80bfe71dc4c7dca2",
+    "implementation_sha256": {
+      "data_tools/senna_inputs.py": "9a259bfa5afec398b55701019dd21597c66f2de4dd4e9950aa568fd2a2178a53",
+      "data_tools/senna_qa_utils.py": "722f251b1e40056c8a2036f80a827e0fb0362911a8bc69ee6abfa54df6309116",
+      "eval_tools/senna_plan_cmd_eval_multi_img.py": "c0cb3976a028af50dcb961972d45973f3fc87f52b8adc4c5a0d4a7f250f14776"
+    },
+    "vision_config_sha256": "51b1c14aabcdf639c4a0370eeda1010b773bbe1df78319c7d0f5882c22ac0ac0",
+    "vision_weight": {
+      "size": 1711974081,
+      "mtime_ns": 1791629766000000000
+    },
+    "model_files": {
+      "pytorch_model-00001-of-00002.bin": {
+        "size": 9976631486,
+        "mtime_ns": 1791630170000000000
+      },
+      "pytorch_model-00002-of-00002.bin": {
+        "size": 4149654020,
+        "mtime_ns": 1791629119000000000
+      },
+      "tokenizer.model": {
+        "size": 499723,
+        "mtime_ns": 1791628299000000000
+      }
+    },
+    "max_samples": null,
+    "max_new_tokens": 64,
+    "allow_legacy_inputs": true,
+    "selected_samples": 127,
+    "conv_mode": "llava_v1",
+    "temperature": 0,
+    "num_beams": 1,
+    "metric": "strict_speed_path_exact_match"
+  }
+}

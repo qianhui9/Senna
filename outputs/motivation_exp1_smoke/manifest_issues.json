@@ -1,0 +1,9 @@
+[
+  {
+    "scene_name": "scene-0971",
+    "camera_channel": "CAM_FRONT_LEFT",
+    "token": "02889995a4d74e4f80e75031151e6db1",
+    "reason": "abnormal_interval",
+    "delta_t_ms": 250.0
+  }
+]

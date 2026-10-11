@@ -1,0 +1,253 @@
+{
+  "summary": "Total Number: 2\nCorrect Number: 2\nPlanning Accuracy: 100.00%\nSpeed Accuracy: 100.00%\nPath Accuracy: 100.00%\nInvalid Outputs: 0\nSTOP_STRAIGHT: num: 2, correct num: 2, 100.00%",
+  "f1_score": {
+    "KEEP": 0,
+    "ACCELERATE": 0,
+    "DECELERATE": 0,
+    "STOP": 1.0,
+    "RIGHT_TURN": 0,
+    "RIGHT_CHANGE": 0,
+    "LEFT_TURN": 0,
+    "LEFT_CHANGE": 0,
+    "STRAIGHT": 1.0
+  },
+  "metrics": {
+    "total": 2,
+    "correct": 2,
+    "planning_accuracy": 1.0,
+    "speed_accuracy": 1.0,
+    "path_accuracy": 1.0,
+    "invalid_outputs": 0,
+    "class_metrics": {
+      "KEEP": {
+        "support": 0,
+        "predicted": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0,
+        "recall": 0,
+        "f1": 0
+      },
+      "ACCELERATE": {
+        "support": 0,
+        "predicted": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0,
+        "recall": 0,
+        "f1": 0
+      },
+      "DECELERATE": {
+        "support": 0,
+        "predicted": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0,
+        "recall": 0,
+        "f1": 0
+      },
+      "STOP": {
+        "support": 2,
+        "predicted": 2,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "RIGHT_TURN": {
+        "support": 0,
+        "predicted": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0,
+        "recall": 0,
+        "f1": 0
+      },
+      "RIGHT_CHANGE": {
+        "support": 0,
+        "predicted": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0,
+        "recall": 0,
+        "f1": 0
+      },
+      "LEFT_TURN": {
+        "support": 0,
+        "predicted": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0,
+        "recall": 0,
+        "f1": 0
+      },
+      "LEFT_CHANGE": {
+        "support": 0,
+        "predicted": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0,
+        "recall": 0,
+        "f1": 0
+      },
+      "STRAIGHT": {
+        "support": 2,
+        "predicted": 2,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    "speed_confusion": {
+      "KEEP": {
+        "KEEP": 0,
+        "ACCELERATE": 0,
+        "DECELERATE": 0,
+        "STOP": 0,
+        "INVALID": 0
+      },
+      "ACCELERATE": {
+        "KEEP": 0,
+        "ACCELERATE": 0,
+        "DECELERATE": 0,
+        "STOP": 0,
+        "INVALID": 0
+      },
+      "DECELERATE": {
+        "KEEP": 0,
+        "ACCELERATE": 0,
+        "DECELERATE": 0,
+        "STOP": 0,
+        "INVALID": 0
+      },
+      "STOP": {
+        "KEEP": 0,
+        "ACCELERATE": 0,
+        "DECELERATE": 0,
+        "STOP": 2,
+        "INVALID": 0
+      }
+    },
+    "path_confusion": {
+      "RIGHT_TURN": {
+        "RIGHT_TURN": 0,
+        "RIGHT_CHANGE": 0,
+        "LEFT_TURN": 0,
+        "LEFT_CHANGE": 0,
+        "STRAIGHT": 0,
+        "INVALID": 0
+      },
+      "RIGHT_CHANGE": {
+        "RIGHT_TURN": 0,
+        "RIGHT_CHANGE": 0,
+        "LEFT_TURN": 0,
+        "LEFT_CHANGE": 0,
+        "STRAIGHT": 0,
+        "INVALID": 0
+      },
+      "LEFT_TURN": {
+        "RIGHT_TURN": 0,
+        "RIGHT_CHANGE": 0,
+        "LEFT_TURN": 0,
+        "LEFT_CHANGE": 0,
+        "STRAIGHT": 0,
+        "INVALID": 0
+      },
+      "LEFT_CHANGE": {
+        "RIGHT_TURN": 0,
+        "RIGHT_CHANGE": 0,
+        "LEFT_TURN": 0,
+        "LEFT_CHANGE": 0,
+        "STRAIGHT": 0,
+        "INVALID": 0
+      },
+      "STRAIGHT": {
+        "RIGHT_TURN": 0,
+        "RIGHT_CHANGE": 0,
+        "LEFT_TURN": 0,
+        "LEFT_CHANGE": 0,
+        "STRAIGHT": 2,
+        "INVALID": 0
+      }
+    },
+    "majority_joint_baseline": 1.0
+  },
+  "errors": {},
+  "predictions": [
+    {
+      "token": "fd8420396768425eabec9bdddf7e64b6",
+      "gt": "STOP, STRAIGHT",
+      "pred": "STOP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.7305848989635706
+    },
+    {
+      "token": "6eb8a3ff0abf4f3a9380a48f2a0b87ef",
+      "gt": "STOP, STRAIGHT",
+      "pred": "STOP, STRAIGHT",
+      "navigation": "go straight",
+      "elapsed_seconds": 0.6730757160112262
+    }
+  ],
+  "metadata": {
+    "schema_version": 2,
+    "eval_data_path": "/data/qh/phdCode/work4/Senna/data/senna_nusc_val_plan_corrected.json",
+    "eval_data_sha256": "5d974da8bffd6bd2668efb9fd92ea4b7c7f906a429016597dfd4ddc51b176c5b",
+    "model_path": "/data/qh/phdCode/work4/models/Senna",
+    "model_config_sha256": "4360f459f0db97c2facde2aeae4d1e77059d8dec95181bae80bfe71dc4c7dca2",
+    "implementation_sha256": {
+      "data_tools/senna_inputs.py": "9a259bfa5afec398b55701019dd21597c66f2de4dd4e9950aa568fd2a2178a53",
+      "data_tools/senna_qa_utils.py": "722f251b1e40056c8a2036f80a827e0fb0362911a8bc69ee6abfa54df6309116",
+      "eval_tools/senna_plan_cmd_eval_multi_img.py": "6cca1f482fcc0e8c384953124b41de3656be9e0fa2a6a8d20e7b060578ef29c2"
+    },
+    "vision_config_sha256": "51b1c14aabcdf639c4a0370eeda1010b773bbe1df78319c7d0f5882c22ac0ac0",
+    "vision_weight": {
+      "size": 1711974081,
+      "mtime_ns": 1791629766000000000
+    },
+    "model_files": {
+      "pytorch_model-00001-of-00002.bin": {
+        "size": 9976631486,
+        "mtime_ns": 1791630170000000000
+      },
+      "pytorch_model-00002-of-00002.bin": {
+        "size": 4149654020,
+        "mtime_ns": 1791629119000000000
+      },
+      "tokenizer.model": {
+        "size": 499723,
+        "mtime_ns": 1791628299000000000
+      }
+    },
+    "max_samples": 2,
+    "max_new_tokens": 64,
+    "allow_legacy_inputs": false,
+    "selected_samples": 2,
+    "conv_mode": "llava_v1",
+    "temperature": 0,
+    "num_beams": 1,
+    "metric": "strict_speed_path_exact_match",
+    "lora": {
+      "path": "/data/qh/phdCode/work4/Senna/outputs/senna_lora_smoke_3090_v3",
+      "files": {
+        "senna_lora_manifest.json": "fda9bba0b53aa799a521f0e7f373669d49763510490cf8219a2c0eeb7f6b89ef",
+        "adapter_config.json": "9f89de46ade0dc5a3853c4038dbce227da91e3b7598fb4d08bf9fc4ba5cd398f",
+        "adapter_model.bin": "af6a539ac55856376bffa2810a933470fd75bc2d52f4382a187701f63807cca2",
+        "non_lora_trainables.bin": "cbb3a526de8b1919a1b0e22212cbf29708adcb4b4ea42b0cd2f7103ab80eda1b"
+      },
+      "loader_sha256": "c3676e142df94ec28010ceddf55394af02cc78ac5738e941a6e2c55a9969347a"
+    }
+  }
+}

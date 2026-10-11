@@ -1,0 +1,7 @@
+# Additional analytical dependencies; use the existing Senna torch/transformers.
+numpy>=1.24
+scipy>=1.10
+Pillow>=9.1
+PyYAML>=6.0
+matplotlib>=3.7
+nuscenes-devkit>=1.1.11

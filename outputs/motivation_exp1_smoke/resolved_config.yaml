@@ -1,0 +1,41 @@
+senna:
+  checkpoint_path: /data/qh/phdCode/work4/models/Senna
+  eval_json_path: /data/qh/phdCode/work4/Senna/data/senna_nusc_val_plan_corrected.json
+  device: cuda:0
+  device_map: single
+  precision: fp16
+  max_new_tokens: 64
+  validation_samples: 2
+  detailed_samples: 1
+nuscenes:
+  dataroot: /data/qh/nuscenes/v1.0-trainval
+  version: v1.0-trainval
+experiment:
+  seed: 42
+  max_scenes: 2
+  max_temporal_pairs: 36
+  max_profile_samples: 2
+  warmup_iterations: 1
+  profile_repeats: 1
+  temporal_gaps_seconds:
+  - 0.083
+  - 0.25
+  - 0.5
+  gap_tolerance_seconds: 0.035
+  abnormal_interval_seconds:
+  - 0.02
+  - 0.2
+  analysis_resize:
+  - 320
+  - 192
+  patch_grid:
+  - 8
+  - 8
+  ssim_thresholds:
+  - 0.7
+  - 0.8
+  - 0.9
+  bootstrap_iterations: 2000
+  save_visualizations: true
+output:
+  directory: /data/qh/phdCode/work4/Senna/outputs/motivation_exp1_smoke

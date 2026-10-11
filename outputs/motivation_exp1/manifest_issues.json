@@ -1,0 +1,51 @@
+[
+  {
+    "scene_name": "scene-0632",
+    "camera_channel": "CAM_BACK",
+    "token": "37c67aec87b545398646676a77f1bb5f",
+    "reason": "abnormal_interval",
+    "delta_t_ms": 250.0
+  },
+  {
+    "scene_name": "scene-0967",
+    "camera_channel": "CAM_BACK_LEFT",
+    "token": "8ef1df5698a44002b28bf6cea943bde4",
+    "reason": "abnormal_interval",
+    "delta_t_ms": 200.003
+  },
+  {
+    "scene_name": "scene-0971",
+    "camera_channel": "CAM_FRONT_LEFT",
+    "token": "02889995a4d74e4f80e75031151e6db1",
+    "reason": "abnormal_interval",
+    "delta_t_ms": 250.0
+  },
+  {
+    "scene_name": "scene-0972",
+    "camera_channel": "CAM_BACK_LEFT",
+    "token": "b3df2daaaca842458181a7ee13c67d22",
+    "reason": "abnormal_interval",
+    "delta_t_ms": 250.0
+  },
+  {
+    "scene_name": "scene-0972",
+    "camera_channel": "CAM_BACK_LEFT",
+    "token": "a25867903e9c4c588940541ba2a7217c",
+    "reason": "abnormal_interval",
+    "delta_t_ms": 250.0
+  },
+  {
+    "scene_name": "scene-0972",
+    "camera_channel": "CAM_BACK_RIGHT",
+    "token": "cb0b42bb1a5b436992ba9fae08907af5",
+    "reason": "abnormal_interval",
+    "delta_t_ms": 250.0
+  },
+  {
+    "scene_name": "scene-0972",
+    "camera_channel": "CAM_BACK",
+    "token": "cd2e2f1a5d5240e6bcb9c818e9f20f76",
+    "reason": "abnormal_interval",
+    "delta_t_ms": 250.0
+  }
+]

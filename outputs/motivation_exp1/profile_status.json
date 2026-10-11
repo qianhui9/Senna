@@ -1,0 +1,9 @@
+{
+  "status": "complete",
+  "completed_modes": [
+    "detailed",
+    "timing"
+  ],
+  "equivalence_samples": 2,
+  "samples": 100
+}

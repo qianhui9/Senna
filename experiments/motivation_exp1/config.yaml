@@ -1,0 +1,29 @@
+senna:
+  checkpoint_path: ""  # Or SENNA_MODEL_PATH; paths are relative to repository root.
+  eval_json_path: "data/senna_nusc_val_plan_corrected.json"
+  device: "cuda:0"
+  device_map: "single"  # single or auto (cross-device stages become unavailable)
+  precision: "fp16"  # Original loader and evaluation helper use fp16.
+  max_new_tokens: 64
+  validation_samples: 2
+  detailed_samples: 1
+nuscenes:
+  dataroot: ""  # Or NUSCENES_ROOT
+  version: "v1.0-trainval"
+experiment:
+  seed: 42
+  max_scenes: 10
+  max_temporal_pairs: 500
+  max_profile_samples: 100
+  warmup_iterations: 10
+  profile_repeats: 3
+  temporal_gaps_seconds: [0.083, 0.25, 0.5]
+  gap_tolerance_seconds: 0.035
+  abnormal_interval_seconds: [0.02, 0.20]
+  analysis_resize: [320, 192]  # width, height; never used by Senna
+  patch_grid: [8, 8]  # rows, columns
+  ssim_thresholds: [0.70, 0.80, 0.90]
+  bootstrap_iterations: 2000
+  save_visualizations: true
+output:
+  directory: "outputs/motivation_exp1"

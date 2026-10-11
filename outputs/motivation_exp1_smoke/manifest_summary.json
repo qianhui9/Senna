@@ -1,0 +1,21 @@
+{
+  "scenes": [
+    {
+      "name": "scene-0559",
+      "token": "0e7ede02718341558414865d5c604745",
+      "description": "Passing intersection, pedestrian, parked cars, construction zone, construction vehicles"
+    },
+    {
+      "name": "scene-0971",
+      "token": "64bfc5edd71147858ce7446892d7f864",
+      "description": "Cross T junction, peds, parked motorcycles, turn right, jaywalker"
+    }
+  ],
+  "frames": 2786,
+  "missing_images": 0,
+  "non_key_frames": 2300,
+  "candidate_pairs": 8136,
+  "selected_pairs": 36,
+  "issues": 1,
+  "selection": "seeded scene selection; scene/camera/gap round-robin with seeded content-independent pair hashes; first gap denotes adjacent sample_data links"
+}

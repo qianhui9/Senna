@@ -1,0 +1,61 @@
+{
+  "scenes": [
+    {
+      "name": "scene-0274",
+      "token": "9709626638f5406f9f773348150d02fd",
+      "description": "Peds, construction zone, construction workers, barriers, cars, jaywalker"
+    },
+    {
+      "name": "scene-0275",
+      "token": "8377abf77f464a9cb62eacf63f383422",
+      "description": "Peds, bus, barriers, stopped at intersection"
+    },
+    {
+      "name": "scene-0276",
+      "token": "201b7c65a61f4bc1a2333ea90ba9a932",
+      "description": "Intersection, peds, cars, scooter, parked bicycle"
+    },
+    {
+      "name": "scene-0557",
+      "token": "3f90afe9f7dc49399347ae1626502aed",
+      "description": "Parked cars, pedestrian, stopped at intersection, oncoming vehicle"
+    },
+    {
+      "name": "scene-0559",
+      "token": "0e7ede02718341558414865d5c604745",
+      "description": "Passing intersection, pedestrian, parked cars, construction zone, construction vehicles"
+    },
+    {
+      "name": "scene-0632",
+      "token": "b789de07180846cc972118ee6d1fb027",
+      "description": "Rain, industrial, turn right, turn right, parked cars"
+    },
+    {
+      "name": "scene-0913",
+      "token": "55b3a17359014f398b6bbd90e94a8e1b",
+      "description": "Rain, parked cars, semi trailers, barriers, construction vehicle, parking lot, parked buses"
+    },
+    {
+      "name": "scene-0967",
+      "token": "6776b91389394ff18e57b269863b4dbf",
+      "description": "Peds on sidewalk, parked cars, parked motorcycle"
+    },
+    {
+      "name": "scene-0971",
+      "token": "64bfc5edd71147858ce7446892d7f864",
+      "description": "Cross T junction, peds, parked motorcycles, turn right, jaywalker"
+    },
+    {
+      "name": "scene-0972",
+      "token": "e005041f659c47e194cd5b18ea6fc346",
+      "description": "Parked bicycles, peds, ped walk along the road, parked cars, motorcycle, bus"
+    }
+  ],
+  "frames": 13857,
+  "missing_images": 0,
+  "non_key_frames": 11439,
+  "candidate_pairs": 40471,
+  "selected_pairs": 500,
+  "issues": 7,
+  "selection": "seeded scene selection; scene/camera/gap round-robin with seeded content-independent pair hashes; first gap denotes adjacent sample_data links"
+}
