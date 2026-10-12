@@ -6,7 +6,7 @@ Continuous driving observations may contain persistent visual content while the 
 
 ## Reproduction and provenance
 
-- Senna commit: `31a3a2336e9494c254b612665fe55e95f67e9cae`; local source SHA256 hashes and working-tree changes are recorded in `run_metadata.json`.
+- Senna commit: `63368f1d0da31940d3e7a2c3099923cb942ad6f6`; local source SHA256 hashes and working-tree changes are recorded in `run_metadata.json`.
 - Checkpoint: `/data/qh/phdCode/work4/models/Senna`; original base weights, no LoRA or weight changes.
 - nuScenes: `v1.0-trainval` at `/data/qh/nuscenes/v1.0-trainval`.
 - Evaluation JSON: `/data/qh/phdCode/work4/Senna/data/senna_nusc_val_plan_corrected.json`; SHA256 `5d974da8bffd6bd2668efb9fd92ea4b7c7f906a429016597dfd4ddc51b176c5b`.
@@ -72,33 +72,40 @@ Scope: global official 3D annotations at adjacent keyframes. Persistence ratio =
 
 Actual entry: `llava/model/builder.py::load_senna_pretrained_model` → `SennaLlavaLlamaForCausalLM`, with the implementation in `llava/senna/`, rather than generic `llava/model/llava_arch.py`. CLIP ViT-L/14-336 selects layer -2 patch features (576 tokens per image). Each of six views passes through the MLP Projector and the original img_adapter (128 tokens per image, 768 total). These are confirmed at runtime by recorded module shapes rather than assumed in the statistics.
 
-Read-only module hooks surround `get_vision_tower()`, `get_model().mm_projector` and `get_model().img_adapter`. Temporary transparent wrappers time loading/preprocessing and bracket multimodal preparation and `generate()`. All attributes/hooks are restored even on exceptions. LLM KV cache remains within each generation request; no visual state crosses requests.
+Read-only module hooks surround `get_vision_tower()`, `get_model().mm_projector` and `get_model().img_adapter`. Temporary transparent wrappers time loading/preprocessing, bracket multimodal preparation and `generate()`, and measure the original LLM `forward()` calls without modifying their arguments or outputs. All attributes/hooks are restored even on exceptions. LLM KV cache remains within each generation request; no visual state crosses requests.
 
-Single-device stage durations use CUDA events on the current stream. They include stream idle/CPU-dispatch gaps between events, and are not pure kernel-only costs. Preparation and generation are parent intervals: exclusive preparation = preparation − Vision − Projector − adapter; LLM generation = generation − inclusive preparation. End-to-end uses synchronized wall clock and includes loading, preprocessing, transfer, prompt processing and answer decoding. Other is its residual. No prefill/decode split is inferred. Multiple-device models get synchronized wall time and metadata, with unreliable stage decomposition left unavailable. Detailed Profiler records are excluded from latency summaries.
+Single-device stage durations use CUDA events on the current stream. They include stream idle/CPU-dispatch gaps between events, and are not pure kernel-only costs. Preparation and generation are parent intervals: exclusive preparation = preparation − Vision − Projector − adapter; LLM generation = generation − inclusive preparation before the LLM. The no-op preparation checks inside cached forwards remain in Decode to avoid overlap. End-to-end uses synchronized wall clock and includes loading, preprocessing, transfer, prompt processing and answer decoding. Other is its residual. Prefill is the actual full-prompt forward with empty incoming KV cache; Decode sums subsequent single-token forwards with nonempty KV cache. CUDA events bracket the original forwards. Prefill produces logits for generated token 1, so Decode has output_tokens − 1 calls. Generation setup, token selection, cache bookkeeping, stopping checks and dispatch outside forward are retained as llm_generation_overhead_ms. The measured Prefill + Decode + generation overhead equals the exclusive LLM generation parent. Prefill is not end-to-end time to first token, and these are stream intervals rather than pure kernel times. Multiple-device models get synchronized wall time and metadata, with unreliable stage decomposition left unavailable. Detailed Profiler records are excluded from latency summaries.
 
-Model load: 2.042e+04 ms (excluded from steady-state results). GPU: `NVIDIA GeForce RTX 3090`. Warmup iterations: 10; repeats per request: 3; max new tokens: 64; temperature=0, beam=1, template=llava_v1, use_cache=True.
+Model load: 1.083e+04 ms (excluded from steady-state results). GPU: `NVIDIA GeForce RTX 3090`. Warmup iterations: 10; repeats per request: 3; max new tokens: 64; temperature=0, beam=1, template=llava_v1, use_cache=True.
 
 Output equivalence: 2/2 fixed samples passed exact token IDs, decoded answers, prediction plans, input tensor hashes and generation configuration checks.
 
 | Stage/metric | Finite records | Mean | P50 | P95 | P99 |
 |---|---:|---:|---:|---:|---:|
-| image_file_loading_ms | 300 | 43.65 | 18.35 | 121 | 184.6 |
-| image_preprocessing_ms | 300 | 102.7 | 102.4 | 105.1 | 107.7 |
-| host_to_device_ms | 300 | 0.6065 | 0.6022 | 0.6234 | 0.69 |
-| vision_tower_ms | 300 | 56.48 | 56.55 | 57.05 | 57.13 |
-| projector_ms | 300 | 2.457 | 2.46 | 2.49 | 2.492 |
-| img_adapter_ms | 300 | 0.2659 | 0.2664 | 0.2696 | 0.2701 |
-| multimodal_preparation_ms | 300 | 0.6872 | 0.6796 | 0.7418 | 0.7853 |
-| llm_generation_ms | 300 | 478.8 | 479.8 | 525.8 | 527.6 |
-| other_ms | 300 | 1.274 | 1.274 | 1.321 | 1.359 |
-| end_to_end_ms | 300 | 687 | 663.2 | 770 | 833.5 |
-| vision_latency_ratio | 300 | 0.08258 | 0.08504 | 0.08875 | 0.08935 |
-| projector_latency_ratio | 300 | 0.003592 | 0.003712 | 0.003869 | 0.003902 |
-| visual_path_latency_ratio | 300 | 0.08656 | 0.08917 | 0.09303 | 0.09366 |
-| llm_generation_latency_ratio | 300 | 0.6995 | 0.7227 | 0.7413 | 0.7449 |
-| ideal_visual_path_speedup_bound | 300 | 1.095 | 1.098 | 1.103 | 1.103 |
+| image_file_loading_ms | 300 | 20.12 | 17.97 | 28.32 | 91.06 |
+| image_preprocessing_ms | 300 | 103.4 | 102.5 | 110 | 117.1 |
+| host_to_device_ms | 300 | 0.6159 | 0.611 | 0.6401 | 0.6846 |
+| vision_tower_ms | 300 | 56.27 | 56.38 | 56.91 | 57.04 |
+| projector_ms | 300 | 2.45 | 2.461 | 2.478 | 2.487 |
+| img_adapter_ms | 300 | 0.2654 | 0.2666 | 0.2686 | 0.2728 |
+| multimodal_preparation_ms | 300 | 0.5971 | 0.5872 | 0.6554 | 0.7258 |
+| llm_generation_ms | 300 | 479 | 479.8 | 526.9 | 528.3 |
+| llm_prefill_ms | 300 | 287.7 | 287.8 | 288.6 | 289.6 |
+| llm_decode_ms | 300 | 189.5 | 190.2 | 237.6 | 237.9 |
+| llm_generation_overhead_ms | 300 | 1.826 | 1.801 | 2.118 | 2.409 |
+| llm_decode_ms_per_token | 300 | 23.78 | 23.78 | 23.81 | 23.84 |
+| other_ms | 300 | 1.226 | 1.22 | 1.287 | 1.409 |
+| end_to_end_ms | 300 | 664 | 661.8 | 709.4 | 720.7 |
+| vision_latency_ratio | 300 | 0.08483 | 0.08517 | 0.08889 | 0.08939 |
+| projector_latency_ratio | 300 | 0.003693 | 0.00372 | 0.003866 | 0.003884 |
+| visual_path_latency_ratio | 300 | 0.08892 | 0.0893 | 0.09317 | 0.09359 |
+| llm_generation_latency_ratio | 300 | 0.7215 | 0.7244 | 0.7416 | 0.7464 |
+| llm_prefill_latency_ratio | 300 | 0.4337 | 0.4348 | 0.4519 | 0.4534 |
+| llm_decode_latency_ratio | 300 | 0.2851 | 0.2872 | 0.3342 | 0.3361 |
+| llm_generation_overhead_latency_ratio | 300 | 0.002749 | 0.002718 | 0.003016 | 0.003375 |
+| ideal_visual_path_speedup_bound | 300 | 1.098 | 1.098 | 1.103 | 1.103 |
 
-`profile_scene_statistics` in `aggregate_summary.json` records scene-level latency confidence intervals. Request output lengths exclude the artificial initial BOS token in the inspected inputs_embeds generation path; returned sequence length and BOS removal are also recorded. Shapes, allocated/reserved GPU peaks and call counts are in `profiling_samples.csv`. The ideal bound removes measured Vision + Projector + adapter time at zero added management cost; it is not a measured or attainable speedup.
+`profile_scene_statistics` in `aggregate_summary.json` records scene-level latency confidence intervals. Request output lengths exclude the artificial initial BOS token in the inspected inputs_embeds generation path; returned sequence length and BOS removal are also recorded. Shapes, allocated/reserved GPU peaks, call counts and per-forward CUDA durations/input lengths/incoming and outgoing KV lengths are in `profiling_samples.csv`. Exactly one Prefill, one-token cached Decode, monotonic KV growth and the forward/output-token count relationship are checked per request. `llm_decode_ms_per_token` divides Decode by the cached-forward count, excluding generated token 1. Detailed traces expose `senna.llm_prefill` and `senna.llm_decode` ranges; these ranges are disabled in low-overhead timing. The ideal bound removes measured Vision + Projector + adapter time at zero added management cost; it is not a measured or attainable speedup.
 
 Recorded input_shape: `[1, 6, 3, 336, 336]`.
 
@@ -138,17 +145,14 @@ Similarity and original inference use distinct input sources. Sample-level compa
 
 [Vector PDF](figures/matched_similarity_latency.pdf). Availability: True. 
 
-M1(d) Other includes img_adapter, loading, transfer, exclusive preparation and residual costs. Parent timings are never stacked with their children. M1(e) has no fabricated values when exact linkage is absent.
+M1(d) replaces the former LLM Generation bar with measured LLM Prefill and LLM Decode. Other includes img_adapter, loading, transfer, exclusive preparation, generation overhead and residual costs. Its stacked segments still sum to synchronized end-to-end latency. The first 12 requests are shown, averaging 3 repeats per request; full-workload statistics use all timing records. Parent timings are never stacked with their children. M1(e) has no fabricated values when exact linkage is absent.
 
 ## Missing data, anomalies and limitations
 
-- aggregate: complete; 
 - index: complete; 
 - objects: complete; 
-- plot: complete; 
 - profile: complete; 
 - redundancy: complete; 
-- report: complete; 
 - manifest_issues: 7 recorded issues; inspect `manifest_issues.json`.
 - similarity_issues: 0 recorded issues; inspect `similarity_issues.json`.
 - object_issues: 0 recorded issues; inspect `object_issues.json`.
@@ -164,7 +168,7 @@ Measured group-level scene-mean SSIM spans 0.4269–0.7984; the tables and M1(a/
 
 Global annotated instances persist at the recorded ratio of 0.9531; camera-visible persistence remains unmeasured.
 
-All 300 recorded low-overhead requests execute 1–1 Vision Tower calls; runtime shapes/call counts establish repeated encoding for these requests. Vision latency fraction mean is 0.08258; its practical importance must be judged against the measured end-to-end cost and workload variability.
+All 300 recorded low-overhead requests execute 1–1 Vision Tower calls; runtime shapes/call counts establish repeated encoding for these requests. Vision latency fraction mean is 0.08483; its practical importance must be judged against the measured end-to-end cost and workload variability.
 
 For each recorded input shape, `input_shape_groups` reports encoding token counts and latency. Fixed token counts establish a fixed encoding scale in the tested inputs; they do not establish that runtime cost is independent of scene content. The hypothesis receives evidence only for the recorded components and sampled workload.
 

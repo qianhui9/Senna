@@ -54,8 +54,8 @@ def inference_args(sample, cfg):
 
 def profile_summary(rows):
     timing = [r for r in rows if r["measurement_mode"] == "timing"]
-    metrics = ("image_file_loading_ms", "image_preprocessing_ms", "host_to_device_ms", "vision_tower_ms", "projector_ms", "img_adapter_ms", "multimodal_preparation_ms", "llm_generation_ms", "other_ms", "end_to_end_ms", "vision_latency_ratio", "projector_latency_ratio", "visual_path_latency_ratio", "llm_generation_latency_ratio", "ideal_visual_path_speedup_bound")
-    return {"timing_records": len(timing), "unique_samples": len({r["sample_token"] for r in timing}), "metrics": {key: distribution([r.get(key) for r in timing]) for key in metrics}, "detailed_records_excluded": sum(r["measurement_mode"] != "timing" for r in rows), "speedup_caveat": "Ideal bound removes measured Vision Tower + Projector + img_adapter only, assumes zero added management cost; not an achievable or measured speedup", "prefill_decode": "Not separately measured; llm_generation_ms covers original autoregressive generation after multimodal preparation"}
+    metrics = ("image_file_loading_ms", "image_preprocessing_ms", "host_to_device_ms", "vision_tower_ms", "projector_ms", "img_adapter_ms", "multimodal_preparation_ms", "llm_generation_ms", "llm_prefill_ms", "llm_decode_ms", "llm_generation_overhead_ms", "llm_decode_ms_per_token", "other_ms", "end_to_end_ms", "vision_latency_ratio", "projector_latency_ratio", "visual_path_latency_ratio", "llm_generation_latency_ratio", "llm_prefill_latency_ratio", "llm_decode_latency_ratio", "llm_generation_overhead_latency_ratio", "ideal_visual_path_speedup_bound")
+    return {"timing_records": len(timing), "unique_samples": len({r["sample_token"] for r in timing}), "metrics": {key: distribution([r.get(key) for r in timing]) for key in metrics}, "detailed_records_excluded": sum(r["measurement_mode"] != "timing" for r in rows), "speedup_caveat": "Ideal bound removes measured Vision Tower + Projector + img_adapter only, assumes zero added management cost; not an achievable or measured speedup", "prefill_decode": "CUDA events around original model.forward: prefill consumes full multimodal prompt with empty incoming KV cache and produces token one; decode sums subsequent single-token forwards with nonempty KV cache. Generation setup, token selection, cache bookkeeping, stopping checks and dispatch outside forward remain llm_generation_overhead_ms (plotted in Other). These are current-stream forward intervals, not pure kernel times or time to first token."}
 
 
 def matched_results(samples, linked, rows, cfg, out):
@@ -156,11 +156,13 @@ def run(cfg, args, out):
                     trace_dir = out / "profiler_trace"
                     trace_dir.mkdir(exist_ok=True)
                     with torch.profiler.profile(activities=[torch.profiler.ProfilerActivity.CPU, torch.profiler.ProfilerActivity.CUDA], record_shapes=True, profile_memory=True, with_stack=False) as prof:
-                        answer, ids, _, metrics = timed_request(request, tokenizer, model, processor)
+                        answer, ids, _, metrics = timed_request(request, tokenizer, model, processor, record_ranges=True)
                     prof.export_chrome_trace(str(trace_dir / (sample["token"] + ".json")))
                     (trace_dir / (sample["token"] + "_operators.txt")).write_text(prof.key_averages().table(sort_by="cuda_time_total", row_limit=100))
                 else:
                     answer, ids, _, metrics = timed_request(request, tokenizer, model, processor)
+                if not metrics["llm_split_valid"] and metrics["timing_decomposition_valid"]:
+                    raise RuntimeError("A valid stage decomposition requires measured LLM prefill/decode")
                 if sample["token"] in expected_outputs and (answer, ids) != expected_outputs[sample["token"]]:
                     raise RuntimeError("A measured request differs from its verified original output")
                 link = linked.get(sample["token"], {})

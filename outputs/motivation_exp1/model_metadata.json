@@ -1,6 +1,6 @@
 {
-  "model_loading_ms": 20419.026638148353,
-  "cuda_initialization_ms": 80.99786820821464,
+  "model_loading_ms": 10831.163107883185,
+  "cuda_initialization_ms": 77.46618916280568,
   "class": "SennaLlavaLlamaForCausalLM",
   "model_config": {
     "vocab_size": 32000,

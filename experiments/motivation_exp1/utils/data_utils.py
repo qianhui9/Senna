@@ -204,7 +204,7 @@ def initialize(cfg, args):
         if changed and args.existing == "overwrite":
             # Never label stale outputs with new provenance. Clear experiment-
             # owned products only; user files and unrelated directories survive.
-            owned = {"camera_manifest.csv", "temporal_pairs.csv", "temporal_similarity.csv", "patch_similarity.csv", "object_persistence.csv", "profiling_samples.csv", "matched_profile_pairs.csv", "scene_statistics.csv", "experiment_report.md", "model_metadata.json", "output_equivalence.json", "aggregate_summary.json", "profiling_summary.json", "manifest_summary.json", "manifest_issues.json", "similarity_issues.json", "object_issues.json", "matched_profile_issues.json", "figure_metadata.json", "invocation_status.json"}
+            owned = {"camera_manifest.csv", "temporal_pairs.csv", "temporal_similarity.csv", "patch_similarity.csv", "object_persistence.csv", "profiling_samples.csv", "matched_profile_pairs.csv", "scene_statistics.csv", "experiment_report.md", "model_metadata.json", "output_equivalence.json", "aggregate_summary.json", "profiling_summary.json", "manifest_summary.json", "manifest_issues.json", "similarity_issues.json", "object_issues.json", "matched_profile_issues.json", "figure_metadata.json", "invocation_status.json", "verification_results.json"}
             for p in out.iterdir():
                 if p.is_file() and (p.name in owned or p.name.endswith("_status.json")):
                     p.unlink()

@@ -91,9 +91,9 @@ def run(cfg, args, out):
     save(fig, "M1c_object_persistence", bool(usable))
 
     fig, ax = plt.subplots(figsize=(6.5, 3.7), layout="constrained")
-    profile = [r for r in read_csv(out / "profiling_samples.csv") if r["measurement_mode"] == "timing" and str(r["timing_decomposition_valid"]).lower() == "true"]
+    profile = [r for r in read_csv(out / "profiling_samples.csv") if r["measurement_mode"] == "timing" and str(r["timing_decomposition_valid"]).lower() == "true" and str(r.get("llm_split_valid", "")).lower() == "true"]
     if profile:
-        stages = {"Preprocessing": ["image_preprocessing_ms"], "Vision Tower": ["vision_tower_ms"], "Projector": ["projector_ms"], "LLM Generation": ["llm_generation_ms"], "Other": ["image_file_loading_ms", "host_to_device_ms", "img_adapter_ms", "multimodal_preparation_ms", "other_ms"]}
+        stages = {"Preprocessing": ["image_preprocessing_ms"], "Vision Tower": ["vision_tower_ms"], "Projector": ["projector_ms"], "LLM Prefill": ["llm_prefill_ms"], "LLM Decode": ["llm_decode_ms"], "Other": ["image_file_loading_ms", "host_to_device_ms", "img_adapter_ms", "multimodal_preparation_ms", "llm_generation_overhead_ms", "other_ms"]}
         groups = defaultdict(list)
         for r in profile:
             groups[r["sample_token"]].append(r)
@@ -107,11 +107,12 @@ def run(cfg, args, out):
         ax.set_xticks(np.arange(len(keys)), [k[:6] for k in keys], rotation=45)
         ax.set_ylim(0, max(bottom) * 1.35)
         ax.legend(ncol=3, fontsize=7, loc="upper left")
-        ax.text(.02, .84, "Other includes img_adapter, loading, transfer and preparation residual", va="top", fontsize=7, transform=ax.transAxes)
+        ax.text(.02, .84, "Other: loading, transfer, adapter, preparation + generation overhead\nPrefill produces token 1; Decode sums subsequent cached forwards", va="top", fontsize=7, transform=ax.transAxes)
     else:
-        unavailable(ax, "No valid single-device low-overhead timing")
+        unavailable(ax, "No valid single-device measured prefill/decode timing; rerun profiling")
     ax.set(xlabel="Original six-view request (sample token prefix)", ylabel="Latency (ms)", title="M1(d) Senna Inference Latency Breakdown")
     save(fig, "M1d_latency_breakdown", bool(profile))
+    metadata["M1d_latency_breakdown"].update(llm_split="measured forward intervals; generation overhead in Other", plotted_requests=min(12, len({r["sample_token"] for r in profile})), timing_records=len(profile))
 
     matched = [r for r in read_csv(out / "matched_profile_pairs.csv") if r.get("camera_channel") == "CAM_FRONT"]
     # Show frames and execution for exactly matched evaluation requests only.

@@ -31,9 +31,11 @@ class AggregationTests(unittest.TestCase):
         self.assertEqual(counts(set(), {"a"})["persistence_ratio"], "")
 
     def test_detailed_profiler_excluded(self):
-        rows = [{"sample_token": "s", "measurement_mode": "timing", "end_to_end_ms": 10}, {"sample_token": "s", "measurement_mode": "detailed", "end_to_end_ms": 1000}]
+        rows = [{"sample_token": "s", "measurement_mode": "timing", "end_to_end_ms": 10, "llm_prefill_ms": 4, "llm_decode_ms": 3}, {"sample_token": "s", "measurement_mode": "detailed", "end_to_end_ms": 1000, "llm_prefill_ms": 400, "llm_decode_ms": 300}]
         self.assertEqual(profile_summary(rows)["metrics"]["end_to_end_ms"]["mean"], 10)
         self.assertEqual(profile_summary(rows)["detailed_records_excluded"], 1)
+        self.assertEqual(profile_summary(rows)["metrics"]["llm_prefill_ms"]["mean"], 4)
+        self.assertEqual(profile_summary(rows)["metrics"]["llm_decode_ms"]["mean"], 3)
 
     def test_matched_paths_required_for_linkage(self):
         cfg = config()

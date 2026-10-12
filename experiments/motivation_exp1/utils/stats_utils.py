@@ -56,3 +56,17 @@ def latency_partition(end_to_end, loading, preprocessing, transfer, generate, pr
             "vision_latency_ratio": vision / end_to_end, "projector_latency_ratio": projector / end_to_end,
             "visual_path_latency_ratio": visual / end_to_end, "llm_generation_latency_ratio": llm / end_to_end,
             "ideal_visual_path_speedup_bound": end_to_end / (end_to_end - visual) if end_to_end > visual else None}
+
+
+def llm_latency_partition(generation, prefill, decode, end_to_end):
+    """Partition forward costs and retain generation-loop overhead as a residual."""
+    if any(not np.isfinite(v) or v < 0 for v in (generation, prefill, decode)) or not np.isfinite(end_to_end) or end_to_end <= 0:
+        raise ValueError("Invalid LLM timings")
+    overhead = generation - prefill - decode
+    if overhead < 0:
+        raise ValueError("LLM forward timings exceed exclusive generation parent")
+    return {"llm_prefill_ms": prefill, "llm_decode_ms": decode,
+            "llm_generation_overhead_ms": overhead,
+            "llm_prefill_latency_ratio": prefill / end_to_end,
+            "llm_decode_latency_ratio": decode / end_to_end,
+            "llm_generation_overhead_latency_ratio": overhead / end_to_end}

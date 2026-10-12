@@ -1,22 +1,155 @@
 {
   "unit_tests": {
     "runner": "Senna python -m unittest discover -s experiments/motivation_exp1/tests -v",
-    "passed": 25,
+    "passed": 30,
     "failed": 0
   },
   "compileall": "passed",
-  "dry_run": "passed; CUDA/model/evaluation/tables available",
-  "resume_interruption_fixture": "passed; interrupted patch commit recovered without duplication; synthetic test only",
-  "real_smoke_test": "passed; 2 scenes, 36 image pairs, 2 original requests, both profiling modes",
-  "configured_full_run": "passed; 10 scenes, 500 pairs, 100 requests x 3 repeats, both profiling modes",
-  "real_data_audit": "passed; same scene/camera, actual timestamps, direct adjacent links, tolerance checks, annotation set counts, 64 patches per pair",
-  "latency_partition_max_absolute_error_ms": 0.0,
+  "configured_full_run": "passed; original 10 scenes, 500 pairs, 100 requests x 3 repeats and one detailed trace",
+  "previous_results_backup": "/data/qh/phdCode/work4/Senna/outputs/motivation_exp1_before_llm_split_20261011_215902",
+  "unchanged_scientific_configuration_data_model_dependencies": true,
+  "unchanged_data_csv_hashes": {
+    "camera_manifest.csv": true,
+    "temporal_pairs.csv": true,
+    "temporal_similarity.csv": true,
+    "patch_similarity.csv": true,
+    "object_persistence.csv": true
+  },
+  "real_data_audit": "passed; all five data CSVs match the previous verified run byte-for-byte",
   "profiling_records": 300,
+  "detailed_records_excluded": 1,
   "matched_front_pairs": 90,
   "equivalence_samples_passed": 2,
+  "generation_matches_previous_run": {
+    "unique_samples": 100,
+    "timing_rows": 300,
+    "detailed_rows": 1,
+    "all_token_ids_and_predictions_equal": true
+  },
+  "latency_partition_max_absolute_error_ms": 0.0,
+  "llm_split": {
+    "valid_timing_records": 300,
+    "valid_detailed_records": 1,
+    "exactly_one_prefill_per_request": true,
+    "decode_calls_equal_output_tokens_minus_one": true,
+    "single_token_decode_and_monotonic_kv_cache_verified": true,
+    "prefill_input_tokens": [
+      999,
+      1002
+    ],
+    "prefill_matches_raw_forward_max_absolute_error_ms": 0.0,
+    "decode_matches_raw_forward_max_absolute_error_ms": 0.0,
+    "generation_parent_max_absolute_error_ms": 0.0,
+    "overhead_plotted_in": "Other",
+    "by_output_tokens": {
+      "8": {
+        "records": 57,
+        "cached_decode_calls": 7,
+        "llm_prefill_ms": {
+          "n": 57,
+          "mean": 287.5476379394531,
+          "p50": 287.660888671875,
+          "p95": 288.6082336425781,
+          "p99": 288.72626708984376
+        },
+        "llm_decode_ms": {
+          "n": 57,
+          "mean": 166.5020364794815,
+          "p50": 166.55548858642578,
+          "p95": 166.66360168457032,
+          "p99": 166.6746697998047
+        },
+        "llm_generation_overhead_ms": {
+          "n": 57,
+          "mean": 1.6691443794652034,
+          "p50": 1.6637458801269531,
+          "p95": 1.778390121459961,
+          "p99": 1.8027587890624999
+        },
+        "llm_decode_ms_per_token": {
+          "n": 57,
+          "mean": 23.786005211354496,
+          "p50": 23.793641226632253,
+          "p95": 23.809085954938617,
+          "p99": 23.810667114257814
+        }
+      },
+      "9": {
+        "records": 219,
+        "cached_decode_calls": 8,
+        "llm_prefill_ms": {
+          "n": 219,
+          "mean": 287.7375259747788,
+          "p50": 287.8421936035156,
+          "p95": 288.60707702636716,
+          "p99": 289.59519958496094
+        },
+        "llm_decode_ms": {
+          "n": 219,
+          "mean": 190.26290188967909,
+          "p50": 190.2630386352539,
+          "p95": 190.580393409729,
+          "p99": 190.7143902206421
+        },
+        "llm_generation_overhead_ms": {
+          "n": 219,
+          "mean": 1.8252129141054196,
+          "p50": 1.8079471588134766,
+          "p95": 1.9262266159057617,
+          "p99": 2.0895015335083005
+        },
+        "llm_decode_ms_per_token": {
+          "n": 219,
+          "mean": 23.782862736209886,
+          "p50": 23.78287982940674,
+          "p95": 23.822549176216125,
+          "p99": 23.83929877758026
+        }
+      },
+      "11": {
+        "records": 24,
+        "cached_decode_calls": 10,
+        "llm_prefill_ms": {
+          "n": 24,
+          "mean": 287.2190907796224,
+          "p50": 287.5453338623047,
+          "p95": 288.54593048095705,
+          "p99": 288.9510986328125
+        },
+        "llm_decode_ms": {
+          "n": 24,
+          "mean": 237.66435043017069,
+          "p50": 237.61086559295654,
+          "p95": 238.00564289093018,
+          "p99": 238.0928785133362
+        },
+        "llm_generation_overhead_ms": {
+          "n": 24,
+          "mean": 2.211315711339315,
+          "p50": 2.1351966857910156,
+          "p95": 2.566262817382812,
+          "p99": 3.2030453491210933
+        },
+        "llm_decode_ms_per_token": {
+          "n": 24,
+          "mean": 23.76643504301707,
+          "p50": 23.761086559295656,
+          "p95": 23.800564289093018,
+          "p99": 23.809287851333618
+        }
+      }
+    }
+  },
   "source_provenance": "passed; all 24 recorded source hashes match",
-  "trace_audit": "passed; CPU ops, CUDA kernels and memory events present",
-  "figure_audit": "passed; 6 available figures, PNG 300 DPI and PDF headers valid",
+  "trace_audit": {
+    "passed": true,
+    "prefill_ranges": 1,
+    "decode_ranges": 8,
+    "kernel_events": 14439,
+    "cpu_op_events": 61785,
+    "memory_events": 31406
+  },
+  "figure_audit": "passed; 6 available figures, PNG 300 DPI and PDF headers valid; M1d shows 12 requests, 300 measurements in summaries",
   "overall_gap_ssim_scene_bootstrap": {
     "adjacent": {
       "scenes": 10,
@@ -82,11 +215,14 @@
       }
     }
   },
+  "previous_run_checks": {
+    "verification_file": "/data/qh/phdCode/work4/Senna/outputs/motivation_exp1_before_llm_split_20261011_215902/verification_results.json",
+    "note": "Earlier dry-run, smoke, interruption and completed-resume checks are archived; current split checks are above."
+  },
   "remaining_unmeasured": [
     "camera-specific object visibility",
-    "separate LLM prefill/decode",
     "cross-device stage decomposition",
     "any WorldStream optimization or speedup"
   ],
-  "real_completed_pipeline_resume": "passed; completed index/objects/similarity/profiling skipped; 300 timing records retained; aggregate/plots/report regenerated without GPU inference"
+  "audit_script_sha256": "57cc9fbdb697899d852eaf519a819dfd56c900841eb1fbc44fe8616075b35715"
 }

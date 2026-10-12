@@ -21,7 +21,10 @@
     "available": true,
     "reason": "",
     "png_dpi": 300,
-    "pdf": "vector text/plots; frame photographs embedded as raster"
+    "pdf": "vector text/plots; frame photographs embedded as raster",
+    "llm_split": "measured forward intervals; generation overhead in Other",
+    "plotted_requests": 12,
+    "timing_records": 300
   },
   "M1e_repeated_execution": {
     "available": true,

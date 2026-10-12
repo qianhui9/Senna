@@ -141,12 +141,35 @@ kernels and memory activity. Breakdown definitions are disjoint:
 - `vision_tower_ms`, `projector_ms`, `img_adapter_ms`: actual leaf module calls;
 - `multimodal_preparation_ms`: parent preparation minus these three leaves;
 - `llm_generation_ms`: parent generation minus inclusive preparation;
+- `llm_prefill_ms`: the original LLM forward consuming the full multimodal
+  prompt with empty incoming KV cache, including the logits for generated token 1;
+- `llm_decode_ms`: sum of subsequent original single-token forwards using
+  nonempty KV cache (there are `output_tokens - 1` calls);
+- `llm_generation_overhead_ms`: `llm_generation_ms - llm_prefill_ms -
+  llm_decode_ms`, retaining generation setup, token selection, cache bookkeeping,
+  stopping checks and dispatch outside the forward intervals;
 - `other_ms`: end-to-end minus loading, preprocessing, transfers and generation.
 
 `preparation_inclusive_ms` and `generate_inclusive_ms` are diagnostic parents;
-never add them to the leaf/exclusive stages. M1(d) Other combines img_adapter,
-exclusive preparation, transfers, loading, and residual time. Exact prefill/decode
-segmentation is not attempted. End-to-end excludes model load, warmup, equivalence
+`llm_generation_ms` is also a parent of the measured prefill, decode and generation
+overhead intervals. Never add these parents to their children. M1(d) stacks
+separate LLM Prefill and LLM Decode bars. Its Other combines img_adapter, exclusive
+preparation, transfers, loading, generation overhead and residual time. All
+segments still sum to the synchronized end-to-end request latency.
+
+Phase classification inspects the actual incoming KV cache and forward input
+length. Each row records `llm_forward_calls` with input shapes, input/output KV
+lengths and CUDA-event durations. Exactly one prefill, single-token decode,
+monotonic KV growth and the forward/output-token relationship are verified.
+Senna's no-op multimodal preparation checks inside cached forwards remain inside
+Decode; only preparation before the LLM is subtracted from the generation parent.
+`llm_decode_ms_per_token` divides Decode by the actual number of cached forwards,
+excluding the first generated token. Prefill is an LLM forward interval, not
+end-to-end time to first token. Timing includes current-stream dispatch/idle
+gaps; it is not pure kernel time. Detailed traces contain `senna.llm_prefill` and
+`senna.llm_decode` ranges, which are disabled during low-overhead measurements.
+Old rows without measured splits cannot produce M1(d); rerun profiling instead
+of estimating a split from the old total. End-to-end excludes model load, warmup, equivalence
 checks and detailed tracing. CPU OS file caches are not flushed. Output token
 counts exclude the artificial BOS prefix in this local inputs_embeds generation
 path; returned sequence length and raw IDs are retained.

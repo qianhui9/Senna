@@ -1,0 +1,92 @@
+{
+  "unit_tests": {
+    "runner": "Senna python -m unittest discover -s experiments/motivation_exp1/tests -v",
+    "passed": 25,
+    "failed": 0
+  },
+  "compileall": "passed",
+  "dry_run": "passed; CUDA/model/evaluation/tables available",
+  "resume_interruption_fixture": "passed; interrupted patch commit recovered without duplication; synthetic test only",
+  "real_smoke_test": "passed; 2 scenes, 36 image pairs, 2 original requests, both profiling modes",
+  "configured_full_run": "passed; 10 scenes, 500 pairs, 100 requests x 3 repeats, both profiling modes",
+  "real_data_audit": "passed; same scene/camera, actual timestamps, direct adjacent links, tolerance checks, annotation set counts, 64 patches per pair",
+  "latency_partition_max_absolute_error_ms": 0.0,
+  "profiling_records": 300,
+  "matched_front_pairs": 90,
+  "equivalence_samples_passed": 2,
+  "source_provenance": "passed; all 24 recorded source hashes match",
+  "trace_audit": "passed; CPU ops, CUDA kernels and memory events present",
+  "figure_audit": "passed; 6 available figures, PNG 300 DPI and PDF headers valid",
+  "overall_gap_ssim_scene_bootstrap": {
+    "adjacent": {
+      "scenes": 10,
+      "scene_equal_weight_mean": 0.6560912292613486,
+      "ci95": [
+        0.5974471615920142,
+        0.7177154940747535
+      ],
+      "bootstrap_unit": "scene mean",
+      "scene_means": {
+        "0e7ede02718341558414865d5c604745": 0.5994643807569089,
+        "201b7c65a61f4bc1a2333ea90ba9a932": 0.6060310317735306,
+        "3f90afe9f7dc49399347ae1626502aed": 0.814628099629201,
+        "55b3a17359014f398b6bbd90e94a8e1b": 0.7553657877262947,
+        "64bfc5edd71147858ce7446892d7f864": 0.5347155252386303,
+        "6776b91389394ff18e57b269863b4dbf": 0.6579097160132592,
+        "8377abf77f464a9cb62eacf63f383422": 0.7687097967013199,
+        "9709626638f5406f9f773348150d02fd": 0.5435721945465203,
+        "b789de07180846cc972118ee6d1fb027": 0.7229381104159349,
+        "e005041f659c47e194cd5b18ea6fc346": 0.5575776498118858
+      }
+    },
+    "0.25s": {
+      "scenes": 10,
+      "scene_equal_weight_mean": 0.5597629346273976,
+      "ci95": [
+        0.48286240641355044,
+        0.6345763351150974
+      ],
+      "bootstrap_unit": "scene mean",
+      "scene_means": {
+        "0e7ede02718341558414865d5c604745": 0.5197996721099958,
+        "201b7c65a61f4bc1a2333ea90ba9a932": 0.4419202155003963,
+        "3f90afe9f7dc49399347ae1626502aed": 0.7609807087392025,
+        "55b3a17359014f398b6bbd90e94a8e1b": 0.6832338356661753,
+        "64bfc5edd71147858ce7446892d7f864": 0.5588485137102105,
+        "6776b91389394ff18e57b269863b4dbf": 0.5430486120967346,
+        "8377abf77f464a9cb62eacf63f383422": 0.6045949350664481,
+        "9709626638f5406f9f773348150d02fd": 0.40291409782918886,
+        "b789de07180846cc972118ee6d1fb027": 0.6881231862082523,
+        "e005041f659c47e194cd5b18ea6fc346": 0.3941655693473711
+      }
+    },
+    "0.5s": {
+      "scenes": 10,
+      "scene_equal_weight_mean": 0.49338814832799455,
+      "ci95": [
+        0.41965743485352786,
+        0.5615697208340459
+      ],
+      "bootstrap_unit": "scene mean",
+      "scene_means": {
+        "0e7ede02718341558414865d5c604745": 0.45974015458048356,
+        "201b7c65a61f4bc1a2333ea90ba9a932": 0.41227638825723373,
+        "3f90afe9f7dc49399347ae1626502aed": 0.5644016017015929,
+        "55b3a17359014f398b6bbd90e94a8e1b": 0.6682346269522657,
+        "64bfc5edd71147858ce7446892d7f864": 0.48796870371967577,
+        "6776b91389394ff18e57b269863b4dbf": 0.3909997129304104,
+        "8377abf77f464a9cb62eacf63f383422": 0.606922179979643,
+        "9709626638f5406f9f773348150d02fd": 0.34236402209229,
+        "b789de07180846cc972118ee6d1fb027": 0.6462124631075706,
+        "e005041f659c47e194cd5b18ea6fc346": 0.3547616299587795
+      }
+    }
+  },
+  "remaining_unmeasured": [
+    "camera-specific object visibility",
+    "separate LLM prefill/decode",
+    "cross-device stage decomposition",
+    "any WorldStream optimization or speedup"
+  ],
+  "real_completed_pipeline_resume": "passed; completed index/objects/similarity/profiling skipped; 300 timing records retained; aggregate/plots/report regenerated without GPU inference"
+}

@@ -63,19 +63,19 @@
     "experiments/motivation_exp1/analyze_object_persistence.py": "1b0856ab482a5cdf63e6f9492040dc087e1a0f4a344fb5098ece60d0e19d248a",
     "experiments/motivation_exp1/analyze_temporal_redundancy.py": "141a48cff0e539b932da14440315c2fd3e49ee995b9bc2c9393c8c709f144699",
     "experiments/motivation_exp1/build_nuscenes_manifest.py": "2dbe165b54b05cd29abb0fc349d872b52fe69bfed09b4f129e6a676f43b1cd46",
-    "experiments/motivation_exp1/generate_report.py": "205a640c906ff87fac770cbc153f0e593e16cd89a2d85d4213d53df3ad12bf2c",
-    "experiments/motivation_exp1/plot_results.py": "3ed3f55ce68938a67c99ea3eb567de0c0875c0b59716567762d898c308a5f3d4",
-    "experiments/motivation_exp1/profile_senna.py": "64ea21e4b5ba6c855b3467f9fb6f0499a6f8a090fb84be36aee75860316023d1",
+    "experiments/motivation_exp1/generate_report.py": "500c21a908fa6466e72f093421e560076b6d71112edc49598d8dabe89dca4565",
+    "experiments/motivation_exp1/plot_results.py": "a84ff8d285bf12d1007de58e0b80f3c5816e58377e7626ddd8b099bfa1cf3843",
+    "experiments/motivation_exp1/profile_senna.py": "afe5999986190ff8b7768f6cdecdb66c937c83ba7c284cb2612f552e1f4470c2",
     "experiments/motivation_exp1/run.py": "812d92730c11bb93ea34366722b01c84405b2d09247a55b19923d6d4926720ba",
     "experiments/motivation_exp1/tests/__init__.py": "c8a8e472472797725edeac1eee77fbdc47c5c2f45e8688560eb1cef6f40fc7e5",
-    "experiments/motivation_exp1/tests/test_aggregation.py": "ea815fba6b2845142a91715360033f0e91bfbe95228189aa89d691037e75f675",
+    "experiments/motivation_exp1/tests/test_aggregation.py": "125f8281c00f5a501eef9d7b82506e3dfeea0f4d5106d4157b893ecf400af936",
     "experiments/motivation_exp1/tests/test_manifest.py": "9301313b0c1233f500dcbaa0df7aa40e97912a3b84b16b9dacbfb86b66736a7a",
-    "experiments/motivation_exp1/tests/test_profiling_utils.py": "12c3d72e1b3072463622233d2350384918f0e555795a5bbb29ab9473c3228cf5",
+    "experiments/motivation_exp1/tests/test_profiling_utils.py": "932c20ff3bc9ec3f0265926e332b370a1055730877d3dabcfe0c0b589576649e",
     "experiments/motivation_exp1/tests/test_similarity.py": "73da686f1d06edc214c6ee936a9eb8ac4ec56d9be5877b0e8b90c887d9a8031b",
     "experiments/motivation_exp1/utils/__init__.py": "bec2b379b27e664672d459303c122ba604ccccd2735bbb808fea648c2fd0c4e4",
-    "experiments/motivation_exp1/utils/data_utils.py": "7dbff857c593e37cd8a27a090354853f9d24cc6c13c03a53a50f7a21a2ca0ec9",
-    "experiments/motivation_exp1/utils/profiling_utils.py": "416bb223f11803ed7326ef582b94f6bda32fd46a45695581951066c79feeee68",
-    "experiments/motivation_exp1/utils/stats_utils.py": "479c7de944de56d57b7cedad99811d0538b9533108aed7ffa2a3e9308cd7e417"
+    "experiments/motivation_exp1/utils/data_utils.py": "1dff75fd09747beff9fc56d40712dd91fdd4c51f03977efbf44d208fdeeabd1c",
+    "experiments/motivation_exp1/utils/profiling_utils.py": "84c59a1d1c5d489210cb1d6296cd2f321853a024d417749b90a2c9a12ce2b07f",
+    "experiments/motivation_exp1/utils/stats_utils.py": "04871fc9c52637182ed935906b223b293286131e7a42b6ae8d52e608b4147b00"
   },
   "packages": {
     "torch": "2.0.1+cu118",
@@ -203,9 +203,9 @@
       "mtime_ns": 1553285910000000000
     }
   },
-  "fingerprint": "75e1a404900c0fce6c7009404db5ce87cd63154025ff3253dfd5aa1244ed90a7",
-  "git_commit": "31a3a2336e9494c254b612665fe55e95f67e9cae",
-  "git_status": "M data_tools/senna_nusc_converter.sh\n M data_tools/senna_nusc_data_converter.py\n M data_tools/senna_qa_utils.py\n M eval_tools/senna_plan_cmd_eval_multi_img.py\n M eval_tools/senna_plan_cmd_eval_multi_img.sh\n M llava/model/language_model/__pycache__/llava_llama.cpython-310.pyc\n M llava/model/language_model/__pycache__/llava_mpt.cpython-310.pyc\n M train_tools/train_senna_llava_lora.sh\n?? .aris/\n?? data/\n?? data_tools/__pycache__/\n?? data_tools/senna_inputs.py\n?? eval_tools/__pycache__/\n?? eval_tools/prepare_senna_plan_eval.py\n?? eval_tools/run_senna_val_corrected.sh\n?? eval_tools/senna_inference.py\n?? eval_tools/senna_inference.sh\n?? eval_tools/test_senna_inputs.py\n?? experiments/\n?? llava/__pycache__/\n?? llava/model/__pycache__/\n?? llava/model/multimodal_encoder/__pycache__/\n?? llava/model/multimodal_projector/__pycache__/\n?? llava/senna/__pycache__/\n?? outputs/\n?? tools/\n?? train_tools/__pycache__/\n?? train_tools/lora_io.py\n?? train_tools/prepare_senna_lora_data.sh\n?? train_tools/senna_lora.py\n?? train_tools/senna_lora_env.json\n?? train_tools/test_senna_lora.py\n?? train_tools/train_senna_lora_3090.sh\n?? \"\\350\\277\\220\\350\\241\\214\\346\\226\\207\\344\\273\\266.md\"",
+  "fingerprint": "ee75a9421fa293b2fa25a27f7f495621e15b8bcc07ae4d65b064d15c4753d8d8",
+  "git_commit": "63368f1d0da31940d3e7a2c3099923cb942ad6f6",
+  "git_status": "M experiments/motivation_exp1/README.md\n M experiments/motivation_exp1/generate_report.py\n M experiments/motivation_exp1/plot_results.py\n M experiments/motivation_exp1/profile_senna.py\n M experiments/motivation_exp1/tests/test_aggregation.py\n M experiments/motivation_exp1/tests/test_profiling_utils.py\n M experiments/motivation_exp1/utils/data_utils.py\n M experiments/motivation_exp1/utils/profiling_utils.py\n M experiments/motivation_exp1/utils/stats_utils.py\n D outputs/motivation_exp1/aggregate_status.json\n D outputs/motivation_exp1/aggregate_summary.json\n D outputs/motivation_exp1/camera_manifest.csv\n D outputs/motivation_exp1/experiment_report.md\n D outputs/motivation_exp1/figure_metadata.json\n D outputs/motivation_exp1/figures/M1a_temporal_similarity.pdf\n D outputs/motivation_exp1/figures/M1a_temporal_similarity.png\n D outputs/motivation_exp1/figures/M1b_patch_similarity.pdf\n D outputs/motivation_exp1/figures/M1b_patch_similarity.png\n D outputs/motivation_exp1/figures/M1c_object_persistence.pdf\n D outputs/motivation_exp1/figures/M1c_object_persistence.png\n D outputs/motivation_exp1/figures/M1d_latency_breakdown.pdf\n D outputs/motivation_exp1/figures/M1d_latency_breakdown.png\n D outputs/motivation_exp1/figures/M1e_repeated_execution.pdf\n D outputs/motivation_exp1/figures/M1e_repeated_execution.png\n D outputs/motivation_exp1/figures/matched_similarity_latency.pdf\n D outputs/motivation_exp1/figures/matched_similarity_latency.png\n D outputs/motivation_exp1/index_status.json\n D outputs/motivation_exp1/invocation_status.json\n D outputs/motivation_exp1/manifest_issues.json\n D outputs/motivation_exp1/manifest_summary.json\n D outputs/motivation_exp1/matched_profile_issues.json\n D outputs/motivation_exp1/matched_profile_pairs.csv\n D outputs/motivation_exp1/model_metadata.json\n D outputs/motivation_exp1/object_issues.json\n D outputs/motivation_exp1/object_persistence.csv\n D outputs/motivation_exp1/objects_status.json\n D outputs/motivation_exp1/output_equivalence.json\n D outputs/motivation_exp1/patch_similarity.csv\n D outputs/motivation_exp1/plot_status.json\n D outputs/motivation_exp1/profile_status.json\n D outputs/motivation_exp1/profiling_samples.csv\n D outputs/motivation_exp1/profiling_summary.json\n D outputs/motivation_exp1/redundancy_status.json\n D outputs/motivation_exp1/report_status.json\n D outputs/motivation_exp1/scene_statistics.csv\n D outputs/motivation_exp1/similarity_issues.json\n D outputs/motivation_exp1/temporal_pairs.csv\n D outputs/motivation_exp1/temporal_similarity.csv\n D outputs/motivation_exp1/verification_results.json\n?? outputs/motivation_exp1_before_llm_split_20261011_215902/",
   "python": "3.10.22 (main, Oct  1 2026, 20:14:04) [GCC 14.3.0]",
   "argv": [
     "/data/qh/phdCode/work4/Senna/experiments/motivation_exp1/run.py",
@@ -214,7 +214,7 @@
     "--profile-mode",
     "both",
     "--existing",
-    "resume"
+    "overwrite"
   ],
   "data_kind": "real_dataset",
   "camera_order": [
