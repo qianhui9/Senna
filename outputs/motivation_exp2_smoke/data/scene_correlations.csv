@@ -1,0 +1,5 @@
+scene_name,variable,n,scenes,observation_spearman,scene_median_spearman,scene_median_ci95,bootstrap_unit,iid_p_value,note
+scene-0274,ego_translation_m,5971,1,0.24298058933115302,,,scene,,Observation rho is descriptive; scene rho compares scene medians; no independent-object/frame p-value
+scene-0274,ego_rotation_deg,5971,1,0.11210436510183462,,,scene,,Observation rho is descriptive; scene rho compares scene medians; no independent-object/frame p-value
+scene-0275,ego_translation_m,5915,1,0.6022090182263727,,,scene,,Observation rho is descriptive; scene rho compares scene medians; no independent-object/frame p-value
+scene-0275,ego_rotation_deg,5915,1,0.6126068571691579,,,scene,,Observation rho is descriptive; scene rho compares scene medians; no independent-object/frame p-value

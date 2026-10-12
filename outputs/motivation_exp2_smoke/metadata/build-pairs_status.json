@@ -1,0 +1,16 @@
+{
+  "status": "complete",
+  "seconds": 39.29264063411392,
+  "products": [
+    "data/keyframe_pairs.csv",
+    "data/camera_frames.csv",
+    "data/global_annotations.csv",
+    "data/ego_pairs.csv"
+  ],
+  "product_sha256": {
+    "data/keyframe_pairs.csv": "7dc6aea1b1b33c4cd082ddda234bcd01971c74d757c9df5feab8d0d0b90eed8e",
+    "data/camera_frames.csv": "563b2bd31209d0622a3667a3d39416bfe5a4a857f9990b6a4d15f63a7c54fe07",
+    "data/global_annotations.csv": "d6dc943655d608ed5a9b335bc0501a024f3949ea7144231f94a69c4ea820027e",
+    "data/ego_pairs.csv": "befc31b7dd05c377731c8aafd0774ed48a7e8523d4762edeed932df7994a2b2b"
+  }
+}

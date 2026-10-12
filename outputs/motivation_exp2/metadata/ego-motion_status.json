@@ -1,0 +1,12 @@
+{
+  "status": "complete",
+  "seconds": 10.939814721932635,
+  "products": [
+    "data/ego_motion_displacement.csv",
+    "data/grid_ego_motion.csv"
+  ],
+  "product_sha256": {
+    "data/ego_motion_displacement.csv": "9854ca2ac8b3f075e5dcd1d781e575e3f83984690787b8db2f452eff817022e3",
+    "data/grid_ego_motion.csv": "d08ab33d7e2cabdb95cec9c05901234d9a4ce050ff3edd9a1664023d60ecb2f0"
+  }
+}

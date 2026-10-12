@@ -1,0 +1,12 @@
+{
+  "status": "complete",
+  "seconds": 88.63403872493654,
+  "products": [
+    "data/projected_objects.csv",
+    "metadata/projection_regression.json"
+  ],
+  "product_sha256": {
+    "data/projected_objects.csv": "6b2f3b755decf034cec7ce8fe0abe41d0ab0735121f1ec09732ce3a039be6f11",
+    "metadata/projection_regression.json": "d2a5a08ca1de7597a0da9e4c835f4ddd57ef6cc6eab671166764c3da7db189ff"
+  }
+}

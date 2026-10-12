@@ -1,0 +1,212 @@
+[
+  {
+    "file": "visualizations/example_00.png",
+    "caption": "scene-0557 | CAM_FRONT | Δt=2.100s | ego 0.01m, 0.08° | displacement 56.3px | J=0.800 | moving",
+    "instance_token": "970c58eec6d8438fabe45ef0e007af9b",
+    "pair_id": "d1d66d7d6a3043b380cc10f7ccee4ca6:8484f806540a4824bccfb53f7d89755b",
+    "motion_group": "moving"
+  },
+  {
+    "file": "visualizations/example_01.png",
+    "caption": "scene-0276 | CAM_FRONT_RIGHT | Δt=0.400s | ego 1.50m, 0.59° | displacement 18.2px | J=0.400 | approximately_static",
+    "instance_token": "cdfe58028a85437a9a674b3e40b0de3c",
+    "pair_id": "d628f4a6b4a6405c8f4cfbb8d18c6fd8:7b011306ccc34c94a341a54ba2552c52",
+    "motion_group": "approximately_static"
+  },
+  {
+    "file": "visualizations/example_02.png",
+    "caption": "scene-0274 | CAM_BACK | Δt=0.400s | ego 2.70m, 0.22° | displacement 7.0px | J=1.000 | approximately_static",
+    "instance_token": "699aa864ecd84cf28251ed1c62899204",
+    "pair_id": "3387d937c3864cdcaf0454542ebaa961:2bb8324710ae4fb1a000cdf7f1eb253c",
+    "motion_group": "approximately_static"
+  },
+  {
+    "file": "visualizations/example_03.png",
+    "caption": "scene-0913 | CAM_BACK_LEFT | Δt=0.500s | ego 5.05m, 0.19° | displacement 160.0px | J=0.250 | approximately_static",
+    "instance_token": "0fb867083804484c9a2716ac81655381",
+    "pair_id": "e3f8a3be1acd4c969bfb5dbe917132f4:3608204ac02a47afa1165e06f47d761d",
+    "motion_group": "approximately_static"
+  },
+  {
+    "file": "visualizations/example_04.png",
+    "caption": "scene-0274 | CAM_BACK_LEFT | Δt=1.900s | ego 15.54m, 0.53° | displacement 548.6px | J=0.000 | approximately_static",
+    "instance_token": "6691fe985beb40d0a32510f180c256cb",
+    "pair_id": "4de831d46edf46d084ac2cecf682b11a:d813d750f591453a9b1bb905e6a88b48",
+    "motion_group": "approximately_static"
+  },
+  {
+    "file": "visualizations/example_05.png",
+    "caption": "scene-0632 | CAM_FRONT | Δt=1.000s | ego 5.08m, 2.38° | displacement 68.5px | J=0.667 | approximately_static",
+    "instance_token": "7af0c8c5882a413c86ebf90c514496eb",
+    "pair_id": "619376b327d04e7d9d28d9f73049bded:ddbdad13484d4b6f91fd7ac2ae4ad606",
+    "motion_group": "approximately_static"
+  },
+  {
+    "file": "visualizations/example_06.png",
+    "caption": "scene-0274 | CAM_FRONT_LEFT | Δt=1.000s | ego 5.23m, 0.31° | displacement 116.9px | J=0.000 | moving",
+    "instance_token": "cdbc121bfba1476eacd2c2d4c49e05e2",
+    "pair_id": "364828ce52784d7a8f1b6f586637e23a:1734a670436946788e72ec8ce185957b",
+    "motion_group": "moving"
+  },
+  {
+    "file": "visualizations/example_07.png",
+    "caption": "scene-0971 | CAM_BACK_RIGHT | Δt=1.000s | ego 4.49m, 7.52° | displacement 92.3px | J=0.000 | moving",
+    "instance_token": "290bac5f558344ada78024abf2c7ff28",
+    "pair_id": "0b91ae54127e4c82a973b4c5fd79ba3c:fd2a143eed5f4e68939500814cef7624",
+    "motion_group": "moving"
+  },
+  {
+    "file": "visualizations/example_08.png",
+    "caption": "scene-0559 | CAM_BACK | Δt=1.000s | ego 6.42m, 1.01° | displacement 12.6px | J=1.000 | moving",
+    "instance_token": "03e5bc118a29476980e7a86af24ba303",
+    "pair_id": "68df1fb2d0574a308cd3eb083a26462d:7135174a1ee54418a08c46f24f71368c",
+    "motion_group": "moving"
+  },
+  {
+    "file": "visualizations/example_09.png",
+    "caption": "scene-0972 | CAM_BACK | Δt=2.000s | ego 9.93m, 2.96° | displacement 49.7px | J=1.000 | approximately_static",
+    "instance_token": "8826721c6075476392484f500ea392b0",
+    "pair_id": "ac6670acd3054a0cb075fa248f036cbc:fcb5d6987a9e4deb80551d2a85e60e20",
+    "motion_group": "approximately_static"
+  },
+  {
+    "file": "visualizations/example_10.png",
+    "caption": "scene-0971 | CAM_BACK | Δt=1.000s | ego 6.34m, 0.87° | displacement 56.3px | J=1.000 | approximately_static",
+    "instance_token": "f1165d52bf4545df90998a1194152be4",
+    "pair_id": "415d154bbb1347919b340b21903e603e:5fcbd73f4fdb4b0faaf55256bb03cdaf",
+    "motion_group": "approximately_static"
+  },
+  {
+    "file": "visualizations/example_11.png",
+    "caption": "scene-0275 | CAM_FRONT_RIGHT | Δt=1.900s | ego 10.92m, 0.69° | displacement 114.8px | J=0.333 | moving",
+    "instance_token": "a379f897aab0458fb57dc09e0d2d8224",
+    "pair_id": "5c9f496ba0904ac0a2a62c138dd627f2:c5fc747cb34f44d78820ae649d183e93",
+    "motion_group": "moving"
+  },
+  {
+    "file": "visualizations/example_12.png",
+    "caption": "scene-0971 | CAM_FRONT_RIGHT | Δt=1.900s | ego 7.72m, 37.74° | displacement 10.3px | J=0.400 | moving",
+    "instance_token": "f496699e85a746daa91479d936815f14",
+    "pair_id": "0c9100bbabe84ff9b3f10842e676d4f9:0b91ae54127e4c82a973b4c5fd79ba3c",
+    "motion_group": "moving"
+  },
+  {
+    "file": "visualizations/example_13.png",
+    "caption": "scene-0632 | CAM_FRONT_RIGHT | Δt=0.500s | ego 2.39m, 3.98° | displacement 168.4px | J=0.474 | approximately_static",
+    "instance_token": "65e7eaec45764e91b69e2db131576699",
+    "pair_id": "39961df49391439fbca612a8efe1c531:8d8d71781b5e4a9aaa0e1830bcbc3796",
+    "motion_group": "approximately_static"
+  },
+  {
+    "file": "visualizations/example_14.png",
+    "caption": "scene-0274 | CAM_BACK_LEFT | Δt=0.900s | ego 6.43m, 0.54° | displacement 589.7px | J=0.000 | approximately_static",
+    "instance_token": "c5a84da0d2354f73982d26ef313284d6",
+    "pair_id": "5b8b618c3f9e481bb8522d9900d74f20:d90f206c2a2e405e912ee046b0b27d85",
+    "motion_group": "approximately_static"
+  },
+  {
+    "file": "visualizations/example_15.png",
+    "caption": "scene-0913 | CAM_BACK_RIGHT | Δt=0.500s | ego 4.98m, 0.27° | displacement 248.8px | J=0.200 | approximately_static",
+    "instance_token": "b643c8ce661646eb97c6023e6fed9b98",
+    "pair_id": "d2bfb598a2104ed2ae695ff1dd9f38a1:a68a08180d9749c28b9fec0abf30548c",
+    "motion_group": "approximately_static"
+  },
+  {
+    "file": "visualizations/example_16.png",
+    "caption": "scene-0632 | CAM_FRONT_LEFT | Δt=1.000s | ego 5.27m, 1.06° | displacement 221.0px | J=0.167 | approximately_static",
+    "instance_token": "c7a83adc61e345b2af2c58128f0dbdc7",
+    "pair_id": "02c431d3d810472d9307d91e77fe495f:6ac07a4efec04453b7326d3a425c7b79",
+    "motion_group": "approximately_static"
+  },
+  {
+    "file": "visualizations/example_17.png",
+    "caption": "scene-0274 | CAM_BACK_RIGHT | Δt=0.500s | ego 3.64m, 0.26° | displacement 169.0px | J=0.000 | moving",
+    "instance_token": "0203eacab8144a22bb601b6e46006312",
+    "pair_id": "de44070678e84676ab9e68a16a55b5d5:a6f13e65dcd141bca7ffb425d7c6c8be",
+    "motion_group": "moving"
+  },
+  {
+    "file": "visualizations/example_18.png",
+    "caption": "scene-0967 | CAM_FRONT_RIGHT | Δt=0.450s | ego 2.13m, 0.62° | displacement 70.9px | J=0.500 | moving",
+    "instance_token": "df70e364489546038f245c482871ce1c",
+    "pair_id": "bc8ddffb55a642f9b809342e7f35cce6:d87b020529cb45f3a936baf7493acc37",
+    "motion_group": "moving"
+  },
+  {
+    "file": "visualizations/example_19.png",
+    "caption": "scene-0274 | CAM_BACK | Δt=0.900s | ego 6.85m, 1.98° | displacement 102.8px | J=0.333 | approximately_static",
+    "instance_token": "e7dbd95082e7419298da2c5c0afaaef9",
+    "pair_id": "040a956bf0c04ad09fffc286cab5bc56:fc651dc8a36846fdba3f705117d3d0d0",
+    "motion_group": "approximately_static"
+  },
+  {
+    "file": "visualizations/example_20.png",
+    "caption": "scene-0275 | CAM_BACK_RIGHT | Δt=1.950s | ego 2.77m, 5.00° | displacement 458.7px | J=0.400 | approximately_static",
+    "instance_token": "021a2284e7204c9fb3b2b35008a54d0c",
+    "pair_id": "c49a39d8f51d41dabd03de50bbcf06d9:5484714099f84b6c90d7db7fa8673073",
+    "motion_group": "approximately_static"
+  },
+  {
+    "file": "visualizations/example_21.png",
+    "caption": "scene-0967 | CAM_BACK_RIGHT | Δt=1.000s | ego 2.59m, 0.38° | displacement 325.3px | J=0.324 | approximately_static",
+    "instance_token": "49f72147fff1454db945bed9332b6f6b",
+    "pair_id": "d493e1061aa845159cdeaec0f7dcea66:c05842b5b1c14d7da231f1684f4d010e",
+    "motion_group": "approximately_static"
+  },
+  {
+    "file": "visualizations/example_22.png",
+    "caption": "scene-0559 | CAM_BACK_RIGHT | Δt=1.000s | ego 5.56m, 0.69° | displacement 807.7px | J=0.000 | approximately_static",
+    "instance_token": "074cfece001948c9a352d44332c4a0c0",
+    "pair_id": "35c031b027b54e5f8f7d4ef13c0150be:d9523bc7d6014ae49bfc855e59898897",
+    "motion_group": "approximately_static"
+  },
+  {
+    "file": "visualizations/example_23.png",
+    "caption": "scene-0274 | CAM_FRONT_RIGHT | Δt=1.900s | ego 13.59m, 2.07° | displacement 1077.9px | J=0.000 | approximately_static",
+    "instance_token": "c8072d7b1c114a28b620aa0630ddde46",
+    "pair_id": "3387d937c3864cdcaf0454542ebaa961:72fb9f0f545a4d6b92f6de14c9dcce85",
+    "motion_group": "approximately_static"
+  },
+  {
+    "file": "visualizations/example_24.png",
+    "caption": "scene-0971 | CAM_BACK | Δt=2.000s | ego 4.93m, 21.05° | displacement 304.4px | J=0.000 | moving",
+    "instance_token": "290bac5f558344ada78024abf2c7ff28",
+    "pair_id": "deefc5673f374152b60cb36fff7439a9:95c679992b8043b192c24d9b7c0cadc5",
+    "motion_group": "moving"
+  },
+  {
+    "file": "visualizations/example_25.png",
+    "caption": "scene-0559 | CAM_FRONT_RIGHT | Δt=1.002s | ego 5.96m, 0.51° | displacement 727.5px | J=0.050 | approximately_static",
+    "instance_token": "074cfece001948c9a352d44332c4a0c0",
+    "pair_id": "9628cc12065b4feaa18c63f333cbabf1:ba887e569f124fa5b7bad893e92f8767",
+    "motion_group": "approximately_static"
+  },
+  {
+    "file": "visualizations/example_26.png",
+    "caption": "scene-0559 | CAM_BACK_RIGHT | Δt=1.900s | ego 13.30m, 2.54° | displacement 197.4px | J=0.722 | moving",
+    "instance_token": "4a79e5b45798495e8c3166c8f4ca3f05",
+    "pair_id": "c10534cac92945438adc094afeb541f7:70b0647a7b174b429f077dfeac62128f",
+    "motion_group": "moving"
+  },
+  {
+    "file": "visualizations/example_27.png",
+    "caption": "scene-0276 | CAM_FRONT | Δt=2.000s | ego 3.95m, 7.76° | displacement 267.9px | J=0.000 | approximately_static",
+    "instance_token": "e37ef9a447354bf393a5c39c35037a0a",
+    "pair_id": "b22ec0c7883143c6a201e71ab917da7a:d628f4a6b4a6405c8f4cfbb8d18c6fd8",
+    "motion_group": "approximately_static"
+  },
+  {
+    "file": "visualizations/example_28.png",
+    "caption": "scene-0971 | CAM_FRONT | Δt=0.500s | ego 2.72m, 0.88° | displacement 35.7px | J=0.500 | moving",
+    "instance_token": "30741c62103349c48a1dd3e28e47b0c8",
+    "pair_id": "ce0a66937ec741af9defc0fcde1134d5:dd3e836009744523a5f359e5217661c0",
+    "motion_group": "moving"
+  },
+  {
+    "file": "visualizations/example_29.png",
+    "caption": "scene-0972 | CAM_BACK | Δt=1.000s | ego 7.35m, 1.10° | displacement 254.0px | J=0.273 | approximately_static",
+    "instance_token": "98ce48a112174c6d9b7455d10c8d98bc",
+    "pair_id": "82c379e1de1245e4b18822e277d2a0eb:0354524ee674423bbc37b986a342713f",
+    "motion_group": "approximately_static"
+  }
+]

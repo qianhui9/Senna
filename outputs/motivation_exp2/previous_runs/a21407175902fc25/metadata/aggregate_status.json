@@ -1,0 +1,10 @@
+{
+  "status": "complete",
+  "seconds": 31.344274532049894,
+  "products": [
+    "statistics/summary.json"
+  ],
+  "product_sha256": {
+    "statistics/summary.json": "dbd152eb5b2222c76296f5a35e5b684165f72df5ab229351825ed9c657887aed"
+  }
+}

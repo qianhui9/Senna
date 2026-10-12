@@ -1,0 +1,10 @@
+{
+  "scenes": 10,
+  "keyframes": 403,
+  "pairs": 1139,
+  "camera_frames": 2418,
+  "global_annotations": 17113,
+  "e1_keyframe_rows_verified": 2418,
+  "issues": [],
+  "strategy": "All within-scene sample.next gaps; no sweeps; actual sample and per-camera timestamps"
+}

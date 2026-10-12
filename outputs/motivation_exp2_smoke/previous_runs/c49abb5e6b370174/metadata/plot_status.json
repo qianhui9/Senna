@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "seconds": 34.79641608404927,
+  "products": [
+    "metadata/figure_metadata.json",
+    "figures/M2a_physical_persistence.png",
+    "figures/M2b_image_displacement.png",
+    "figures/M2c_ego_motion_displacement.png",
+    "figures/M2d_grid_overlap.png",
+    "figures/M2e_qualitative_examples.png",
+    "figure_pdf/M2a_physical_persistence.pdf",
+    "figure_pdf/M2b_image_displacement.pdf",
+    "figure_pdf/M2c_ego_motion_displacement.pdf",
+    "figure_pdf/M2d_grid_overlap.pdf",
+    "figure_pdf/M2e_qualitative_examples.pdf"
+  ],
+  "product_sha256": {
+    "metadata/figure_metadata.json": "687ca6de1f306cf7c2c33d295665193402b9747ab6d8693eaff97faafb3c87e0",
+    "figures/M2a_physical_persistence.png": "738bf88d441741634c10a64e41e75888a301fde6b5442766b1b8f9db314496d9",
+    "figures/M2b_image_displacement.png": "a618123db71c589725ebd676922b93bd75bb9fc297443df184d9c8f3f2b502ce",
+    "figures/M2c_ego_motion_displacement.png": "d03c76e1d01228df5f9fdc7c6c448ef0c07fd75278a3bf9f476e08c0992391b7",
+    "figures/M2d_grid_overlap.png": "13c3f7ed7073af2c1f3d13b98cf7fb6ad84367a59de772dd63f099ec12fb602c",
+    "figures/M2e_qualitative_examples.png": "7eb83e0c1b82cd77f2ab05c1cff894878edcf2283c74691cc741a8cf9b5791c0",
+    "figure_pdf/M2a_physical_persistence.pdf": "6d0dc3b3289337c7b9fca4b0aaa57c368873a6a68ac5f53fc4ecfc8c3d3a2503",
+    "figure_pdf/M2b_image_displacement.pdf": "8c7ffa8f5a4f3ce82a2d17fed8388f7f3e525aafd5288110a742abc3b15014c5",
+    "figure_pdf/M2c_ego_motion_displacement.pdf": "c87fdd0706b81879395fb885d8f228a19fd1b731c9609595664906f1bf85851e",
+    "figure_pdf/M2d_grid_overlap.pdf": "fd376cc84d65aa4b057b31a5a63b67cc0601a303acf71140586a8ce9e82a0c00",
+    "figure_pdf/M2e_qualitative_examples.pdf": "44ff1c4617e2dbdaea734329448bc462f1e096fa938b02c291252aa1c711bdfe"
+  }
+}

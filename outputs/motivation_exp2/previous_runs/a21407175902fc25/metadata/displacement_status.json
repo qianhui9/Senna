@@ -1,0 +1,10 @@
+{
+  "status": "complete",
+  "seconds": 7.3666811268776655,
+  "products": [
+    "data/image_displacement.csv"
+  ],
+  "product_sha256": {
+    "data/image_displacement.csv": "ca94485e1421099ea947e9ebb39305ebf48d572197b3d8b998fe2c4bb494fff7"
+  }
+}

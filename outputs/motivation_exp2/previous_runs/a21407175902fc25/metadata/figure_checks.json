@@ -1,0 +1,425 @@
+{
+  "pngs": [
+    {
+      "file": "figures/M2a_physical_persistence.png",
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "readable": true
+    },
+    {
+      "file": "figures/M2b_image_displacement.png",
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "readable": true
+    },
+    {
+      "file": "figures/M2c_ego_motion_displacement.png",
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "readable": true
+    },
+    {
+      "file": "figures/M2d_grid_overlap.png",
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "readable": true
+    },
+    {
+      "file": "figures/M2e_qualitative_examples.png",
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "readable": true
+    },
+    {
+      "file": "figures/M2e_qualitative_examples_page2.png",
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "readable": true
+    },
+    {
+      "file": "figures/M2e_qualitative_examples_page3.png",
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "readable": true
+    },
+    {
+      "file": "figures/M2e_qualitative_examples_page4.png",
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "readable": true
+    },
+    {
+      "file": "visualizations/example_00.png",
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "readable": true
+    },
+    {
+      "file": "visualizations/example_01.png",
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "readable": true
+    },
+    {
+      "file": "visualizations/example_02.png",
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "readable": true
+    },
+    {
+      "file": "visualizations/example_03.png",
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "readable": true
+    },
+    {
+      "file": "visualizations/example_04.png",
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "readable": true
+    },
+    {
+      "file": "visualizations/example_05.png",
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "readable": true
+    },
+    {
+      "file": "visualizations/example_06.png",
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "readable": true
+    },
+    {
+      "file": "visualizations/example_07.png",
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "readable": true
+    },
+    {
+      "file": "visualizations/example_08.png",
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "readable": true
+    },
+    {
+      "file": "visualizations/example_09.png",
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "readable": true
+    },
+    {
+      "file": "visualizations/example_10.png",
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "readable": true
+    },
+    {
+      "file": "visualizations/example_11.png",
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "readable": true
+    },
+    {
+      "file": "visualizations/example_12.png",
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "readable": true
+    },
+    {
+      "file": "visualizations/example_13.png",
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "readable": true
+    },
+    {
+      "file": "visualizations/example_14.png",
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "readable": true
+    },
+    {
+      "file": "visualizations/example_15.png",
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "readable": true
+    },
+    {
+      "file": "visualizations/example_16.png",
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "readable": true
+    },
+    {
+      "file": "visualizations/example_17.png",
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "readable": true
+    },
+    {
+      "file": "visualizations/example_18.png",
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "readable": true
+    },
+    {
+      "file": "visualizations/example_19.png",
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "readable": true
+    },
+    {
+      "file": "visualizations/example_20.png",
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "readable": true
+    },
+    {
+      "file": "visualizations/example_21.png",
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "readable": true
+    },
+    {
+      "file": "visualizations/example_22.png",
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "readable": true
+    },
+    {
+      "file": "visualizations/example_23.png",
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "readable": true
+    },
+    {
+      "file": "visualizations/example_24.png",
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "readable": true
+    },
+    {
+      "file": "visualizations/example_25.png",
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "readable": true
+    },
+    {
+      "file": "visualizations/example_26.png",
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "readable": true
+    },
+    {
+      "file": "visualizations/example_27.png",
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "readable": true
+    },
+    {
+      "file": "visualizations/example_28.png",
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "readable": true
+    },
+    {
+      "file": "visualizations/example_29.png",
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "readable": true
+    },
+    {
+      "file": "visualizations/projection_regression_00.png",
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "readable": true
+    },
+    {
+      "file": "visualizations/projection_regression_01.png",
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "readable": true
+    },
+    {
+      "file": "visualizations/projection_regression_02.png",
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "readable": true
+    },
+    {
+      "file": "visualizations/projection_regression_03.png",
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "readable": true
+    },
+    {
+      "file": "visualizations/projection_regression_04.png",
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "readable": true
+    },
+    {
+      "file": "visualizations/projection_regression_05.png",
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "readable": true
+    },
+    {
+      "file": "visualizations/projection_regression_06.png",
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "readable": true
+    },
+    {
+      "file": "visualizations/projection_regression_07.png",
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "readable": true
+    },
+    {
+      "file": "visualizations/projection_regression_08.png",
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "readable": true
+    },
+    {
+      "file": "visualizations/projection_regression_09.png",
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "readable": true
+    },
+    {
+      "file": "visualizations/projection_regression_10.png",
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "readable": true
+    },
+    {
+      "file": "visualizations/projection_regression_11.png",
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "readable": true
+    }
+  ],
+  "pdfs": [
+    "figure_pdf/M2a_physical_persistence.pdf",
+    "figure_pdf/M2b_image_displacement.pdf",
+    "figure_pdf/M2c_ego_motion_displacement.pdf",
+    "figure_pdf/M2d_grid_overlap.pdf",
+    "figure_pdf/M2e_qualitative_examples.pdf",
+    "figure_pdf/M2e_qualitative_examples_page2.pdf",
+    "figure_pdf/M2e_qualitative_examples_page3.pdf",
+    "figure_pdf/M2e_qualitative_examples_page4.pdf"
+  ],
+  "self_inspection": "Rendered M2a-d, paired-image pages and official-wireframe overlays inspected; captions outside photos; no per-bin labels obscuring measurements.",
+  "review_skill": "/home/qh/.codex/skills/paper-figure/SKILL.md",
+  "reviewer": "gpt-5.6-sol xhigh",
+  "fixes": [
+    "Separate physical/camera/grid counts",
+    "Explicit repeated-observation dependence",
+    "Mark singleton-scene bins",
+    "Self-contained static and cell-rule definitions",
+    "Print-sized plots and paginated qualitative galleries",
+    "Token-prefix labels explained"
+  ]
+}

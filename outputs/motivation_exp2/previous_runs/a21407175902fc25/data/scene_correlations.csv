@@ -1,0 +1,21 @@
+scene_name,variable,n,scenes,observation_spearman,scene_median_spearman,scene_median_ci95,bootstrap_unit,iid_p_value,note
+scene-0274,ego_translation_m,5971,1,0.24298058933115302,,,scene,,Observation rho is descriptive; scene rho compares scene medians; no independent-object/frame p-value
+scene-0274,ego_rotation_deg,5971,1,0.11210436510183462,,,scene,,Observation rho is descriptive; scene rho compares scene medians; no independent-object/frame p-value
+scene-0275,ego_translation_m,5915,1,0.6022090182263727,,,scene,,Observation rho is descriptive; scene rho compares scene medians; no independent-object/frame p-value
+scene-0275,ego_rotation_deg,5915,1,0.6126068571691579,,,scene,,Observation rho is descriptive; scene rho compares scene medians; no independent-object/frame p-value
+scene-0276,ego_translation_m,7530,1,0.3798735610949782,,,scene,,Observation rho is descriptive; scene rho compares scene medians; no independent-object/frame p-value
+scene-0276,ego_rotation_deg,7530,1,0.2587367905784855,,,scene,,Observation rho is descriptive; scene rho compares scene medians; no independent-object/frame p-value
+scene-0557,ego_translation_m,1775,1,0.6400859102344247,,,scene,,Observation rho is descriptive; scene rho compares scene medians; no independent-object/frame p-value
+scene-0557,ego_rotation_deg,1775,1,0.7166286790620301,,,scene,,Observation rho is descriptive; scene rho compares scene medians; no independent-object/frame p-value
+scene-0559,ego_translation_m,2679,1,0.2390595187094729,,,scene,,Observation rho is descriptive; scene rho compares scene medians; no independent-object/frame p-value
+scene-0559,ego_rotation_deg,2679,1,0.1162575272020239,,,scene,,Observation rho is descriptive; scene rho compares scene medians; no independent-object/frame p-value
+scene-0632,ego_translation_m,784,1,0.297657033811555,,,scene,,Observation rho is descriptive; scene rho compares scene medians; no independent-object/frame p-value
+scene-0632,ego_rotation_deg,784,1,0.43263065615187685,,,scene,,Observation rho is descriptive; scene rho compares scene medians; no independent-object/frame p-value
+scene-0913,ego_translation_m,6133,1,0.2910645512651786,,,scene,,Observation rho is descriptive; scene rho compares scene medians; no independent-object/frame p-value
+scene-0913,ego_rotation_deg,6133,1,0.08664873727574293,,,scene,,Observation rho is descriptive; scene rho compares scene medians; no independent-object/frame p-value
+scene-0967,ego_translation_m,1941,1,0.3595298951546079,,,scene,,Observation rho is descriptive; scene rho compares scene medians; no independent-object/frame p-value
+scene-0967,ego_rotation_deg,1941,1,0.3106720942699641,,,scene,,Observation rho is descriptive; scene rho compares scene medians; no independent-object/frame p-value
+scene-0971,ego_translation_m,4226,1,0.5519672015234126,,,scene,,Observation rho is descriptive; scene rho compares scene medians; no independent-object/frame p-value
+scene-0971,ego_rotation_deg,4226,1,0.594953418210369,,,scene,,Observation rho is descriptive; scene rho compares scene medians; no independent-object/frame p-value
+scene-0972,ego_translation_m,3089,1,0.48831243288386783,,,scene,,Observation rho is descriptive; scene rho compares scene medians; no independent-object/frame p-value
+scene-0972,ego_rotation_deg,3089,1,0.2055890417994555,,,scene,,Observation rho is descriptive; scene rho compares scene medians; no independent-object/frame p-value

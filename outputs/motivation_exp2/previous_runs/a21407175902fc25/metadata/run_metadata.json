@@ -1,0 +1,204 @@
+{
+  "config": {
+    "nuscenes": {
+      "dataroot": "/data/qh/nuscenes/v1.0-trainval",
+      "version": "v1.0-trainval"
+    },
+    "dataset": {
+      "exp1_config": "/data/qh/phdCode/work4/Senna/experiments/motivation_exp1/config.yaml",
+      "scene_manifest": "/data/qh/phdCode/work4/Senna/outputs/motivation_exp1/manifest_summary.json",
+      "frame_manifest": "/data/qh/phdCode/work4/Senna/outputs/motivation_exp1/camera_manifest.csv",
+      "max_scenes": 10,
+      "cameras": [
+        "CAM_FRONT",
+        "CAM_FRONT_LEFT",
+        "CAM_FRONT_RIGHT",
+        "CAM_BACK_LEFT",
+        "CAM_BACK_RIGHT",
+        "CAM_BACK"
+      ]
+    },
+    "pairs": {
+      "keyframe_gaps": [
+        1,
+        2,
+        4
+      ],
+      "allow_cross_scene": false
+    },
+    "projection": {
+      "near_plane_m": 0.1,
+      "min_bbox_width_px": 8,
+      "min_bbox_height_px": 8,
+      "min_visible_area_ratio": 0.2,
+      "visible_area_sensitivity": [
+        0.0,
+        0.2,
+        0.5
+      ]
+    },
+    "analysis": {
+      "grid_shapes": [
+        [
+          8,
+          8
+        ],
+        [
+          16,
+          16
+        ],
+        [
+          32,
+          32
+        ]
+      ],
+      "grid_rules": [
+        "any",
+        "coverage",
+        "center"
+      ],
+      "primary_grid_rule": "any",
+      "grid_min_coverage_ratio": 0.25,
+      "ego_grid_shape": [
+        16,
+        16
+      ],
+      "static_speed_threshold_mps": 0.5,
+      "static_speed_sensitivity_mps": [
+        0.2,
+        0.5,
+        1.0
+      ],
+      "translation_bins_m": [
+        0,
+        1,
+        3,
+        10,
+        null
+      ],
+      "yaw_bins_deg": [
+        0,
+        1,
+        3,
+        10,
+        null
+      ],
+      "distance_bins_m": [
+        0,
+        10,
+        30,
+        60,
+        null
+      ],
+      "bootstrap_iterations": 1000,
+      "seed": 42
+    },
+    "output": {
+      "directory": "/data/qh/phdCode/work4/Senna/outputs/motivation_exp2",
+      "save_visualizations": true,
+      "visualization_samples": 30
+    }
+  },
+  "source_hashes": {
+    "experiments/motivation_exp2/__init__.py": "9fed71615f67afa9d687835326e13e81f4634d9bca94556033ffd65f8804592d",
+    "experiments/motivation_exp2/aggregate_results.py": "b1019d98ad1c2ad49c2b3150a9ae5e6a789d037e4f7a07d0ec8ba3939e0c29f3",
+    "experiments/motivation_exp2/analyze_ego_motion.py": "b53eab9fb3b444bd9a55ad86122c5ce3b3824825d569bbfaacdf92667fd4696d",
+    "experiments/motivation_exp2/analyze_grid_overlap.py": "82b5b8e1d2435a894187717442380243f84b3e63e9aac51bb17a3f71c7229045",
+    "experiments/motivation_exp2/analyze_image_displacement.py": "5bd8012a0a3efcd5e23c1cc0cdb5fd18ccc9b566382164db208989d1e179d2fa",
+    "experiments/motivation_exp2/analyze_physical_persistence.py": "5b258d9dd1323fbffee058220d155f3ed38e62404e74335bdaa2079ae793caa9",
+    "experiments/motivation_exp2/build_keyframe_pairs.py": "4c0caea0d7184e0159b8b166d1978203909cea8447e0bf960abdd1a7a1eacecd",
+    "experiments/motivation_exp2/extract_projected_annotations.py": "7125a4f41301cddf9ef7c0cd14d43bc03c0eefde38ab1890ea6a9fc9c54a0787",
+    "experiments/motivation_exp2/gen_M2a.py": "c3327655cd1a8488f7e8b38d74bd456901d9d9002e2ee1d6274994bd94c23b39",
+    "experiments/motivation_exp2/gen_M2b.py": "6d28afe18ea34f2eb18e4bec48396a9956cb7c3cb4d6d00a5b5d5fbcc9c67f89",
+    "experiments/motivation_exp2/gen_M2c.py": "e44f1794fe9ae1c19f11805898b20f2fe9ed63c9a67334f93007d7ddd4d0c59d",
+    "experiments/motivation_exp2/gen_M2d.py": "85e45740a342db582b237bb398c7ac850af5a4f46703f24067cddad0ce1cf9d8",
+    "experiments/motivation_exp2/gen_M2e.py": "5f8abc81b4793c2ed90c1382bdde96037599aeaa1d3208d646706710815905ef",
+    "experiments/motivation_exp2/generate_report.py": "e95a8e312c39927e87bb90e7b2a7e9704c3cec82afca46960bb7ff6dd562c603",
+    "experiments/motivation_exp2/plot_results.py": "5f63058c6a2d119e2b9bea3cb0923934381d54ccec901c34f130ce299caf6ef5",
+    "experiments/motivation_exp2/run_exp2.py": "4b3d0e11b47545a17dde3f39ae56a65a3ad026633f1cc35d3415a773ca736dd8",
+    "experiments/motivation_exp2/utils/__init__.py": "15e6a1e7f9f464172ee8a1ac859e919d26661d63a1857377efbac4ebd012b28c",
+    "experiments/motivation_exp2/utils/annotation_utils.py": "02246f2729b4fe235368456b01808cdbefba9a67125d3200af5e68a00fcfa0e1",
+    "experiments/motivation_exp2/utils/data_utils.py": "2ff226c9415536aedee52b0991696251df024f63569b53c73918dc4dbc6188fc",
+    "experiments/motivation_exp2/utils/geometry_utils.py": "f3bc3fdb7a152a19b2a1fe183aa42c3886847e69d3b29572d4bac1bc018e07fb",
+    "experiments/motivation_exp2/utils/statistics_utils.py": "7db4b815745df0c116164e80642c202f2b6e8ec555bf1ca9fa7b1bbceebf1eab",
+    "experiments/motivation_exp2/utils/visualization_utils.py": "75f2b96c4a6abe78bc68ef7e83208f2b423cf69e7a44847e32aa1504f259e763"
+  },
+  "e1_source_hashes": {
+    "experiments/motivation_exp1/utils/data_utils.py": "1dff75fd09747beff9fc56d40712dd91fdd4c51f03977efbf44d208fdeeabd1c",
+    "experiments/motivation_exp1/utils/stats_utils.py": "04871fc9c52637182ed935906b223b293286131e7a42b6ae8d52e608b4147b00"
+  },
+  "packages": {
+    "numpy": "1.26.4",
+    "pandas": "2.2.2",
+    "scipy": "1.13.1",
+    "nuscenes-devkit": "1.1.11",
+    "Pillow": "10.3.0",
+    "matplotlib": "3.8.4",
+    "PyYAML": "6.0.1"
+  },
+  "dataset_tables": {
+    "sample_data.json": {
+      "bytes": 1345678379,
+      "mtime_ns": 1553285927000000000
+    },
+    "sensor.json": {
+      "bytes": 1185,
+      "mtime_ns": 1553285927000000000
+    },
+    "category.json": {
+      "bytes": 4747,
+      "mtime_ns": 1553285904000000000
+    },
+    "map.json": {
+      "bytes": 3606,
+      "mtime_ns": 1553285910000000000
+    },
+    "sample_annotation.json": {
+      "bytes": 583417244,
+      "mtime_ns": 1767576939520274190
+    },
+    "scene.json": {
+      "bytes": 285132,
+      "mtime_ns": 1553285927000000000
+    },
+    "log.json": {
+      "bytes": 11968,
+      "mtime_ns": 1553285910000000000
+    },
+    "sample.json": {
+      "bytes": 14628865,
+      "mtime_ns": 1767576831446518902
+    },
+    "sample_annotationKey.json": {
+      "bytes": 120711598,
+      "mtime_ns": 1766654506173437603
+    },
+    "ego_pose.json": {
+      "bytes": 645746265,
+      "mtime_ns": 1553285910000000000
+    },
+    "calibrated_sensor.json": {
+      "bytes": 3268133,
+      "mtime_ns": 1553285904000000000
+    },
+    "visibility.json": {
+      "bytes": 418,
+      "mtime_ns": 1553285927000000000
+    },
+    "attribute.json": {
+      "bytes": 1147,
+      "mtime_ns": 1553285904000000000
+    },
+    "instance.json": {
+      "bytes": 16012833,
+      "mtime_ns": 1553285910000000000
+    }
+  },
+  "input_hashes": {
+    "scene_manifest": "5049d59a39f2700b90ed024687eccc7055330ba22f286fef3bce9571c8393a1c",
+    "frame_manifest": "b8016736c8d0ee82bd69ff8cab9ba9c0f1ed0433334b158744ab900098bb39c1",
+    "exp1_config": "4cac6354341e5aeed79fa943246ba02d7aa652d1958a5eed1d4c3a910afe3054"
+  },
+  "fingerprint": "a21407175902fc250f937adbfccb47ff16eb075e2389684ad217e818a597cc4c",
+  "data_kind": "real_nuscenes_keyframes"
+}

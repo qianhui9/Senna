@@ -1,0 +1,12 @@
+{
+  "status": "complete",
+  "seconds": 0.3337337539996952,
+  "products": [
+    "data/global_object_persistence.csv",
+    "data/camera_object_persistence.csv"
+  ],
+  "product_sha256": {
+    "data/global_object_persistence.csv": "f9a1dbb5499e93c001dd2e065d00a43d59d1c9fee991dda7ab1e8fc04fa7d459",
+    "data/camera_object_persistence.csv": "c9080b22be564113ece564146c1dec76e1c64d268e80943be3be4f8a1c3e9cdc"
+  }
+}

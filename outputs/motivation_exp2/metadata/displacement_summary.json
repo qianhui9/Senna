@@ -1,0 +1,7 @@
+{
+  "matched_camera_observations": 40043,
+  "unique_instances": 1033,
+  "issues": [],
+  "normalization": "Euclidean center displacement divided by actual image diagonal",
+  "object_speed_timebase": "sample timestamps (annotation centers), not camera timestamps"
+}

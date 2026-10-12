@@ -1,0 +1,155 @@
+{
+  "M2a_physical_persistence": {
+    "available": true,
+    "n": 226,
+    "caption": "Global annotated persistence and camera projected-in-view persistence use separate sets and different denominators; the curve gap is not a decomposition. Scene-equal pair means; 95% scene-bootstrap intervals; n counts pairs with a nonempty initial set, summed over gaps in each legend. Actual mean sample gaps are shown; camera exposure gaps are recorded separately.",
+    "png_dpi": 300,
+    "pdf": "Vector axes/text; real camera photographs are embedded raster",
+    "bootstrap_unit": "scene",
+    "script": "experiments/motivation_exp2/gen_M2a.py",
+    "counts": {
+      "global_valid_pairs_by_gap": {
+        "1": 78,
+        "2": 76,
+        "4": 72
+      },
+      "camera_valid_pairs": [
+        {
+          "gap_steps": 1,
+          "camera": "CAM_BACK",
+          "n": 78
+        },
+        {
+          "gap_steps": 1,
+          "camera": "CAM_BACK_LEFT",
+          "n": 63
+        },
+        {
+          "gap_steps": 1,
+          "camera": "CAM_BACK_RIGHT",
+          "n": 69
+        },
+        {
+          "gap_steps": 1,
+          "camera": "CAM_FRONT",
+          "n": 78
+        },
+        {
+          "gap_steps": 1,
+          "camera": "CAM_FRONT_LEFT",
+          "n": 73
+        },
+        {
+          "gap_steps": 1,
+          "camera": "CAM_FRONT_RIGHT",
+          "n": 77
+        },
+        {
+          "gap_steps": 2,
+          "camera": "CAM_BACK",
+          "n": 76
+        },
+        {
+          "gap_steps": 2,
+          "camera": "CAM_BACK_LEFT",
+          "n": 61
+        },
+        {
+          "gap_steps": 2,
+          "camera": "CAM_BACK_RIGHT",
+          "n": 67
+        },
+        {
+          "gap_steps": 2,
+          "camera": "CAM_FRONT",
+          "n": 76
+        },
+        {
+          "gap_steps": 2,
+          "camera": "CAM_FRONT_LEFT",
+          "n": 71
+        },
+        {
+          "gap_steps": 2,
+          "camera": "CAM_FRONT_RIGHT",
+          "n": 75
+        },
+        {
+          "gap_steps": 4,
+          "camera": "CAM_BACK",
+          "n": 72
+        },
+        {
+          "gap_steps": 4,
+          "camera": "CAM_BACK_LEFT",
+          "n": 57
+        },
+        {
+          "gap_steps": 4,
+          "camera": "CAM_BACK_RIGHT",
+          "n": 65
+        },
+        {
+          "gap_steps": 4,
+          "camera": "CAM_FRONT",
+          "n": 72
+        },
+        {
+          "gap_steps": 4,
+          "camera": "CAM_FRONT_LEFT",
+          "n": 67
+        },
+        {
+          "gap_steps": 4,
+          "camera": "CAM_FRONT_RIGHT",
+          "n": 71
+        }
+      ]
+    }
+  },
+  "M2b_image_displacement": {
+    "available": true,
+    "n": 11886,
+    "caption": "Same official instance ID, same camera and scene, valid projections at both times. Boxes: pooled 25–75%, median; whiskers: 5–95%. Orange diamonds: scene-equal means with 95% scene-bootstrap intervals. n is camera-pair instance observations; repeated temporal pairs, repeated instances and cross-camera projections are dependent.",
+    "png_dpi": 300,
+    "pdf": "Vector axes/text; real camera photographs are embedded raster",
+    "bootstrap_unit": "scene",
+    "script": "experiments/motivation_exp2/gen_M2b.py"
+  },
+  "M2c_ego_motion_displacement": {
+    "available": true,
+    "n": 11886,
+    "caption": "Time-gap strata; approximately static means global annotation-center speed ≤0.5 m/s over actual sample timestamps. Scatter is seeded and independently capped at 1,200 observations per group, so it does not encode group frequency; binned summaries use all rows. X medians count each unique camera pair once; y is scene-equal displacement mean with 95% scene-bootstrap intervals. Open markers denote one-scene bins without CIs; exact per-bin observation and scene counts are in metadata/figure_bin_counts.json. Dashed segments connect bin summaries, not a fitted causal response. Associations do not establish ego-only causation.",
+    "png_dpi": 300,
+    "pdf": "Vector axes/text; real camera photographs are embedded raster",
+    "bootstrap_unit": "scene",
+    "script": "experiments/motivation_exp2/gen_M2c.py"
+  },
+  "M2d_grid_overlap": {
+    "available": true,
+    "n": 7549,
+    "caption": "Approximately static annotated objects only: global annotation-center speed ≤0.5 m/s over actual sample timestamps. Main rule any: positive-area box/cell intersection. Grids are diagnostic image regions, not CLIP tokens. X medians count unique camera pairs once; y is scene-equal Jaccard mean with 95% scene-bootstrap intervals. Open markers denote singleton-scene bins without CIs; exact per-bin counts are in metadata/figure_bin_counts.json. Grid variants share the same underlying observations and are not independent objects. Dashed segments connect bin summaries.",
+    "png_dpi": 300,
+    "pdf": "Vector axes/text; real camera photographs are embedded raster",
+    "bootstrap_unit": "scene",
+    "script": "experiments/motivation_exp2/gen_M2d.py"
+  },
+  "M2e_qualitative_examples": {
+    "available": true,
+    "n": 3,
+    "caption": "The two gold rectangles within each row mark the matched official instance; labels show ten-character token prefixes (full IDs in metadata/CSV). Fixed [16, 16] grid, any overlap. Seeded scene/camera/gap/motion round-robin strata with 5–95% quantile targets include both small and large displacement; cases are illustrative, not statistical evidence. Page 1/2; 6 individual examples saved.",
+    "png_dpi": 300,
+    "pdf": "Vector axes/text; real camera photographs are embedded raster",
+    "bootstrap_unit": "scene",
+    "script": "experiments/motivation_exp2/gen_M2e.py"
+  },
+  "M2e_qualitative_examples_page2": {
+    "available": true,
+    "n": 3,
+    "caption": "The two gold rectangles within each row mark the matched official instance; labels show ten-character token prefixes (full IDs in metadata/CSV). Fixed [16, 16] grid, any overlap. Seeded scene/camera/gap/motion round-robin strata with 5–95% quantile targets include both small and large displacement; cases are illustrative, not statistical evidence. Page 2/2; 6 individual examples saved.",
+    "png_dpi": 300,
+    "pdf": "Vector axes/text; real camera photographs are embedded raster",
+    "bootstrap_unit": "scene",
+    "script": "experiments/motivation_exp2/gen_M2e.py"
+  }
+}

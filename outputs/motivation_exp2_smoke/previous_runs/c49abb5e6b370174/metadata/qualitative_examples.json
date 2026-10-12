@@ -1,0 +1,44 @@
+[
+  {
+    "file": "visualizations/example_00.png",
+    "caption": "scene-0274 | CAM_BACK | Δt=2.100s | ego 15.18m, 1.09° | displacement 13.7px | J=0.500 | approximately_static",
+    "instance_token": "0e3bdd57de6e447e8105755b094fe09a",
+    "pair_id": "f5a8490b733140bd9eb51131f5e65b4e:a6f13e65dcd141bca7ffb425d7c6c8be",
+    "motion_group": "approximately_static"
+  },
+  {
+    "file": "visualizations/example_01.png",
+    "caption": "scene-0274 | CAM_BACK_LEFT | Δt=0.950s | ego 7.63m, 0.58° | displacement 363.5px | J=0.000 | approximately_static",
+    "instance_token": "6691fe985beb40d0a32510f180c256cb",
+    "pair_id": "728f711f0d8e4b5fa85defb9bbb51399:4de831d46edf46d084ac2cecf682b11a",
+    "motion_group": "approximately_static"
+  },
+  {
+    "file": "visualizations/example_02.png",
+    "caption": "scene-0274 | CAM_FRONT_LEFT | Δt=0.600s | ego 3.31m, 1.05° | displacement 169.1px | J=0.000 | moving",
+    "instance_token": "9958e6e9377b41c8ac51fb5b5692c2e1",
+    "pair_id": "90c1665c6cf24153a834063fd99f257c:783bf5ef43d04e538df4986e1461ba7e",
+    "motion_group": "moving"
+  },
+  {
+    "file": "visualizations/example_03.png",
+    "caption": "scene-0275 | CAM_BACK | Δt=0.900s | ego 5.78m, 0.55° | displacement 28.0px | J=1.000 | approximately_static",
+    "instance_token": "ce05816ccbf54773b069ddaf20d1b5c7",
+    "pair_id": "ad7080dc8e08423482474c439e96c2ee:99c4cc9ce89246b19b802666bff43cf9",
+    "motion_group": "approximately_static"
+  },
+  {
+    "file": "visualizations/example_04.png",
+    "caption": "scene-0275 | CAM_FRONT | Δt=1.000s | ego 5.43m, 0.33° | displacement 93.9px | J=0.000 | moving",
+    "instance_token": "9030eb6148f14d71a3e60f4755e633f8",
+    "pair_id": "4ffdd34156524df380cddc090dcadc7d:c5fc747cb34f44d78820ae649d183e93",
+    "motion_group": "moving"
+  },
+  {
+    "file": "visualizations/example_05.png",
+    "caption": "scene-0275 | CAM_FRONT | Δt=1.000s | ego 1.72m, 3.41° | displacement 221.2px | J=0.188 | approximately_static",
+    "instance_token": "09ca910c245a4e70a05a6d4a4c10d5e0",
+    "pair_id": "c49a39d8f51d41dabd03de50bbcf06d9:a4093bf016f74a93bab9aea589de615c",
+    "motion_group": "approximately_static"
+  }
+]

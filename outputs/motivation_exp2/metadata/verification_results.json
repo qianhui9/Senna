@@ -1,0 +1,26 @@
+{
+  "command": "SENNA_EXP2_REAL_OUTPUT=outputs/motivation_exp2 python -m unittest discover -s experiments/motivation_exp2/tests -v",
+  "python_environment": "Senna",
+  "tests_run": 42,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "success": true,
+  "output": "test_cross_scene_override_forbidden (test_configuration.ConfigurationTests) ... ok\ntest_default_smoke_output_is_separate (test_configuration.ConfigurationTests) ... ok\ntest_exp1_output_write_forbidden (test_configuration.ConfigurationTests) ... ok\ntest_explicit_smoke_output_is_preserved (test_configuration.ConfigurationTests) ... ok\ntest_nested_list_and_numeric_cli_overrides (test_configuration.ConfigurationTests) ... ok\ntest_smoke_remains_real_keyframe_workload (test_configuration.ConfigurationTests) ... ok\ntest_camera_without_projection_does_not_match (test_displacement.DisplacementTests) ... ok\ntest_displacement_3_4_5_and_real_diagonal (test_displacement.DisplacementTests) ... ok\ntest_identical_box_iou_one (test_displacement.DisplacementTests) ... ok\ntest_no_overlap_iou_zero (test_displacement.DisplacementTests) ... ok\ntest_one_scene_and_constant_correlation (test_displacement.DisplacementTests) ... ok\ntest_partial_overlap (test_displacement.DisplacementTests) ... ok\ntest_scene_bootstrap_not_frame_bootstrap (test_displacement.DisplacementTests) ... ok\ntest_boundary_touch_not_area_intersection (test_grid_overlap.GridTests) ... ok\ntest_disjoint_sets (test_grid_overlap.GridTests) ... ok\ntest_empty_sets_nan (test_grid_overlap.GridTests) ... ok\ntest_identical_sets (test_grid_overlap.GridTests) ... ok\ntest_partial_outside_and_nonsquare_grid (test_grid_overlap.GridTests) ... ok\ntest_retention_separate_from_jaccard (test_grid_overlap.GridTests) ... ok\ntest_three_rules (test_grid_overlap.GridTests) ... ok\ntest_duplicate_instance_rejected (test_instance_matching.InstanceTests) ... ok\ntest_empty_persistence_is_nan (test_instance_matching.InstanceTests) ... ok\ntest_exact_counts (test_instance_matching.InstanceTests) ... ok\ntest_same_category_different_instance_not_matched (test_instance_matching.InstanceTests) ... ok\ntest_same_instance_different_annotation (test_instance_matching.InstanceTests) ... ok\ntest_invalid_timestamp_order (test_pair_index.PairTests) ... ok\ntest_next_link_order (test_pair_index.PairTests) ... ok\ntest_no_cross_scene (test_pair_index.PairTests) ... ok\ntest_real_timestamp_gaps_and_counts (test_pair_index.PairTests) ... ok\ntest_behind_camera (test_projection.ProjectionTests) ... ok\ntest_boundary_clipping (test_projection.ProjectionTests) ... ok\ntest_identical_pose_static_projection (test_projection.ProjectionTests) ... ok\ntest_initial_ego_translation_frame (test_projection.ProjectionTests) ... ok\ntest_invalid_time_rejected (test_projection.ProjectionTests) ... ok\ntest_near_plane_crossing_explicitly_excluded (test_projection.ProjectionTests) ... ok\ntest_nonfinite_and_degenerate (test_projection.ProjectionTests) ... ok\ntest_official_transform_agreement (test_projection.ProjectionTests) ... ok\ntest_outside_image (test_projection.ProjectionTests) ... ok\ntest_static_object_different_ego_pose (test_projection.ProjectionTests) ... ok\ntest_yaw_wrap_and_quaternion_sign (test_projection.ProjectionTests) ... ok\ntest_real_boxes_independent_world_transform (test_real_nuscenes_regression.RealNuScenesTests) ... ok\ntest_real_visual_regression_artifacts (test_real_nuscenes_regression.RealNuScenesTests) ... ok\n\n----------------------------------------------------------------------\nRan 42 tests in 42.574s\n\nOK\n",
+  "real_projection_views": 60,
+  "e1_artifacts_checked": 44,
+  "e1_artifacts_unchanged": true,
+  "raw_reproduction_checks": {
+    "keyframe_pairs": true,
+    "projected_objects": true,
+    "global_object_persistence": true,
+    "camera_object_persistence": true,
+    "image_displacement": true,
+    "fixed_grid_overlap": true,
+    "ego_motion_displacement": true
+  },
+  "synthetic_fixtures_are_experiment_evidence": false,
+  "independent_report_stage": "passed: --stage report --existing overwrite",
+  "full_stage_reuse": "passed: --config experiments/motivation_exp2/config.yaml --run-all; all 9 stages reused without loading nuScenes",
+  "smoke_stage_reuse": "passed: --max-scenes 2 --smoke-test; all 9 stages reused"
+}

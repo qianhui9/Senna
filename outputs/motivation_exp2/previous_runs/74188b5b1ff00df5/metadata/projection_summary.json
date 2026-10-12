@@ -1,0 +1,16 @@
+{
+  "attempts": 102678,
+  "status_counts": {
+    "behind_or_inside_near_plane": 50364,
+    "outside_image": 27704,
+    "valid": 19390,
+    "near_plane_crossing_excluded": 4059,
+    "low_in_image_area_ratio": 962,
+    "too_small": 199
+  },
+  "valid": 19390,
+  "geometric_clipped": 31831,
+  "near_plane_policy": "explicitly exclude boxes crossing z=near_plane_m",
+  "area_ratio": "image-clipped / raw projected rectangle area, not occlusion visibility",
+  "annotation_timing": "Keyframe sample annotations without interpolation, transformed using actual camera ego pose"
+}

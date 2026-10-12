@@ -1,0 +1,9 @@
+# Same CPU analysis dependencies as E1; already available in the Senna environment.
+numpy
+pandas
+scipy
+Pillow
+matplotlib
+PyYAML
+nuscenes-devkit
+pyquaternion
