@@ -1,0 +1,54 @@
+{
+  "date_client_timezone": "2026-10-12 Asia/Shanghai",
+  "environment": "Senna",
+  "e3_unit_and_real_regression": {
+    "tests": 35,
+    "passed": 35,
+    "skipped": 0,
+    "log": "validation_logs/e3_complete_tests.log"
+  },
+  "e1_regression": {
+    "tests": 30,
+    "passed": 30
+  },
+  "e2_regular_regression": {
+    "tests": 42,
+    "passed": 40,
+    "skipped": 2
+  },
+  "e2_real_regression_separate": {
+    "tests": 2,
+    "passed": 2
+  },
+  "smoke": {
+    "scenes": 2,
+    "object_pairs": 100,
+    "image_forwards": 150,
+    "all_11_stages_complete": true
+  },
+  "full": {
+    "scenes": 10,
+    "object_pairs": 3000,
+    "physical_instances": 709,
+    "image_forwards": 1706,
+    "valid_primary_pairs": 2011,
+    "failed_images": 0,
+    "all_11_stages_complete": true
+  },
+  "resume": {
+    "completed_stages_verified": 11,
+    "new_image_forwards": 0,
+    "log": "validation_logs/e3_complete_resume.log"
+  },
+  "checks": [
+    "dry-run produces no output directory",
+    "compileall passed",
+    "git diff --check passed",
+    "bootstrap matches original E1 implementation within 1e-12 on real observations"
+  ],
+  "original_forward_equivalence": {
+    "batches": 3,
+    "max_absolute_vision_error": 0.0,
+    "max_absolute_compressed_visual_error": 0.0
+  }
+}

@@ -1,3 +1,6 @@
 outputs/**/data/fixed_grid_overlap.csv filter=lfs diff=lfs merge=lfs -text
 outputs/**/data/grid_ego_motion.csv filter=lfs diff=lfs merge=lfs -text
 outputs/**/data/projected_objects.csv filter=lfs diff=lfs merge=lfs -text
+outputs/motivation_exp3/data/feature_similarity.csv filter=lfs diff=lfs merge=lfs -text
+outputs/motivation_exp3/data/object_patch_mapping.csv filter=lfs diff=lfs merge=lfs -text
+outputs/motivation_exp3/data/identity_margins.csv filter=lfs diff=lfs merge=lfs -text

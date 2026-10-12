@@ -1,0 +1,35 @@
+{
+  "counts_by_method_and_status": [
+    {
+      "aggregation": "area",
+      "mapping_status": "insufficient_patches",
+      "n": 5550
+    },
+    {
+      "aggregation": "area",
+      "mapping_status": "valid",
+      "n": 11763
+    },
+    {
+      "aggregation": "center",
+      "mapping_status": "insufficient_patches",
+      "n": 7492
+    },
+    {
+      "aggregation": "center",
+      "mapping_status": "valid",
+      "n": 9821
+    },
+    {
+      "aggregation": "mean",
+      "mapping_status": "insufficient_patches",
+      "n": 5550
+    },
+    {
+      "aggregation": "mean",
+      "mapping_status": "valid",
+      "n": 11763
+    }
+  ],
+  "patch_indices_exclude_cls": true
+}

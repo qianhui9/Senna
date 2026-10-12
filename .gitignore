@@ -23,6 +23,8 @@ dist/
 
 # Raw profiler traces, logs, and runtime files
 /outputs/**/profiler_trace/
+/outputs/motivation_exp3*/**/features/
+/outputs/motivation_exp3*/previous_runs/
 *.log
 *.log.*
 *.lock

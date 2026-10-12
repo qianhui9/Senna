@@ -1,0 +1,101 @@
+{
+  "rows": 100233,
+  "numeric_status_counts": {
+    "valid": 74179,
+    "invalid_patch_mapping": 26054
+  },
+  "groups": [
+    {
+      "comparison_group": "B1_same_instance",
+      "aggregation": "area",
+      "numeric_status": "invalid_patch_mapping",
+      "n": 6923
+    },
+    {
+      "comparison_group": "B1_same_instance",
+      "aggregation": "area",
+      "numeric_status": "valid",
+      "n": 14077
+    },
+    {
+      "comparison_group": "B1_same_instance",
+      "aggregation": "center",
+      "numeric_status": "invalid_patch_mapping",
+      "n": 9317
+    },
+    {
+      "comparison_group": "B1_same_instance",
+      "aggregation": "center",
+      "numeric_status": "valid",
+      "n": 11683
+    },
+    {
+      "comparison_group": "B1_same_instance",
+      "aggregation": "mean",
+      "numeric_status": "invalid_patch_mapping",
+      "n": 6923
+    },
+    {
+      "comparison_group": "B1_same_instance",
+      "aggregation": "mean",
+      "numeric_status": "valid",
+      "n": 14077
+    },
+    {
+      "comparison_group": "B2_different_instance_same_category",
+      "aggregation": "area",
+      "numeric_status": "valid",
+      "n": 6447
+    },
+    {
+      "comparison_group": "B2_different_instance_same_category",
+      "aggregation": "center",
+      "numeric_status": "invalid_patch_mapping",
+      "n": 1358
+    },
+    {
+      "comparison_group": "B2_different_instance_same_category",
+      "aggregation": "center",
+      "numeric_status": "valid",
+      "n": 5089
+    },
+    {
+      "comparison_group": "B2_different_instance_same_category",
+      "aggregation": "mean",
+      "numeric_status": "valid",
+      "n": 6447
+    },
+    {
+      "comparison_group": "B3_different_category",
+      "aggregation": "area",
+      "numeric_status": "valid",
+      "n": 5964
+    },
+    {
+      "comparison_group": "B3_different_category",
+      "aggregation": "center",
+      "numeric_status": "invalid_patch_mapping",
+      "n": 1533
+    },
+    {
+      "comparison_group": "B3_different_category",
+      "aggregation": "center",
+      "numeric_status": "valid",
+      "n": 4431
+    },
+    {
+      "comparison_group": "B3_different_category",
+      "aggregation": "mean",
+      "numeric_status": "valid",
+      "n": 5964
+    }
+  ],
+  "missing_pairs": [],
+  "controls_matched": 1773,
+  "controls_attempted": 4022,
+  "fixed_position_rows": 118160,
+  "fixed_position_selection": "Predeclared uniform patch-center sample; excludes padded-content centers. This is an image-coordinate diagnostic.",
+  "negative_control": "Same scene, camera and exact target frame; different official instance; target area/depth ratios bounded; controls may be reused across anchors",
+  "metrics_precision": "float32",
+  "relative_l2_denominator": "norm(t1) + 1e-8"
+}

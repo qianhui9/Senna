@@ -1,0 +1,3959 @@
+{
+  "e2_matched_rows": 40043,
+  "within_selected_scenes": 11886,
+  "eligible_pairs": 11122,
+  "selected_pairs": 100,
+  "quality_filtered": 764,
+  "quality_filter_fraction": 0.06427730102641764,
+  "sampling_omitted": 11022,
+  "unique_instances": 71,
+  "object_observations_including_controls": 2209,
+  "sampling": "seeded round robin over scene/camera/category/gap/motion/area/displacement/ego strata; descriptive selected cohort, not population estimate",
+  "distributions": {
+    "scene_name": {
+      "eligible": {
+        "scene-0274": 5520,
+        "scene-0275": 5602
+      },
+      "selected": {
+        "scene-0274": 51,
+        "scene-0275": 49
+      }
+    },
+    "camera_channel": {
+      "eligible": {
+        "CAM_BACK": 2563,
+        "CAM_BACK_LEFT": 1738,
+        "CAM_BACK_RIGHT": 819,
+        "CAM_FRONT": 2634,
+        "CAM_FRONT_LEFT": 1970,
+        "CAM_FRONT_RIGHT": 1398
+      },
+      "selected": {
+        "CAM_BACK": 16,
+        "CAM_BACK_LEFT": 17,
+        "CAM_BACK_RIGHT": 13,
+        "CAM_FRONT": 25,
+        "CAM_FRONT_LEFT": 18,
+        "CAM_FRONT_RIGHT": 11
+      }
+    },
+    "category_name": {
+      "eligible": {
+        "human.pedestrian.adult": 4296,
+        "human.pedestrian.construction_worker": 373,
+        "movable_object.barrier": 4014,
+        "movable_object.pushable_pullable": 26,
+        "movable_object.trafficcone": 630,
+        "static_object.bicycle_rack": 44,
+        "vehicle.bicycle": 43,
+        "vehicle.bus.rigid": 303,
+        "vehicle.car": 1108,
+        "vehicle.construction": 101,
+        "vehicle.motorcycle": 137,
+        "vehicle.truck": 47
+      },
+      "selected": {
+        "human.pedestrian.adult": 29,
+        "human.pedestrian.construction_worker": 4,
+        "movable_object.barrier": 22,
+        "movable_object.trafficcone": 19,
+        "static_object.bicycle_rack": 2,
+        "vehicle.bicycle": 1,
+        "vehicle.bus.rigid": 2,
+        "vehicle.car": 15,
+        "vehicle.construction": 2,
+        "vehicle.motorcycle": 2,
+        "vehicle.truck": 2
+      }
+    },
+    "gap_steps": {
+      "eligible": {
+        "1": 4568,
+        "2": 3838,
+        "4": 2716
+      },
+      "selected": {
+        "1": 40,
+        "2": 31,
+        "4": 29
+      }
+    },
+    "motion_group": {
+      "eligible": {
+        "approximately_static": 7001,
+        "moving": 4121
+      },
+      "selected": {
+        "approximately_static": 64,
+        "moving": 36
+      }
+    },
+    "area_bin": {
+      "eligible": {
+        "(0.0, 2000.0]": 2577,
+        "(10000.0, 50000.0]": 2655,
+        "(2000.0, 10000.0]": 5122,
+        "(50000.0, inf]": 768
+      },
+      "selected": {
+        "(0.0, 2000.0]": 14,
+        "(10000.0, 50000.0]": 32,
+        "(2000.0, 10000.0]": 39,
+        "(50000.0, inf]": 15
+      }
+    },
+    "displacement_bin": {
+      "eligible": {
+        "(-inf, 0.03]": 4461,
+        "(0.03, 0.1]": 3346,
+        "(0.1, 0.25]": 2228,
+        "(0.25, inf]": 1087
+      },
+      "selected": {
+        "(-inf, 0.03]": 23,
+        "(0.03, 0.1]": 29,
+        "(0.1, 0.25]": 28,
+        "(0.25, inf]": 20
+      }
+    },
+    "ego_translation_bin": {
+      "eligible": {
+        "(-inf, 1.0]": 2599,
+        "(1.0, 3.0]": 1806,
+        "(10.0, inf]": 1325,
+        "(3.0, 10.0]": 5392
+      },
+      "selected": {
+        "(-inf, 1.0]": 15,
+        "(1.0, 3.0]": 22,
+        "(10.0, inf]": 12,
+        "(3.0, 10.0]": 51
+      }
+    }
+  },
+  "exclusions": [
+    {
+      "pair_id": "d6f9027a85474ee4bbd4103cc7619f4f:573172be3eda4aae94e875fe4403c57b",
+      "instance_token": "7a45db444dea4f098533909a25f709de",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "d6f9027a85474ee4bbd4103cc7619f4f:573172be3eda4aae94e875fe4403c57b",
+      "instance_token": "699aa864ecd84cf28251ed1c62899204",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "573172be3eda4aae94e875fe4403c57b:3387d937c3864cdcaf0454542ebaa961",
+      "instance_token": "699aa864ecd84cf28251ed1c62899204",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "3387d937c3864cdcaf0454542ebaa961:2bb8324710ae4fb1a000cdf7f1eb253c",
+      "instance_token": "699aa864ecd84cf28251ed1c62899204",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "2bb8324710ae4fb1a000cdf7f1eb253c:34cf97ab4d6b452d862ae6c8374f7ee9",
+      "instance_token": "699aa864ecd84cf28251ed1c62899204",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "34cf97ab4d6b452d862ae6c8374f7ee9:9bd318b5781f4bf797b9b6ee69f9cbd8",
+      "instance_token": "699aa864ecd84cf28251ed1c62899204",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "9bd318b5781f4bf797b9b6ee69f9cbd8:72fb9f0f545a4d6b92f6de14c9dcce85",
+      "instance_token": "699aa864ecd84cf28251ed1c62899204",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "9bd318b5781f4bf797b9b6ee69f9cbd8:72fb9f0f545a4d6b92f6de14c9dcce85",
+      "instance_token": "9361faab5d6147768c4213daada4dd0e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "72fb9f0f545a4d6b92f6de14c9dcce85:ef9eddeaa6c641b2bfc687237153a1e9",
+      "instance_token": "699aa864ecd84cf28251ed1c62899204",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "72fb9f0f545a4d6b92f6de14c9dcce85:ef9eddeaa6c641b2bfc687237153a1e9",
+      "instance_token": "7a45db444dea4f098533909a25f709de",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "72fb9f0f545a4d6b92f6de14c9dcce85:ef9eddeaa6c641b2bfc687237153a1e9",
+      "instance_token": "9361faab5d6147768c4213daada4dd0e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "ef9eddeaa6c641b2bfc687237153a1e9:913f4d17b4c54ce19662f83158a3d4d0",
+      "instance_token": "699aa864ecd84cf28251ed1c62899204",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "ef9eddeaa6c641b2bfc687237153a1e9:913f4d17b4c54ce19662f83158a3d4d0",
+      "instance_token": "7a45db444dea4f098533909a25f709de",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "ef9eddeaa6c641b2bfc687237153a1e9:913f4d17b4c54ce19662f83158a3d4d0",
+      "instance_token": "9361faab5d6147768c4213daada4dd0e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "913f4d17b4c54ce19662f83158a3d4d0:728f711f0d8e4b5fa85defb9bbb51399",
+      "instance_token": "334a18dd060c4212b28014c62527ef8e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "913f4d17b4c54ce19662f83158a3d4d0:728f711f0d8e4b5fa85defb9bbb51399",
+      "instance_token": "334a18dd060c4212b28014c62527ef8e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "913f4d17b4c54ce19662f83158a3d4d0:728f711f0d8e4b5fa85defb9bbb51399",
+      "instance_token": "699aa864ecd84cf28251ed1c62899204",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "913f4d17b4c54ce19662f83158a3d4d0:728f711f0d8e4b5fa85defb9bbb51399",
+      "instance_token": "9361faab5d6147768c4213daada4dd0e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "913f4d17b4c54ce19662f83158a3d4d0:728f711f0d8e4b5fa85defb9bbb51399",
+      "instance_token": "bf678f13abb14aeead1fd0aaff9915ad",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "728f711f0d8e4b5fa85defb9bbb51399:4ea42d9dcb2548658a950769437f108b",
+      "instance_token": "ca5e73260a44432e82bfe3b3eaae2daf",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "728f711f0d8e4b5fa85defb9bbb51399:4ea42d9dcb2548658a950769437f108b",
+      "instance_token": "334a18dd060c4212b28014c62527ef8e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "728f711f0d8e4b5fa85defb9bbb51399:4ea42d9dcb2548658a950769437f108b",
+      "instance_token": "54b3010576664b529ef1972566e0cf7e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "728f711f0d8e4b5fa85defb9bbb51399:4ea42d9dcb2548658a950769437f108b",
+      "instance_token": "699aa864ecd84cf28251ed1c62899204",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "728f711f0d8e4b5fa85defb9bbb51399:4ea42d9dcb2548658a950769437f108b",
+      "instance_token": "9361faab5d6147768c4213daada4dd0e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "728f711f0d8e4b5fa85defb9bbb51399:4ea42d9dcb2548658a950769437f108b",
+      "instance_token": "bf678f13abb14aeead1fd0aaff9915ad",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4ea42d9dcb2548658a950769437f108b:4de831d46edf46d084ac2cecf682b11a",
+      "instance_token": "20c4266d6ea64c7baccf76cb606955b2",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4ea42d9dcb2548658a950769437f108b:4de831d46edf46d084ac2cecf682b11a",
+      "instance_token": "346d9ada6ec54240afd201651bb6409c",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4ea42d9dcb2548658a950769437f108b:4de831d46edf46d084ac2cecf682b11a",
+      "instance_token": "ca5e73260a44432e82bfe3b3eaae2daf",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4ea42d9dcb2548658a950769437f108b:4de831d46edf46d084ac2cecf682b11a",
+      "instance_token": "334a18dd060c4212b28014c62527ef8e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4ea42d9dcb2548658a950769437f108b:4de831d46edf46d084ac2cecf682b11a",
+      "instance_token": "54b3010576664b529ef1972566e0cf7e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4ea42d9dcb2548658a950769437f108b:4de831d46edf46d084ac2cecf682b11a",
+      "instance_token": "9361faab5d6147768c4213daada4dd0e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4ea42d9dcb2548658a950769437f108b:4de831d46edf46d084ac2cecf682b11a",
+      "instance_token": "dfb1994e77954288ae5f992fbfd63ef9",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4de831d46edf46d084ac2cecf682b11a:9bab9367c07f4410ab2a3e901d76034f",
+      "instance_token": "0dae99222c5042e68c4ebbd20f95f526",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4de831d46edf46d084ac2cecf682b11a:9bab9367c07f4410ab2a3e901d76034f",
+      "instance_token": "20c4266d6ea64c7baccf76cb606955b2",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4de831d46edf46d084ac2cecf682b11a:9bab9367c07f4410ab2a3e901d76034f",
+      "instance_token": "30c1972105e6465b9928bc46d9bf9538",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4de831d46edf46d084ac2cecf682b11a:9bab9367c07f4410ab2a3e901d76034f",
+      "instance_token": "346d9ada6ec54240afd201651bb6409c",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4de831d46edf46d084ac2cecf682b11a:9bab9367c07f4410ab2a3e901d76034f",
+      "instance_token": "c612ed42c4d940769f63c02b9d8fbf28",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4de831d46edf46d084ac2cecf682b11a:9bab9367c07f4410ab2a3e901d76034f",
+      "instance_token": "ca5e73260a44432e82bfe3b3eaae2daf",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4de831d46edf46d084ac2cecf682b11a:9bab9367c07f4410ab2a3e901d76034f",
+      "instance_token": "334a18dd060c4212b28014c62527ef8e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4de831d46edf46d084ac2cecf682b11a:9bab9367c07f4410ab2a3e901d76034f",
+      "instance_token": "54b3010576664b529ef1972566e0cf7e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4de831d46edf46d084ac2cecf682b11a:9bab9367c07f4410ab2a3e901d76034f",
+      "instance_token": "9361faab5d6147768c4213daada4dd0e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4de831d46edf46d084ac2cecf682b11a:9bab9367c07f4410ab2a3e901d76034f",
+      "instance_token": "dfb1994e77954288ae5f992fbfd63ef9",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "9bab9367c07f4410ab2a3e901d76034f:2128fc958907421ca888ab014a73348a",
+      "instance_token": "0dae99222c5042e68c4ebbd20f95f526",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "9bab9367c07f4410ab2a3e901d76034f:2128fc958907421ca888ab014a73348a",
+      "instance_token": "30c1972105e6465b9928bc46d9bf9538",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "9bab9367c07f4410ab2a3e901d76034f:2128fc958907421ca888ab014a73348a",
+      "instance_token": "346d9ada6ec54240afd201651bb6409c",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "9bab9367c07f4410ab2a3e901d76034f:2128fc958907421ca888ab014a73348a",
+      "instance_token": "c612ed42c4d940769f63c02b9d8fbf28",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "9bab9367c07f4410ab2a3e901d76034f:2128fc958907421ca888ab014a73348a",
+      "instance_token": "ca5e73260a44432e82bfe3b3eaae2daf",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "9bab9367c07f4410ab2a3e901d76034f:2128fc958907421ca888ab014a73348a",
+      "instance_token": "334a18dd060c4212b28014c62527ef8e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "9bab9367c07f4410ab2a3e901d76034f:2128fc958907421ca888ab014a73348a",
+      "instance_token": "9361faab5d6147768c4213daada4dd0e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "9bab9367c07f4410ab2a3e901d76034f:2128fc958907421ca888ab014a73348a",
+      "instance_token": "dfb1994e77954288ae5f992fbfd63ef9",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "2128fc958907421ca888ab014a73348a:144689dc04d74506a875106f2ff76d9e",
+      "instance_token": "0dae99222c5042e68c4ebbd20f95f526",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "2128fc958907421ca888ab014a73348a:144689dc04d74506a875106f2ff76d9e",
+      "instance_token": "334a18dd060c4212b28014c62527ef8e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "2128fc958907421ca888ab014a73348a:144689dc04d74506a875106f2ff76d9e",
+      "instance_token": "9361faab5d6147768c4213daada4dd0e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "144689dc04d74506a875106f2ff76d9e:d813d750f591453a9b1bb905e6a88b48",
+      "instance_token": "0dae99222c5042e68c4ebbd20f95f526",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "144689dc04d74506a875106f2ff76d9e:d813d750f591453a9b1bb905e6a88b48",
+      "instance_token": "48991cf65c484db6874d0556d70710f5",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "144689dc04d74506a875106f2ff76d9e:d813d750f591453a9b1bb905e6a88b48",
+      "instance_token": "e036e66aab1c4d72b207cdfb26c8e429",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "144689dc04d74506a875106f2ff76d9e:d813d750f591453a9b1bb905e6a88b48",
+      "instance_token": "6db61aee8cdc42f0bc6a496efb62abd3",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "144689dc04d74506a875106f2ff76d9e:d813d750f591453a9b1bb905e6a88b48",
+      "instance_token": "9361faab5d6147768c4213daada4dd0e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "d813d750f591453a9b1bb905e6a88b48:bf6aeba0f19a46b087916c915f73cf39",
+      "instance_token": "48991cf65c484db6874d0556d70710f5",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "d813d750f591453a9b1bb905e6a88b48:bf6aeba0f19a46b087916c915f73cf39",
+      "instance_token": "e036e66aab1c4d72b207cdfb26c8e429",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "d813d750f591453a9b1bb905e6a88b48:bf6aeba0f19a46b087916c915f73cf39",
+      "instance_token": "6db61aee8cdc42f0bc6a496efb62abd3",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "d813d750f591453a9b1bb905e6a88b48:bf6aeba0f19a46b087916c915f73cf39",
+      "instance_token": "9361faab5d6147768c4213daada4dd0e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "bf6aeba0f19a46b087916c915f73cf39:9018d220fc7340998efa65631a9c3cd4",
+      "instance_token": "48991cf65c484db6874d0556d70710f5",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "bf6aeba0f19a46b087916c915f73cf39:9018d220fc7340998efa65631a9c3cd4",
+      "instance_token": "97d542667155423097edcf872050af3d",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "bf6aeba0f19a46b087916c915f73cf39:9018d220fc7340998efa65631a9c3cd4",
+      "instance_token": "e036e66aab1c4d72b207cdfb26c8e429",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "bf6aeba0f19a46b087916c915f73cf39:9018d220fc7340998efa65631a9c3cd4",
+      "instance_token": "4105a910a2be481fa625fc55ddf9c039",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "bf6aeba0f19a46b087916c915f73cf39:9018d220fc7340998efa65631a9c3cd4",
+      "instance_token": "6691fe985beb40d0a32510f180c256cb",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "bf6aeba0f19a46b087916c915f73cf39:9018d220fc7340998efa65631a9c3cd4",
+      "instance_token": "6db61aee8cdc42f0bc6a496efb62abd3",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "bf6aeba0f19a46b087916c915f73cf39:9018d220fc7340998efa65631a9c3cd4",
+      "instance_token": "9361faab5d6147768c4213daada4dd0e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "bf6aeba0f19a46b087916c915f73cf39:9018d220fc7340998efa65631a9c3cd4",
+      "instance_token": "9c51df8c5ecf4514b03d2f62c149d8f1",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "9018d220fc7340998efa65631a9c3cd4:5b8b618c3f9e481bb8522d9900d74f20",
+      "instance_token": "48991cf65c484db6874d0556d70710f5",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "9018d220fc7340998efa65631a9c3cd4:5b8b618c3f9e481bb8522d9900d74f20",
+      "instance_token": "97d542667155423097edcf872050af3d",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "9018d220fc7340998efa65631a9c3cd4:5b8b618c3f9e481bb8522d9900d74f20",
+      "instance_token": "e036e66aab1c4d72b207cdfb26c8e429",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "9018d220fc7340998efa65631a9c3cd4:5b8b618c3f9e481bb8522d9900d74f20",
+      "instance_token": "4105a910a2be481fa625fc55ddf9c039",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "9018d220fc7340998efa65631a9c3cd4:5b8b618c3f9e481bb8522d9900d74f20",
+      "instance_token": "451696b36357405b87368287bf50bbf6",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "9018d220fc7340998efa65631a9c3cd4:5b8b618c3f9e481bb8522d9900d74f20",
+      "instance_token": "9361faab5d6147768c4213daada4dd0e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "9018d220fc7340998efa65631a9c3cd4:5b8b618c3f9e481bb8522d9900d74f20",
+      "instance_token": "e94c4ffff6104b69a44c5e7328322a83",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "5b8b618c3f9e481bb8522d9900d74f20:8491dd8fb7a44826b15e24ef9f869455",
+      "instance_token": "48991cf65c484db6874d0556d70710f5",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "5b8b618c3f9e481bb8522d9900d74f20:8491dd8fb7a44826b15e24ef9f869455",
+      "instance_token": "e036e66aab1c4d72b207cdfb26c8e429",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "5b8b618c3f9e481bb8522d9900d74f20:8491dd8fb7a44826b15e24ef9f869455",
+      "instance_token": "e036e66aab1c4d72b207cdfb26c8e429",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "5b8b618c3f9e481bb8522d9900d74f20:8491dd8fb7a44826b15e24ef9f869455",
+      "instance_token": "f0d030b84f944a9eaccc53869f95c881",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "5b8b618c3f9e481bb8522d9900d74f20:8491dd8fb7a44826b15e24ef9f869455",
+      "instance_token": "9361faab5d6147768c4213daada4dd0e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "5b8b618c3f9e481bb8522d9900d74f20:8491dd8fb7a44826b15e24ef9f869455",
+      "instance_token": "a6dc0a3736064e418426ccff591b70de",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "5b8b618c3f9e481bb8522d9900d74f20:8491dd8fb7a44826b15e24ef9f869455",
+      "instance_token": "e94c4ffff6104b69a44c5e7328322a83",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "8491dd8fb7a44826b15e24ef9f869455:d90f206c2a2e405e912ee046b0b27d85",
+      "instance_token": "e036e66aab1c4d72b207cdfb26c8e429",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "8491dd8fb7a44826b15e24ef9f869455:d90f206c2a2e405e912ee046b0b27d85",
+      "instance_token": "f0d030b84f944a9eaccc53869f95c881",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "8491dd8fb7a44826b15e24ef9f869455:d90f206c2a2e405e912ee046b0b27d85",
+      "instance_token": "9361faab5d6147768c4213daada4dd0e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "8491dd8fb7a44826b15e24ef9f869455:d90f206c2a2e405e912ee046b0b27d85",
+      "instance_token": "9e64ba12fbbd474d908a6e93f8461b83",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "8491dd8fb7a44826b15e24ef9f869455:d90f206c2a2e405e912ee046b0b27d85",
+      "instance_token": "a6dc0a3736064e418426ccff591b70de",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "8491dd8fb7a44826b15e24ef9f869455:d90f206c2a2e405e912ee046b0b27d85",
+      "instance_token": "b60a51c72fcd4b1d8f232d2275e31114",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "8491dd8fb7a44826b15e24ef9f869455:d90f206c2a2e405e912ee046b0b27d85",
+      "instance_token": "e94c4ffff6104b69a44c5e7328322a83",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "d90f206c2a2e405e912ee046b0b27d85:9d0b36d611be43ffa9244ee9a4e9c5e9",
+      "instance_token": "5a9c5367ec66438995e4d2c197899cd1",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "d90f206c2a2e405e912ee046b0b27d85:9d0b36d611be43ffa9244ee9a4e9c5e9",
+      "instance_token": "e036e66aab1c4d72b207cdfb26c8e429",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "d90f206c2a2e405e912ee046b0b27d85:9d0b36d611be43ffa9244ee9a4e9c5e9",
+      "instance_token": "9361faab5d6147768c4213daada4dd0e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "d90f206c2a2e405e912ee046b0b27d85:9d0b36d611be43ffa9244ee9a4e9c5e9",
+      "instance_token": "a6dc0a3736064e418426ccff591b70de",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "d90f206c2a2e405e912ee046b0b27d85:9d0b36d611be43ffa9244ee9a4e9c5e9",
+      "instance_token": "e94c4ffff6104b69a44c5e7328322a83",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "9d0b36d611be43ffa9244ee9a4e9c5e9:1fa5506ca31d4174955140d2138db679",
+      "instance_token": "95415fa7d0a04aec97c47591cad537ae",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "9d0b36d611be43ffa9244ee9a4e9c5e9:1fa5506ca31d4174955140d2138db679",
+      "instance_token": "a6dc0a3736064e418426ccff591b70de",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "9d0b36d611be43ffa9244ee9a4e9c5e9:1fa5506ca31d4174955140d2138db679",
+      "instance_token": "ca7859921a134b87b9433c2899bd3efa",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "1fa5506ca31d4174955140d2138db679:364828ce52784d7a8f1b6f586637e23a",
+      "instance_token": "5b7e19b6d76a42c4b862682630e01eda",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "1fa5506ca31d4174955140d2138db679:364828ce52784d7a8f1b6f586637e23a",
+      "instance_token": "95415fa7d0a04aec97c47591cad537ae",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "1fa5506ca31d4174955140d2138db679:364828ce52784d7a8f1b6f586637e23a",
+      "instance_token": "a6dc0a3736064e418426ccff591b70de",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "1fa5506ca31d4174955140d2138db679:364828ce52784d7a8f1b6f586637e23a",
+      "instance_token": "ca7859921a134b87b9433c2899bd3efa",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "364828ce52784d7a8f1b6f586637e23a:864f2bd660ba4d5b83fc5dee443801ce",
+      "instance_token": "5b7e19b6d76a42c4b862682630e01eda",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "364828ce52784d7a8f1b6f586637e23a:864f2bd660ba4d5b83fc5dee443801ce",
+      "instance_token": "95415fa7d0a04aec97c47591cad537ae",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "364828ce52784d7a8f1b6f586637e23a:864f2bd660ba4d5b83fc5dee443801ce",
+      "instance_token": "a50f438911c042b7978efe694a97a16d",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "364828ce52784d7a8f1b6f586637e23a:864f2bd660ba4d5b83fc5dee443801ce",
+      "instance_token": "ca7859921a134b87b9433c2899bd3efa",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "864f2bd660ba4d5b83fc5dee443801ce:1734a670436946788e72ec8ce185957b",
+      "instance_token": "4c2b495edd3248ebbb05872da9ae7ac7",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "864f2bd660ba4d5b83fc5dee443801ce:1734a670436946788e72ec8ce185957b",
+      "instance_token": "5b7e19b6d76a42c4b862682630e01eda",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "864f2bd660ba4d5b83fc5dee443801ce:1734a670436946788e72ec8ce185957b",
+      "instance_token": "a50f438911c042b7978efe694a97a16d",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "864f2bd660ba4d5b83fc5dee443801ce:1734a670436946788e72ec8ce185957b",
+      "instance_token": "ca7859921a134b87b9433c2899bd3efa",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "1734a670436946788e72ec8ce185957b:2e51aaf4465441dcbe22351087a62c46",
+      "instance_token": "4c2b495edd3248ebbb05872da9ae7ac7",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "1734a670436946788e72ec8ce185957b:2e51aaf4465441dcbe22351087a62c46",
+      "instance_token": "e036e66aab1c4d72b207cdfb26c8e429",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "1734a670436946788e72ec8ce185957b:2e51aaf4465441dcbe22351087a62c46",
+      "instance_token": "5b7e19b6d76a42c4b862682630e01eda",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "1734a670436946788e72ec8ce185957b:2e51aaf4465441dcbe22351087a62c46",
+      "instance_token": "721de34f904046db918e7c93d7dc4cd8",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "1734a670436946788e72ec8ce185957b:2e51aaf4465441dcbe22351087a62c46",
+      "instance_token": "a50f438911c042b7978efe694a97a16d",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "2e51aaf4465441dcbe22351087a62c46:291d30843273487c96a7dc86f79a030f",
+      "instance_token": "53d6143a52b64bc0984ca447a8321372",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "2e51aaf4465441dcbe22351087a62c46:291d30843273487c96a7dc86f79a030f",
+      "instance_token": "e036e66aab1c4d72b207cdfb26c8e429",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "2e51aaf4465441dcbe22351087a62c46:291d30843273487c96a7dc86f79a030f",
+      "instance_token": "5b7e19b6d76a42c4b862682630e01eda",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "2e51aaf4465441dcbe22351087a62c46:291d30843273487c96a7dc86f79a030f",
+      "instance_token": "721de34f904046db918e7c93d7dc4cd8",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "2e51aaf4465441dcbe22351087a62c46:291d30843273487c96a7dc86f79a030f",
+      "instance_token": "a08f86d9cade410da8c7e0a15d0d4187",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "2e51aaf4465441dcbe22351087a62c46:291d30843273487c96a7dc86f79a030f",
+      "instance_token": "a50f438911c042b7978efe694a97a16d",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "2e51aaf4465441dcbe22351087a62c46:291d30843273487c96a7dc86f79a030f",
+      "instance_token": "fa587210b65e4ae6bb9684cd431a21c4",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "291d30843273487c96a7dc86f79a030f:90c1665c6cf24153a834063fd99f257c",
+      "instance_token": "53d6143a52b64bc0984ca447a8321372",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "291d30843273487c96a7dc86f79a030f:90c1665c6cf24153a834063fd99f257c",
+      "instance_token": "e036e66aab1c4d72b207cdfb26c8e429",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "291d30843273487c96a7dc86f79a030f:90c1665c6cf24153a834063fd99f257c",
+      "instance_token": "721de34f904046db918e7c93d7dc4cd8",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "291d30843273487c96a7dc86f79a030f:90c1665c6cf24153a834063fd99f257c",
+      "instance_token": "a08f86d9cade410da8c7e0a15d0d4187",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "291d30843273487c96a7dc86f79a030f:90c1665c6cf24153a834063fd99f257c",
+      "instance_token": "fa587210b65e4ae6bb9684cd431a21c4",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "90c1665c6cf24153a834063fd99f257c:783bf5ef43d04e538df4986e1461ba7e",
+      "instance_token": "53d6143a52b64bc0984ca447a8321372",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "90c1665c6cf24153a834063fd99f257c:783bf5ef43d04e538df4986e1461ba7e",
+      "instance_token": "e036e66aab1c4d72b207cdfb26c8e429",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "90c1665c6cf24153a834063fd99f257c:783bf5ef43d04e538df4986e1461ba7e",
+      "instance_token": "721de34f904046db918e7c93d7dc4cd8",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "90c1665c6cf24153a834063fd99f257c:783bf5ef43d04e538df4986e1461ba7e",
+      "instance_token": "a08f86d9cade410da8c7e0a15d0d4187",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "90c1665c6cf24153a834063fd99f257c:783bf5ef43d04e538df4986e1461ba7e",
+      "instance_token": "b06db657e7f74eb79db446b6aff87890",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "90c1665c6cf24153a834063fd99f257c:783bf5ef43d04e538df4986e1461ba7e",
+      "instance_token": "fa587210b65e4ae6bb9684cd431a21c4",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "783bf5ef43d04e538df4986e1461ba7e:f5a8490b733140bd9eb51131f5e65b4e",
+      "instance_token": "721de34f904046db918e7c93d7dc4cd8",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "783bf5ef43d04e538df4986e1461ba7e:f5a8490b733140bd9eb51131f5e65b4e",
+      "instance_token": "a08f86d9cade410da8c7e0a15d0d4187",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "783bf5ef43d04e538df4986e1461ba7e:f5a8490b733140bd9eb51131f5e65b4e",
+      "instance_token": "b06db657e7f74eb79db446b6aff87890",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "783bf5ef43d04e538df4986e1461ba7e:f5a8490b733140bd9eb51131f5e65b4e",
+      "instance_token": "fa587210b65e4ae6bb9684cd431a21c4",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "f5a8490b733140bd9eb51131f5e65b4e:cb57adad69c54307907d522fd78c543b",
+      "instance_token": "721de34f904046db918e7c93d7dc4cd8",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "f5a8490b733140bd9eb51131f5e65b4e:cb57adad69c54307907d522fd78c543b",
+      "instance_token": "fa587210b65e4ae6bb9684cd431a21c4",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "cb57adad69c54307907d522fd78c543b:b46095be5e6c47d2aff1a67a151fc984",
+      "instance_token": "7894d10930c649568ae5fc46dcc300b4",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "cb57adad69c54307907d522fd78c543b:b46095be5e6c47d2aff1a67a151fc984",
+      "instance_token": "4c2b495edd3248ebbb05872da9ae7ac7",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "cb57adad69c54307907d522fd78c543b:b46095be5e6c47d2aff1a67a151fc984",
+      "instance_token": "86b51678019b403b90b8114826dcc370",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "cb57adad69c54307907d522fd78c543b:b46095be5e6c47d2aff1a67a151fc984",
+      "instance_token": "fa587210b65e4ae6bb9684cd431a21c4",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "b46095be5e6c47d2aff1a67a151fc984:de44070678e84676ab9e68a16a55b5d5",
+      "instance_token": "29760d0db01c4a2a84a9f58604ed5253",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "b46095be5e6c47d2aff1a67a151fc984:de44070678e84676ab9e68a16a55b5d5",
+      "instance_token": "7894d10930c649568ae5fc46dcc300b4",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "b46095be5e6c47d2aff1a67a151fc984:de44070678e84676ab9e68a16a55b5d5",
+      "instance_token": "63eba4431717461aa0dfc941c1e43728",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "b46095be5e6c47d2aff1a67a151fc984:de44070678e84676ab9e68a16a55b5d5",
+      "instance_token": "86b51678019b403b90b8114826dcc370",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "b46095be5e6c47d2aff1a67a151fc984:de44070678e84676ab9e68a16a55b5d5",
+      "instance_token": "c612ed42c4d940769f63c02b9d8fbf28",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "b46095be5e6c47d2aff1a67a151fc984:de44070678e84676ab9e68a16a55b5d5",
+      "instance_token": "fa587210b65e4ae6bb9684cd431a21c4",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "de44070678e84676ab9e68a16a55b5d5:a6f13e65dcd141bca7ffb425d7c6c8be",
+      "instance_token": "29760d0db01c4a2a84a9f58604ed5253",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "de44070678e84676ab9e68a16a55b5d5:a6f13e65dcd141bca7ffb425d7c6c8be",
+      "instance_token": "7894d10930c649568ae5fc46dcc300b4",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "de44070678e84676ab9e68a16a55b5d5:a6f13e65dcd141bca7ffb425d7c6c8be",
+      "instance_token": "63eba4431717461aa0dfc941c1e43728",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "de44070678e84676ab9e68a16a55b5d5:a6f13e65dcd141bca7ffb425d7c6c8be",
+      "instance_token": "a80ac864fdfe40c48e980e9e85a75ddb",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "de44070678e84676ab9e68a16a55b5d5:a6f13e65dcd141bca7ffb425d7c6c8be",
+      "instance_token": "c612ed42c4d940769f63c02b9d8fbf28",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "de44070678e84676ab9e68a16a55b5d5:a6f13e65dcd141bca7ffb425d7c6c8be",
+      "instance_token": "fa587210b65e4ae6bb9684cd431a21c4",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "6d32f67b3307453aae7b942c91b7b9e8:573172be3eda4aae94e875fe4403c57b",
+      "instance_token": "7a45db444dea4f098533909a25f709de",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "6d32f67b3307453aae7b942c91b7b9e8:573172be3eda4aae94e875fe4403c57b",
+      "instance_token": "699aa864ecd84cf28251ed1c62899204",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "d6f9027a85474ee4bbd4103cc7619f4f:3387d937c3864cdcaf0454542ebaa961",
+      "instance_token": "699aa864ecd84cf28251ed1c62899204",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "573172be3eda4aae94e875fe4403c57b:2bb8324710ae4fb1a000cdf7f1eb253c",
+      "instance_token": "699aa864ecd84cf28251ed1c62899204",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "3387d937c3864cdcaf0454542ebaa961:34cf97ab4d6b452d862ae6c8374f7ee9",
+      "instance_token": "699aa864ecd84cf28251ed1c62899204",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "2bb8324710ae4fb1a000cdf7f1eb253c:9bd318b5781f4bf797b9b6ee69f9cbd8",
+      "instance_token": "699aa864ecd84cf28251ed1c62899204",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "34cf97ab4d6b452d862ae6c8374f7ee9:72fb9f0f545a4d6b92f6de14c9dcce85",
+      "instance_token": "699aa864ecd84cf28251ed1c62899204",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "34cf97ab4d6b452d862ae6c8374f7ee9:72fb9f0f545a4d6b92f6de14c9dcce85",
+      "instance_token": "9361faab5d6147768c4213daada4dd0e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "9bd318b5781f4bf797b9b6ee69f9cbd8:ef9eddeaa6c641b2bfc687237153a1e9",
+      "instance_token": "699aa864ecd84cf28251ed1c62899204",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "9bd318b5781f4bf797b9b6ee69f9cbd8:ef9eddeaa6c641b2bfc687237153a1e9",
+      "instance_token": "7a45db444dea4f098533909a25f709de",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "9bd318b5781f4bf797b9b6ee69f9cbd8:ef9eddeaa6c641b2bfc687237153a1e9",
+      "instance_token": "9361faab5d6147768c4213daada4dd0e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "72fb9f0f545a4d6b92f6de14c9dcce85:913f4d17b4c54ce19662f83158a3d4d0",
+      "instance_token": "699aa864ecd84cf28251ed1c62899204",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "72fb9f0f545a4d6b92f6de14c9dcce85:913f4d17b4c54ce19662f83158a3d4d0",
+      "instance_token": "7a45db444dea4f098533909a25f709de",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "72fb9f0f545a4d6b92f6de14c9dcce85:913f4d17b4c54ce19662f83158a3d4d0",
+      "instance_token": "9361faab5d6147768c4213daada4dd0e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "ef9eddeaa6c641b2bfc687237153a1e9:728f711f0d8e4b5fa85defb9bbb51399",
+      "instance_token": "699aa864ecd84cf28251ed1c62899204",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "ef9eddeaa6c641b2bfc687237153a1e9:728f711f0d8e4b5fa85defb9bbb51399",
+      "instance_token": "9361faab5d6147768c4213daada4dd0e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "ef9eddeaa6c641b2bfc687237153a1e9:728f711f0d8e4b5fa85defb9bbb51399",
+      "instance_token": "bf678f13abb14aeead1fd0aaff9915ad",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "913f4d17b4c54ce19662f83158a3d4d0:4ea42d9dcb2548658a950769437f108b",
+      "instance_token": "334a18dd060c4212b28014c62527ef8e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "913f4d17b4c54ce19662f83158a3d4d0:4ea42d9dcb2548658a950769437f108b",
+      "instance_token": "54b3010576664b529ef1972566e0cf7e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "913f4d17b4c54ce19662f83158a3d4d0:4ea42d9dcb2548658a950769437f108b",
+      "instance_token": "699aa864ecd84cf28251ed1c62899204",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "913f4d17b4c54ce19662f83158a3d4d0:4ea42d9dcb2548658a950769437f108b",
+      "instance_token": "9361faab5d6147768c4213daada4dd0e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "913f4d17b4c54ce19662f83158a3d4d0:4ea42d9dcb2548658a950769437f108b",
+      "instance_token": "bf678f13abb14aeead1fd0aaff9915ad",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "728f711f0d8e4b5fa85defb9bbb51399:4de831d46edf46d084ac2cecf682b11a",
+      "instance_token": "ca5e73260a44432e82bfe3b3eaae2daf",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "728f711f0d8e4b5fa85defb9bbb51399:4de831d46edf46d084ac2cecf682b11a",
+      "instance_token": "334a18dd060c4212b28014c62527ef8e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "728f711f0d8e4b5fa85defb9bbb51399:4de831d46edf46d084ac2cecf682b11a",
+      "instance_token": "54b3010576664b529ef1972566e0cf7e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "728f711f0d8e4b5fa85defb9bbb51399:4de831d46edf46d084ac2cecf682b11a",
+      "instance_token": "9361faab5d6147768c4213daada4dd0e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "728f711f0d8e4b5fa85defb9bbb51399:4de831d46edf46d084ac2cecf682b11a",
+      "instance_token": "dfb1994e77954288ae5f992fbfd63ef9",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4ea42d9dcb2548658a950769437f108b:9bab9367c07f4410ab2a3e901d76034f",
+      "instance_token": "20c4266d6ea64c7baccf76cb606955b2",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4ea42d9dcb2548658a950769437f108b:9bab9367c07f4410ab2a3e901d76034f",
+      "instance_token": "346d9ada6ec54240afd201651bb6409c",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4ea42d9dcb2548658a950769437f108b:9bab9367c07f4410ab2a3e901d76034f",
+      "instance_token": "ca5e73260a44432e82bfe3b3eaae2daf",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4ea42d9dcb2548658a950769437f108b:9bab9367c07f4410ab2a3e901d76034f",
+      "instance_token": "334a18dd060c4212b28014c62527ef8e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4ea42d9dcb2548658a950769437f108b:9bab9367c07f4410ab2a3e901d76034f",
+      "instance_token": "54b3010576664b529ef1972566e0cf7e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4ea42d9dcb2548658a950769437f108b:9bab9367c07f4410ab2a3e901d76034f",
+      "instance_token": "9361faab5d6147768c4213daada4dd0e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4ea42d9dcb2548658a950769437f108b:9bab9367c07f4410ab2a3e901d76034f",
+      "instance_token": "dfb1994e77954288ae5f992fbfd63ef9",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4de831d46edf46d084ac2cecf682b11a:2128fc958907421ca888ab014a73348a",
+      "instance_token": "0dae99222c5042e68c4ebbd20f95f526",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4de831d46edf46d084ac2cecf682b11a:2128fc958907421ca888ab014a73348a",
+      "instance_token": "20c4266d6ea64c7baccf76cb606955b2",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4de831d46edf46d084ac2cecf682b11a:2128fc958907421ca888ab014a73348a",
+      "instance_token": "30c1972105e6465b9928bc46d9bf9538",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4de831d46edf46d084ac2cecf682b11a:2128fc958907421ca888ab014a73348a",
+      "instance_token": "346d9ada6ec54240afd201651bb6409c",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4de831d46edf46d084ac2cecf682b11a:2128fc958907421ca888ab014a73348a",
+      "instance_token": "c612ed42c4d940769f63c02b9d8fbf28",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4de831d46edf46d084ac2cecf682b11a:2128fc958907421ca888ab014a73348a",
+      "instance_token": "ca5e73260a44432e82bfe3b3eaae2daf",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4de831d46edf46d084ac2cecf682b11a:2128fc958907421ca888ab014a73348a",
+      "instance_token": "334a18dd060c4212b28014c62527ef8e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4de831d46edf46d084ac2cecf682b11a:2128fc958907421ca888ab014a73348a",
+      "instance_token": "9361faab5d6147768c4213daada4dd0e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4de831d46edf46d084ac2cecf682b11a:2128fc958907421ca888ab014a73348a",
+      "instance_token": "dfb1994e77954288ae5f992fbfd63ef9",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "9bab9367c07f4410ab2a3e901d76034f:144689dc04d74506a875106f2ff76d9e",
+      "instance_token": "0dae99222c5042e68c4ebbd20f95f526",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "9bab9367c07f4410ab2a3e901d76034f:144689dc04d74506a875106f2ff76d9e",
+      "instance_token": "30c1972105e6465b9928bc46d9bf9538",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "9bab9367c07f4410ab2a3e901d76034f:144689dc04d74506a875106f2ff76d9e",
+      "instance_token": "346d9ada6ec54240afd201651bb6409c",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "9bab9367c07f4410ab2a3e901d76034f:144689dc04d74506a875106f2ff76d9e",
+      "instance_token": "c612ed42c4d940769f63c02b9d8fbf28",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "9bab9367c07f4410ab2a3e901d76034f:144689dc04d74506a875106f2ff76d9e",
+      "instance_token": "ca5e73260a44432e82bfe3b3eaae2daf",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "9bab9367c07f4410ab2a3e901d76034f:144689dc04d74506a875106f2ff76d9e",
+      "instance_token": "334a18dd060c4212b28014c62527ef8e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "9bab9367c07f4410ab2a3e901d76034f:144689dc04d74506a875106f2ff76d9e",
+      "instance_token": "9361faab5d6147768c4213daada4dd0e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "2128fc958907421ca888ab014a73348a:d813d750f591453a9b1bb905e6a88b48",
+      "instance_token": "0dae99222c5042e68c4ebbd20f95f526",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "2128fc958907421ca888ab014a73348a:d813d750f591453a9b1bb905e6a88b48",
+      "instance_token": "6db61aee8cdc42f0bc6a496efb62abd3",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "2128fc958907421ca888ab014a73348a:d813d750f591453a9b1bb905e6a88b48",
+      "instance_token": "9361faab5d6147768c4213daada4dd0e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "144689dc04d74506a875106f2ff76d9e:bf6aeba0f19a46b087916c915f73cf39",
+      "instance_token": "0dae99222c5042e68c4ebbd20f95f526",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "144689dc04d74506a875106f2ff76d9e:bf6aeba0f19a46b087916c915f73cf39",
+      "instance_token": "48991cf65c484db6874d0556d70710f5",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "144689dc04d74506a875106f2ff76d9e:bf6aeba0f19a46b087916c915f73cf39",
+      "instance_token": "e036e66aab1c4d72b207cdfb26c8e429",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "144689dc04d74506a875106f2ff76d9e:bf6aeba0f19a46b087916c915f73cf39",
+      "instance_token": "6db61aee8cdc42f0bc6a496efb62abd3",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "144689dc04d74506a875106f2ff76d9e:bf6aeba0f19a46b087916c915f73cf39",
+      "instance_token": "9361faab5d6147768c4213daada4dd0e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "d813d750f591453a9b1bb905e6a88b48:9018d220fc7340998efa65631a9c3cd4",
+      "instance_token": "48991cf65c484db6874d0556d70710f5",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "d813d750f591453a9b1bb905e6a88b48:9018d220fc7340998efa65631a9c3cd4",
+      "instance_token": "e036e66aab1c4d72b207cdfb26c8e429",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "d813d750f591453a9b1bb905e6a88b48:9018d220fc7340998efa65631a9c3cd4",
+      "instance_token": "6db61aee8cdc42f0bc6a496efb62abd3",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "d813d750f591453a9b1bb905e6a88b48:9018d220fc7340998efa65631a9c3cd4",
+      "instance_token": "9361faab5d6147768c4213daada4dd0e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "d813d750f591453a9b1bb905e6a88b48:9018d220fc7340998efa65631a9c3cd4",
+      "instance_token": "9c51df8c5ecf4514b03d2f62c149d8f1",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "bf6aeba0f19a46b087916c915f73cf39:5b8b618c3f9e481bb8522d9900d74f20",
+      "instance_token": "48991cf65c484db6874d0556d70710f5",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "bf6aeba0f19a46b087916c915f73cf39:5b8b618c3f9e481bb8522d9900d74f20",
+      "instance_token": "97d542667155423097edcf872050af3d",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "bf6aeba0f19a46b087916c915f73cf39:5b8b618c3f9e481bb8522d9900d74f20",
+      "instance_token": "e036e66aab1c4d72b207cdfb26c8e429",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "bf6aeba0f19a46b087916c915f73cf39:5b8b618c3f9e481bb8522d9900d74f20",
+      "instance_token": "9361faab5d6147768c4213daada4dd0e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "bf6aeba0f19a46b087916c915f73cf39:5b8b618c3f9e481bb8522d9900d74f20",
+      "instance_token": "e94c4ffff6104b69a44c5e7328322a83",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "9018d220fc7340998efa65631a9c3cd4:8491dd8fb7a44826b15e24ef9f869455",
+      "instance_token": "48991cf65c484db6874d0556d70710f5",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "9018d220fc7340998efa65631a9c3cd4:8491dd8fb7a44826b15e24ef9f869455",
+      "instance_token": "97d542667155423097edcf872050af3d",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "9018d220fc7340998efa65631a9c3cd4:8491dd8fb7a44826b15e24ef9f869455",
+      "instance_token": "e036e66aab1c4d72b207cdfb26c8e429",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "9018d220fc7340998efa65631a9c3cd4:8491dd8fb7a44826b15e24ef9f869455",
+      "instance_token": "4105a910a2be481fa625fc55ddf9c039",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "9018d220fc7340998efa65631a9c3cd4:8491dd8fb7a44826b15e24ef9f869455",
+      "instance_token": "451696b36357405b87368287bf50bbf6",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "9018d220fc7340998efa65631a9c3cd4:8491dd8fb7a44826b15e24ef9f869455",
+      "instance_token": "9361faab5d6147768c4213daada4dd0e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "9018d220fc7340998efa65631a9c3cd4:8491dd8fb7a44826b15e24ef9f869455",
+      "instance_token": "a6dc0a3736064e418426ccff591b70de",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "9018d220fc7340998efa65631a9c3cd4:8491dd8fb7a44826b15e24ef9f869455",
+      "instance_token": "e94c4ffff6104b69a44c5e7328322a83",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "5b8b618c3f9e481bb8522d9900d74f20:d90f206c2a2e405e912ee046b0b27d85",
+      "instance_token": "48991cf65c484db6874d0556d70710f5",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "5b8b618c3f9e481bb8522d9900d74f20:d90f206c2a2e405e912ee046b0b27d85",
+      "instance_token": "e036e66aab1c4d72b207cdfb26c8e429",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "5b8b618c3f9e481bb8522d9900d74f20:d90f206c2a2e405e912ee046b0b27d85",
+      "instance_token": "e036e66aab1c4d72b207cdfb26c8e429",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "5b8b618c3f9e481bb8522d9900d74f20:d90f206c2a2e405e912ee046b0b27d85",
+      "instance_token": "f0d030b84f944a9eaccc53869f95c881",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "5b8b618c3f9e481bb8522d9900d74f20:d90f206c2a2e405e912ee046b0b27d85",
+      "instance_token": "9361faab5d6147768c4213daada4dd0e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "5b8b618c3f9e481bb8522d9900d74f20:d90f206c2a2e405e912ee046b0b27d85",
+      "instance_token": "9e64ba12fbbd474d908a6e93f8461b83",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "5b8b618c3f9e481bb8522d9900d74f20:d90f206c2a2e405e912ee046b0b27d85",
+      "instance_token": "a6dc0a3736064e418426ccff591b70de",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "5b8b618c3f9e481bb8522d9900d74f20:d90f206c2a2e405e912ee046b0b27d85",
+      "instance_token": "b60a51c72fcd4b1d8f232d2275e31114",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "5b8b618c3f9e481bb8522d9900d74f20:d90f206c2a2e405e912ee046b0b27d85",
+      "instance_token": "e94c4ffff6104b69a44c5e7328322a83",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "8491dd8fb7a44826b15e24ef9f869455:9d0b36d611be43ffa9244ee9a4e9c5e9",
+      "instance_token": "5a9c5367ec66438995e4d2c197899cd1",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "8491dd8fb7a44826b15e24ef9f869455:9d0b36d611be43ffa9244ee9a4e9c5e9",
+      "instance_token": "e036e66aab1c4d72b207cdfb26c8e429",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "8491dd8fb7a44826b15e24ef9f869455:9d0b36d611be43ffa9244ee9a4e9c5e9",
+      "instance_token": "f0d030b84f944a9eaccc53869f95c881",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "8491dd8fb7a44826b15e24ef9f869455:9d0b36d611be43ffa9244ee9a4e9c5e9",
+      "instance_token": "9361faab5d6147768c4213daada4dd0e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "8491dd8fb7a44826b15e24ef9f869455:9d0b36d611be43ffa9244ee9a4e9c5e9",
+      "instance_token": "a6dc0a3736064e418426ccff591b70de",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "8491dd8fb7a44826b15e24ef9f869455:9d0b36d611be43ffa9244ee9a4e9c5e9",
+      "instance_token": "e94c4ffff6104b69a44c5e7328322a83",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "d90f206c2a2e405e912ee046b0b27d85:1fa5506ca31d4174955140d2138db679",
+      "instance_token": "e036e66aab1c4d72b207cdfb26c8e429",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "d90f206c2a2e405e912ee046b0b27d85:1fa5506ca31d4174955140d2138db679",
+      "instance_token": "95415fa7d0a04aec97c47591cad537ae",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "d90f206c2a2e405e912ee046b0b27d85:1fa5506ca31d4174955140d2138db679",
+      "instance_token": "a6dc0a3736064e418426ccff591b70de",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "d90f206c2a2e405e912ee046b0b27d85:1fa5506ca31d4174955140d2138db679",
+      "instance_token": "ca7859921a134b87b9433c2899bd3efa",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "9d0b36d611be43ffa9244ee9a4e9c5e9:364828ce52784d7a8f1b6f586637e23a",
+      "instance_token": "5b7e19b6d76a42c4b862682630e01eda",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "9d0b36d611be43ffa9244ee9a4e9c5e9:364828ce52784d7a8f1b6f586637e23a",
+      "instance_token": "95415fa7d0a04aec97c47591cad537ae",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "9d0b36d611be43ffa9244ee9a4e9c5e9:364828ce52784d7a8f1b6f586637e23a",
+      "instance_token": "a6dc0a3736064e418426ccff591b70de",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "9d0b36d611be43ffa9244ee9a4e9c5e9:364828ce52784d7a8f1b6f586637e23a",
+      "instance_token": "ca7859921a134b87b9433c2899bd3efa",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "1fa5506ca31d4174955140d2138db679:864f2bd660ba4d5b83fc5dee443801ce",
+      "instance_token": "5b7e19b6d76a42c4b862682630e01eda",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "1fa5506ca31d4174955140d2138db679:864f2bd660ba4d5b83fc5dee443801ce",
+      "instance_token": "95415fa7d0a04aec97c47591cad537ae",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "1fa5506ca31d4174955140d2138db679:864f2bd660ba4d5b83fc5dee443801ce",
+      "instance_token": "a50f438911c042b7978efe694a97a16d",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "1fa5506ca31d4174955140d2138db679:864f2bd660ba4d5b83fc5dee443801ce",
+      "instance_token": "ca7859921a134b87b9433c2899bd3efa",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "364828ce52784d7a8f1b6f586637e23a:1734a670436946788e72ec8ce185957b",
+      "instance_token": "5b7e19b6d76a42c4b862682630e01eda",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "364828ce52784d7a8f1b6f586637e23a:1734a670436946788e72ec8ce185957b",
+      "instance_token": "a50f438911c042b7978efe694a97a16d",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "364828ce52784d7a8f1b6f586637e23a:1734a670436946788e72ec8ce185957b",
+      "instance_token": "ca7859921a134b87b9433c2899bd3efa",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "864f2bd660ba4d5b83fc5dee443801ce:2e51aaf4465441dcbe22351087a62c46",
+      "instance_token": "4c2b495edd3248ebbb05872da9ae7ac7",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "864f2bd660ba4d5b83fc5dee443801ce:2e51aaf4465441dcbe22351087a62c46",
+      "instance_token": "e036e66aab1c4d72b207cdfb26c8e429",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "864f2bd660ba4d5b83fc5dee443801ce:2e51aaf4465441dcbe22351087a62c46",
+      "instance_token": "5b7e19b6d76a42c4b862682630e01eda",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "864f2bd660ba4d5b83fc5dee443801ce:2e51aaf4465441dcbe22351087a62c46",
+      "instance_token": "721de34f904046db918e7c93d7dc4cd8",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "864f2bd660ba4d5b83fc5dee443801ce:2e51aaf4465441dcbe22351087a62c46",
+      "instance_token": "a50f438911c042b7978efe694a97a16d",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "1734a670436946788e72ec8ce185957b:291d30843273487c96a7dc86f79a030f",
+      "instance_token": "4c2b495edd3248ebbb05872da9ae7ac7",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "1734a670436946788e72ec8ce185957b:291d30843273487c96a7dc86f79a030f",
+      "instance_token": "e036e66aab1c4d72b207cdfb26c8e429",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "1734a670436946788e72ec8ce185957b:291d30843273487c96a7dc86f79a030f",
+      "instance_token": "5b7e19b6d76a42c4b862682630e01eda",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "1734a670436946788e72ec8ce185957b:291d30843273487c96a7dc86f79a030f",
+      "instance_token": "721de34f904046db918e7c93d7dc4cd8",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "1734a670436946788e72ec8ce185957b:291d30843273487c96a7dc86f79a030f",
+      "instance_token": "a08f86d9cade410da8c7e0a15d0d4187",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "1734a670436946788e72ec8ce185957b:291d30843273487c96a7dc86f79a030f",
+      "instance_token": "a50f438911c042b7978efe694a97a16d",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "1734a670436946788e72ec8ce185957b:291d30843273487c96a7dc86f79a030f",
+      "instance_token": "fa587210b65e4ae6bb9684cd431a21c4",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "2e51aaf4465441dcbe22351087a62c46:90c1665c6cf24153a834063fd99f257c",
+      "instance_token": "53d6143a52b64bc0984ca447a8321372",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "2e51aaf4465441dcbe22351087a62c46:90c1665c6cf24153a834063fd99f257c",
+      "instance_token": "e036e66aab1c4d72b207cdfb26c8e429",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "2e51aaf4465441dcbe22351087a62c46:90c1665c6cf24153a834063fd99f257c",
+      "instance_token": "721de34f904046db918e7c93d7dc4cd8",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "2e51aaf4465441dcbe22351087a62c46:90c1665c6cf24153a834063fd99f257c",
+      "instance_token": "a08f86d9cade410da8c7e0a15d0d4187",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "2e51aaf4465441dcbe22351087a62c46:90c1665c6cf24153a834063fd99f257c",
+      "instance_token": "fa587210b65e4ae6bb9684cd431a21c4",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "291d30843273487c96a7dc86f79a030f:783bf5ef43d04e538df4986e1461ba7e",
+      "instance_token": "53d6143a52b64bc0984ca447a8321372",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "291d30843273487c96a7dc86f79a030f:783bf5ef43d04e538df4986e1461ba7e",
+      "instance_token": "e036e66aab1c4d72b207cdfb26c8e429",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "291d30843273487c96a7dc86f79a030f:783bf5ef43d04e538df4986e1461ba7e",
+      "instance_token": "721de34f904046db918e7c93d7dc4cd8",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "291d30843273487c96a7dc86f79a030f:783bf5ef43d04e538df4986e1461ba7e",
+      "instance_token": "a08f86d9cade410da8c7e0a15d0d4187",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "291d30843273487c96a7dc86f79a030f:783bf5ef43d04e538df4986e1461ba7e",
+      "instance_token": "b06db657e7f74eb79db446b6aff87890",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "291d30843273487c96a7dc86f79a030f:783bf5ef43d04e538df4986e1461ba7e",
+      "instance_token": "fa587210b65e4ae6bb9684cd431a21c4",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "90c1665c6cf24153a834063fd99f257c:f5a8490b733140bd9eb51131f5e65b4e",
+      "instance_token": "53d6143a52b64bc0984ca447a8321372",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "90c1665c6cf24153a834063fd99f257c:f5a8490b733140bd9eb51131f5e65b4e",
+      "instance_token": "e036e66aab1c4d72b207cdfb26c8e429",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "90c1665c6cf24153a834063fd99f257c:f5a8490b733140bd9eb51131f5e65b4e",
+      "instance_token": "721de34f904046db918e7c93d7dc4cd8",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "90c1665c6cf24153a834063fd99f257c:f5a8490b733140bd9eb51131f5e65b4e",
+      "instance_token": "a08f86d9cade410da8c7e0a15d0d4187",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "90c1665c6cf24153a834063fd99f257c:f5a8490b733140bd9eb51131f5e65b4e",
+      "instance_token": "b06db657e7f74eb79db446b6aff87890",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "90c1665c6cf24153a834063fd99f257c:f5a8490b733140bd9eb51131f5e65b4e",
+      "instance_token": "fa587210b65e4ae6bb9684cd431a21c4",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "783bf5ef43d04e538df4986e1461ba7e:cb57adad69c54307907d522fd78c543b",
+      "instance_token": "721de34f904046db918e7c93d7dc4cd8",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "783bf5ef43d04e538df4986e1461ba7e:cb57adad69c54307907d522fd78c543b",
+      "instance_token": "fa587210b65e4ae6bb9684cd431a21c4",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "f5a8490b733140bd9eb51131f5e65b4e:b46095be5e6c47d2aff1a67a151fc984",
+      "instance_token": "86b51678019b403b90b8114826dcc370",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "f5a8490b733140bd9eb51131f5e65b4e:b46095be5e6c47d2aff1a67a151fc984",
+      "instance_token": "fa587210b65e4ae6bb9684cd431a21c4",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "cb57adad69c54307907d522fd78c543b:de44070678e84676ab9e68a16a55b5d5",
+      "instance_token": "7894d10930c649568ae5fc46dcc300b4",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "cb57adad69c54307907d522fd78c543b:de44070678e84676ab9e68a16a55b5d5",
+      "instance_token": "4c2b495edd3248ebbb05872da9ae7ac7",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "cb57adad69c54307907d522fd78c543b:de44070678e84676ab9e68a16a55b5d5",
+      "instance_token": "63eba4431717461aa0dfc941c1e43728",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "cb57adad69c54307907d522fd78c543b:de44070678e84676ab9e68a16a55b5d5",
+      "instance_token": "86b51678019b403b90b8114826dcc370",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "cb57adad69c54307907d522fd78c543b:de44070678e84676ab9e68a16a55b5d5",
+      "instance_token": "c612ed42c4d940769f63c02b9d8fbf28",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "cb57adad69c54307907d522fd78c543b:de44070678e84676ab9e68a16a55b5d5",
+      "instance_token": "fa587210b65e4ae6bb9684cd431a21c4",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "b46095be5e6c47d2aff1a67a151fc984:a6f13e65dcd141bca7ffb425d7c6c8be",
+      "instance_token": "29760d0db01c4a2a84a9f58604ed5253",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "b46095be5e6c47d2aff1a67a151fc984:a6f13e65dcd141bca7ffb425d7c6c8be",
+      "instance_token": "7894d10930c649568ae5fc46dcc300b4",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "b46095be5e6c47d2aff1a67a151fc984:a6f13e65dcd141bca7ffb425d7c6c8be",
+      "instance_token": "63eba4431717461aa0dfc941c1e43728",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "b46095be5e6c47d2aff1a67a151fc984:a6f13e65dcd141bca7ffb425d7c6c8be",
+      "instance_token": "a80ac864fdfe40c48e980e9e85a75ddb",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "b46095be5e6c47d2aff1a67a151fc984:a6f13e65dcd141bca7ffb425d7c6c8be",
+      "instance_token": "c612ed42c4d940769f63c02b9d8fbf28",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "b46095be5e6c47d2aff1a67a151fc984:a6f13e65dcd141bca7ffb425d7c6c8be",
+      "instance_token": "fa587210b65e4ae6bb9684cd431a21c4",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "fc651dc8a36846fdba3f705117d3d0d0:573172be3eda4aae94e875fe4403c57b",
+      "instance_token": "7a45db444dea4f098533909a25f709de",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "fc651dc8a36846fdba3f705117d3d0d0:573172be3eda4aae94e875fe4403c57b",
+      "instance_token": "699aa864ecd84cf28251ed1c62899204",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "3d65380e1e2b470bbe0c944ecec05616:3387d937c3864cdcaf0454542ebaa961",
+      "instance_token": "699aa864ecd84cf28251ed1c62899204",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "6d32f67b3307453aae7b942c91b7b9e8:2bb8324710ae4fb1a000cdf7f1eb253c",
+      "instance_token": "699aa864ecd84cf28251ed1c62899204",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "d6f9027a85474ee4bbd4103cc7619f4f:34cf97ab4d6b452d862ae6c8374f7ee9",
+      "instance_token": "699aa864ecd84cf28251ed1c62899204",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "573172be3eda4aae94e875fe4403c57b:9bd318b5781f4bf797b9b6ee69f9cbd8",
+      "instance_token": "699aa864ecd84cf28251ed1c62899204",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "3387d937c3864cdcaf0454542ebaa961:72fb9f0f545a4d6b92f6de14c9dcce85",
+      "instance_token": "699aa864ecd84cf28251ed1c62899204",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "3387d937c3864cdcaf0454542ebaa961:72fb9f0f545a4d6b92f6de14c9dcce85",
+      "instance_token": "9361faab5d6147768c4213daada4dd0e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "2bb8324710ae4fb1a000cdf7f1eb253c:ef9eddeaa6c641b2bfc687237153a1e9",
+      "instance_token": "699aa864ecd84cf28251ed1c62899204",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "2bb8324710ae4fb1a000cdf7f1eb253c:ef9eddeaa6c641b2bfc687237153a1e9",
+      "instance_token": "7a45db444dea4f098533909a25f709de",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "2bb8324710ae4fb1a000cdf7f1eb253c:ef9eddeaa6c641b2bfc687237153a1e9",
+      "instance_token": "9361faab5d6147768c4213daada4dd0e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "34cf97ab4d6b452d862ae6c8374f7ee9:913f4d17b4c54ce19662f83158a3d4d0",
+      "instance_token": "699aa864ecd84cf28251ed1c62899204",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "34cf97ab4d6b452d862ae6c8374f7ee9:913f4d17b4c54ce19662f83158a3d4d0",
+      "instance_token": "7a45db444dea4f098533909a25f709de",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "34cf97ab4d6b452d862ae6c8374f7ee9:913f4d17b4c54ce19662f83158a3d4d0",
+      "instance_token": "9361faab5d6147768c4213daada4dd0e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "9bd318b5781f4bf797b9b6ee69f9cbd8:728f711f0d8e4b5fa85defb9bbb51399",
+      "instance_token": "699aa864ecd84cf28251ed1c62899204",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "9bd318b5781f4bf797b9b6ee69f9cbd8:728f711f0d8e4b5fa85defb9bbb51399",
+      "instance_token": "9361faab5d6147768c4213daada4dd0e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "9bd318b5781f4bf797b9b6ee69f9cbd8:728f711f0d8e4b5fa85defb9bbb51399",
+      "instance_token": "bf678f13abb14aeead1fd0aaff9915ad",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "72fb9f0f545a4d6b92f6de14c9dcce85:4ea42d9dcb2548658a950769437f108b",
+      "instance_token": "54b3010576664b529ef1972566e0cf7e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "72fb9f0f545a4d6b92f6de14c9dcce85:4ea42d9dcb2548658a950769437f108b",
+      "instance_token": "699aa864ecd84cf28251ed1c62899204",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "72fb9f0f545a4d6b92f6de14c9dcce85:4ea42d9dcb2548658a950769437f108b",
+      "instance_token": "9361faab5d6147768c4213daada4dd0e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "72fb9f0f545a4d6b92f6de14c9dcce85:4ea42d9dcb2548658a950769437f108b",
+      "instance_token": "bf678f13abb14aeead1fd0aaff9915ad",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "ef9eddeaa6c641b2bfc687237153a1e9:4de831d46edf46d084ac2cecf682b11a",
+      "instance_token": "54b3010576664b529ef1972566e0cf7e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "ef9eddeaa6c641b2bfc687237153a1e9:4de831d46edf46d084ac2cecf682b11a",
+      "instance_token": "9361faab5d6147768c4213daada4dd0e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "ef9eddeaa6c641b2bfc687237153a1e9:4de831d46edf46d084ac2cecf682b11a",
+      "instance_token": "dfb1994e77954288ae5f992fbfd63ef9",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "913f4d17b4c54ce19662f83158a3d4d0:9bab9367c07f4410ab2a3e901d76034f",
+      "instance_token": "334a18dd060c4212b28014c62527ef8e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "913f4d17b4c54ce19662f83158a3d4d0:9bab9367c07f4410ab2a3e901d76034f",
+      "instance_token": "54b3010576664b529ef1972566e0cf7e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "913f4d17b4c54ce19662f83158a3d4d0:9bab9367c07f4410ab2a3e901d76034f",
+      "instance_token": "9361faab5d6147768c4213daada4dd0e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "913f4d17b4c54ce19662f83158a3d4d0:9bab9367c07f4410ab2a3e901d76034f",
+      "instance_token": "dfb1994e77954288ae5f992fbfd63ef9",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "728f711f0d8e4b5fa85defb9bbb51399:2128fc958907421ca888ab014a73348a",
+      "instance_token": "ca5e73260a44432e82bfe3b3eaae2daf",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "728f711f0d8e4b5fa85defb9bbb51399:2128fc958907421ca888ab014a73348a",
+      "instance_token": "334a18dd060c4212b28014c62527ef8e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "728f711f0d8e4b5fa85defb9bbb51399:2128fc958907421ca888ab014a73348a",
+      "instance_token": "9361faab5d6147768c4213daada4dd0e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "728f711f0d8e4b5fa85defb9bbb51399:2128fc958907421ca888ab014a73348a",
+      "instance_token": "dfb1994e77954288ae5f992fbfd63ef9",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4ea42d9dcb2548658a950769437f108b:144689dc04d74506a875106f2ff76d9e",
+      "instance_token": "20c4266d6ea64c7baccf76cb606955b2",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4ea42d9dcb2548658a950769437f108b:144689dc04d74506a875106f2ff76d9e",
+      "instance_token": "346d9ada6ec54240afd201651bb6409c",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4ea42d9dcb2548658a950769437f108b:144689dc04d74506a875106f2ff76d9e",
+      "instance_token": "ca5e73260a44432e82bfe3b3eaae2daf",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4ea42d9dcb2548658a950769437f108b:144689dc04d74506a875106f2ff76d9e",
+      "instance_token": "334a18dd060c4212b28014c62527ef8e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4ea42d9dcb2548658a950769437f108b:144689dc04d74506a875106f2ff76d9e",
+      "instance_token": "9361faab5d6147768c4213daada4dd0e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4de831d46edf46d084ac2cecf682b11a:d813d750f591453a9b1bb905e6a88b48",
+      "instance_token": "0dae99222c5042e68c4ebbd20f95f526",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4de831d46edf46d084ac2cecf682b11a:d813d750f591453a9b1bb905e6a88b48",
+      "instance_token": "20c4266d6ea64c7baccf76cb606955b2",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4de831d46edf46d084ac2cecf682b11a:d813d750f591453a9b1bb905e6a88b48",
+      "instance_token": "30c1972105e6465b9928bc46d9bf9538",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4de831d46edf46d084ac2cecf682b11a:d813d750f591453a9b1bb905e6a88b48",
+      "instance_token": "346d9ada6ec54240afd201651bb6409c",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4de831d46edf46d084ac2cecf682b11a:d813d750f591453a9b1bb905e6a88b48",
+      "instance_token": "c612ed42c4d940769f63c02b9d8fbf28",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4de831d46edf46d084ac2cecf682b11a:d813d750f591453a9b1bb905e6a88b48",
+      "instance_token": "ca5e73260a44432e82bfe3b3eaae2daf",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4de831d46edf46d084ac2cecf682b11a:d813d750f591453a9b1bb905e6a88b48",
+      "instance_token": "6db61aee8cdc42f0bc6a496efb62abd3",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4de831d46edf46d084ac2cecf682b11a:d813d750f591453a9b1bb905e6a88b48",
+      "instance_token": "9361faab5d6147768c4213daada4dd0e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "9bab9367c07f4410ab2a3e901d76034f:bf6aeba0f19a46b087916c915f73cf39",
+      "instance_token": "0dae99222c5042e68c4ebbd20f95f526",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "9bab9367c07f4410ab2a3e901d76034f:bf6aeba0f19a46b087916c915f73cf39",
+      "instance_token": "30c1972105e6465b9928bc46d9bf9538",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "9bab9367c07f4410ab2a3e901d76034f:bf6aeba0f19a46b087916c915f73cf39",
+      "instance_token": "346d9ada6ec54240afd201651bb6409c",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "9bab9367c07f4410ab2a3e901d76034f:bf6aeba0f19a46b087916c915f73cf39",
+      "instance_token": "c612ed42c4d940769f63c02b9d8fbf28",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "9bab9367c07f4410ab2a3e901d76034f:bf6aeba0f19a46b087916c915f73cf39",
+      "instance_token": "ca5e73260a44432e82bfe3b3eaae2daf",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "9bab9367c07f4410ab2a3e901d76034f:bf6aeba0f19a46b087916c915f73cf39",
+      "instance_token": "6db61aee8cdc42f0bc6a496efb62abd3",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "9bab9367c07f4410ab2a3e901d76034f:bf6aeba0f19a46b087916c915f73cf39",
+      "instance_token": "9361faab5d6147768c4213daada4dd0e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "2128fc958907421ca888ab014a73348a:9018d220fc7340998efa65631a9c3cd4",
+      "instance_token": "0dae99222c5042e68c4ebbd20f95f526",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "2128fc958907421ca888ab014a73348a:9018d220fc7340998efa65631a9c3cd4",
+      "instance_token": "6db61aee8cdc42f0bc6a496efb62abd3",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "2128fc958907421ca888ab014a73348a:9018d220fc7340998efa65631a9c3cd4",
+      "instance_token": "9361faab5d6147768c4213daada4dd0e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "2128fc958907421ca888ab014a73348a:9018d220fc7340998efa65631a9c3cd4",
+      "instance_token": "9c51df8c5ecf4514b03d2f62c149d8f1",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "144689dc04d74506a875106f2ff76d9e:5b8b618c3f9e481bb8522d9900d74f20",
+      "instance_token": "0dae99222c5042e68c4ebbd20f95f526",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "144689dc04d74506a875106f2ff76d9e:5b8b618c3f9e481bb8522d9900d74f20",
+      "instance_token": "48991cf65c484db6874d0556d70710f5",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "144689dc04d74506a875106f2ff76d9e:5b8b618c3f9e481bb8522d9900d74f20",
+      "instance_token": "e036e66aab1c4d72b207cdfb26c8e429",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "144689dc04d74506a875106f2ff76d9e:5b8b618c3f9e481bb8522d9900d74f20",
+      "instance_token": "9361faab5d6147768c4213daada4dd0e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "144689dc04d74506a875106f2ff76d9e:5b8b618c3f9e481bb8522d9900d74f20",
+      "instance_token": "e94c4ffff6104b69a44c5e7328322a83",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "d813d750f591453a9b1bb905e6a88b48:8491dd8fb7a44826b15e24ef9f869455",
+      "instance_token": "48991cf65c484db6874d0556d70710f5",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "d813d750f591453a9b1bb905e6a88b48:8491dd8fb7a44826b15e24ef9f869455",
+      "instance_token": "e036e66aab1c4d72b207cdfb26c8e429",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "d813d750f591453a9b1bb905e6a88b48:8491dd8fb7a44826b15e24ef9f869455",
+      "instance_token": "9361faab5d6147768c4213daada4dd0e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "d813d750f591453a9b1bb905e6a88b48:8491dd8fb7a44826b15e24ef9f869455",
+      "instance_token": "a6dc0a3736064e418426ccff591b70de",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "d813d750f591453a9b1bb905e6a88b48:8491dd8fb7a44826b15e24ef9f869455",
+      "instance_token": "e94c4ffff6104b69a44c5e7328322a83",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "bf6aeba0f19a46b087916c915f73cf39:d90f206c2a2e405e912ee046b0b27d85",
+      "instance_token": "48991cf65c484db6874d0556d70710f5",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "bf6aeba0f19a46b087916c915f73cf39:d90f206c2a2e405e912ee046b0b27d85",
+      "instance_token": "97d542667155423097edcf872050af3d",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "bf6aeba0f19a46b087916c915f73cf39:d90f206c2a2e405e912ee046b0b27d85",
+      "instance_token": "e036e66aab1c4d72b207cdfb26c8e429",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "bf6aeba0f19a46b087916c915f73cf39:d90f206c2a2e405e912ee046b0b27d85",
+      "instance_token": "9361faab5d6147768c4213daada4dd0e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "bf6aeba0f19a46b087916c915f73cf39:d90f206c2a2e405e912ee046b0b27d85",
+      "instance_token": "9e64ba12fbbd474d908a6e93f8461b83",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "bf6aeba0f19a46b087916c915f73cf39:d90f206c2a2e405e912ee046b0b27d85",
+      "instance_token": "a6dc0a3736064e418426ccff591b70de",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "bf6aeba0f19a46b087916c915f73cf39:d90f206c2a2e405e912ee046b0b27d85",
+      "instance_token": "b60a51c72fcd4b1d8f232d2275e31114",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "bf6aeba0f19a46b087916c915f73cf39:d90f206c2a2e405e912ee046b0b27d85",
+      "instance_token": "e94c4ffff6104b69a44c5e7328322a83",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "9018d220fc7340998efa65631a9c3cd4:9d0b36d611be43ffa9244ee9a4e9c5e9",
+      "instance_token": "48991cf65c484db6874d0556d70710f5",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "9018d220fc7340998efa65631a9c3cd4:9d0b36d611be43ffa9244ee9a4e9c5e9",
+      "instance_token": "97d542667155423097edcf872050af3d",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "9018d220fc7340998efa65631a9c3cd4:9d0b36d611be43ffa9244ee9a4e9c5e9",
+      "instance_token": "e036e66aab1c4d72b207cdfb26c8e429",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "9018d220fc7340998efa65631a9c3cd4:9d0b36d611be43ffa9244ee9a4e9c5e9",
+      "instance_token": "4105a910a2be481fa625fc55ddf9c039",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "9018d220fc7340998efa65631a9c3cd4:9d0b36d611be43ffa9244ee9a4e9c5e9",
+      "instance_token": "451696b36357405b87368287bf50bbf6",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "9018d220fc7340998efa65631a9c3cd4:9d0b36d611be43ffa9244ee9a4e9c5e9",
+      "instance_token": "9361faab5d6147768c4213daada4dd0e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "9018d220fc7340998efa65631a9c3cd4:9d0b36d611be43ffa9244ee9a4e9c5e9",
+      "instance_token": "a6dc0a3736064e418426ccff591b70de",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "9018d220fc7340998efa65631a9c3cd4:9d0b36d611be43ffa9244ee9a4e9c5e9",
+      "instance_token": "e94c4ffff6104b69a44c5e7328322a83",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "5b8b618c3f9e481bb8522d9900d74f20:1fa5506ca31d4174955140d2138db679",
+      "instance_token": "48991cf65c484db6874d0556d70710f5",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "5b8b618c3f9e481bb8522d9900d74f20:1fa5506ca31d4174955140d2138db679",
+      "instance_token": "e036e66aab1c4d72b207cdfb26c8e429",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "5b8b618c3f9e481bb8522d9900d74f20:1fa5506ca31d4174955140d2138db679",
+      "instance_token": "f0d030b84f944a9eaccc53869f95c881",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "5b8b618c3f9e481bb8522d9900d74f20:1fa5506ca31d4174955140d2138db679",
+      "instance_token": "95415fa7d0a04aec97c47591cad537ae",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "5b8b618c3f9e481bb8522d9900d74f20:1fa5506ca31d4174955140d2138db679",
+      "instance_token": "a6dc0a3736064e418426ccff591b70de",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "5b8b618c3f9e481bb8522d9900d74f20:1fa5506ca31d4174955140d2138db679",
+      "instance_token": "ca7859921a134b87b9433c2899bd3efa",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "8491dd8fb7a44826b15e24ef9f869455:364828ce52784d7a8f1b6f586637e23a",
+      "instance_token": "e036e66aab1c4d72b207cdfb26c8e429",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "8491dd8fb7a44826b15e24ef9f869455:364828ce52784d7a8f1b6f586637e23a",
+      "instance_token": "f0d030b84f944a9eaccc53869f95c881",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "8491dd8fb7a44826b15e24ef9f869455:364828ce52784d7a8f1b6f586637e23a",
+      "instance_token": "5b7e19b6d76a42c4b862682630e01eda",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "8491dd8fb7a44826b15e24ef9f869455:364828ce52784d7a8f1b6f586637e23a",
+      "instance_token": "95415fa7d0a04aec97c47591cad537ae",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "8491dd8fb7a44826b15e24ef9f869455:364828ce52784d7a8f1b6f586637e23a",
+      "instance_token": "a6dc0a3736064e418426ccff591b70de",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "8491dd8fb7a44826b15e24ef9f869455:364828ce52784d7a8f1b6f586637e23a",
+      "instance_token": "ca7859921a134b87b9433c2899bd3efa",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "d90f206c2a2e405e912ee046b0b27d85:864f2bd660ba4d5b83fc5dee443801ce",
+      "instance_token": "e036e66aab1c4d72b207cdfb26c8e429",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "d90f206c2a2e405e912ee046b0b27d85:864f2bd660ba4d5b83fc5dee443801ce",
+      "instance_token": "5b7e19b6d76a42c4b862682630e01eda",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "d90f206c2a2e405e912ee046b0b27d85:864f2bd660ba4d5b83fc5dee443801ce",
+      "instance_token": "95415fa7d0a04aec97c47591cad537ae",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "d90f206c2a2e405e912ee046b0b27d85:864f2bd660ba4d5b83fc5dee443801ce",
+      "instance_token": "a50f438911c042b7978efe694a97a16d",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "d90f206c2a2e405e912ee046b0b27d85:864f2bd660ba4d5b83fc5dee443801ce",
+      "instance_token": "ca7859921a134b87b9433c2899bd3efa",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "9d0b36d611be43ffa9244ee9a4e9c5e9:1734a670436946788e72ec8ce185957b",
+      "instance_token": "5b7e19b6d76a42c4b862682630e01eda",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "9d0b36d611be43ffa9244ee9a4e9c5e9:1734a670436946788e72ec8ce185957b",
+      "instance_token": "a50f438911c042b7978efe694a97a16d",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "9d0b36d611be43ffa9244ee9a4e9c5e9:1734a670436946788e72ec8ce185957b",
+      "instance_token": "ca7859921a134b87b9433c2899bd3efa",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "1fa5506ca31d4174955140d2138db679:2e51aaf4465441dcbe22351087a62c46",
+      "instance_token": "e036e66aab1c4d72b207cdfb26c8e429",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "1fa5506ca31d4174955140d2138db679:2e51aaf4465441dcbe22351087a62c46",
+      "instance_token": "5b7e19b6d76a42c4b862682630e01eda",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "1fa5506ca31d4174955140d2138db679:2e51aaf4465441dcbe22351087a62c46",
+      "instance_token": "721de34f904046db918e7c93d7dc4cd8",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "1fa5506ca31d4174955140d2138db679:2e51aaf4465441dcbe22351087a62c46",
+      "instance_token": "a50f438911c042b7978efe694a97a16d",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "364828ce52784d7a8f1b6f586637e23a:291d30843273487c96a7dc86f79a030f",
+      "instance_token": "e036e66aab1c4d72b207cdfb26c8e429",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "364828ce52784d7a8f1b6f586637e23a:291d30843273487c96a7dc86f79a030f",
+      "instance_token": "5b7e19b6d76a42c4b862682630e01eda",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "364828ce52784d7a8f1b6f586637e23a:291d30843273487c96a7dc86f79a030f",
+      "instance_token": "721de34f904046db918e7c93d7dc4cd8",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "364828ce52784d7a8f1b6f586637e23a:291d30843273487c96a7dc86f79a030f",
+      "instance_token": "a08f86d9cade410da8c7e0a15d0d4187",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "364828ce52784d7a8f1b6f586637e23a:291d30843273487c96a7dc86f79a030f",
+      "instance_token": "a50f438911c042b7978efe694a97a16d",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "364828ce52784d7a8f1b6f586637e23a:291d30843273487c96a7dc86f79a030f",
+      "instance_token": "fa587210b65e4ae6bb9684cd431a21c4",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "864f2bd660ba4d5b83fc5dee443801ce:90c1665c6cf24153a834063fd99f257c",
+      "instance_token": "4c2b495edd3248ebbb05872da9ae7ac7",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "864f2bd660ba4d5b83fc5dee443801ce:90c1665c6cf24153a834063fd99f257c",
+      "instance_token": "e036e66aab1c4d72b207cdfb26c8e429",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "864f2bd660ba4d5b83fc5dee443801ce:90c1665c6cf24153a834063fd99f257c",
+      "instance_token": "721de34f904046db918e7c93d7dc4cd8",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "864f2bd660ba4d5b83fc5dee443801ce:90c1665c6cf24153a834063fd99f257c",
+      "instance_token": "a08f86d9cade410da8c7e0a15d0d4187",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "864f2bd660ba4d5b83fc5dee443801ce:90c1665c6cf24153a834063fd99f257c",
+      "instance_token": "fa587210b65e4ae6bb9684cd431a21c4",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "1734a670436946788e72ec8ce185957b:783bf5ef43d04e538df4986e1461ba7e",
+      "instance_token": "4c2b495edd3248ebbb05872da9ae7ac7",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "1734a670436946788e72ec8ce185957b:783bf5ef43d04e538df4986e1461ba7e",
+      "instance_token": "721de34f904046db918e7c93d7dc4cd8",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "1734a670436946788e72ec8ce185957b:783bf5ef43d04e538df4986e1461ba7e",
+      "instance_token": "a08f86d9cade410da8c7e0a15d0d4187",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "1734a670436946788e72ec8ce185957b:783bf5ef43d04e538df4986e1461ba7e",
+      "instance_token": "b06db657e7f74eb79db446b6aff87890",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "1734a670436946788e72ec8ce185957b:783bf5ef43d04e538df4986e1461ba7e",
+      "instance_token": "fa587210b65e4ae6bb9684cd431a21c4",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "2e51aaf4465441dcbe22351087a62c46:f5a8490b733140bd9eb51131f5e65b4e",
+      "instance_token": "53d6143a52b64bc0984ca447a8321372",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "2e51aaf4465441dcbe22351087a62c46:f5a8490b733140bd9eb51131f5e65b4e",
+      "instance_token": "e036e66aab1c4d72b207cdfb26c8e429",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "2e51aaf4465441dcbe22351087a62c46:f5a8490b733140bd9eb51131f5e65b4e",
+      "instance_token": "721de34f904046db918e7c93d7dc4cd8",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "2e51aaf4465441dcbe22351087a62c46:f5a8490b733140bd9eb51131f5e65b4e",
+      "instance_token": "a08f86d9cade410da8c7e0a15d0d4187",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "2e51aaf4465441dcbe22351087a62c46:f5a8490b733140bd9eb51131f5e65b4e",
+      "instance_token": "b06db657e7f74eb79db446b6aff87890",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "2e51aaf4465441dcbe22351087a62c46:f5a8490b733140bd9eb51131f5e65b4e",
+      "instance_token": "fa587210b65e4ae6bb9684cd431a21c4",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "291d30843273487c96a7dc86f79a030f:cb57adad69c54307907d522fd78c543b",
+      "instance_token": "53d6143a52b64bc0984ca447a8321372",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "291d30843273487c96a7dc86f79a030f:cb57adad69c54307907d522fd78c543b",
+      "instance_token": "e036e66aab1c4d72b207cdfb26c8e429",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "291d30843273487c96a7dc86f79a030f:cb57adad69c54307907d522fd78c543b",
+      "instance_token": "721de34f904046db918e7c93d7dc4cd8",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "291d30843273487c96a7dc86f79a030f:cb57adad69c54307907d522fd78c543b",
+      "instance_token": "fa587210b65e4ae6bb9684cd431a21c4",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "90c1665c6cf24153a834063fd99f257c:b46095be5e6c47d2aff1a67a151fc984",
+      "instance_token": "53d6143a52b64bc0984ca447a8321372",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "90c1665c6cf24153a834063fd99f257c:b46095be5e6c47d2aff1a67a151fc984",
+      "instance_token": "e036e66aab1c4d72b207cdfb26c8e429",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "90c1665c6cf24153a834063fd99f257c:b46095be5e6c47d2aff1a67a151fc984",
+      "instance_token": "86b51678019b403b90b8114826dcc370",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "90c1665c6cf24153a834063fd99f257c:b46095be5e6c47d2aff1a67a151fc984",
+      "instance_token": "fa587210b65e4ae6bb9684cd431a21c4",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "783bf5ef43d04e538df4986e1461ba7e:de44070678e84676ab9e68a16a55b5d5",
+      "instance_token": "63eba4431717461aa0dfc941c1e43728",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "783bf5ef43d04e538df4986e1461ba7e:de44070678e84676ab9e68a16a55b5d5",
+      "instance_token": "86b51678019b403b90b8114826dcc370",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "783bf5ef43d04e538df4986e1461ba7e:de44070678e84676ab9e68a16a55b5d5",
+      "instance_token": "c612ed42c4d940769f63c02b9d8fbf28",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "783bf5ef43d04e538df4986e1461ba7e:de44070678e84676ab9e68a16a55b5d5",
+      "instance_token": "fa587210b65e4ae6bb9684cd431a21c4",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "f5a8490b733140bd9eb51131f5e65b4e:a6f13e65dcd141bca7ffb425d7c6c8be",
+      "instance_token": "63eba4431717461aa0dfc941c1e43728",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "f5a8490b733140bd9eb51131f5e65b4e:a6f13e65dcd141bca7ffb425d7c6c8be",
+      "instance_token": "a80ac864fdfe40c48e980e9e85a75ddb",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "f5a8490b733140bd9eb51131f5e65b4e:a6f13e65dcd141bca7ffb425d7c6c8be",
+      "instance_token": "c612ed42c4d940769f63c02b9d8fbf28",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "f5a8490b733140bd9eb51131f5e65b4e:a6f13e65dcd141bca7ffb425d7c6c8be",
+      "instance_token": "fa587210b65e4ae6bb9684cd431a21c4",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "8fb167b9767d420b9c6368719bafb7b4:1dffa2d447444bc89fa5c494f88aaa20",
+      "instance_token": "cbc313f64c6f48edac528f1332b4e0c9",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "1dffa2d447444bc89fa5c494f88aaa20:8c6a954f8ab94c36b994a18d9f6a5b26",
+      "instance_token": "8610b2f9f92840f1bca90e9363a928e8",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "1dffa2d447444bc89fa5c494f88aaa20:8c6a954f8ab94c36b994a18d9f6a5b26",
+      "instance_token": "cbc313f64c6f48edac528f1332b4e0c9",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "8c6a954f8ab94c36b994a18d9f6a5b26:d5686f4785d04f7f82f723548f14523c",
+      "instance_token": "8610b2f9f92840f1bca90e9363a928e8",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "8c6a954f8ab94c36b994a18d9f6a5b26:d5686f4785d04f7f82f723548f14523c",
+      "instance_token": "bb52fb7f1359400db2cdf4b76758991c",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "8c6a954f8ab94c36b994a18d9f6a5b26:d5686f4785d04f7f82f723548f14523c",
+      "instance_token": "cbc313f64c6f48edac528f1332b4e0c9",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "8c6a954f8ab94c36b994a18d9f6a5b26:d5686f4785d04f7f82f723548f14523c",
+      "instance_token": "e96689f13fc54aff97703891811e6405",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "d5686f4785d04f7f82f723548f14523c:ad7080dc8e08423482474c439e96c2ee",
+      "instance_token": "8610b2f9f92840f1bca90e9363a928e8",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "d5686f4785d04f7f82f723548f14523c:ad7080dc8e08423482474c439e96c2ee",
+      "instance_token": "bb52fb7f1359400db2cdf4b76758991c",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "d5686f4785d04f7f82f723548f14523c:ad7080dc8e08423482474c439e96c2ee",
+      "instance_token": "cbc313f64c6f48edac528f1332b4e0c9",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "d5686f4785d04f7f82f723548f14523c:ad7080dc8e08423482474c439e96c2ee",
+      "instance_token": "e96689f13fc54aff97703891811e6405",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "ad7080dc8e08423482474c439e96c2ee:96af1a7dbbe643ee9b54c2702c719407",
+      "instance_token": "8610b2f9f92840f1bca90e9363a928e8",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "ad7080dc8e08423482474c439e96c2ee:96af1a7dbbe643ee9b54c2702c719407",
+      "instance_token": "bb52fb7f1359400db2cdf4b76758991c",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "ad7080dc8e08423482474c439e96c2ee:96af1a7dbbe643ee9b54c2702c719407",
+      "instance_token": "cbc313f64c6f48edac528f1332b4e0c9",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "ad7080dc8e08423482474c439e96c2ee:96af1a7dbbe643ee9b54c2702c719407",
+      "instance_token": "5b275fa1f102486599a35f1d1c038c2e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "ad7080dc8e08423482474c439e96c2ee:96af1a7dbbe643ee9b54c2702c719407",
+      "instance_token": "ce05816ccbf54773b069ddaf20d1b5c7",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "ad7080dc8e08423482474c439e96c2ee:96af1a7dbbe643ee9b54c2702c719407",
+      "instance_token": "e96689f13fc54aff97703891811e6405",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "96af1a7dbbe643ee9b54c2702c719407:99c4cc9ce89246b19b802666bff43cf9",
+      "instance_token": "cbc313f64c6f48edac528f1332b4e0c9",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "96af1a7dbbe643ee9b54c2702c719407:99c4cc9ce89246b19b802666bff43cf9",
+      "instance_token": "33ea67e633754c38b02c6c1d836bfb15",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "96af1a7dbbe643ee9b54c2702c719407:99c4cc9ce89246b19b802666bff43cf9",
+      "instance_token": "90bc0e76695e413daddb10897af52669",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "96af1a7dbbe643ee9b54c2702c719407:99c4cc9ce89246b19b802666bff43cf9",
+      "instance_token": "ce05816ccbf54773b069ddaf20d1b5c7",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "96af1a7dbbe643ee9b54c2702c719407:99c4cc9ce89246b19b802666bff43cf9",
+      "instance_token": "e96689f13fc54aff97703891811e6405",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "99c4cc9ce89246b19b802666bff43cf9:5c9f496ba0904ac0a2a62c138dd627f2",
+      "instance_token": "cbc313f64c6f48edac528f1332b4e0c9",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "99c4cc9ce89246b19b802666bff43cf9:5c9f496ba0904ac0a2a62c138dd627f2",
+      "instance_token": "33ea67e633754c38b02c6c1d836bfb15",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "99c4cc9ce89246b19b802666bff43cf9:5c9f496ba0904ac0a2a62c138dd627f2",
+      "instance_token": "49b508526b4d4d6382e44c872b9cdfb7",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "99c4cc9ce89246b19b802666bff43cf9:5c9f496ba0904ac0a2a62c138dd627f2",
+      "instance_token": "90bc0e76695e413daddb10897af52669",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "99c4cc9ce89246b19b802666bff43cf9:5c9f496ba0904ac0a2a62c138dd627f2",
+      "instance_token": "ce05816ccbf54773b069ddaf20d1b5c7",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "5c9f496ba0904ac0a2a62c138dd627f2:ce45c7c9cae1491ba4e30bdf649b7de0",
+      "instance_token": "cbc313f64c6f48edac528f1332b4e0c9",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "5c9f496ba0904ac0a2a62c138dd627f2:ce45c7c9cae1491ba4e30bdf649b7de0",
+      "instance_token": "33ea67e633754c38b02c6c1d836bfb15",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "5c9f496ba0904ac0a2a62c138dd627f2:ce45c7c9cae1491ba4e30bdf649b7de0",
+      "instance_token": "49b508526b4d4d6382e44c872b9cdfb7",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "5c9f496ba0904ac0a2a62c138dd627f2:ce45c7c9cae1491ba4e30bdf649b7de0",
+      "instance_token": "90bc0e76695e413daddb10897af52669",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "5c9f496ba0904ac0a2a62c138dd627f2:ce45c7c9cae1491ba4e30bdf649b7de0",
+      "instance_token": "ce05816ccbf54773b069ddaf20d1b5c7",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "ce45c7c9cae1491ba4e30bdf649b7de0:4ffdd34156524df380cddc090dcadc7d",
+      "instance_token": "12b673728c674b559b7beb0094a19b33",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "ce45c7c9cae1491ba4e30bdf649b7de0:4ffdd34156524df380cddc090dcadc7d",
+      "instance_token": "33ea67e633754c38b02c6c1d836bfb15",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "ce45c7c9cae1491ba4e30bdf649b7de0:4ffdd34156524df380cddc090dcadc7d",
+      "instance_token": "49b508526b4d4d6382e44c872b9cdfb7",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "ce45c7c9cae1491ba4e30bdf649b7de0:4ffdd34156524df380cddc090dcadc7d",
+      "instance_token": "90bc0e76695e413daddb10897af52669",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "ce45c7c9cae1491ba4e30bdf649b7de0:4ffdd34156524df380cddc090dcadc7d",
+      "instance_token": "ce05816ccbf54773b069ddaf20d1b5c7",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4ffdd34156524df380cddc090dcadc7d:ffec010a27b4462f86b78e2e41d14f42",
+      "instance_token": "e91be0857d76470097ba8c482f5f09f0",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4ffdd34156524df380cddc090dcadc7d:ffec010a27b4462f86b78e2e41d14f42",
+      "instance_token": "33ea67e633754c38b02c6c1d836bfb15",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4ffdd34156524df380cddc090dcadc7d:ffec010a27b4462f86b78e2e41d14f42",
+      "instance_token": "49b508526b4d4d6382e44c872b9cdfb7",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4ffdd34156524df380cddc090dcadc7d:ffec010a27b4462f86b78e2e41d14f42",
+      "instance_token": "ce05816ccbf54773b069ddaf20d1b5c7",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "ffec010a27b4462f86b78e2e41d14f42:c5fc747cb34f44d78820ae649d183e93",
+      "instance_token": "33ea67e633754c38b02c6c1d836bfb15",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "ffec010a27b4462f86b78e2e41d14f42:c5fc747cb34f44d78820ae649d183e93",
+      "instance_token": "49b508526b4d4d6382e44c872b9cdfb7",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "ffec010a27b4462f86b78e2e41d14f42:c5fc747cb34f44d78820ae649d183e93",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "ffec010a27b4462f86b78e2e41d14f42:c5fc747cb34f44d78820ae649d183e93",
+      "instance_token": "6811f6032b5d4f52af1b777c4bc0e138",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "ffec010a27b4462f86b78e2e41d14f42:c5fc747cb34f44d78820ae649d183e93",
+      "instance_token": "ce05816ccbf54773b069ddaf20d1b5c7",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "ffec010a27b4462f86b78e2e41d14f42:c5fc747cb34f44d78820ae649d183e93",
+      "instance_token": "f23cc3ca7b5f410984a3389eca65d972",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "c5fc747cb34f44d78820ae649d183e93:88aa269105204f8db1a29debf3cde07c",
+      "instance_token": "9f4e6122c14743b494afa86c971b75cf",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "c5fc747cb34f44d78820ae649d183e93:88aa269105204f8db1a29debf3cde07c",
+      "instance_token": "33ea67e633754c38b02c6c1d836bfb15",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "c5fc747cb34f44d78820ae649d183e93:88aa269105204f8db1a29debf3cde07c",
+      "instance_token": "49b508526b4d4d6382e44c872b9cdfb7",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "c5fc747cb34f44d78820ae649d183e93:88aa269105204f8db1a29debf3cde07c",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "c5fc747cb34f44d78820ae649d183e93:88aa269105204f8db1a29debf3cde07c",
+      "instance_token": "6811f6032b5d4f52af1b777c4bc0e138",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "c5fc747cb34f44d78820ae649d183e93:88aa269105204f8db1a29debf3cde07c",
+      "instance_token": "f23cc3ca7b5f410984a3389eca65d972",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "88aa269105204f8db1a29debf3cde07c:6b282c1c40c1454bad559e58b5fcecb0",
+      "instance_token": "0dcdd5eb06f84acdb68109e37a413851",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "88aa269105204f8db1a29debf3cde07c:6b282c1c40c1454bad559e58b5fcecb0",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "88aa269105204f8db1a29debf3cde07c:6b282c1c40c1454bad559e58b5fcecb0",
+      "instance_token": "6811f6032b5d4f52af1b777c4bc0e138",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "88aa269105204f8db1a29debf3cde07c:6b282c1c40c1454bad559e58b5fcecb0",
+      "instance_token": "d21a8714c13c42cd97feafd36d97ca95",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "88aa269105204f8db1a29debf3cde07c:6b282c1c40c1454bad559e58b5fcecb0",
+      "instance_token": "f23cc3ca7b5f410984a3389eca65d972",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "6b282c1c40c1454bad559e58b5fcecb0:4523fb98c35940f1a47555072262965d",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "6b282c1c40c1454bad559e58b5fcecb0:4523fb98c35940f1a47555072262965d",
+      "instance_token": "6811f6032b5d4f52af1b777c4bc0e138",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "6b282c1c40c1454bad559e58b5fcecb0:4523fb98c35940f1a47555072262965d",
+      "instance_token": "d21a8714c13c42cd97feafd36d97ca95",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "6b282c1c40c1454bad559e58b5fcecb0:4523fb98c35940f1a47555072262965d",
+      "instance_token": "f23cc3ca7b5f410984a3389eca65d972",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4523fb98c35940f1a47555072262965d:6e75580faac94693acd7ece6419dcb88",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4523fb98c35940f1a47555072262965d:6e75580faac94693acd7ece6419dcb88",
+      "instance_token": "6811f6032b5d4f52af1b777c4bc0e138",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4523fb98c35940f1a47555072262965d:6e75580faac94693acd7ece6419dcb88",
+      "instance_token": "d21a8714c13c42cd97feafd36d97ca95",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4523fb98c35940f1a47555072262965d:6e75580faac94693acd7ece6419dcb88",
+      "instance_token": "f23cc3ca7b5f410984a3389eca65d972",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4523fb98c35940f1a47555072262965d:6e75580faac94693acd7ece6419dcb88",
+      "instance_token": "f7cb70131e86498fabb0ad7373f7c565",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "6e75580faac94693acd7ece6419dcb88:bd0a172dbc9045d5a11b1980ccfb0d53",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "6e75580faac94693acd7ece6419dcb88:bd0a172dbc9045d5a11b1980ccfb0d53",
+      "instance_token": "6811f6032b5d4f52af1b777c4bc0e138",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "6e75580faac94693acd7ece6419dcb88:bd0a172dbc9045d5a11b1980ccfb0d53",
+      "instance_token": "d21a8714c13c42cd97feafd36d97ca95",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "6e75580faac94693acd7ece6419dcb88:bd0a172dbc9045d5a11b1980ccfb0d53",
+      "instance_token": "f23cc3ca7b5f410984a3389eca65d972",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "6e75580faac94693acd7ece6419dcb88:bd0a172dbc9045d5a11b1980ccfb0d53",
+      "instance_token": "f7cb70131e86498fabb0ad7373f7c565",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "bd0a172dbc9045d5a11b1980ccfb0d53:af620d74bb47486b89cdc3844acb6c18",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "bd0a172dbc9045d5a11b1980ccfb0d53:af620d74bb47486b89cdc3844acb6c18",
+      "instance_token": "6811f6032b5d4f52af1b777c4bc0e138",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "bd0a172dbc9045d5a11b1980ccfb0d53:af620d74bb47486b89cdc3844acb6c18",
+      "instance_token": "d21a8714c13c42cd97feafd36d97ca95",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "bd0a172dbc9045d5a11b1980ccfb0d53:af620d74bb47486b89cdc3844acb6c18",
+      "instance_token": "f23cc3ca7b5f410984a3389eca65d972",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "bd0a172dbc9045d5a11b1980ccfb0d53:af620d74bb47486b89cdc3844acb6c18",
+      "instance_token": "f7cb70131e86498fabb0ad7373f7c565",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "af620d74bb47486b89cdc3844acb6c18:8a51f719699b49f893a8ed0932201c22",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "af620d74bb47486b89cdc3844acb6c18:8a51f719699b49f893a8ed0932201c22",
+      "instance_token": "d21a8714c13c42cd97feafd36d97ca95",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "af620d74bb47486b89cdc3844acb6c18:8a51f719699b49f893a8ed0932201c22",
+      "instance_token": "f7cb70131e86498fabb0ad7373f7c565",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "8a51f719699b49f893a8ed0932201c22:cf4d66093d824995b2b56eb08503c663",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "8a51f719699b49f893a8ed0932201c22:cf4d66093d824995b2b56eb08503c663",
+      "instance_token": "f7cb70131e86498fabb0ad7373f7c565",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "cf4d66093d824995b2b56eb08503c663:5bea7ebf706d4a5c906769ca8de1be22",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "cf4d66093d824995b2b56eb08503c663:5bea7ebf706d4a5c906769ca8de1be22",
+      "instance_token": "f7cb70131e86498fabb0ad7373f7c565",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "5bea7ebf706d4a5c906769ca8de1be22:c49a39d8f51d41dabd03de50bbcf06d9",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "5bea7ebf706d4a5c906769ca8de1be22:c49a39d8f51d41dabd03de50bbcf06d9",
+      "instance_token": "f7cb70131e86498fabb0ad7373f7c565",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "c49a39d8f51d41dabd03de50bbcf06d9:b9853461935b41f88ba20195a2d0217c",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "c49a39d8f51d41dabd03de50bbcf06d9:b9853461935b41f88ba20195a2d0217c",
+      "instance_token": "f7cb70131e86498fabb0ad7373f7c565",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "b9853461935b41f88ba20195a2d0217c:a4093bf016f74a93bab9aea589de615c",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "b9853461935b41f88ba20195a2d0217c:a4093bf016f74a93bab9aea589de615c",
+      "instance_token": "f7cb70131e86498fabb0ad7373f7c565",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "a4093bf016f74a93bab9aea589de615c:33c965ece87842c2ac898543d26dad5f",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "33c965ece87842c2ac898543d26dad5f:5484714099f84b6c90d7db7fa8673073",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "5484714099f84b6c90d7db7fa8673073:318791a3a2054db9a90bc6eba32795bf",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "318791a3a2054db9a90bc6eba32795bf:9f6fcb159f6046cb9b2f9165479c2e51",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "9f6fcb159f6046cb9b2f9165479c2e51:7967df27333942bca9eb8c1af9de61af",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "7967df27333942bca9eb8c1af9de61af:1aaff367ed174989b350fd40619b6f9a",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "1aaff367ed174989b350fd40619b6f9a:28d072daaeb44926a824bb2671878b68",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "28d072daaeb44926a824bb2671878b68:0a4c9338501444aebc937ec231dcde43",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "0a4c9338501444aebc937ec231dcde43:81d4dc6d876c46528e7c678fe85410cf",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "81d4dc6d876c46528e7c678fe85410cf:a2f135999c12428caacda927ebcff835",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "a2f135999c12428caacda927ebcff835:e32db3f8b6c244c2be60b6d7db30ccc3",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "e32db3f8b6c244c2be60b6d7db30ccc3:38f030fc7723490e98b3b40ba7d525f9",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "38f030fc7723490e98b3b40ba7d525f9:e2526ae0b641422f9151ffd49a19f01c",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "e2526ae0b641422f9151ffd49a19f01c:b3bafb1ec0824002ac518570c7995935",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "b3bafb1ec0824002ac518570c7995935:4ac8bb201c7f44cfad407f00d3b18c4d",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4ac8bb201c7f44cfad407f00d3b18c4d:91d55da975464dd6a50d71a4d46881eb",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "8fb167b9767d420b9c6368719bafb7b4:8c6a954f8ab94c36b994a18d9f6a5b26",
+      "instance_token": "cbc313f64c6f48edac528f1332b4e0c9",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "1dffa2d447444bc89fa5c494f88aaa20:d5686f4785d04f7f82f723548f14523c",
+      "instance_token": "8610b2f9f92840f1bca90e9363a928e8",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "1dffa2d447444bc89fa5c494f88aaa20:d5686f4785d04f7f82f723548f14523c",
+      "instance_token": "cbc313f64c6f48edac528f1332b4e0c9",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "1dffa2d447444bc89fa5c494f88aaa20:d5686f4785d04f7f82f723548f14523c",
+      "instance_token": "e96689f13fc54aff97703891811e6405",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "8c6a954f8ab94c36b994a18d9f6a5b26:ad7080dc8e08423482474c439e96c2ee",
+      "instance_token": "8610b2f9f92840f1bca90e9363a928e8",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "8c6a954f8ab94c36b994a18d9f6a5b26:ad7080dc8e08423482474c439e96c2ee",
+      "instance_token": "bb52fb7f1359400db2cdf4b76758991c",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "8c6a954f8ab94c36b994a18d9f6a5b26:ad7080dc8e08423482474c439e96c2ee",
+      "instance_token": "cbc313f64c6f48edac528f1332b4e0c9",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "8c6a954f8ab94c36b994a18d9f6a5b26:ad7080dc8e08423482474c439e96c2ee",
+      "instance_token": "e96689f13fc54aff97703891811e6405",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "d5686f4785d04f7f82f723548f14523c:96af1a7dbbe643ee9b54c2702c719407",
+      "instance_token": "8610b2f9f92840f1bca90e9363a928e8",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "d5686f4785d04f7f82f723548f14523c:96af1a7dbbe643ee9b54c2702c719407",
+      "instance_token": "bb52fb7f1359400db2cdf4b76758991c",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "d5686f4785d04f7f82f723548f14523c:96af1a7dbbe643ee9b54c2702c719407",
+      "instance_token": "cbc313f64c6f48edac528f1332b4e0c9",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "d5686f4785d04f7f82f723548f14523c:96af1a7dbbe643ee9b54c2702c719407",
+      "instance_token": "5b275fa1f102486599a35f1d1c038c2e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "d5686f4785d04f7f82f723548f14523c:96af1a7dbbe643ee9b54c2702c719407",
+      "instance_token": "ce05816ccbf54773b069ddaf20d1b5c7",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "d5686f4785d04f7f82f723548f14523c:96af1a7dbbe643ee9b54c2702c719407",
+      "instance_token": "e96689f13fc54aff97703891811e6405",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "ad7080dc8e08423482474c439e96c2ee:99c4cc9ce89246b19b802666bff43cf9",
+      "instance_token": "8610b2f9f92840f1bca90e9363a928e8",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "ad7080dc8e08423482474c439e96c2ee:99c4cc9ce89246b19b802666bff43cf9",
+      "instance_token": "bb52fb7f1359400db2cdf4b76758991c",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "ad7080dc8e08423482474c439e96c2ee:99c4cc9ce89246b19b802666bff43cf9",
+      "instance_token": "cbc313f64c6f48edac528f1332b4e0c9",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "ad7080dc8e08423482474c439e96c2ee:99c4cc9ce89246b19b802666bff43cf9",
+      "instance_token": "33ea67e633754c38b02c6c1d836bfb15",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "ad7080dc8e08423482474c439e96c2ee:99c4cc9ce89246b19b802666bff43cf9",
+      "instance_token": "90bc0e76695e413daddb10897af52669",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "ad7080dc8e08423482474c439e96c2ee:99c4cc9ce89246b19b802666bff43cf9",
+      "instance_token": "ce05816ccbf54773b069ddaf20d1b5c7",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "ad7080dc8e08423482474c439e96c2ee:99c4cc9ce89246b19b802666bff43cf9",
+      "instance_token": "e96689f13fc54aff97703891811e6405",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "96af1a7dbbe643ee9b54c2702c719407:5c9f496ba0904ac0a2a62c138dd627f2",
+      "instance_token": "cbc313f64c6f48edac528f1332b4e0c9",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "96af1a7dbbe643ee9b54c2702c719407:5c9f496ba0904ac0a2a62c138dd627f2",
+      "instance_token": "33ea67e633754c38b02c6c1d836bfb15",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "96af1a7dbbe643ee9b54c2702c719407:5c9f496ba0904ac0a2a62c138dd627f2",
+      "instance_token": "49b508526b4d4d6382e44c872b9cdfb7",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "96af1a7dbbe643ee9b54c2702c719407:5c9f496ba0904ac0a2a62c138dd627f2",
+      "instance_token": "90bc0e76695e413daddb10897af52669",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "96af1a7dbbe643ee9b54c2702c719407:5c9f496ba0904ac0a2a62c138dd627f2",
+      "instance_token": "ce05816ccbf54773b069ddaf20d1b5c7",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "99c4cc9ce89246b19b802666bff43cf9:ce45c7c9cae1491ba4e30bdf649b7de0",
+      "instance_token": "cbc313f64c6f48edac528f1332b4e0c9",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "99c4cc9ce89246b19b802666bff43cf9:ce45c7c9cae1491ba4e30bdf649b7de0",
+      "instance_token": "33ea67e633754c38b02c6c1d836bfb15",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "99c4cc9ce89246b19b802666bff43cf9:ce45c7c9cae1491ba4e30bdf649b7de0",
+      "instance_token": "49b508526b4d4d6382e44c872b9cdfb7",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "99c4cc9ce89246b19b802666bff43cf9:ce45c7c9cae1491ba4e30bdf649b7de0",
+      "instance_token": "90bc0e76695e413daddb10897af52669",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "99c4cc9ce89246b19b802666bff43cf9:ce45c7c9cae1491ba4e30bdf649b7de0",
+      "instance_token": "ce05816ccbf54773b069ddaf20d1b5c7",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "5c9f496ba0904ac0a2a62c138dd627f2:4ffdd34156524df380cddc090dcadc7d",
+      "instance_token": "cbc313f64c6f48edac528f1332b4e0c9",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "5c9f496ba0904ac0a2a62c138dd627f2:4ffdd34156524df380cddc090dcadc7d",
+      "instance_token": "33ea67e633754c38b02c6c1d836bfb15",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "5c9f496ba0904ac0a2a62c138dd627f2:4ffdd34156524df380cddc090dcadc7d",
+      "instance_token": "49b508526b4d4d6382e44c872b9cdfb7",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "5c9f496ba0904ac0a2a62c138dd627f2:4ffdd34156524df380cddc090dcadc7d",
+      "instance_token": "90bc0e76695e413daddb10897af52669",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "5c9f496ba0904ac0a2a62c138dd627f2:4ffdd34156524df380cddc090dcadc7d",
+      "instance_token": "ce05816ccbf54773b069ddaf20d1b5c7",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "ce45c7c9cae1491ba4e30bdf649b7de0:ffec010a27b4462f86b78e2e41d14f42",
+      "instance_token": "12b673728c674b559b7beb0094a19b33",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "ce45c7c9cae1491ba4e30bdf649b7de0:ffec010a27b4462f86b78e2e41d14f42",
+      "instance_token": "33ea67e633754c38b02c6c1d836bfb15",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "ce45c7c9cae1491ba4e30bdf649b7de0:ffec010a27b4462f86b78e2e41d14f42",
+      "instance_token": "49b508526b4d4d6382e44c872b9cdfb7",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "ce45c7c9cae1491ba4e30bdf649b7de0:ffec010a27b4462f86b78e2e41d14f42",
+      "instance_token": "ce05816ccbf54773b069ddaf20d1b5c7",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4ffdd34156524df380cddc090dcadc7d:c5fc747cb34f44d78820ae649d183e93",
+      "instance_token": "e91be0857d76470097ba8c482f5f09f0",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4ffdd34156524df380cddc090dcadc7d:c5fc747cb34f44d78820ae649d183e93",
+      "instance_token": "33ea67e633754c38b02c6c1d836bfb15",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4ffdd34156524df380cddc090dcadc7d:c5fc747cb34f44d78820ae649d183e93",
+      "instance_token": "49b508526b4d4d6382e44c872b9cdfb7",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4ffdd34156524df380cddc090dcadc7d:c5fc747cb34f44d78820ae649d183e93",
+      "instance_token": "6811f6032b5d4f52af1b777c4bc0e138",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4ffdd34156524df380cddc090dcadc7d:c5fc747cb34f44d78820ae649d183e93",
+      "instance_token": "ce05816ccbf54773b069ddaf20d1b5c7",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4ffdd34156524df380cddc090dcadc7d:c5fc747cb34f44d78820ae649d183e93",
+      "instance_token": "f23cc3ca7b5f410984a3389eca65d972",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "ffec010a27b4462f86b78e2e41d14f42:88aa269105204f8db1a29debf3cde07c",
+      "instance_token": "9f4e6122c14743b494afa86c971b75cf",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "ffec010a27b4462f86b78e2e41d14f42:88aa269105204f8db1a29debf3cde07c",
+      "instance_token": "33ea67e633754c38b02c6c1d836bfb15",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "ffec010a27b4462f86b78e2e41d14f42:88aa269105204f8db1a29debf3cde07c",
+      "instance_token": "49b508526b4d4d6382e44c872b9cdfb7",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "ffec010a27b4462f86b78e2e41d14f42:88aa269105204f8db1a29debf3cde07c",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "ffec010a27b4462f86b78e2e41d14f42:88aa269105204f8db1a29debf3cde07c",
+      "instance_token": "6811f6032b5d4f52af1b777c4bc0e138",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "ffec010a27b4462f86b78e2e41d14f42:88aa269105204f8db1a29debf3cde07c",
+      "instance_token": "f23cc3ca7b5f410984a3389eca65d972",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "c5fc747cb34f44d78820ae649d183e93:6b282c1c40c1454bad559e58b5fcecb0",
+      "instance_token": "0dcdd5eb06f84acdb68109e37a413851",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "c5fc747cb34f44d78820ae649d183e93:6b282c1c40c1454bad559e58b5fcecb0",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "c5fc747cb34f44d78820ae649d183e93:6b282c1c40c1454bad559e58b5fcecb0",
+      "instance_token": "6811f6032b5d4f52af1b777c4bc0e138",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "c5fc747cb34f44d78820ae649d183e93:6b282c1c40c1454bad559e58b5fcecb0",
+      "instance_token": "d21a8714c13c42cd97feafd36d97ca95",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "c5fc747cb34f44d78820ae649d183e93:6b282c1c40c1454bad559e58b5fcecb0",
+      "instance_token": "f23cc3ca7b5f410984a3389eca65d972",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "88aa269105204f8db1a29debf3cde07c:4523fb98c35940f1a47555072262965d",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "88aa269105204f8db1a29debf3cde07c:4523fb98c35940f1a47555072262965d",
+      "instance_token": "6811f6032b5d4f52af1b777c4bc0e138",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "88aa269105204f8db1a29debf3cde07c:4523fb98c35940f1a47555072262965d",
+      "instance_token": "d21a8714c13c42cd97feafd36d97ca95",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "88aa269105204f8db1a29debf3cde07c:4523fb98c35940f1a47555072262965d",
+      "instance_token": "f23cc3ca7b5f410984a3389eca65d972",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "6b282c1c40c1454bad559e58b5fcecb0:6e75580faac94693acd7ece6419dcb88",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "6b282c1c40c1454bad559e58b5fcecb0:6e75580faac94693acd7ece6419dcb88",
+      "instance_token": "6811f6032b5d4f52af1b777c4bc0e138",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "6b282c1c40c1454bad559e58b5fcecb0:6e75580faac94693acd7ece6419dcb88",
+      "instance_token": "d21a8714c13c42cd97feafd36d97ca95",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "6b282c1c40c1454bad559e58b5fcecb0:6e75580faac94693acd7ece6419dcb88",
+      "instance_token": "f23cc3ca7b5f410984a3389eca65d972",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "6b282c1c40c1454bad559e58b5fcecb0:6e75580faac94693acd7ece6419dcb88",
+      "instance_token": "f7cb70131e86498fabb0ad7373f7c565",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4523fb98c35940f1a47555072262965d:bd0a172dbc9045d5a11b1980ccfb0d53",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4523fb98c35940f1a47555072262965d:bd0a172dbc9045d5a11b1980ccfb0d53",
+      "instance_token": "6811f6032b5d4f52af1b777c4bc0e138",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4523fb98c35940f1a47555072262965d:bd0a172dbc9045d5a11b1980ccfb0d53",
+      "instance_token": "d21a8714c13c42cd97feafd36d97ca95",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4523fb98c35940f1a47555072262965d:bd0a172dbc9045d5a11b1980ccfb0d53",
+      "instance_token": "f23cc3ca7b5f410984a3389eca65d972",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4523fb98c35940f1a47555072262965d:bd0a172dbc9045d5a11b1980ccfb0d53",
+      "instance_token": "f7cb70131e86498fabb0ad7373f7c565",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "6e75580faac94693acd7ece6419dcb88:af620d74bb47486b89cdc3844acb6c18",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "6e75580faac94693acd7ece6419dcb88:af620d74bb47486b89cdc3844acb6c18",
+      "instance_token": "6811f6032b5d4f52af1b777c4bc0e138",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "6e75580faac94693acd7ece6419dcb88:af620d74bb47486b89cdc3844acb6c18",
+      "instance_token": "d21a8714c13c42cd97feafd36d97ca95",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "6e75580faac94693acd7ece6419dcb88:af620d74bb47486b89cdc3844acb6c18",
+      "instance_token": "f23cc3ca7b5f410984a3389eca65d972",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "6e75580faac94693acd7ece6419dcb88:af620d74bb47486b89cdc3844acb6c18",
+      "instance_token": "f7cb70131e86498fabb0ad7373f7c565",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "bd0a172dbc9045d5a11b1980ccfb0d53:8a51f719699b49f893a8ed0932201c22",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "bd0a172dbc9045d5a11b1980ccfb0d53:8a51f719699b49f893a8ed0932201c22",
+      "instance_token": "d21a8714c13c42cd97feafd36d97ca95",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "bd0a172dbc9045d5a11b1980ccfb0d53:8a51f719699b49f893a8ed0932201c22",
+      "instance_token": "f7cb70131e86498fabb0ad7373f7c565",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "af620d74bb47486b89cdc3844acb6c18:cf4d66093d824995b2b56eb08503c663",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "af620d74bb47486b89cdc3844acb6c18:cf4d66093d824995b2b56eb08503c663",
+      "instance_token": "f7cb70131e86498fabb0ad7373f7c565",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "8a51f719699b49f893a8ed0932201c22:5bea7ebf706d4a5c906769ca8de1be22",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "8a51f719699b49f893a8ed0932201c22:5bea7ebf706d4a5c906769ca8de1be22",
+      "instance_token": "f7cb70131e86498fabb0ad7373f7c565",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "cf4d66093d824995b2b56eb08503c663:c49a39d8f51d41dabd03de50bbcf06d9",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "cf4d66093d824995b2b56eb08503c663:c49a39d8f51d41dabd03de50bbcf06d9",
+      "instance_token": "f7cb70131e86498fabb0ad7373f7c565",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "5bea7ebf706d4a5c906769ca8de1be22:b9853461935b41f88ba20195a2d0217c",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "5bea7ebf706d4a5c906769ca8de1be22:b9853461935b41f88ba20195a2d0217c",
+      "instance_token": "f7cb70131e86498fabb0ad7373f7c565",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "c49a39d8f51d41dabd03de50bbcf06d9:a4093bf016f74a93bab9aea589de615c",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "c49a39d8f51d41dabd03de50bbcf06d9:a4093bf016f74a93bab9aea589de615c",
+      "instance_token": "f7cb70131e86498fabb0ad7373f7c565",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "b9853461935b41f88ba20195a2d0217c:33c965ece87842c2ac898543d26dad5f",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "a4093bf016f74a93bab9aea589de615c:5484714099f84b6c90d7db7fa8673073",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "33c965ece87842c2ac898543d26dad5f:318791a3a2054db9a90bc6eba32795bf",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "5484714099f84b6c90d7db7fa8673073:9f6fcb159f6046cb9b2f9165479c2e51",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "318791a3a2054db9a90bc6eba32795bf:7967df27333942bca9eb8c1af9de61af",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "9f6fcb159f6046cb9b2f9165479c2e51:1aaff367ed174989b350fd40619b6f9a",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "7967df27333942bca9eb8c1af9de61af:28d072daaeb44926a824bb2671878b68",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "1aaff367ed174989b350fd40619b6f9a:0a4c9338501444aebc937ec231dcde43",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "28d072daaeb44926a824bb2671878b68:81d4dc6d876c46528e7c678fe85410cf",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "0a4c9338501444aebc937ec231dcde43:a2f135999c12428caacda927ebcff835",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "81d4dc6d876c46528e7c678fe85410cf:e32db3f8b6c244c2be60b6d7db30ccc3",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "a2f135999c12428caacda927ebcff835:38f030fc7723490e98b3b40ba7d525f9",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "e32db3f8b6c244c2be60b6d7db30ccc3:e2526ae0b641422f9151ffd49a19f01c",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "38f030fc7723490e98b3b40ba7d525f9:b3bafb1ec0824002ac518570c7995935",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "e2526ae0b641422f9151ffd49a19f01c:4ac8bb201c7f44cfad407f00d3b18c4d",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "b3bafb1ec0824002ac518570c7995935:91d55da975464dd6a50d71a4d46881eb",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "8fb167b9767d420b9c6368719bafb7b4:ad7080dc8e08423482474c439e96c2ee",
+      "instance_token": "cbc313f64c6f48edac528f1332b4e0c9",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "8fb167b9767d420b9c6368719bafb7b4:ad7080dc8e08423482474c439e96c2ee",
+      "instance_token": "e96689f13fc54aff97703891811e6405",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "1dffa2d447444bc89fa5c494f88aaa20:96af1a7dbbe643ee9b54c2702c719407",
+      "instance_token": "8610b2f9f92840f1bca90e9363a928e8",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "1dffa2d447444bc89fa5c494f88aaa20:96af1a7dbbe643ee9b54c2702c719407",
+      "instance_token": "cbc313f64c6f48edac528f1332b4e0c9",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "1dffa2d447444bc89fa5c494f88aaa20:96af1a7dbbe643ee9b54c2702c719407",
+      "instance_token": "5b275fa1f102486599a35f1d1c038c2e",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "1dffa2d447444bc89fa5c494f88aaa20:96af1a7dbbe643ee9b54c2702c719407",
+      "instance_token": "ce05816ccbf54773b069ddaf20d1b5c7",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "1dffa2d447444bc89fa5c494f88aaa20:96af1a7dbbe643ee9b54c2702c719407",
+      "instance_token": "e96689f13fc54aff97703891811e6405",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "8c6a954f8ab94c36b994a18d9f6a5b26:99c4cc9ce89246b19b802666bff43cf9",
+      "instance_token": "8610b2f9f92840f1bca90e9363a928e8",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "8c6a954f8ab94c36b994a18d9f6a5b26:99c4cc9ce89246b19b802666bff43cf9",
+      "instance_token": "bb52fb7f1359400db2cdf4b76758991c",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "8c6a954f8ab94c36b994a18d9f6a5b26:99c4cc9ce89246b19b802666bff43cf9",
+      "instance_token": "cbc313f64c6f48edac528f1332b4e0c9",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "8c6a954f8ab94c36b994a18d9f6a5b26:99c4cc9ce89246b19b802666bff43cf9",
+      "instance_token": "33ea67e633754c38b02c6c1d836bfb15",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "8c6a954f8ab94c36b994a18d9f6a5b26:99c4cc9ce89246b19b802666bff43cf9",
+      "instance_token": "90bc0e76695e413daddb10897af52669",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "8c6a954f8ab94c36b994a18d9f6a5b26:99c4cc9ce89246b19b802666bff43cf9",
+      "instance_token": "ce05816ccbf54773b069ddaf20d1b5c7",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "8c6a954f8ab94c36b994a18d9f6a5b26:99c4cc9ce89246b19b802666bff43cf9",
+      "instance_token": "e96689f13fc54aff97703891811e6405",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "d5686f4785d04f7f82f723548f14523c:5c9f496ba0904ac0a2a62c138dd627f2",
+      "instance_token": "8610b2f9f92840f1bca90e9363a928e8",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "d5686f4785d04f7f82f723548f14523c:5c9f496ba0904ac0a2a62c138dd627f2",
+      "instance_token": "bb52fb7f1359400db2cdf4b76758991c",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "d5686f4785d04f7f82f723548f14523c:5c9f496ba0904ac0a2a62c138dd627f2",
+      "instance_token": "cbc313f64c6f48edac528f1332b4e0c9",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "d5686f4785d04f7f82f723548f14523c:5c9f496ba0904ac0a2a62c138dd627f2",
+      "instance_token": "33ea67e633754c38b02c6c1d836bfb15",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "d5686f4785d04f7f82f723548f14523c:5c9f496ba0904ac0a2a62c138dd627f2",
+      "instance_token": "49b508526b4d4d6382e44c872b9cdfb7",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "d5686f4785d04f7f82f723548f14523c:5c9f496ba0904ac0a2a62c138dd627f2",
+      "instance_token": "90bc0e76695e413daddb10897af52669",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "d5686f4785d04f7f82f723548f14523c:5c9f496ba0904ac0a2a62c138dd627f2",
+      "instance_token": "ce05816ccbf54773b069ddaf20d1b5c7",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "ad7080dc8e08423482474c439e96c2ee:ce45c7c9cae1491ba4e30bdf649b7de0",
+      "instance_token": "8610b2f9f92840f1bca90e9363a928e8",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "ad7080dc8e08423482474c439e96c2ee:ce45c7c9cae1491ba4e30bdf649b7de0",
+      "instance_token": "bb52fb7f1359400db2cdf4b76758991c",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "ad7080dc8e08423482474c439e96c2ee:ce45c7c9cae1491ba4e30bdf649b7de0",
+      "instance_token": "cbc313f64c6f48edac528f1332b4e0c9",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "ad7080dc8e08423482474c439e96c2ee:ce45c7c9cae1491ba4e30bdf649b7de0",
+      "instance_token": "33ea67e633754c38b02c6c1d836bfb15",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "ad7080dc8e08423482474c439e96c2ee:ce45c7c9cae1491ba4e30bdf649b7de0",
+      "instance_token": "49b508526b4d4d6382e44c872b9cdfb7",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "ad7080dc8e08423482474c439e96c2ee:ce45c7c9cae1491ba4e30bdf649b7de0",
+      "instance_token": "90bc0e76695e413daddb10897af52669",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "ad7080dc8e08423482474c439e96c2ee:ce45c7c9cae1491ba4e30bdf649b7de0",
+      "instance_token": "ce05816ccbf54773b069ddaf20d1b5c7",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "96af1a7dbbe643ee9b54c2702c719407:4ffdd34156524df380cddc090dcadc7d",
+      "instance_token": "cbc313f64c6f48edac528f1332b4e0c9",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "96af1a7dbbe643ee9b54c2702c719407:4ffdd34156524df380cddc090dcadc7d",
+      "instance_token": "33ea67e633754c38b02c6c1d836bfb15",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "96af1a7dbbe643ee9b54c2702c719407:4ffdd34156524df380cddc090dcadc7d",
+      "instance_token": "49b508526b4d4d6382e44c872b9cdfb7",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "96af1a7dbbe643ee9b54c2702c719407:4ffdd34156524df380cddc090dcadc7d",
+      "instance_token": "90bc0e76695e413daddb10897af52669",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "96af1a7dbbe643ee9b54c2702c719407:4ffdd34156524df380cddc090dcadc7d",
+      "instance_token": "ce05816ccbf54773b069ddaf20d1b5c7",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "99c4cc9ce89246b19b802666bff43cf9:ffec010a27b4462f86b78e2e41d14f42",
+      "instance_token": "cbc313f64c6f48edac528f1332b4e0c9",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "99c4cc9ce89246b19b802666bff43cf9:ffec010a27b4462f86b78e2e41d14f42",
+      "instance_token": "33ea67e633754c38b02c6c1d836bfb15",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "99c4cc9ce89246b19b802666bff43cf9:ffec010a27b4462f86b78e2e41d14f42",
+      "instance_token": "49b508526b4d4d6382e44c872b9cdfb7",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "99c4cc9ce89246b19b802666bff43cf9:ffec010a27b4462f86b78e2e41d14f42",
+      "instance_token": "ce05816ccbf54773b069ddaf20d1b5c7",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "5c9f496ba0904ac0a2a62c138dd627f2:c5fc747cb34f44d78820ae649d183e93",
+      "instance_token": "cbc313f64c6f48edac528f1332b4e0c9",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "5c9f496ba0904ac0a2a62c138dd627f2:c5fc747cb34f44d78820ae649d183e93",
+      "instance_token": "33ea67e633754c38b02c6c1d836bfb15",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "5c9f496ba0904ac0a2a62c138dd627f2:c5fc747cb34f44d78820ae649d183e93",
+      "instance_token": "49b508526b4d4d6382e44c872b9cdfb7",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "5c9f496ba0904ac0a2a62c138dd627f2:c5fc747cb34f44d78820ae649d183e93",
+      "instance_token": "6811f6032b5d4f52af1b777c4bc0e138",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "5c9f496ba0904ac0a2a62c138dd627f2:c5fc747cb34f44d78820ae649d183e93",
+      "instance_token": "ce05816ccbf54773b069ddaf20d1b5c7",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "5c9f496ba0904ac0a2a62c138dd627f2:c5fc747cb34f44d78820ae649d183e93",
+      "instance_token": "f23cc3ca7b5f410984a3389eca65d972",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "ce45c7c9cae1491ba4e30bdf649b7de0:88aa269105204f8db1a29debf3cde07c",
+      "instance_token": "9f4e6122c14743b494afa86c971b75cf",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "ce45c7c9cae1491ba4e30bdf649b7de0:88aa269105204f8db1a29debf3cde07c",
+      "instance_token": "12b673728c674b559b7beb0094a19b33",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "ce45c7c9cae1491ba4e30bdf649b7de0:88aa269105204f8db1a29debf3cde07c",
+      "instance_token": "33ea67e633754c38b02c6c1d836bfb15",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "ce45c7c9cae1491ba4e30bdf649b7de0:88aa269105204f8db1a29debf3cde07c",
+      "instance_token": "49b508526b4d4d6382e44c872b9cdfb7",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "ce45c7c9cae1491ba4e30bdf649b7de0:88aa269105204f8db1a29debf3cde07c",
+      "instance_token": "6811f6032b5d4f52af1b777c4bc0e138",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "ce45c7c9cae1491ba4e30bdf649b7de0:88aa269105204f8db1a29debf3cde07c",
+      "instance_token": "f23cc3ca7b5f410984a3389eca65d972",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4ffdd34156524df380cddc090dcadc7d:6b282c1c40c1454bad559e58b5fcecb0",
+      "instance_token": "0dcdd5eb06f84acdb68109e37a413851",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4ffdd34156524df380cddc090dcadc7d:6b282c1c40c1454bad559e58b5fcecb0",
+      "instance_token": "e91be0857d76470097ba8c482f5f09f0",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4ffdd34156524df380cddc090dcadc7d:6b282c1c40c1454bad559e58b5fcecb0",
+      "instance_token": "6811f6032b5d4f52af1b777c4bc0e138",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4ffdd34156524df380cddc090dcadc7d:6b282c1c40c1454bad559e58b5fcecb0",
+      "instance_token": "d21a8714c13c42cd97feafd36d97ca95",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4ffdd34156524df380cddc090dcadc7d:6b282c1c40c1454bad559e58b5fcecb0",
+      "instance_token": "f23cc3ca7b5f410984a3389eca65d972",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "ffec010a27b4462f86b78e2e41d14f42:4523fb98c35940f1a47555072262965d",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "ffec010a27b4462f86b78e2e41d14f42:4523fb98c35940f1a47555072262965d",
+      "instance_token": "6811f6032b5d4f52af1b777c4bc0e138",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "ffec010a27b4462f86b78e2e41d14f42:4523fb98c35940f1a47555072262965d",
+      "instance_token": "d21a8714c13c42cd97feafd36d97ca95",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "ffec010a27b4462f86b78e2e41d14f42:4523fb98c35940f1a47555072262965d",
+      "instance_token": "f23cc3ca7b5f410984a3389eca65d972",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "c5fc747cb34f44d78820ae649d183e93:6e75580faac94693acd7ece6419dcb88",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "c5fc747cb34f44d78820ae649d183e93:6e75580faac94693acd7ece6419dcb88",
+      "instance_token": "6811f6032b5d4f52af1b777c4bc0e138",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "c5fc747cb34f44d78820ae649d183e93:6e75580faac94693acd7ece6419dcb88",
+      "instance_token": "d21a8714c13c42cd97feafd36d97ca95",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "c5fc747cb34f44d78820ae649d183e93:6e75580faac94693acd7ece6419dcb88",
+      "instance_token": "f23cc3ca7b5f410984a3389eca65d972",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "c5fc747cb34f44d78820ae649d183e93:6e75580faac94693acd7ece6419dcb88",
+      "instance_token": "f7cb70131e86498fabb0ad7373f7c565",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "88aa269105204f8db1a29debf3cde07c:bd0a172dbc9045d5a11b1980ccfb0d53",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "88aa269105204f8db1a29debf3cde07c:bd0a172dbc9045d5a11b1980ccfb0d53",
+      "instance_token": "6811f6032b5d4f52af1b777c4bc0e138",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "88aa269105204f8db1a29debf3cde07c:bd0a172dbc9045d5a11b1980ccfb0d53",
+      "instance_token": "d21a8714c13c42cd97feafd36d97ca95",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "88aa269105204f8db1a29debf3cde07c:bd0a172dbc9045d5a11b1980ccfb0d53",
+      "instance_token": "f23cc3ca7b5f410984a3389eca65d972",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "88aa269105204f8db1a29debf3cde07c:bd0a172dbc9045d5a11b1980ccfb0d53",
+      "instance_token": "f7cb70131e86498fabb0ad7373f7c565",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "6b282c1c40c1454bad559e58b5fcecb0:af620d74bb47486b89cdc3844acb6c18",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "6b282c1c40c1454bad559e58b5fcecb0:af620d74bb47486b89cdc3844acb6c18",
+      "instance_token": "6811f6032b5d4f52af1b777c4bc0e138",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "6b282c1c40c1454bad559e58b5fcecb0:af620d74bb47486b89cdc3844acb6c18",
+      "instance_token": "d21a8714c13c42cd97feafd36d97ca95",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "6b282c1c40c1454bad559e58b5fcecb0:af620d74bb47486b89cdc3844acb6c18",
+      "instance_token": "f23cc3ca7b5f410984a3389eca65d972",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "6b282c1c40c1454bad559e58b5fcecb0:af620d74bb47486b89cdc3844acb6c18",
+      "instance_token": "f7cb70131e86498fabb0ad7373f7c565",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4523fb98c35940f1a47555072262965d:8a51f719699b49f893a8ed0932201c22",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4523fb98c35940f1a47555072262965d:8a51f719699b49f893a8ed0932201c22",
+      "instance_token": "d21a8714c13c42cd97feafd36d97ca95",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "4523fb98c35940f1a47555072262965d:8a51f719699b49f893a8ed0932201c22",
+      "instance_token": "f7cb70131e86498fabb0ad7373f7c565",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "6e75580faac94693acd7ece6419dcb88:cf4d66093d824995b2b56eb08503c663",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "6e75580faac94693acd7ece6419dcb88:cf4d66093d824995b2b56eb08503c663",
+      "instance_token": "f7cb70131e86498fabb0ad7373f7c565",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "bd0a172dbc9045d5a11b1980ccfb0d53:5bea7ebf706d4a5c906769ca8de1be22",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "bd0a172dbc9045d5a11b1980ccfb0d53:5bea7ebf706d4a5c906769ca8de1be22",
+      "instance_token": "f7cb70131e86498fabb0ad7373f7c565",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "af620d74bb47486b89cdc3844acb6c18:c49a39d8f51d41dabd03de50bbcf06d9",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "af620d74bb47486b89cdc3844acb6c18:c49a39d8f51d41dabd03de50bbcf06d9",
+      "instance_token": "f7cb70131e86498fabb0ad7373f7c565",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "8a51f719699b49f893a8ed0932201c22:b9853461935b41f88ba20195a2d0217c",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "8a51f719699b49f893a8ed0932201c22:b9853461935b41f88ba20195a2d0217c",
+      "instance_token": "f7cb70131e86498fabb0ad7373f7c565",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "cf4d66093d824995b2b56eb08503c663:a4093bf016f74a93bab9aea589de615c",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "cf4d66093d824995b2b56eb08503c663:a4093bf016f74a93bab9aea589de615c",
+      "instance_token": "f7cb70131e86498fabb0ad7373f7c565",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "5bea7ebf706d4a5c906769ca8de1be22:33c965ece87842c2ac898543d26dad5f",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "c49a39d8f51d41dabd03de50bbcf06d9:5484714099f84b6c90d7db7fa8673073",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "b9853461935b41f88ba20195a2d0217c:318791a3a2054db9a90bc6eba32795bf",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "a4093bf016f74a93bab9aea589de615c:9f6fcb159f6046cb9b2f9165479c2e51",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "33c965ece87842c2ac898543d26dad5f:7967df27333942bca9eb8c1af9de61af",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "5484714099f84b6c90d7db7fa8673073:1aaff367ed174989b350fd40619b6f9a",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "318791a3a2054db9a90bc6eba32795bf:28d072daaeb44926a824bb2671878b68",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "9f6fcb159f6046cb9b2f9165479c2e51:0a4c9338501444aebc937ec231dcde43",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "7967df27333942bca9eb8c1af9de61af:81d4dc6d876c46528e7c678fe85410cf",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "1aaff367ed174989b350fd40619b6f9a:a2f135999c12428caacda927ebcff835",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "28d072daaeb44926a824bb2671878b68:e32db3f8b6c244c2be60b6d7db30ccc3",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "0a4c9338501444aebc937ec231dcde43:38f030fc7723490e98b3b40ba7d525f9",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "81d4dc6d876c46528e7c678fe85410cf:e2526ae0b641422f9151ffd49a19f01c",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "a2f135999c12428caacda927ebcff835:b3bafb1ec0824002ac518570c7995935",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "e32db3f8b6c244c2be60b6d7db30ccc3:4ac8bb201c7f44cfad407f00d3b18c4d",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    },
+    {
+      "pair_id": "38f030fc7723490e98b3b40ba7d525f9:91d55da975464dd6a50d71a4d46881eb",
+      "instance_token": "657ccaf97776466abaab167159824a41",
+      "reason": "invalid_or_small_bbox"
+    }
+  ],
+  "speed_timebase": "sample annotation-center displacement / sample timestamp gap",
+  "similarity_timebase": "actual camera exposure timestamps"
+}

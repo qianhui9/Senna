@@ -1,0 +1,5 @@
+{
+  "rows_before": 100233,
+  "common_valid_rows": 74179,
+  "definition": "Identical object/control pair IDs valid at every extracted layer, separately by aggregation/group"
+}

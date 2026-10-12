@@ -1,0 +1,283 @@
+{
+  "checkpoint": "/data/qh/phdCode/work4/models/Senna",
+  "model_config": {
+    "_name_or_path": "/horizon-bucket/saturn_v_dev/01_users/bo01.jiang/models/v8senna-llava-v1.5-7b-128-tok/",
+    "architectures": [
+      "v8SennaLlavaLlamaForCausalLM"
+    ],
+    "bos_token_id": 1,
+    "eos_token_id": 2,
+    "freeze_mm_mlp_adapter": false,
+    "hidden_act": "silu",
+    "hidden_size": 4096,
+    "image_aspect_ratio": "pad",
+    "initializer_range": 0.02,
+    "intermediate_size": 11008,
+    "max_position_embeddings": 4096,
+    "mm_hidden_size": 1024,
+    "mm_patch_merge_type": "flat",
+    "mm_projector_lr": null,
+    "mm_projector_type": "mlp2x_gelu",
+    "mm_use_im_patch_token": false,
+    "mm_use_im_start_end": false,
+    "mm_vision_select_feature": "patch",
+    "mm_vision_select_layer": -2,
+    "mm_vision_tower": "/data/qh/phdCode/work4/models/clip-vit-large-patch14-336",
+    "model_type": "llava_llama",
+    "num_attention_heads": 32,
+    "num_hidden_layers": 32,
+    "num_key_value_heads": 32,
+    "pad_token_id": 0,
+    "pretraining_tp": 1,
+    "rms_norm_eps": 1e-05,
+    "rope_scaling": null,
+    "tie_word_embeddings": false,
+    "tokenizer_model_max_length": 2048,
+    "tokenizer_padding_side": "right",
+    "torch_dtype": "bfloat16",
+    "transformers_version": "4.31.0",
+    "tune_mm_mlp_adapter": false,
+    "use_cache": true,
+    "use_mm_proj": true,
+    "vocab_size": 32000
+  },
+  "vision_tower_class": "CLIPVisionTower",
+  "vision_tower_name": "/data/qh/phdCode/work4/models/clip-vit-large-patch14-336",
+  "vision_config": {
+    "return_dict": true,
+    "output_hidden_states": false,
+    "output_attentions": false,
+    "torchscript": false,
+    "torch_dtype": null,
+    "use_bfloat16": false,
+    "tf_legacy_loss": false,
+    "pruned_heads": {},
+    "tie_word_embeddings": true,
+    "is_encoder_decoder": false,
+    "is_decoder": false,
+    "cross_attention_hidden_size": null,
+    "add_cross_attention": false,
+    "tie_encoder_decoder": false,
+    "max_length": 20,
+    "min_length": 0,
+    "do_sample": false,
+    "early_stopping": false,
+    "num_beams": 1,
+    "num_beam_groups": 1,
+    "diversity_penalty": 0.0,
+    "temperature": 1.0,
+    "top_k": 50,
+    "top_p": 1.0,
+    "typical_p": 1.0,
+    "repetition_penalty": 1.0,
+    "length_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "encoder_no_repeat_ngram_size": 0,
+    "bad_words_ids": null,
+    "num_return_sequences": 1,
+    "chunk_size_feed_forward": 0,
+    "output_scores": false,
+    "return_dict_in_generate": false,
+    "forced_bos_token_id": null,
+    "forced_eos_token_id": null,
+    "remove_invalid_values": false,
+    "exponential_decay_length_penalty": null,
+    "suppress_tokens": null,
+    "begin_suppress_tokens": null,
+    "architectures": null,
+    "finetuning_task": null,
+    "id2label": {
+      "0": "LABEL_0",
+      "1": "LABEL_1"
+    },
+    "label2id": {
+      "LABEL_0": 0,
+      "LABEL_1": 1
+    },
+    "tokenizer_class": null,
+    "prefix": null,
+    "bos_token_id": null,
+    "pad_token_id": null,
+    "eos_token_id": null,
+    "sep_token_id": null,
+    "decoder_start_token_id": null,
+    "task_specific_params": null,
+    "problem_type": null,
+    "_name_or_path": "",
+    "transformers_version": "4.31.0",
+    "dropout": 0.0,
+    "model_type": "clip_vision_model",
+    "hidden_size": 1024,
+    "intermediate_size": 4096,
+    "projection_dim": 768,
+    "num_hidden_layers": 24,
+    "num_attention_heads": 16,
+    "num_channels": 3,
+    "patch_size": 14,
+    "image_size": 336,
+    "initializer_range": 0.02,
+    "initializer_factor": 1.0,
+    "attention_dropout": 0.0,
+    "layer_norm_eps": 1e-05,
+    "hidden_act": "quick_gelu"
+  },
+  "feature_layers": [
+    0,
+    6,
+    12,
+    18,
+    23,
+    24
+  ],
+  "selected_layer": 23,
+  "selected_feature": "patch",
+  "precision": "fp16",
+  "device": "cuda:0",
+  "grid_shape": [
+    24,
+    24
+  ],
+  "spatial_projector": true,
+  "adapter_spatial_mapping": false,
+  "adapter_note": "Learned token-axis Linear/GELU network; globally mixes 576 into 128 tokens. Only global analysis permitted.",
+  "layer_zero_note": "CLIP hidden_states[0] is embedding+position after pre_layernorm, before transformer block 1",
+  "status": "runtime_verified",
+  "loaded_model_class": "SennaLlavaLlamaForCausalLM",
+  "projector_structure": "Sequential(\n  (0): Linear(in_features=1024, out_features=4096, bias=True)\n  (1): GELU(approximate='none')\n  (2): Linear(in_features=4096, out_features=4096, bias=True)\n)",
+  "img_adapter_structure": "img_adapter(\n  (adapter): Sequential(\n    (0): Linear(in_features=576, out_features=128, bias=True)\n    (1): GELU(approximate='none')\n    (2): Linear(in_features=128, out_features=128, bias=True)\n    (3): GELU(approximate='none')\n    (4): Linear(in_features=128, out_features=128, bias=True)\n  )\n)",
+  "actual_vision_dtype": "torch.float16",
+  "actual_device": "cuda:0",
+  "torch": "2.0.1+cu118",
+  "transformers": "4.31.0",
+  "gpu": "NVIDIA GeForce RTX 3090",
+  "runtime_shapes": {
+    "layer_0": {
+      "layer_id": 0,
+      "shape": [
+        1,
+        577,
+        1024
+      ],
+      "patch_shape": [
+        1,
+        576,
+        1024
+      ],
+      "contains_cls_before_removal": true,
+      "dtype": "torch.float16",
+      "spatial_mapping": true,
+      "spatial_downsampling": false
+    },
+    "layer_6": {
+      "layer_id": 6,
+      "shape": [
+        1,
+        577,
+        1024
+      ],
+      "patch_shape": [
+        1,
+        576,
+        1024
+      ],
+      "contains_cls_before_removal": true,
+      "dtype": "torch.float16",
+      "spatial_mapping": true,
+      "spatial_downsampling": false
+    },
+    "layer_12": {
+      "layer_id": 12,
+      "shape": [
+        1,
+        577,
+        1024
+      ],
+      "patch_shape": [
+        1,
+        576,
+        1024
+      ],
+      "contains_cls_before_removal": true,
+      "dtype": "torch.float16",
+      "spatial_mapping": true,
+      "spatial_downsampling": false
+    },
+    "layer_18": {
+      "layer_id": 18,
+      "shape": [
+        1,
+        577,
+        1024
+      ],
+      "patch_shape": [
+        1,
+        576,
+        1024
+      ],
+      "contains_cls_before_removal": true,
+      "dtype": "torch.float16",
+      "spatial_mapping": true,
+      "spatial_downsampling": false
+    },
+    "layer_23": {
+      "layer_id": 23,
+      "shape": [
+        1,
+        577,
+        1024
+      ],
+      "patch_shape": [
+        1,
+        576,
+        1024
+      ],
+      "contains_cls_before_removal": true,
+      "dtype": "torch.float16",
+      "spatial_mapping": true,
+      "spatial_downsampling": false
+    },
+    "layer_24": {
+      "layer_id": 24,
+      "shape": [
+        1,
+        577,
+        1024
+      ],
+      "patch_shape": [
+        1,
+        576,
+        1024
+      ],
+      "contains_cls_before_removal": true,
+      "dtype": "torch.float16",
+      "spatial_mapping": true,
+      "spatial_downsampling": false
+    },
+    "projector": {
+      "shape": [
+        1,
+        576,
+        4096
+      ],
+      "dtype": "torch.float16",
+      "contains_cls_before_removal": false,
+      "spatial_mapping": true
+    },
+    "adapter_global": {
+      "shape": [
+        1,
+        128,
+        4096
+      ],
+      "dtype": "torch.float16",
+      "spatial_mapping": false,
+      "analysis": "global mean only"
+    }
+  },
+  "input_shape": [
+    1,
+    3,
+    336,
+    336
+  ]
+}

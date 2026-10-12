@@ -1,0 +1,1485 @@
+[
+  {
+    "sample_data_tokens": [
+      "0006d92c00d04195b4b6825788f4a7b6"
+    ],
+    "atol": 0.001,
+    "rtol": 0.001,
+    "vision_output": {
+      "shape": [
+        1,
+        576,
+        1024
+      ],
+      "dtype": "torch.float16",
+      "same_layout": true,
+      "max_absolute_error": 0.0,
+      "passed": true
+    },
+    "compressed_output": {
+      "shape": [
+        1,
+        128,
+        4096
+      ],
+      "dtype": "torch.float16",
+      "same_layout": true,
+      "max_absolute_error": 0.0,
+      "passed": true
+    },
+    "repeated_hidden_outputs": {
+      "layer_0": {
+        "shape": [
+          1,
+          576,
+          1024
+        ],
+        "dtype": "torch.float16",
+        "same_layout": true,
+        "max_absolute_error": 0.0,
+        "passed": true
+      },
+      "layer_6": {
+        "shape": [
+          1,
+          576,
+          1024
+        ],
+        "dtype": "torch.float16",
+        "same_layout": true,
+        "max_absolute_error": 0.0,
+        "passed": true
+      },
+      "layer_12": {
+        "shape": [
+          1,
+          576,
+          1024
+        ],
+        "dtype": "torch.float16",
+        "same_layout": true,
+        "max_absolute_error": 0.0,
+        "passed": true
+      },
+      "layer_18": {
+        "shape": [
+          1,
+          576,
+          1024
+        ],
+        "dtype": "torch.float16",
+        "same_layout": true,
+        "max_absolute_error": 0.0,
+        "passed": true
+      },
+      "layer_23": {
+        "shape": [
+          1,
+          576,
+          1024
+        ],
+        "dtype": "torch.float16",
+        "same_layout": true,
+        "max_absolute_error": 0.0,
+        "passed": true
+      },
+      "layer_24": {
+        "shape": [
+          1,
+          576,
+          1024
+        ],
+        "dtype": "torch.float16",
+        "same_layout": true,
+        "max_absolute_error": 0.0,
+        "passed": true
+      },
+      "projector": {
+        "shape": [
+          1,
+          576,
+          4096
+        ],
+        "dtype": "torch.float16",
+        "same_layout": true,
+        "max_absolute_error": 0.0,
+        "passed": true
+      },
+      "adapter_global": {
+        "shape": [
+          1,
+          4096
+        ],
+        "dtype": "torch.float32",
+        "same_layout": true,
+        "max_absolute_error": 0.0,
+        "passed": true
+      }
+    },
+    "repeated_object_descriptors": [
+      {
+        "sample_data_token": "0006d92c00d04195b4b6825788f4a7b6",
+        "observation_id": "7e9de58b0c42a61501114896",
+        "scene_token": "e005041f659c47e194cd5b18ea6fc346",
+        "layer_id": "layer_0",
+        "cosine_similarity": 0.9999999403953552,
+        "cosine_distance": 5.960464477539063e-08,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "0006d92c00d04195b4b6825788f4a7b6",
+        "observation_id": "7e9de58b0c42a61501114896",
+        "scene_token": "e005041f659c47e194cd5b18ea6fc346",
+        "layer_id": "layer_6",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "0006d92c00d04195b4b6825788f4a7b6",
+        "observation_id": "7e9de58b0c42a61501114896",
+        "scene_token": "e005041f659c47e194cd5b18ea6fc346",
+        "layer_id": "layer_12",
+        "cosine_similarity": 0.9999999403953552,
+        "cosine_distance": 5.960464477539063e-08,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "0006d92c00d04195b4b6825788f4a7b6",
+        "observation_id": "7e9de58b0c42a61501114896",
+        "scene_token": "e005041f659c47e194cd5b18ea6fc346",
+        "layer_id": "layer_18",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "0006d92c00d04195b4b6825788f4a7b6",
+        "observation_id": "7e9de58b0c42a61501114896",
+        "scene_token": "e005041f659c47e194cd5b18ea6fc346",
+        "layer_id": "layer_23",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "0006d92c00d04195b4b6825788f4a7b6",
+        "observation_id": "7e9de58b0c42a61501114896",
+        "scene_token": "e005041f659c47e194cd5b18ea6fc346",
+        "layer_id": "layer_24",
+        "cosine_similarity": 0.9999999403953552,
+        "cosine_distance": 5.960464477539063e-08,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "0006d92c00d04195b4b6825788f4a7b6",
+        "observation_id": "7e9de58b0c42a61501114896",
+        "scene_token": "e005041f659c47e194cd5b18ea6fc346",
+        "layer_id": "projector",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      }
+    ],
+    "passed": true
+  },
+  {
+    "sample_data_tokens": [
+      "00094383a1c347f980cbfe7df9aeab91"
+    ],
+    "atol": 0.001,
+    "rtol": 0.001,
+    "vision_output": {
+      "shape": [
+        1,
+        576,
+        1024
+      ],
+      "dtype": "torch.float16",
+      "same_layout": true,
+      "max_absolute_error": 0.0,
+      "passed": true
+    },
+    "compressed_output": {
+      "shape": [
+        1,
+        128,
+        4096
+      ],
+      "dtype": "torch.float16",
+      "same_layout": true,
+      "max_absolute_error": 0.0,
+      "passed": true
+    },
+    "repeated_hidden_outputs": {
+      "layer_0": {
+        "shape": [
+          1,
+          576,
+          1024
+        ],
+        "dtype": "torch.float16",
+        "same_layout": true,
+        "max_absolute_error": 0.0,
+        "passed": true
+      },
+      "layer_6": {
+        "shape": [
+          1,
+          576,
+          1024
+        ],
+        "dtype": "torch.float16",
+        "same_layout": true,
+        "max_absolute_error": 0.0,
+        "passed": true
+      },
+      "layer_12": {
+        "shape": [
+          1,
+          576,
+          1024
+        ],
+        "dtype": "torch.float16",
+        "same_layout": true,
+        "max_absolute_error": 0.0,
+        "passed": true
+      },
+      "layer_18": {
+        "shape": [
+          1,
+          576,
+          1024
+        ],
+        "dtype": "torch.float16",
+        "same_layout": true,
+        "max_absolute_error": 0.0,
+        "passed": true
+      },
+      "layer_23": {
+        "shape": [
+          1,
+          576,
+          1024
+        ],
+        "dtype": "torch.float16",
+        "same_layout": true,
+        "max_absolute_error": 0.0,
+        "passed": true
+      },
+      "layer_24": {
+        "shape": [
+          1,
+          576,
+          1024
+        ],
+        "dtype": "torch.float16",
+        "same_layout": true,
+        "max_absolute_error": 0.0,
+        "passed": true
+      },
+      "projector": {
+        "shape": [
+          1,
+          576,
+          4096
+        ],
+        "dtype": "torch.float16",
+        "same_layout": true,
+        "max_absolute_error": 0.0,
+        "passed": true
+      },
+      "adapter_global": {
+        "shape": [
+          1,
+          4096
+        ],
+        "dtype": "torch.float32",
+        "same_layout": true,
+        "max_absolute_error": 0.0,
+        "passed": true
+      }
+    },
+    "repeated_object_descriptors": [
+      {
+        "sample_data_token": "00094383a1c347f980cbfe7df9aeab91",
+        "observation_id": "f1f4a1d04d73c25275751e52",
+        "scene_token": "64bfc5edd71147858ce7446892d7f864",
+        "layer_id": "layer_0",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "00094383a1c347f980cbfe7df9aeab91",
+        "observation_id": "f1f4a1d04d73c25275751e52",
+        "scene_token": "64bfc5edd71147858ce7446892d7f864",
+        "layer_id": "layer_6",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "00094383a1c347f980cbfe7df9aeab91",
+        "observation_id": "f1f4a1d04d73c25275751e52",
+        "scene_token": "64bfc5edd71147858ce7446892d7f864",
+        "layer_id": "layer_12",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "00094383a1c347f980cbfe7df9aeab91",
+        "observation_id": "f1f4a1d04d73c25275751e52",
+        "scene_token": "64bfc5edd71147858ce7446892d7f864",
+        "layer_id": "layer_18",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "00094383a1c347f980cbfe7df9aeab91",
+        "observation_id": "f1f4a1d04d73c25275751e52",
+        "scene_token": "64bfc5edd71147858ce7446892d7f864",
+        "layer_id": "layer_23",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "00094383a1c347f980cbfe7df9aeab91",
+        "observation_id": "f1f4a1d04d73c25275751e52",
+        "scene_token": "64bfc5edd71147858ce7446892d7f864",
+        "layer_id": "layer_24",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "00094383a1c347f980cbfe7df9aeab91",
+        "observation_id": "f1f4a1d04d73c25275751e52",
+        "scene_token": "64bfc5edd71147858ce7446892d7f864",
+        "layer_id": "projector",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "00094383a1c347f980cbfe7df9aeab91",
+        "observation_id": "639994963df47770bc3e074f",
+        "scene_token": "64bfc5edd71147858ce7446892d7f864",
+        "layer_id": "layer_0",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "00094383a1c347f980cbfe7df9aeab91",
+        "observation_id": "639994963df47770bc3e074f",
+        "scene_token": "64bfc5edd71147858ce7446892d7f864",
+        "layer_id": "layer_6",
+        "cosine_similarity": 0.9999999403953552,
+        "cosine_distance": 5.960464477539063e-08,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "00094383a1c347f980cbfe7df9aeab91",
+        "observation_id": "639994963df47770bc3e074f",
+        "scene_token": "64bfc5edd71147858ce7446892d7f864",
+        "layer_id": "layer_12",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "00094383a1c347f980cbfe7df9aeab91",
+        "observation_id": "639994963df47770bc3e074f",
+        "scene_token": "64bfc5edd71147858ce7446892d7f864",
+        "layer_id": "layer_18",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "00094383a1c347f980cbfe7df9aeab91",
+        "observation_id": "639994963df47770bc3e074f",
+        "scene_token": "64bfc5edd71147858ce7446892d7f864",
+        "layer_id": "layer_23",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "00094383a1c347f980cbfe7df9aeab91",
+        "observation_id": "639994963df47770bc3e074f",
+        "scene_token": "64bfc5edd71147858ce7446892d7f864",
+        "layer_id": "layer_24",
+        "cosine_similarity": 0.9999998807907104,
+        "cosine_distance": 1.1920928955078125e-07,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "00094383a1c347f980cbfe7df9aeab91",
+        "observation_id": "639994963df47770bc3e074f",
+        "scene_token": "64bfc5edd71147858ce7446892d7f864",
+        "layer_id": "projector",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "00094383a1c347f980cbfe7df9aeab91",
+        "observation_id": "c42cea7c14a730c4104ad330",
+        "scene_token": "64bfc5edd71147858ce7446892d7f864",
+        "layer_id": "layer_0",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "00094383a1c347f980cbfe7df9aeab91",
+        "observation_id": "c42cea7c14a730c4104ad330",
+        "scene_token": "64bfc5edd71147858ce7446892d7f864",
+        "layer_id": "layer_6",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "00094383a1c347f980cbfe7df9aeab91",
+        "observation_id": "c42cea7c14a730c4104ad330",
+        "scene_token": "64bfc5edd71147858ce7446892d7f864",
+        "layer_id": "layer_12",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "00094383a1c347f980cbfe7df9aeab91",
+        "observation_id": "c42cea7c14a730c4104ad330",
+        "scene_token": "64bfc5edd71147858ce7446892d7f864",
+        "layer_id": "layer_18",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "00094383a1c347f980cbfe7df9aeab91",
+        "observation_id": "c42cea7c14a730c4104ad330",
+        "scene_token": "64bfc5edd71147858ce7446892d7f864",
+        "layer_id": "layer_23",
+        "cosine_similarity": 0.9999999403953552,
+        "cosine_distance": 5.960464477539063e-08,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "00094383a1c347f980cbfe7df9aeab91",
+        "observation_id": "c42cea7c14a730c4104ad330",
+        "scene_token": "64bfc5edd71147858ce7446892d7f864",
+        "layer_id": "layer_24",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "00094383a1c347f980cbfe7df9aeab91",
+        "observation_id": "c42cea7c14a730c4104ad330",
+        "scene_token": "64bfc5edd71147858ce7446892d7f864",
+        "layer_id": "projector",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      }
+    ],
+    "passed": true
+  },
+  {
+    "sample_data_tokens": [
+      "003d073b85f74c33a7039f78258285e0"
+    ],
+    "atol": 0.001,
+    "rtol": 0.001,
+    "vision_output": {
+      "shape": [
+        1,
+        576,
+        1024
+      ],
+      "dtype": "torch.float16",
+      "same_layout": true,
+      "max_absolute_error": 0.0,
+      "passed": true
+    },
+    "compressed_output": {
+      "shape": [
+        1,
+        128,
+        4096
+      ],
+      "dtype": "torch.float16",
+      "same_layout": true,
+      "max_absolute_error": 0.0,
+      "passed": true
+    },
+    "repeated_hidden_outputs": {
+      "layer_0": {
+        "shape": [
+          1,
+          576,
+          1024
+        ],
+        "dtype": "torch.float16",
+        "same_layout": true,
+        "max_absolute_error": 0.0,
+        "passed": true
+      },
+      "layer_6": {
+        "shape": [
+          1,
+          576,
+          1024
+        ],
+        "dtype": "torch.float16",
+        "same_layout": true,
+        "max_absolute_error": 0.0,
+        "passed": true
+      },
+      "layer_12": {
+        "shape": [
+          1,
+          576,
+          1024
+        ],
+        "dtype": "torch.float16",
+        "same_layout": true,
+        "max_absolute_error": 0.0,
+        "passed": true
+      },
+      "layer_18": {
+        "shape": [
+          1,
+          576,
+          1024
+        ],
+        "dtype": "torch.float16",
+        "same_layout": true,
+        "max_absolute_error": 0.0,
+        "passed": true
+      },
+      "layer_23": {
+        "shape": [
+          1,
+          576,
+          1024
+        ],
+        "dtype": "torch.float16",
+        "same_layout": true,
+        "max_absolute_error": 0.0,
+        "passed": true
+      },
+      "layer_24": {
+        "shape": [
+          1,
+          576,
+          1024
+        ],
+        "dtype": "torch.float16",
+        "same_layout": true,
+        "max_absolute_error": 0.0,
+        "passed": true
+      },
+      "projector": {
+        "shape": [
+          1,
+          576,
+          4096
+        ],
+        "dtype": "torch.float16",
+        "same_layout": true,
+        "max_absolute_error": 0.0,
+        "passed": true
+      },
+      "adapter_global": {
+        "shape": [
+          1,
+          4096
+        ],
+        "dtype": "torch.float32",
+        "same_layout": true,
+        "max_absolute_error": 0.0,
+        "passed": true
+      }
+    },
+    "repeated_object_descriptors": [
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "28aaaa86bb08768e5cf3870f",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_0",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "28aaaa86bb08768e5cf3870f",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_6",
+        "cosine_similarity": 0.9999999403953552,
+        "cosine_distance": 5.960464477539063e-08,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "28aaaa86bb08768e5cf3870f",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_12",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "28aaaa86bb08768e5cf3870f",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_18",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "28aaaa86bb08768e5cf3870f",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_23",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "28aaaa86bb08768e5cf3870f",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_24",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "28aaaa86bb08768e5cf3870f",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "projector",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "9ed35fc743444b8303fa9f3d",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_0",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "9ed35fc743444b8303fa9f3d",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_6",
+        "cosine_similarity": 0.9999999403953552,
+        "cosine_distance": 5.960464477539063e-08,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "9ed35fc743444b8303fa9f3d",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_12",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "9ed35fc743444b8303fa9f3d",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_18",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "9ed35fc743444b8303fa9f3d",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_23",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "9ed35fc743444b8303fa9f3d",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_24",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "9ed35fc743444b8303fa9f3d",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "projector",
+        "cosine_similarity": 0.9999998807907104,
+        "cosine_distance": 1.1920928955078125e-07,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "6c6759787831adc31126997e",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_0",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "6c6759787831adc31126997e",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_6",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "6c6759787831adc31126997e",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_12",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "6c6759787831adc31126997e",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_18",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "6c6759787831adc31126997e",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_23",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "6c6759787831adc31126997e",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_24",
+        "cosine_similarity": 0.9999998807907104,
+        "cosine_distance": 1.1920928955078125e-07,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "6c6759787831adc31126997e",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "projector",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "4d8261c9426b82beb762f0fc",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_0",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "4d8261c9426b82beb762f0fc",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_6",
+        "cosine_similarity": 0.9999999403953552,
+        "cosine_distance": 5.960464477539063e-08,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "4d8261c9426b82beb762f0fc",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_12",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "4d8261c9426b82beb762f0fc",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_18",
+        "cosine_similarity": 0.9999998807907104,
+        "cosine_distance": 1.1920928955078125e-07,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "4d8261c9426b82beb762f0fc",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_23",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "4d8261c9426b82beb762f0fc",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_24",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "4d8261c9426b82beb762f0fc",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "projector",
+        "cosine_similarity": 0.9999999403953552,
+        "cosine_distance": 5.960464477539063e-08,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "47c1e5f678a08c2a738b3709",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_0",
+        "cosine_similarity": 0.9999999403953552,
+        "cosine_distance": 5.960464477539063e-08,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "47c1e5f678a08c2a738b3709",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_6",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "47c1e5f678a08c2a738b3709",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_12",
+        "cosine_similarity": 0.9999999403953552,
+        "cosine_distance": 5.960464477539063e-08,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "47c1e5f678a08c2a738b3709",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_18",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "47c1e5f678a08c2a738b3709",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_23",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "47c1e5f678a08c2a738b3709",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_24",
+        "cosine_similarity": 0.9999999403953552,
+        "cosine_distance": 5.960464477539063e-08,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "47c1e5f678a08c2a738b3709",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "projector",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "ea52a6e6e7b1da9fbb244d85",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_0",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "ea52a6e6e7b1da9fbb244d85",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_6",
+        "cosine_similarity": 0.9999999403953552,
+        "cosine_distance": 5.960464477539063e-08,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "ea52a6e6e7b1da9fbb244d85",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_12",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "ea52a6e6e7b1da9fbb244d85",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_18",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "ea52a6e6e7b1da9fbb244d85",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_23",
+        "cosine_similarity": 0.9999999403953552,
+        "cosine_distance": 5.960464477539063e-08,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "ea52a6e6e7b1da9fbb244d85",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_24",
+        "cosine_similarity": 0.9999999403953552,
+        "cosine_distance": 5.960464477539063e-08,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "ea52a6e6e7b1da9fbb244d85",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "projector",
+        "cosine_similarity": 0.9999999403953552,
+        "cosine_distance": 5.960464477539063e-08,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "3070b9c4eb1e51bed9e43e14",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_0",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "3070b9c4eb1e51bed9e43e14",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_6",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "3070b9c4eb1e51bed9e43e14",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_12",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "3070b9c4eb1e51bed9e43e14",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_18",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "3070b9c4eb1e51bed9e43e14",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_23",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "3070b9c4eb1e51bed9e43e14",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_24",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "3070b9c4eb1e51bed9e43e14",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "projector",
+        "cosine_similarity": 0.9999998807907104,
+        "cosine_distance": 1.1920928955078125e-07,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "5392f52c6618e901f7a3a39a",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_0",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "5392f52c6618e901f7a3a39a",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_6",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "5392f52c6618e901f7a3a39a",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_12",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "5392f52c6618e901f7a3a39a",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_18",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "5392f52c6618e901f7a3a39a",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_23",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "5392f52c6618e901f7a3a39a",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_24",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "5392f52c6618e901f7a3a39a",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "projector",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "7914006266a12b26fa657305",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_0",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "7914006266a12b26fa657305",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_6",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "7914006266a12b26fa657305",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_12",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "7914006266a12b26fa657305",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_18",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "7914006266a12b26fa657305",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_23",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "7914006266a12b26fa657305",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_24",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "7914006266a12b26fa657305",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "projector",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "9f3c1b91ba9c1fb5a299e328",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_0",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "9f3c1b91ba9c1fb5a299e328",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_6",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "9f3c1b91ba9c1fb5a299e328",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_12",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "9f3c1b91ba9c1fb5a299e328",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_18",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "9f3c1b91ba9c1fb5a299e328",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_23",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "9f3c1b91ba9c1fb5a299e328",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_24",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "9f3c1b91ba9c1fb5a299e328",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "projector",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "0542036993bf069fe9be0dc4",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_0",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "0542036993bf069fe9be0dc4",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_6",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "0542036993bf069fe9be0dc4",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_12",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "0542036993bf069fe9be0dc4",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_18",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "0542036993bf069fe9be0dc4",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_23",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "0542036993bf069fe9be0dc4",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_24",
+        "cosine_similarity": 0.9999999403953552,
+        "cosine_distance": 5.960464477539063e-08,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "0542036993bf069fe9be0dc4",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "projector",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "d4fad7f1e3b016801b527296",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_0",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "d4fad7f1e3b016801b527296",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_6",
+        "cosine_similarity": 0.9999999403953552,
+        "cosine_distance": 5.960464477539063e-08,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "d4fad7f1e3b016801b527296",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_12",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "d4fad7f1e3b016801b527296",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_18",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "d4fad7f1e3b016801b527296",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_23",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "d4fad7f1e3b016801b527296",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "layer_24",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      },
+      {
+        "sample_data_token": "003d073b85f74c33a7039f78258285e0",
+        "observation_id": "d4fad7f1e3b016801b527296",
+        "scene_token": "8377abf77f464a9cb62eacf63f383422",
+        "layer_id": "projector",
+        "cosine_similarity": 1.0,
+        "cosine_distance": 0.0,
+        "relative_l2_error": 0.0,
+        "numeric_status": "valid"
+      }
+    ],
+    "passed": true
+  }
+]

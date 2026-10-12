@@ -1,0 +1,46 @@
+senna:
+  checkpoint_path: "" # SENNA_MODEL_PATH, then E1 resolved configuration.
+  device: cuda:0
+  precision: fp16 # The original Senna loader uses fp16.
+  use_original_preprocessing: true
+  extract_projector_features: true
+  feature_layers: [0, 6, 12, 18, 24] # Hidden state 0 is pre-LN embedding; selected layer is added.
+  use_inference_mode: true
+  batch_size: 1
+  validation_images: 3
+  equivalence_atol: 0.001
+  equivalence_rtol: 0.001
+data:
+  nuscenes_dataroot: ""
+  exp2_output_dir: outputs/motivation_exp2
+  max_scenes: 10
+  max_object_pairs: 3000
+  min_bbox_width_px: 16
+  min_bbox_height_px: 16
+  min_projection_quality: 0.2
+  min_retained_area_ratio: 0.5
+  min_valid_patch_count: 2
+  min_patch_coverage_ratio: 0.25 # Intersection / patch area.
+analysis:
+  time_gap_groups: [0.5, 1.0, 2.0]
+  time_gap_tolerance_seconds: 0.15
+  static_speed_threshold_mps: 0.5
+  static_speed_sensitivity_mps: [0.2, 0.5, 1.0]
+  patch_count_sensitivity: [2, 4, 8]
+  similarity_metrics: [cosine, relative_l2]
+  compare_same_instance: true
+  compare_different_instance: true
+  compare_fixed_position: true
+  negative_max_area_ratio: 2.0
+  negative_max_depth_ratio: 2.0
+  fixed_position_grid: [4, 4] # Diagnostic sample of CLIP patch centers, not token compression.
+  bootstrap_iterations: 1000
+  seed: 42
+output:
+  directory: outputs/motivation_exp3
+  save_raw_features: false
+  raw_feature_max_images: 3
+  raw_feature_budget_mb: 256
+  save_object_features: true
+  save_visualizations: true
+  visualization_samples: 30

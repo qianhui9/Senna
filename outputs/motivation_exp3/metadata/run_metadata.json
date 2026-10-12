@@ -1,0 +1,179 @@
+{
+  "config": {
+    "senna": {
+      "checkpoint_path": "/data/qh/phdCode/work4/models/Senna",
+      "device": "cuda:0",
+      "precision": "fp16",
+      "use_original_preprocessing": true,
+      "extract_projector_features": true,
+      "feature_layers": [
+        0,
+        6,
+        12,
+        18,
+        24
+      ],
+      "use_inference_mode": true,
+      "batch_size": 1,
+      "validation_images": 3,
+      "equivalence_atol": 0.001,
+      "equivalence_rtol": 0.001
+    },
+    "data": {
+      "nuscenes_dataroot": "/data/qh/nuscenes/v1.0-trainval",
+      "exp2_output_dir": "/data/qh/phdCode/work4/Senna/outputs/motivation_exp2",
+      "max_scenes": 10,
+      "max_object_pairs": 3000,
+      "min_bbox_width_px": 16,
+      "min_bbox_height_px": 16,
+      "min_projection_quality": 0.2,
+      "min_retained_area_ratio": 0.5,
+      "min_valid_patch_count": 2,
+      "min_patch_coverage_ratio": 0.25
+    },
+    "analysis": {
+      "time_gap_groups": [
+        0.5,
+        1.0,
+        2.0
+      ],
+      "time_gap_tolerance_seconds": 0.15,
+      "static_speed_threshold_mps": 0.5,
+      "static_speed_sensitivity_mps": [
+        0.2,
+        0.5,
+        1.0
+      ],
+      "patch_count_sensitivity": [
+        2,
+        4,
+        8
+      ],
+      "similarity_metrics": [
+        "cosine",
+        "relative_l2"
+      ],
+      "compare_same_instance": true,
+      "compare_different_instance": true,
+      "compare_fixed_position": true,
+      "negative_max_area_ratio": 2.0,
+      "negative_max_depth_ratio": 2.0,
+      "fixed_position_grid": [
+        4,
+        4
+      ],
+      "bootstrap_iterations": 1000,
+      "seed": 42
+    },
+    "output": {
+      "directory": "/data/qh/phdCode/work4/Senna/outputs/motivation_exp3",
+      "save_raw_features": false,
+      "raw_feature_max_images": 3,
+      "raw_feature_budget_mb": 256,
+      "save_object_features": true,
+      "save_visualizations": true,
+      "visualization_samples": 30
+    }
+  },
+  "sha256": {
+    "/data/qh/phdCode/work4/Senna/outputs/motivation_exp2/data/global_annotations.csv": "c292de952fe86c989b6f93f4562cd7e262f8d2b44ac6ab363a340844601f8741",
+    "/data/qh/phdCode/work4/Senna/outputs/motivation_exp2/data/aggregate_statistics.csv": "6a3dad425e2e9bc5ba57120372da06ee75c5d8b47cd55c85102a5e1768cbcecc",
+    "/data/qh/phdCode/work4/Senna/outputs/motivation_exp2/data/scene_correlations.csv": "ff2ccbd7f1ba046db466832c365e8316f957a0ab303ba98ae0529f68c35fea90",
+    "/data/qh/phdCode/work4/Senna/outputs/motivation_exp2/data/camera_object_persistence.csv": "fa16e38f97bd924d89418d90512f36123deabb2eb540fe55c3e238e9c0b3eb38",
+    "/data/qh/phdCode/work4/Senna/outputs/motivation_exp2/data/camera_frames.csv": "386de1373007d503cd007f1661b205a2e7073c77110ef09cde3318710d6afc60",
+    "/data/qh/phdCode/work4/Senna/outputs/motivation_exp2/data/ego_pairs.csv": "07c5c318170caad845f051457d031eabc568f6ab4d47a42a49e014b648b1852a",
+    "/data/qh/phdCode/work4/Senna/outputs/motivation_exp2/data/image_displacement.csv": "ca94485e1421099ea947e9ebb39305ebf48d572197b3d8b998fe2c4bb494fff7",
+    "/data/qh/phdCode/work4/Senna/outputs/motivation_exp2/data/grid_ego_motion.csv": "d08ab33d7e2cabdb95cec9c05901234d9a4ce050ff3edd9a1664023d60ecb2f0",
+    "/data/qh/phdCode/work4/Senna/outputs/motivation_exp2/data/fixed_grid_overlap.csv": "20144fa2eb6b3621bfb107ce0cb815871de4c6decd829e5808763cb0a671edc3",
+    "/data/qh/phdCode/work4/Senna/outputs/motivation_exp2/data/ego_motion_displacement.csv": "9854ca2ac8b3f075e5dcd1d781e575e3f83984690787b8db2f452eff817022e3",
+    "/data/qh/phdCode/work4/Senna/outputs/motivation_exp2/data/projected_objects.csv": "6b2f3b755decf034cec7ce8fe0abe41d0ab0735121f1ec09732ce3a039be6f11",
+    "/data/qh/phdCode/work4/Senna/outputs/motivation_exp2/data/global_object_persistence.csv": "e54aa407463e74d6f34b03eb23d5540c03c4a67ba42dd813e75f1c137000f7ab",
+    "/data/qh/phdCode/work4/Senna/outputs/motivation_exp2/data/keyframe_pairs.csv": "4d19111afcb9bd6ea4e0b3bcdf4c12517a39f1a2a9106855e991fcd05a79e96b",
+    "/data/qh/phdCode/work4/Senna/outputs/motivation_exp2/data/persistence_with_motion.csv": "fc1657c899df016c83482c86756dc989b500d1299269a21639a6fd0d9868c955",
+    "/data/qh/phdCode/work4/Senna/outputs/motivation_exp2/metadata/figure_checks.json": "f00d6dcb2b377a562535b9ab8dd318eee87f2ef7e9190fadaab8f4d512627e1a",
+    "/data/qh/phdCode/work4/Senna/outputs/motivation_exp2/metadata/aggregate_status.json": "322d49f47c0d09fcbcec92073f8b5e537066934fd52eac30df788f887eb21eaa",
+    "/data/qh/phdCode/work4/Senna/outputs/motivation_exp2/metadata/verification_results.json": "0d3a15bedabe00895374d206ce8027a579561a21e6c3ff5f3290f546df77363f",
+    "/data/qh/phdCode/work4/Senna/outputs/motivation_exp2/metadata/report_status.json": "772b019771f18e8b85930a4b27e5b9064bc016c0347e64d0342414329888b2b7",
+    "/data/qh/phdCode/work4/Senna/outputs/motivation_exp2/metadata/ego-motion_status.json": "8e011e3fe9514fb35e6de86d0451ca2f5b948b0e9a48e2da007023c095caa140",
+    "/data/qh/phdCode/work4/Senna/outputs/motivation_exp2/metadata/projection_summary.json": "8456be4b2e01e2995f86c79141716a8a5a9a91cf212f459f3e002c15d9507ecd",
+    "/data/qh/phdCode/work4/Senna/outputs/motivation_exp2/metadata/persistence_status.json": "b612b3197f3e58c0279454a375db9603e1268c5dcc7355c61a57049f0fb1257a",
+    "/data/qh/phdCode/work4/Senna/outputs/motivation_exp2/metadata/figure_metadata.json": "e254bd5620af6ed7d0bdd8e1c8a85c0716f9b4dc269b02711ca760a220c5602e",
+    "/data/qh/phdCode/work4/Senna/outputs/motivation_exp2/metadata/qualitative_examples.json": "68592c7adabad9e2ef717e573579d26d01a836d33e7229ce06b07cbff744375f",
+    "/data/qh/phdCode/work4/Senna/outputs/motivation_exp2/metadata/projection_regression.json": "d2a5a08ca1de7597a0da9e4c835f4ddd57ef6cc6eab671166764c3da7db189ff",
+    "/data/qh/phdCode/work4/Senna/outputs/motivation_exp2/metadata/displacement_status.json": "515b0c6ea73089a8a5fbff9d9ffec4b3e3773832e52514eba6e295d469818fe5",
+    "/data/qh/phdCode/work4/Senna/outputs/motivation_exp2/metadata/index_summary.json": "7d063393efd76a05c8b2f43071ae43245d990df76082d9cbdf5d8d1ae8da2284",
+    "/data/qh/phdCode/work4/Senna/outputs/motivation_exp2/metadata/run_metadata.json": "108813a983c0d199df0f135d013778d1755a3bcdda21f7c1d98dd9a8510d008c",
+    "/data/qh/phdCode/work4/Senna/outputs/motivation_exp2/metadata/grid-overlap_status.json": "022313c5c0732c3776e7697f29fbc2c95748bd41fcbb35b39c49cf50149e008f",
+    "/data/qh/phdCode/work4/Senna/outputs/motivation_exp2/metadata/plot_status.json": "bfc83217b2f8a1939530f7e1111294dc7c99554848d22e897ad8d7753ea0236b",
+    "/data/qh/phdCode/work4/Senna/outputs/motivation_exp2/metadata/scene_list.json": "916da37d72cbe10c0132df88cdbd3b50d5b0b9e41befc8b1097a93a31c5c4554",
+    "/data/qh/phdCode/work4/Senna/outputs/motivation_exp2/metadata/figure_bin_counts.json": "b0af7238c2b50009d215f4a31cf339ebf46dfabe45491b7bc0065202c4d1f73d",
+    "/data/qh/phdCode/work4/Senna/outputs/motivation_exp2/metadata/build-pairs_status.json": "c5488cf1bfdb70a9a1850f066052b4716c6370c892a028d9c47ab0af2bef06c5",
+    "/data/qh/phdCode/work4/Senna/outputs/motivation_exp2/metadata/project-boxes_status.json": "b39ef6ef9474f5865b46a30a9588bf3914be78cc046cd9a9cf23bce7d6bbb9fa",
+    "/data/qh/phdCode/work4/Senna/outputs/motivation_exp2/metadata/displacement_summary.json": "cc8a9e24a0cd67090a897fe9e196d31568e6ef190e6356b6efa6975bbbed4488",
+    "/data/qh/phdCode/work4/Senna/experiments/motivation_exp3/analyze_temporal_drift.py": "cd47ed4246168eae7693540b08e2b1f607f096ca3f8df36ace8cf79428da69b7",
+    "/data/qh/phdCode/work4/Senna/experiments/motivation_exp3/extract_senna_features.py": "33ebd064d752bc12d868c1e9b749eb8c0833cac8a576ad123e8afdaca6c54da1",
+    "/data/qh/phdCode/work4/Senna/experiments/motivation_exp3/aggregate_results.py": "aba3583e756d4d26b6d101091e97a0097b8e16a24b99a7c25be8be0aebaaeafe",
+    "/data/qh/phdCode/work4/Senna/experiments/motivation_exp3/map_bbox_to_patches.py": "a5b69e087e96dde2aad0ef9489dd27bb33c46560a7374a5af013de8819ca6e30",
+    "/data/qh/phdCode/work4/Senna/experiments/motivation_exp3/plot_results.py": "f6b067f3695a170660b63674dcd1b49b54aeaa8e5dd83c46054d6a4c25db48d3",
+    "/data/qh/phdCode/work4/Senna/experiments/motivation_exp3/generate_report.py": "04228fb6cdbeb457dcbc00cca3dc8cb4664de20f867e03489aa7143548c0223a",
+    "/data/qh/phdCode/work4/Senna/experiments/motivation_exp3/analyze_static_dynamic.py": "ba427c1d478d95bfe7301ca4513881de2f3fce3624d189b3694099345c128fda",
+    "/data/qh/phdCode/work4/Senna/experiments/motivation_exp3/analyze_feature_similarity.py": "f36860c8069dd06503601fa2bd97e4d6bdb3cccb552f550adc6be136453726be",
+    "/data/qh/phdCode/work4/Senna/experiments/motivation_exp3/build_feature_pairs.py": "5132686e0033335c50494658698d7d6c289a8420396c667f553e6731fd6753e4",
+    "/data/qh/phdCode/work4/Senna/experiments/motivation_exp3/extract_object_features.py": "9961f0f859e29910389d421fe28159c644f65fcae251b1c668b0da04f3075410",
+    "/data/qh/phdCode/work4/Senna/experiments/motivation_exp3/run_exp3.py": "b34aeb16220af928928f6c7ed641e4a0eb486937c07fbd2b5e134e476a3fab33",
+    "/data/qh/phdCode/work4/Senna/experiments/motivation_exp3/analyze_layer_stability.py": "25619267e1ef582123314fd84dba954a778a1f3c24e6dc0d17bf75baae90716b",
+    "/data/qh/phdCode/work4/Senna/experiments/motivation_exp3/__init__.py": "b3800fbb2d7294c66b9599539724724c7df7de312df765b2f07b295ea651a827",
+    "/data/qh/phdCode/work4/Senna/experiments/motivation_exp3/utils/__init__.py": "e4c0d8a58e0a6721144d19b15c437ef775d4d21b9a7221b82e8eb940794dc6a0",
+    "/data/qh/phdCode/work4/Senna/experiments/motivation_exp3/utils/common.py": "f7a437f8cae02751df201ccbba0e3a755ab15091e42c6b8f82c7de17462a969f",
+    "/data/qh/phdCode/work4/Senna/experiments/motivation_exp3/utils/statistics.py": "5a90e844957197f4bb143492ca29ff8ed24728fa5245e69f240c12da24f1e5d3",
+    "/data/qh/phdCode/work4/Senna/llava/train.py": "33cc530b67312a75a8c54becbde82a08bc33dba7744f85ed9590e85a95ac4bfc",
+    "/data/qh/phdCode/work4/Senna/llava/constants.py": "05caa532060f61b30cada5ba23da0f4bf640c898298913f768653583482e5901",
+    "/data/qh/phdCode/work4/Senna/llava/utils.py": "b51a3ef996597b7d8b7a54e280529985a7154992bd863209bdbc761b8b397102",
+    "/data/qh/phdCode/work4/Senna/llava/conversation.py": "8683d5847623ff7430136497c50990db167e03ec4749c0079b27141d197b9943",
+    "/data/qh/phdCode/work4/Senna/llava/llava_trainer.py": "33424ae5e186a5e4e65bb43511a5337af5d55085134dcaab0d895ede3aec219b",
+    "/data/qh/phdCode/work4/Senna/llava/mm_utils.py": "5551c1a52ea5e7d6e4ae5ad5da430271b0cd648b044a9b812127a49f46895bcf",
+    "/data/qh/phdCode/work4/Senna/llava/senna/senna_llava_llama.py": "7d8fbe67e06d7a10a208f1340aa777abea562698321bf31539a35cd1feba192f",
+    "/data/qh/phdCode/work4/Senna/llava/senna/senna_llava_trainer.py": "c629fa97dbe9510832acbc3a3230c156757583f58e7e8d7dce923d8ab4c1720d",
+    "/data/qh/phdCode/work4/Senna/llava/senna/train_senna_llava_laion_pretrain.py": "6015d20b5ee818fdb792d4f72bb47c78960dcbc7cd748811a7c17d9c1df27255",
+    "/data/qh/phdCode/work4/Senna/llava/senna/senna_llava_arch.py": "e26a4180b858ce7bd198394fa738d3b9abae36e13d7e515304a60b8b9002d07b",
+    "/data/qh/phdCode/work4/Senna/llava/senna/train_senna_llava_multi_img.py": "77f9430f1c5ea50ca0ba40c1ea7dbcd1495c4a41905be1fad3942a589025ed5c",
+    "/data/qh/phdCode/work4/Senna/llava/model/utils.py": "a6beb41c51d7a124547188d10bf0b7f4ea613b1ecccf165601b96de525664241",
+    "/data/qh/phdCode/work4/Senna/llava/model/llava_arch.py": "358e10bacea509218477ba8468b550a61c622577eb3af84a517a5e52818e0ae4",
+    "/data/qh/phdCode/work4/Senna/llava/model/builder.py": "508b9a9905e39ca2185d8de4dead114c588e8874ecf6eafab7913106c875fe6d",
+    "/data/qh/phdCode/work4/Senna/llava/model/consolidate.py": "d7d8c75a1173ab3b616a84093c98e7d1e04783de7489644a34816c3e7d88df9f",
+    "/data/qh/phdCode/work4/Senna/llava/model/apply_delta.py": "ddf4b680787dd76e659806c96e6cee5c156b913ff6f6e78aa70a347594b8ad79",
+    "/data/qh/phdCode/work4/Senna/llava/model/__init__.py": "ee39b249ed24855167f1d22459f04a8c13aa06d06f3778573175013d5b5fecd5",
+    "/data/qh/phdCode/work4/Senna/llava/model/make_delta.py": "c315a9bf0c288cff8a5de1aba46ad348ae544de94439b0e8c36ad6fc260fdad2",
+    "/data/qh/phdCode/work4/Senna/llava/model/language_model/llava_mpt.py": "1a4a8e900501299dcae2839053c45a6cfe3ab601189010952f4bba5b85c5e3e8",
+    "/data/qh/phdCode/work4/Senna/llava/model/language_model/llava_llama.py": "00ab011e0543bb502e3ce26d402899022a4bc866364de1d645678cba853d05cc",
+    "/data/qh/phdCode/work4/Senna/llava/model/language_model/llava_mistral.py": "2fbd8141fee2cf00f9a3e5485d18b88199c5221a3f4952acdad65c8ebe0fe913",
+    "/data/qh/phdCode/work4/Senna/llava/model/multimodal_projector/builder.py": "f38df14b52d084127405d82594e6a6c48e9a0882cfc736ece0a66d8760ac65bc",
+    "/data/qh/phdCode/work4/Senna/llava/model/multimodal_projector/Qformer.py": "80c6473884671bb96468f11f8d9172ab164f0eef5faacd380d9f112cf1b027f9",
+    "/data/qh/phdCode/work4/Senna/llava/model/multimodal_encoder/builder.py": "cfd991512d808afd8fb0639b9231dd768da1c8ab800c7539c8ed1545b7b25f76",
+    "/data/qh/phdCode/work4/Senna/llava/model/multimodal_encoder/clip_encoder.py": "47a3759c277d34447535dc3b950f7025ef20828b082254a959d2db276091601f",
+    "/data/qh/phdCode/work4/models/Senna/config.json": "4360f459f0db97c2facde2aeae4d1e77059d8dec95181bae80bfe71dc4c7dca2",
+    "/data/qh/phdCode/work4/models/Senna/pytorch_model.bin.index.json": "e0a1cc838d7622f86ba45025ab3d29990fc61c457a434a91e0b84110b6e2c0db",
+    "/data/qh/phdCode/work4/Senna/experiments/motivation_exp1/utils/data_utils.py": "1dff75fd09747beff9fc56d40712dd91fdd4c51f03977efbf44d208fdeeabd1c",
+    "/data/qh/phdCode/work4/Senna/experiments/motivation_exp1/utils/stats_utils.py": "04871fc9c52637182ed935906b223b293286131e7a42b6ae8d52e608b4147b00",
+    "/data/qh/phdCode/work4/Senna/experiments/motivation_exp2/utils/statistics_utils.py": "7db4b815745df0c116164e80642c202f2b6e8ec555bf1ca9fa7b1bbceebf1eab",
+    "/data/qh/phdCode/work4/models/clip-vit-large-patch14-336/config.json": "51b1c14aabcdf639c4a0370eeda1010b773bbe1df78319c7d0f5882c22ac0ac0",
+    "/data/qh/phdCode/work4/models/clip-vit-large-patch14-336/preprocessor_config.json": "d253881f65322dc546df59cf925a408e5538b8ecb5a1b496cdd36af9992686d4"
+  },
+  "weight_files": {
+    "/data/qh/phdCode/work4/models/Senna/pytorch_model-00002-of-00002.bin": [
+      4149654020,
+      1791629119000000000
+    ],
+    "/data/qh/phdCode/work4/models/Senna/pytorch_model-00001-of-00002.bin": [
+      9976631486,
+      1791630170000000000
+    ],
+    "/data/qh/phdCode/work4/models/clip-vit-large-patch14-336/pytorch_model.bin": [
+      1711974081,
+      1791629766000000000
+    ]
+  },
+  "git_commit": "8428d6689aefd25ed0d1b629d54fc34d1e75061b",
+  "fingerprint": "f7139b9f32f99522732a794c2cf2eecc1937a4bbccd790706bb6fa16a4e618ba",
+  "data_kind": "real_nuscenes_original_senna"
+}

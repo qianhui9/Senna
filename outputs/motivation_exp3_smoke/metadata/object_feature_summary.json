@@ -1,0 +1,5 @@
+{
+  "observations_indexed": 2209,
+  "missing_images": [],
+  "descriptor": "Offline bbox patch pooling, includes background and global attention context; not native object tokens"
+}
