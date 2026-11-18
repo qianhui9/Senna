@@ -1,0 +1,487 @@
+[
+  {
+    "query_type": "category",
+    "sample_token": "fd2a143eed5f4e68939500814cef7624",
+    "passed": true,
+    "original_answer": "The nearest vehicle is a red car, which is stationary and positioned to the right of the forward axis.",
+    "instrumented_answer": "The nearest vehicle is a red car, which is stationary and positioned to the right of the forward axis.",
+    "original_input": {
+      "input_ids_sha256": "7f28ed7780fe8a455993e6e177c7860680c1f85cc739faa7c32b9cb3204ebdf9",
+      "images_sha256": "b7692131d186eaed4e96899352e04525a08ca664b5171b3068e828b046fd1977",
+      "image_shape": [
+        1,
+        6,
+        3,
+        336,
+        336
+      ],
+      "image_sizes": [
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ]
+      ],
+      "generation": {
+        "do_sample": false,
+        "temperature": 0,
+        "top_p": null,
+        "num_beams": 1,
+        "max_new_tokens": 64,
+        "use_cache": true
+      }
+    },
+    "instrumented_input": {
+      "input_ids_sha256": "7f28ed7780fe8a455993e6e177c7860680c1f85cc739faa7c32b9cb3204ebdf9",
+      "images_sha256": "b7692131d186eaed4e96899352e04525a08ca664b5171b3068e828b046fd1977",
+      "image_shape": [
+        1,
+        6,
+        3,
+        336,
+        336
+      ],
+      "image_sizes": [
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ]
+      ],
+      "generation": {
+        "do_sample": false,
+        "temperature": 0,
+        "top_p": null,
+        "num_beams": 1,
+        "max_new_tokens": 64,
+        "use_cache": true
+      }
+    }
+  },
+  {
+    "query_type": "existence",
+    "sample_token": "0cd1a04cf7524e95b793b48cd42fc190",
+    "passed": true,
+    "original_answer": "There are no visible vulnerable road users within 20 meters ahead of the vehicle. The road appears to be clear and there are no pedestrians or cyclists in the immediate vicinity. The vehicle is positioned on the right side of the road, which is the correct side for driving in the dep",
+    "instrumented_answer": "There are no visible vulnerable road users within 20 meters ahead of the vehicle. The road appears to be clear and there are no pedestrians or cyclists in the immediate vicinity. The vehicle is positioned on the right side of the road, which is the correct side for driving in the dep",
+    "original_input": {
+      "input_ids_sha256": "635f06c9c8a04f2e32344720adb0635ab9e4515e773c09d860ae8cd958f18479",
+      "images_sha256": "4910e9faad3c4a87e1d81a7c4e1fc12bf5f8710bc205b4ad59dcc56d8e7897ea",
+      "image_shape": [
+        1,
+        6,
+        3,
+        336,
+        336
+      ],
+      "image_sizes": [
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ]
+      ],
+      "generation": {
+        "do_sample": false,
+        "temperature": 0,
+        "top_p": null,
+        "num_beams": 1,
+        "max_new_tokens": 64,
+        "use_cache": true
+      }
+    },
+    "instrumented_input": {
+      "input_ids_sha256": "635f06c9c8a04f2e32344720adb0635ab9e4515e773c09d860ae8cd958f18479",
+      "images_sha256": "4910e9faad3c4a87e1d81a7c4e1fc12bf5f8710bc205b4ad59dcc56d8e7897ea",
+      "image_shape": [
+        1,
+        6,
+        3,
+        336,
+        336
+      ],
+      "image_sizes": [
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ]
+      ],
+      "generation": {
+        "do_sample": false,
+        "temperature": 0,
+        "top_p": null,
+        "num_beams": 1,
+        "max_new_tokens": 64,
+        "use_cache": true
+      }
+    }
+  },
+  {
+    "query_type": "position",
+    "sample_token": "180a0a37340d4cd98196e43cadf926db",
+    "passed": true,
+    "original_answer": "The nearest vehicle is a red car, which is parked on the right side of the road. It is not in motion and is not obstructing the path. The road appears to be clear and there are no other vehicles or pedestrians visible in the immediate vicinity. The weather conditions seem to be",
+    "instrumented_answer": "The nearest vehicle is a red car, which is parked on the right side of the road. It is not in motion and is not obstructing the path. The road appears to be clear and there are no other vehicles or pedestrians visible in the immediate vicinity. The weather conditions seem to be",
+    "original_input": {
+      "input_ids_sha256": "f1ed379f3713cf1972e52bd72c0966578a3d6f64cc22c9ad33569e7443b9106d",
+      "images_sha256": "74f7728d47c33ba581ad4e7fda520e666e472ea0afa58ac036e25f57683493f2",
+      "image_shape": [
+        1,
+        6,
+        3,
+        336,
+        336
+      ],
+      "image_sizes": [
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ]
+      ],
+      "generation": {
+        "do_sample": false,
+        "temperature": 0,
+        "top_p": null,
+        "num_beams": 1,
+        "max_new_tokens": 64,
+        "use_cache": true
+      }
+    },
+    "instrumented_input": {
+      "input_ids_sha256": "f1ed379f3713cf1972e52bd72c0966578a3d6f64cc22c9ad33569e7443b9106d",
+      "images_sha256": "74f7728d47c33ba581ad4e7fda520e666e472ea0afa58ac036e25f57683493f2",
+      "image_shape": [
+        1,
+        6,
+        3,
+        336,
+        336
+      ],
+      "image_sizes": [
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ]
+      ],
+      "generation": {
+        "do_sample": false,
+        "temperature": 0,
+        "top_p": null,
+        "num_beams": 1,
+        "max_new_tokens": 64,
+        "use_cache": true
+      }
+    }
+  },
+  {
+    "query_type": "motion_prediction",
+    "sample_token": "e5164edf0f654331b56e83fcb313b270",
+    "passed": true,
+    "original_answer": "Object 1: STOP, STRAIGHT",
+    "instrumented_answer": "Object 1: STOP, STRAIGHT",
+    "original_input": {
+      "input_ids_sha256": "b61375abb9135c594efc5d317fd29690877f56c61b6c7674b8448f4b6d8c73aa",
+      "images_sha256": "5759175e1a4744352cbe8c42d5e5818762c692bce51f17b57e761963b3505000",
+      "image_shape": [
+        1,
+        6,
+        3,
+        336,
+        336
+      ],
+      "image_sizes": [
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ]
+      ],
+      "generation": {
+        "do_sample": false,
+        "temperature": 0,
+        "top_p": null,
+        "num_beams": 1,
+        "max_new_tokens": 64,
+        "use_cache": true
+      }
+    },
+    "instrumented_input": {
+      "input_ids_sha256": "b61375abb9135c594efc5d317fd29690877f56c61b6c7674b8448f4b6d8c73aa",
+      "images_sha256": "5759175e1a4744352cbe8c42d5e5818762c692bce51f17b57e761963b3505000",
+      "image_shape": [
+        1,
+        6,
+        3,
+        336,
+        336
+      ],
+      "image_sizes": [
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ]
+      ],
+      "generation": {
+        "do_sample": false,
+        "temperature": 0,
+        "top_p": null,
+        "num_beams": 1,
+        "max_new_tokens": 64,
+        "use_cache": true
+      }
+    }
+  },
+  {
+    "query_type": "meta_action_planning",
+    "sample_token": "d651efd7ca614f788deeef5de2d82c48",
+    "passed": true,
+    "original_answer": "KEEP, STRAIGHT",
+    "instrumented_answer": "KEEP, STRAIGHT",
+    "original_input": {
+      "input_ids_sha256": "909203d9b8af0422cab118fcbecfc797f7ae7017c66b0a032e88ed0f31c0a628",
+      "images_sha256": "49e4dd6e53d6a1c044ec2a4f1da994acc0faa71fcf1d03fb838e628709718af5",
+      "image_shape": [
+        1,
+        6,
+        3,
+        336,
+        336
+      ],
+      "image_sizes": [
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ]
+      ],
+      "generation": {
+        "do_sample": false,
+        "temperature": 0,
+        "top_p": null,
+        "num_beams": 1,
+        "max_new_tokens": 64,
+        "use_cache": true
+      }
+    },
+    "instrumented_input": {
+      "input_ids_sha256": "909203d9b8af0422cab118fcbecfc797f7ae7017c66b0a032e88ed0f31c0a628",
+      "images_sha256": "49e4dd6e53d6a1c044ec2a4f1da994acc0faa71fcf1d03fb838e628709718af5",
+      "image_shape": [
+        1,
+        6,
+        3,
+        336,
+        336
+      ],
+      "image_sizes": [
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ]
+      ],
+      "generation": {
+        "do_sample": false,
+        "temperature": 0,
+        "top_p": null,
+        "num_beams": 1,
+        "max_new_tokens": 64,
+        "use_cache": true
+      }
+    }
+  }
+]

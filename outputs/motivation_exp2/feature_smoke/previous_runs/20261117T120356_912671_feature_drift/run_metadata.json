@@ -1,0 +1,165 @@
+{
+  "config": {
+    "exp1_directory": "/data/qh/phdCode/work4/Senna/outputs/motivation_exp1",
+    "output_directory": "/data/qh/phdCode/work4/Senna/outputs/motivation_exp2/feature_smoke",
+    "checkpoint_path": "/data/qh/phdCode/work4/models/Senna",
+    "device": "cuda:0",
+    "seed": 42,
+    "max_scenes": 2,
+    "max_pairs": 36,
+    "stable_thresholds": [
+      0.01,
+      0.025,
+      0.05,
+      0.1,
+      0.2,
+      0.3
+    ],
+    "bootstrap_iterations": 2000,
+    "companion_tolerance_ms": 100.0,
+    "warmup_iterations": 3,
+    "profile_samples": 12
+  },
+  "sources": {
+    "experiments/motivation_exp2/extract_feature_drift.py": "33725ff1e9e6e1ea4da5735baa9eb3a0323761915d5e72e457c14d49f7f4e064",
+    "experiments/motivation_exp2/run_feature_drift.py": "8f39136ab4bb6e7ace5c315d313b1c9c817933838818062c7ecaa2b0c73142a7",
+    "experiments/motivation_exp2/analyze_feature_drift.py": "75b0edbedbdd3d20386b7df0b9f921648727a1d739df1d287b424d84fa770a12",
+    "experiments/motivation_exp2/plot_feature_drift.py": "d3e843e2d0bfd36167bba7ffddfa7e3b0043e9447c2c952ddd4687ff66bcb25e",
+    "experiments/motivation_exp2/drift_metrics.py": "0a0e1d35e704860e96298b3af43bc076f8ca727e1be618f75785a0ddd74ec627",
+    "data_tools/senna_qa_utils.py": "722f251b1e40056c8a2036f80a827e0fb0362911a8bc69ee6abfa54df6309116",
+    "llava/mm_utils.py": "5551c1a52ea5e7d6e4ae5ad5da430271b0cd648b044a9b812127a49f46895bcf",
+    "llava/model/builder.py": "508b9a9905e39ca2185d8de4dead114c588e8874ecf6eafab7913106c875fe6d",
+    "llava/senna/senna_llava_llama.py": "7d8fbe67e06d7a10a208f1340aa777abea562698321bf31539a35cd1feba192f",
+    "llava/senna/senna_llava_arch.py": "e26a4180b858ce7bd198394fa738d3b9abae36e13d7e515304a60b8b9002d07b",
+    "llava/model/multimodal_encoder/clip_encoder.py": "47a3759c277d34447535dc3b950f7025ef20828b082254a959d2db276091601f",
+    "experiments/motivation_exp1/utils/data_utils.py": "01a3a7f6223a8f50985a48be52e211478ca3aad5e27f2108676f308fe703920d",
+    "experiments/motivation_exp1/utils/stats_utils.py": "04871fc9c52637182ed935906b223b293286131e7a42b6ae8d52e608b4147b00",
+    "experiments/motivation_exp1/utils/profiling_utils.py": "84c59a1d1c5d489210cb1d6296cd2f321853a024d417749b90a2c9a12ce2b07f"
+  },
+  "inputs": {
+    "camera_manifest.csv": "b8016736c8d0ee82bd69ff8cab9ba9c0f1ed0433334b158744ab900098bb39c1",
+    "temporal_pairs.csv": "ab255a316125dfd52b9e2b5e2161671acdc96978e0b0f4e7f61114ec48691bdd"
+  },
+  "model_files": {
+    "README.md": {
+      "size": 1243,
+      "mtime_ns": 1791628255000000000
+    },
+    "config.json": {
+      "size": 1242,
+      "mtime_ns": 1791638606728965109
+    },
+    "generation_config.json": {
+      "size": 162,
+      "mtime_ns": 1791628262000000000
+    },
+    "gitattributes": {
+      "size": 1519,
+      "mtime_ns": 1791628250000000000
+    },
+    "pytorch_model-00001-of-00002.bin": {
+      "size": 9976631486,
+      "mtime_ns": 1791630170000000000
+    },
+    "pytorch_model-00002-of-00002.bin": {
+      "size": 4149654020,
+      "mtime_ns": 1791629119000000000
+    },
+    "pytorch_model.bin.index.json": {
+      "size": 76452,
+      "mtime_ns": 1791628276000000000
+    },
+    "special_tokens_map.json": {
+      "size": 438,
+      "mtime_ns": 1791628293000000000
+    },
+    "tokenizer.model": {
+      "size": 499723,
+      "mtime_ns": 1791628299000000000
+    },
+    "tokenizer_config.json": {
+      "size": 749,
+      "mtime_ns": 1791628302000000000
+    }
+  },
+  "vision_files": {
+    "config.json": {
+      "size": 4757,
+      "mtime_ns": 1791628685000000000
+    },
+    "preprocessor_config.json": {
+      "size": 316,
+      "mtime_ns": 1791628695000000000
+    },
+    "pytorch_model.bin": {
+      "size": 1711974081,
+      "mtime_ns": 1791629766000000000
+    }
+  },
+  "packages": {
+    "torch": "2.0.1+cu118",
+    "transformers": "4.31.0",
+    "numpy": "1.26.4",
+    "matplotlib": "3.8.4",
+    "PyYAML": "6.0.1",
+    "Pillow": "10.3.0"
+  },
+  "selected_pair_ids": [
+    "0dd21d2e900a320d235d9bd7",
+    "032b4b698d4d5b970c5cdd05",
+    "72122e790fc851a83112569e",
+    "4d9401b5e5d923cb36308be3",
+    "48506f9d613ea7a81e82de3a",
+    "b1488c17fe91023e4a89152a",
+    "9e674e76d0fcf5df4e0afe8b",
+    "02ec9ad85ca23d3ae1498963",
+    "bc8aaa25d955dc3291f841f0",
+    "bb6653d53f44077f5d3ad6ed",
+    "8e3d24cafde087ca476dc553",
+    "51d0d89c9c72e6f7f0592e33",
+    "d414e49c7a5b5ace5ac4c7f2",
+    "08944a8b236ac1698f0f2d77",
+    "459dfcbdc25949d3084da137",
+    "a4c808cd813a1371fb11e474",
+    "b8cccce46d1e1a26b4c5552b",
+    "c3ae678396bc6db3e2326507",
+    "9297c51207d4c6183057567f",
+    "2d4be78e07a82e73232555a9",
+    "34b2e33cf9d14ca751bb9344",
+    "43bff598dfa472df40db9186",
+    "ff682e1aef95a960b1af3f5a",
+    "47fb290257063e22795a2a02",
+    "c48617a01adeac351d7055f7",
+    "a402963df239a36e24942da0",
+    "5e7c599875e30e22fc92b3be",
+    "8f3d23d78c32c517f881c794",
+    "af8f8c8c5830ab45c9fe13e9",
+    "80b6ed906fc99057400f9ebe",
+    "483700ef3957e0aed06ea9d8",
+    "346a281b0e53bc7087e30458",
+    "a539d3f9371ae2399d6261d4",
+    "0af5f4465bbfcafd5eac25b4",
+    "97a1f2723b58d23fd9c102ab",
+    "7327e8b7758137b3d2b7a8f9"
+  ],
+  "fingerprint": "d993ccac854294ac735480c72db024a4e3ba31d33d113319c5133fc05559d378",
+  "experiment": "spatial_visual_feature_drift",
+  "argv": [
+    "/data/qh/phdCode/work4/Senna/experiments/motivation_exp2/run_feature_drift.py",
+    "--smoke-test",
+    "--output-directory",
+    "outputs/motivation_exp2/feature_smoke"
+  ],
+  "python": "3.10.22 (main, Oct 29 2026, 20:33:25) [GCC 14.3.0]",
+  "camera_order": [
+    "CAM_FRONT",
+    "CAM_FRONT_LEFT",
+    "CAM_FRONT_RIGHT",
+    "CAM_BACK_LEFT",
+    "CAM_BACK_RIGHT",
+    "CAM_BACK"
+  ],
+  "updated_at_utc": "2026-11-17T12:01:01.429008+00:00",
+  "comparison": "same scene, camera and patch index; no physical motion compensation",
+  "retained_data": "pairwise drift arrays only; no stored feature history or cross-request feature reuse"
+}

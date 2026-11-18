@@ -1,0 +1,13 @@
+# Independent of the older geometry experiment's config.yaml.
+exp1_directory: outputs/motivation_exp1
+output_directory: outputs/motivation_exp2
+checkpoint_path: ""  # SENNA_MODEL_PATH, then E1's resolved checkpoint
+device: cuda:0
+seed: 42
+max_scenes: 10
+max_pairs: 500
+stable_thresholds: [0.01, 0.025, 0.05, 0.1, 0.2, 0.3]
+bootstrap_iterations: 2000
+companion_tolerance_ms: 100.0  # E1 manifest maximum observed companion offset: 92.384 ms
+warmup_iterations: 3
+profile_samples: 12

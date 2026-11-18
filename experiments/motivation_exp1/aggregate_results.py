@@ -2,7 +2,8 @@
 from collections import defaultdict
 import json
 
-from .profile_senna import profile_summary
+from .profile_senna import profile_summary, valid_timing_values
+from .match_visual_objects import match_objects, joint_summary
 from .utils.data_utils import read_csv, write_csv, write_json
 from .utils.stats_utils import distribution, scene_bootstrap
 
@@ -26,11 +27,14 @@ def run(cfg, args, out):
     similarity = [r for r in read_csv(out / "temporal_similarity.csv") if r.get("status") == "ok"]
     objects = read_csv(out / "object_persistence.csv")
     profile = read_csv(out / "profiling_samples.csv")
-    timing = [r for r in profile if r["measurement_mode"] == "timing"]
+    timing = valid_timing_values([r for r in profile if r["measurement_mode"] == "timing"])
     manifest = read_csv(out / "camera_manifest.csv")
-    sim_metrics = ["actual_delta_t_ms", "ssim", "psnr_db", "normalized_pixel_difference"] + [f"high_similarity_ratio_{t:.2f}" for t in cfg["experiment"]["ssim_thresholds"]]
+    sim_metrics = ["actual_delta_t_ms", "ssim", "psnr_db", "normalized_pixel_difference", "patch_ssim_mean"] + [f"high_similarity_ratio_{t:.2f}" for t in cfg["experiment"]["ssim_thresholds"]]
     sim = summarize_groups(similarity, ["camera_channel", "gap_group"], sim_metrics, cfg)
     obj = summarize_groups(objects, ["camera_channel"], ["persistence_ratio", "instance_jaccard", "actual_delta_t_ms", "persistent_instance_count", "new_instance_count", "disappeared_instance_count"], cfg)
+    per_scene_similarity = summarize_groups(similarity, ["scene_token", "scene_name", "camera_channel", "gap_group"], sim_metrics, cfg)
+    per_scene_objects = summarize_groups(objects, ["scene_token", "scene_name", "camera_channel"], list(obj[0]["metrics"]) if obj else [], cfg)
+    matched_objects = joint_summary(match_objects(similarity, manifest, objects), cfg["experiment"]["ssim_thresholds"], cfg, out)
     summary = profile_summary(profile)
     profile_scene_stats = {m: scene_bootstrap(timing, m, cfg["experiment"]["seed"], cfg["experiment"]["bootstrap_iterations"]) for m in summary["metrics"]}
     shape_groups = summarize_groups(timing, ["input_shape", "vision_tokens_per_image", "visual_tokens_total"], ["vision_tower_ms", "vision_tower_calls", "projector_calls", "img_adapter_calls"], cfg)
@@ -40,7 +44,7 @@ def run(cfg, args, out):
         path = out / (name + ".json")
         issues[name] = json.loads(path.read_text()) if path.exists() else []
     result = {"counts": {"indexed_scenes": len({r["scene_token"] for r in manifest}), "indexed_images": len(manifest), "present_images": sum(r["file_exists"].lower() == "true" for r in manifest), "non_key_frames": sum(r["is_key_frame"].lower() == "false" for r in manifest), "selected_pairs": len(read_csv(out / "temporal_pairs.csv")), "valid_pairs": len(similarity), "failed_pairs": len(read_csv(out / "temporal_similarity.csv")) - len(similarity), "global_annotation_pairs": len(objects), "profile_samples": summary["unique_samples"], "profile_repeats": len(timing), "matched_front_pairs": sum(r.get("camera_channel") == "CAM_FRONT" for r in read_csv(out / "matched_profile_pairs.csv"))},
-              "similarity": sim, "objects": obj, "profiling": summary, "profile_scene_statistics": profile_scene_stats, "input_shape_groups": shape_groups, "statuses": statuses, "issues": issues,
+              "similarity": sim, "objects": obj, "per_scene_similarity": per_scene_similarity, "per_scene_objects": per_scene_objects, "matched_visual_objects": matched_objects, "profiling": summary, "profile_scene_statistics": profile_scene_stats, "input_shape_groups": shape_groups, "statuses": statuses, "issues": issues,
               "statistical_unit": "Unweighted mean of within-scene means; 95% percentile bootstrap over scene means. CI undefined with <2 scenes. Latency percentiles describe recorded requests/repeats, not independent scene samples.",
               "sources": {"redundancy": "nuScenes per-camera sample_data keyframes and sweeps", "profiling": "existing Senna planning evaluation JSON and original local inference helper", "matched": "exact six keyframe image paths + sample token + scene, verified against camera_manifest; matched_profile_pairs.csv only"}}
     write_json(out / "aggregate_summary.json", result)

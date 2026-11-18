@@ -1,3 +1,5 @@
+> 新的连续语义查询 Experiment 3 见 [SEMANTIC_QUERIES.md](SEMANTIC_QUERIES.md)，入口为 `run_queries.py`。本页保留原对象特征实验。
+
 # Experiment 3: Physical Identity vs. Representation Stability
 
 使用第二组 nuScenes 官方实例和原始 Senna 完整视觉编码，测量同一物体在不同观测中的表示变化。没有训练、特征替换、在线缓存、增量编码或任何 WorldStream 方法。默认环境为 `Senna`，无需增加依赖；测试使用 Python 自带的 `unittest`。

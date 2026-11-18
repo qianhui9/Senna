@@ -1,0 +1,68 @@
+{
+  "updated_utc": "2026-11-17T13:03:31.901419+00:00",
+  "unit_tests": {
+    "semantic_query_tests": 25,
+    "reused_profiling_tests": 11,
+    "targeted_total": 36,
+    "status": "passed",
+    "log": "../semantic_query_targeted_tests.log"
+  },
+  "experiment1_full_regression": {
+    "tests": 38,
+    "status": "passed",
+    "log": "../semantic_query_exp1_tests.log"
+  },
+  "real_artifact_regression": {
+    "tests": 6,
+    "status": "passed",
+    "log": "../semantic_query_real_validation.log",
+    "checks": [
+      "image/sample/scene identity",
+      "planning inputs and GT match existing corrected official evaluation JSON",
+      "complete future motion metadata, no label-to-input dependency",
+      "canonical pair deduplication and oracle safety prerequisites",
+      "all eight requested artifacts and seven PNG 300 DPI/PDF pairs",
+      "no shared-load measurements in formal outputs"
+    ]
+  },
+  "documented_invocation_fresh_agent": {
+    "dry_run_exit_code": 0,
+    "targeted_tests_exit_code": 0,
+    "targeted_tests": 36,
+    "functional_divergence": null,
+    "ledger_note": "Existing environment ledger has old /home interpreter path; documented /data/miniconda3/envs/Senna/bin/python is the actual verified path"
+  },
+  "legacy_feature_suite": {
+    "status": "unavailable_in_current_inference_environment",
+    "missing_dependency": "pandas",
+    "import_errors": 5,
+    "log": "../semantic_query_exp3_tests.log",
+    "note": "Original feature test suite is separate from new semantic pipeline. The new future-prompt fixture found during initial broad run was corrected; all 25 final semantic tests pass."
+  },
+  "real_model_smoke": {
+    "status": "completed_under_shared_load_in_separate_directory",
+    "directory": "outputs/motivation_exp3/semantic_queries_smoke",
+    "scenes": 2,
+    "sequences": 12,
+    "formal_request_measurements": 42,
+    "all_five_query_types_output_equivalence_passed": true,
+    "timing_decompositions_valid": true,
+    "included_in_formal_results": false,
+    "note": "User subsequently selected waiting for an idle GPU. Shared-load smoke is integration evidence only; final source adds idle scheduling and report command, with inference implementation unchanged."
+  },
+  "formal_experiment": {
+    "scenes": 3,
+    "sequences": 54,
+    "valid_query_events": 436,
+    "unique_sample_queries": 228,
+    "canonical_adjacent_pairs": 212,
+    "expected_profile_measurements": 436,
+    "profile_measurements_at_validation": 0,
+    "state": "manual_launch_pending",
+    "tmux_session": "senna_exp3_queries_idle",
+    "status_file": "query_invocation_status.json",
+    "log": "../semantic_query_idle_run.log",
+    "completion_contract": "After two idle snapshots, load original model, warmup, verify all five types, independently measure every valid event, aggregate, export all seven figure pairs, and regenerate experiment_report.md. Authoritative completion is aggregate_summary.status=profile_complete and query_invocation_status.error=null.",
+    "automatic_wait_cancelled_by_user": true
+  }
+}

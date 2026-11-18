@@ -17,7 +17,7 @@ experiment:
   max_profile_samples: 100
   warmup_iterations: 10
   profile_repeats: 3
-  temporal_gaps_seconds: [0.083, 0.25, 0.5]
+  temporal_gaps_seconds: [0.083, 0.25, 0.5]  # adjacent camera links / nearest exposure / successive keyframes
   gap_tolerance_seconds: 0.035
   abnormal_interval_seconds: [0.02, 0.20]
   analysis_resize: [320, 192]  # width, height; never used by Senna

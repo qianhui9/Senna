@@ -56,25 +56,34 @@ def run(cfg, args, out):
     ax.set(xlabel="Actual time interval (ms; scene means)", ylabel="SSIM (scene-equal-weight mean)", title="M1(a) Temporal Visual Similarity")
     save(fig, "M1a_temporal_similarity", bool(data))
 
-    fig, ax = plt.subplots(figsize=(6.5, 3.7), layout="constrained")
     similarity = [r for r in read_csv(out / "temporal_similarity.csv") if r.get("status") == "ok"]
+    thresholds = cfg["experiment"]["ssim_thresholds"]
+    fig, axes = plt.subplots(len(thresholds), 1, figsize=(9, 2.8 * len(thresholds)), squeeze=False, layout="constrained")
     if similarity:
         from .utils.stats_utils import scene_bootstrap
-        for gap in sorted({r["gap_group"] for r in similarity}):
-            records = [r for r in similarity if r["gap_group"] == gap]
-            stats = [scene_bootstrap(records, f"high_similarity_ratio_{t:.2f}", cfg["experiment"]["seed"], cfg["experiment"]["bootstrap_iterations"]) for t in cfg["experiment"]["ssim_thresholds"]]
-            ax.plot(cfg["experiment"]["ssim_thresholds"], [s["scene_equal_weight_mean"] for s in stats], "o-", label=gap)
-            for x, s in zip(cfg["experiment"]["ssim_thresholds"], stats):
-                if s["ci95"]:
-                    ax.vlines(x, *s["ci95"], alpha=.35)
-        ax.legend()
-        ax.set_ylim(0, 1.05)
+        from matplotlib.patches import Patch
+        gaps = sorted({r["gap_group"] for r in similarity}, key=lambda g: min(float(r["target_delta_t_ms"]) for r in similarity if r["gap_group"] == g))
+        colors = plt.get_cmap("tab10")
+        width = .75 / len(gaps)
+        for threshold, (ax,) in zip(thresholds, axes):
+            for i, gap in enumerate(gaps):
+                for j, camera in enumerate(CAMERAS):
+                    rows = [r for r in similarity if r["gap_group"] == gap and r["camera_channel"] == camera]
+                    stats = scene_bootstrap(rows, f"high_similarity_ratio_{threshold:.2f}")
+                    values = list(stats["scene_means"].values())
+                    if values:
+                        box = ax.boxplot([values], positions=[j + (i - (len(gaps) - 1) / 2) * width], widths=width * .85, patch_artist=True, showfliers=True)
+                        box["boxes"][0].set_facecolor(colors(i))
+            ax.set_xticks(range(len(CAMERAS)), [c.removeprefix("CAM_") for c in CAMERAS], fontsize=7)
+            ax.set(ylim=(-.03, 1.25), yticks=np.arange(0, 1.01, .2), ylabel="Stable patch fraction", title=f"Patch SSIM ≥ {threshold:.2f}; each box summarizes scene means")
+            ax.legend(handles=[Patch(facecolor=colors(i), label=g) for i, g in enumerate(gaps)], ncol=len(gaps), fontsize=7, loc="upper right")
     else:
-        unavailable(ax, "No measured patches")
-    ax.set(xlabel="Patch SSIM threshold", ylabel="High-similarity patch fraction", title="M1(b) High-Similarity Region Ratio")
+        for (ax,) in axes:
+            unavailable(ax, "No measured patches")
+    fig.suptitle("M1(b) Patch Stability by Camera and Temporal Gap")
     save(fig, "M1b_patch_similarity", bool(similarity))
 
-    fig, ax = plt.subplots(figsize=(6.5, 3.7), layout="constrained")
+    fig, (ax, changes_ax) = plt.subplots(2, 1, figsize=(9, 6.8), layout="constrained")
     objects = read_csv(out / "object_persistence.csv")
     object_groups = defaultdict(list)
     for r in objects:
@@ -85,15 +94,23 @@ def run(cfg, args, out):
         ax.tick_params(axis="x", rotation=45)
         ax.set_ylim(0, 1.05)
         ax.text(.02, .02, "Global 3D annotations; camera visibility not evaluated", fontsize=7, transform=ax.transAxes)
+        names = [s for s, _ in usable]
+        for offset, metric, label in ((-.18, "new_instance_count", "New"), (.18, "disappeared_instance_count", "Disappeared")):
+            values = [float(finite_values([r[metric] for r in objects if r["scene_name"] == name]).mean()) for name in names]
+            changes_ax.bar(np.arange(len(names)) + offset, values, width=.36, label=label)
+        changes_ax.set_xticks(range(len(names)), names, rotation=45)
+        changes_ax.legend()
     else:
         unavailable(ax, "Reliable keyframe annotations unavailable")
+        unavailable(changes_ax, "Reliable keyframe annotations unavailable")
     ax.set(xlabel="Scene", ylabel="Persistent / previous annotated instances", title="M1(c) Physical Object Persistence")
+    changes_ax.set(xlabel="Scene", ylabel="Mean count per keyframe transition", title="Global Instance Appearance and Disappearance")
     save(fig, "M1c_object_persistence", bool(usable))
 
     fig, ax = plt.subplots(figsize=(6.5, 3.7), layout="constrained")
     profile = [r for r in read_csv(out / "profiling_samples.csv") if r["measurement_mode"] == "timing" and str(r["timing_decomposition_valid"]).lower() == "true" and str(r.get("llm_split_valid", "")).lower() == "true"]
     if profile:
-        stages = {"Preprocessing": ["image_preprocessing_ms"], "Vision Tower": ["vision_tower_ms"], "Projector": ["projector_ms"], "LLM Prefill": ["llm_prefill_ms"], "LLM Decode": ["llm_decode_ms"], "Other": ["image_file_loading_ms", "host_to_device_ms", "img_adapter_ms", "multimodal_preparation_ms", "llm_generation_overhead_ms", "other_ms"]}
+        stages = {"Preprocessing": ["image_preprocessing_ms"], "Vision Tower": ["vision_tower_ms"], "Projector": ["projector_ms"], "Image Adapter": ["img_adapter_ms"], "LLM Prefill": ["llm_prefill_ms"], "LLM Decode": ["llm_decode_ms"], "Other": ["image_file_loading_ms", "host_to_device_ms", "multimodal_preparation_ms", "llm_generation_overhead_ms", "other_ms"]}
         groups = defaultdict(list)
         for r in profile:
             groups[r["sample_token"]].append(r)
@@ -105,9 +122,9 @@ def run(cfg, args, out):
             ax.bar(np.arange(len(keys)), values, bottom=bottom, label=label)
             bottom += values
         ax.set_xticks(np.arange(len(keys)), [k[:6] for k in keys], rotation=45)
-        ax.set_ylim(0, max(bottom) * 1.35)
+        ax.set_ylim(0, max(bottom) * 1.65)
         ax.legend(ncol=3, fontsize=7, loc="upper left")
-        ax.text(.02, .84, "Other: loading, transfer, adapter, preparation + generation overhead\nPrefill produces token 1; Decode sums subsequent cached forwards", va="top", fontsize=7, transform=ax.transAxes)
+        ax.text(.02, .74, "Other: loading, transfer, preparation + generation overhead\nPrefill produces token 1; Decode sums subsequent cached forwards", va="top", fontsize=7, transform=ax.transAxes)
     else:
         unavailable(ax, "No valid single-device measured prefill/decode timing; rerun profiling")
     ax.set(xlabel="Original six-view request (sample token prefix)", ylabel="Latency (ms)", title="M1(d) Senna Inference Latency Breakdown")

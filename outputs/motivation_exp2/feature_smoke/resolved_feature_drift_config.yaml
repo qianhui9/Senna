@@ -1,0 +1,18 @@
+exp1_directory: /data/qh/phdCode/work4/Senna/outputs/motivation_exp1
+output_directory: /data/qh/phdCode/work4/Senna/outputs/motivation_exp2/feature_smoke
+checkpoint_path: /data/qh/phdCode/work4/models/Senna
+device: cuda:0
+seed: 42
+max_scenes: 2
+max_pairs: 36
+stable_thresholds:
+- 0.01
+- 0.025
+- 0.05
+- 0.1
+- 0.2
+- 0.3
+bootstrap_iterations: 2000
+companion_tolerance_ms: 100.0
+warmup_iterations: 3
+profile_samples: 12

@@ -1,0 +1,164 @@
+{
+  "timing_records": 2,
+  "unique_samples": 2,
+  "metrics": {
+    "image_file_loading_ms": {
+      "n": 2,
+      "mean": 44.07434142194688,
+      "p50": 44.07434142194688,
+      "p95": 48.1448088074103,
+      "p99": 48.5066281305626
+    },
+    "image_preprocessing_ms": {
+      "n": 2,
+      "mean": 305.10248662903905,
+      "p50": 305.10248662903905,
+      "p95": 308.6559039540589,
+      "p99": 308.9717632718384
+    },
+    "host_to_device_ms": {
+      "n": 2,
+      "mean": 2.4522922467440367,
+      "p50": 2.4522922467440367,
+      "p95": 2.6622591307386756,
+      "p99": 2.6809228537604213
+    },
+    "vision_tower_ms": {
+      "n": 2,
+      "mean": 78.37094116210938,
+      "p50": 78.37094116210938,
+      "p95": 81.73691177368164,
+      "p99": 82.03610916137696
+    },
+    "projector_ms": {
+      "n": 2,
+      "mean": 3.0758879631757736,
+      "p50": 3.0758879631757736,
+      "p95": 3.4398767217993735,
+      "p99": 3.4722312781214715
+    },
+    "img_adapter_ms": {
+      "n": 2,
+      "mean": 0.26375999860465527,
+      "p50": 0.26375999860465527,
+      "p95": 0.26987999994307754,
+      "p99": 0.2704240000620484
+    },
+    "multimodal_preparation_ms": {
+      "n": 2,
+      "mean": 2.2879231441766024,
+      "p50": 2.2879231441766024,
+      "p95": 2.434762250818312,
+      "p99": 2.447814615853131
+    },
+    "llm_generation_ms": {
+      "n": 2,
+      "mean": 874.9621505737305,
+      "p50": 874.9621505737305,
+      "p95": 900.5121955871582,
+      "p99": 902.7833106994628
+    },
+    "llm_prefill_ms": {
+      "n": 2,
+      "mean": 393.6211700439453,
+      "p50": 393.6211700439453,
+      "p95": 397.7184799194336,
+      "p99": 398.0826852416992
+    },
+    "llm_decode_ms": {
+      "n": 2,
+      "mean": 473.92076873779297,
+      "p50": 473.92076873779297,
+      "p95": 496.12228736877444,
+      "p99": 498.0957556915283
+    },
+    "llm_generation_overhead_ms": {
+      "n": 2,
+      "mean": 7.4202117919921875,
+      "p50": 7.4202117919921875,
+      "p95": 8.16899528503418,
+      "p99": 8.235553817749024
+    },
+    "llm_decode_ms_per_token": {
+      "n": 2,
+      "mean": 63.25127836636135,
+      "p50": 63.25127836636135,
+      "p95": 64.08615258421217,
+      "p99": 64.16036362579891
+    },
+    "other_ms": {
+      "n": 2,
+      "mean": 3.8985879961401224,
+      "p50": 3.8985879961401224,
+      "p95": 4.087020117975771,
+      "p99": 4.103769639916718
+    },
+    "end_to_end_ms": {
+      "n": 2,
+      "mean": 1314.488371135667,
+      "p50": 1314.488371135667,
+      "p95": 1351.2300063623115,
+      "p99": 1354.4959294935688
+    },
+    "vision_latency_ratio": {
+      "n": 2,
+      "mean": 0.05958998438171065,
+      "p50": 0.05958998438171065,
+      "p95": 0.060485037672476184,
+      "p99": 0.06056459796498868
+    },
+    "projector_latency_ratio": {
+      "n": 2,
+      "mean": 0.002332683299253538,
+      "p50": 0.002332683299253538,
+      "p95": 0.0025443870813894845,
+      "p99": 0.0025632051953571244
+    },
+    "visual_path_latency_ratio": {
+      "n": 2,
+      "mean": 0.06212335660650336,
+      "p50": 0.06212335660650336,
+      "p95": 0.06322915997149438,
+      "p99": 0.06332745360393803
+    },
+    "llm_generation_latency_ratio": {
+      "n": 2,
+      "mean": 0.6656006938819051,
+      "p50": 0.6656006938819051,
+      "p95": 0.6664335556525052,
+      "p99": 0.6665075878098918
+    },
+    "llm_prefill_latency_ratio": {
+      "n": 2,
+      "mean": 0.29962963656612834,
+      "p50": 0.29962963656612834,
+      "p95": 0.3048876313008746,
+      "p99": 0.3053550086106298
+    },
+    "llm_decode_latency_ratio": {
+      "n": 2,
+      "mean": 0.3603009884803316,
+      "p50": 0.3603009884803316,
+      "p95": 0.36711996941410246,
+      "p99": 0.36772610105265985
+    },
+    "llm_generation_overhead_latency_ratio": {
+      "n": 2,
+      "mean": 0.005670068835445168,
+      "p50": 0.005670068835445168,
+      "p95": 0.006398193263869725,
+      "p99": 0.006462915435285241
+    },
+    "ideal_visual_path_speedup_bound": {
+      "n": 2,
+      "mean": 1.0662401322096455,
+      "p50": 1.0662401322096455,
+      "p95": 1.0674972825336155,
+      "p99": 1.0676090292290794
+    }
+  },
+  "detailed_records_excluded": 1,
+  "invalid_decomposition_records": 0,
+  "speedup_caveat": "Ideal bound removes measured Vision Tower + Projector + img_adapter only, assumes zero added management cost; not an achievable or measured speedup",
+  "prefill_decode": "CUDA events around original model.forward: prefill consumes full multimodal prompt with empty incoming KV cache and produces token one; decode sums subsequent single-token forwards with nonempty KV cache. Generation setup, token selection, cache bookkeeping, stopping checks and dispatch outside forward remain llm_generation_overhead_ms (plotted in Other). These are current-stream forward intervals, not pure kernel times or time to first token."
+}

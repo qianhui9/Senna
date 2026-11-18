@@ -2,11 +2,14 @@ import math
 from pathlib import Path
 import tempfile
 import unittest
+from types import SimpleNamespace
 
 import numpy as np
 from PIL import Image
 
-from experiments.motivation_exp1.analyze_temporal_redundancy import load_analysis_image, similarity_metrics, ssim
+from experiments.motivation_exp1.analyze_temporal_redundancy import load_analysis_image, similarity_metrics, ssim, run
+from experiments.motivation_exp1.utils.data_utils import read_csv, write_csv
+from experiments.motivation_exp1.tests.test_manifest import config
 
 
 class SimilarityTests(unittest.TestCase):
@@ -17,6 +20,7 @@ class SimilarityTests(unittest.TestCase):
         self.assertTrue(math.isinf(m["psnr_db"]))
         self.assertEqual(m["normalized_pixel_difference"], 0)
         self.assertEqual(m["high_similarity_ratio_0.90"], 1)
+        self.assertAlmostEqual(m["patch_ssim_mean"], 1)
 
     def test_analytic_constant_images(self):
         a, b = np.full((16, 16, 3), .5), np.ones((16, 16, 3))
@@ -66,6 +70,30 @@ class SimilarityTests(unittest.TestCase):
         cov = cv2.filter2D(a * b, -1, window) - means_a * means_b
         ref = ((2 * means_a * means_b + .0001) * (2 * cov + .0009)) / ((means_a ** 2 + means_b ** 2 + .0001) * (var_a + var_b + .0009))
         self.assertAlmostEqual(ssim(a, b), float(ref[5:-5, 5:-5].mean()), places=10)
+
+    def test_resume_drops_unselected_pairs_and_retries_duplicate_patches(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            out = Path(tmp)
+            a, b = out / "a.png", out / "b.png"
+            Image.new("RGB", (24, 24), 0).save(a)
+            Image.new("RGB", (24, 24), 0).save(b)
+            cfg = config()
+            cfg["experiment"].update(analysis_resize=[24, 24], patch_grid=[2, 2])
+            pairs = [{"pair_id": k, "previous_image_path": str(a), "current_image_path": str(b)} for k in ("keep", "stale")]
+            write_csv(out / "temporal_pairs.csv", pairs)
+            run(cfg, SimpleNamespace(existing="overwrite"), out)
+            write_csv(out / "temporal_pairs.csv", pairs[:1])
+            (out / "redundancy_status.json").unlink()
+            run(cfg, SimpleNamespace(existing="resume"), out)
+            self.assertEqual([r["pair_id"] for r in read_csv(out / "temporal_similarity.csv")], ["keep"])
+            patches = read_csv(out / "patch_similarity.csv")
+            self.assertEqual(len(patches), 4)
+            patches[0]["patch_row"], patches[0]["patch_col"] = patches[1]["patch_row"], patches[1]["patch_col"]
+            write_csv(out / "patch_similarity.csv", patches)
+            Image.new("RGB", (24, 24), (255, 255, 255)).save(b)
+            (out / "redundancy_status.json").unlink()
+            run(cfg, SimpleNamespace(existing="resume"), out)
+            self.assertEqual(float(read_csv(out / "temporal_similarity.csv")[0]["normalized_pixel_difference"]), 1)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,250 @@
+[
+  {
+    "sample_token": "45c4bd03ee6f4a369dd42abf08dc3957",
+    "passed": true,
+    "original_output": "KEEP, STRAIGHT",
+    "profiled_output": "KEEP, STRAIGHT",
+    "original_ids": [
+      [
+        1,
+        476,
+        29923,
+        15488,
+        29892,
+        6850,
+        4717,
+        22530,
+        13,
+        2
+      ]
+    ],
+    "profiled_ids": [
+      [
+        1,
+        476,
+        29923,
+        15488,
+        29892,
+        6850,
+        4717,
+        22530,
+        13,
+        2
+      ]
+    ],
+    "original_input": {
+      "input_ids_sha256": "e8e99fcfb353fd80a375301ceb99ba9e9c4f981d49503578cf981e8a702433c5",
+      "images_sha256": "11fab1d84ca753aa335264bd51ecc3d717e1699e3309e1e057c85d3bb6e76cba",
+      "image_shape": [
+        1,
+        6,
+        3,
+        336,
+        336
+      ],
+      "image_sizes": [
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ]
+      ],
+      "generation": {
+        "do_sample": false,
+        "temperature": 0,
+        "top_p": null,
+        "num_beams": 1,
+        "max_new_tokens": 64,
+        "use_cache": true
+      }
+    },
+    "profiled_input": {
+      "input_ids_sha256": "e8e99fcfb353fd80a375301ceb99ba9e9c4f981d49503578cf981e8a702433c5",
+      "images_sha256": "11fab1d84ca753aa335264bd51ecc3d717e1699e3309e1e057c85d3bb6e76cba",
+      "image_shape": [
+        1,
+        6,
+        3,
+        336,
+        336
+      ],
+      "image_sizes": [
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ]
+      ],
+      "generation": {
+        "do_sample": false,
+        "temperature": 0,
+        "top_p": null,
+        "num_beams": 1,
+        "max_new_tokens": 64,
+        "use_cache": true
+      }
+    },
+    "prediction_equal": true
+  },
+  {
+    "sample_token": "75385bf352fe4743a8cbf576b1e184fb",
+    "passed": true,
+    "original_output": "STOP, STRAIGHT",
+    "profiled_output": "STOP, STRAIGHT",
+    "original_ids": [
+      [
+        1,
+        6850,
+        4590,
+        29892,
+        6850,
+        4717,
+        22530,
+        13,
+        2
+      ]
+    ],
+    "profiled_ids": [
+      [
+        1,
+        6850,
+        4590,
+        29892,
+        6850,
+        4717,
+        22530,
+        13,
+        2
+      ]
+    ],
+    "original_input": {
+      "input_ids_sha256": "e8e99fcfb353fd80a375301ceb99ba9e9c4f981d49503578cf981e8a702433c5",
+      "images_sha256": "8cb6506be5fdd376ad5efb72df57334fb75ca57c6d8690eb056977c2785b524c",
+      "image_shape": [
+        1,
+        6,
+        3,
+        336,
+        336
+      ],
+      "image_sizes": [
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ]
+      ],
+      "generation": {
+        "do_sample": false,
+        "temperature": 0,
+        "top_p": null,
+        "num_beams": 1,
+        "max_new_tokens": 64,
+        "use_cache": true
+      }
+    },
+    "profiled_input": {
+      "input_ids_sha256": "e8e99fcfb353fd80a375301ceb99ba9e9c4f981d49503578cf981e8a702433c5",
+      "images_sha256": "8cb6506be5fdd376ad5efb72df57334fb75ca57c6d8690eb056977c2785b524c",
+      "image_shape": [
+        1,
+        6,
+        3,
+        336,
+        336
+      ],
+      "image_sizes": [
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ]
+      ],
+      "generation": {
+        "do_sample": false,
+        "temperature": 0,
+        "top_p": null,
+        "num_beams": 1,
+        "max_new_tokens": 64,
+        "use_cache": true
+      }
+    },
+    "prediction_equal": true
+  }
+]

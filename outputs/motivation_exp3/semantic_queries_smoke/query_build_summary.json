@@ -1,0 +1,64 @@
+{
+  "scenes": [
+    {
+      "token": "0e7ede02718341558414865d5c604745",
+      "log_token": "0d68b81100a640129a185cca5aa1edd7",
+      "nbr_samples": 41,
+      "first_sample_token": "029af235f15d4f6f80713b778edc3c61",
+      "last_sample_token": "a6ef40cda8ed4113b2c5f85dd15bb5f9",
+      "name": "scene-0559",
+      "description": "Passing intersection, pedestrian, parked cars, construction zone, construction vehicles"
+    },
+    {
+      "token": "64bfc5edd71147858ce7446892d7f864",
+      "log_token": "ee155e99938a4c2698fed50fc5b5d16a",
+      "nbr_samples": 40,
+      "first_sample_token": "45c4bd03ee6f4a369dd42abf08dc3957",
+      "last_sample_token": "b6fdaeddf39c44a5a828e7c340a0b6d8",
+      "name": "scene-0971",
+      "description": "Cross T junction, peds, parked motorcycles, turn right, jaywalker"
+    }
+  ],
+  "sequence_count": 12,
+  "valid_query_events": 42,
+  "unique_sample_queries": 35,
+  "excluded_by_reason": {
+    "no_deterministic_vehicle_target": 15
+  },
+  "selection": {
+    "vehicle_prefix": "vehicle.",
+    "excluded_vehicle_categories": [
+      "vehicle.bicycle",
+      "vehicle.motorcycle"
+    ],
+    "max_distance_m": 40.0,
+    "forward_min_m": 0.0,
+    "front_half_angle_degrees": 35.0,
+    "min_sensor_points": 1,
+    "existence_prefixes": [
+      "human.pedestrian.",
+      "vehicle.bicycle",
+      "vehicle.motorcycle"
+    ],
+    "existence_distance_m": 20.0,
+    "position_lateral_edges_m": [
+      -2.0,
+      2.0
+    ],
+    "position_labels": [
+      "FRONT_LEFT",
+      "FRONT",
+      "FRONT_RIGHT"
+    ],
+    "future_steps": 6,
+    "expected_interval_s": 0.5,
+    "interval_tolerance_s": 0.1,
+    "current_speed_bins_mps": [
+      0.5,
+      2.0,
+      5.0,
+      10.0
+    ]
+  },
+  "frame_window": "first keyframes 1..max_length, zero-based; no GT-dependent selection"
+}

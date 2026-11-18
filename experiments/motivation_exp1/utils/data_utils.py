@@ -5,11 +5,13 @@ import hashlib
 from importlib.metadata import PackageNotFoundError, version
 import json
 import logging
+import math
 import os
 from pathlib import Path
 import random
 import subprocess
 import sys
+from datetime import datetime, timezone
 
 import numpy as np
 import yaml
@@ -79,9 +81,9 @@ def configuration(args):
         raise ValueError("The local original evaluation uses fp16; other precision would change the baseline")
     if min(cfg["senna"]["max_new_tokens"], cfg["senna"]["validation_samples"], cfg["senna"]["detailed_samples"]) < 1:
         raise ValueError("Generation length, validation_samples and detailed_samples must be positive")
-    if len(e["temporal_gaps_seconds"]) != len(set(e["temporal_gaps_seconds"])) or any(g <= 0 for g in e["temporal_gaps_seconds"]):
+    if not e["temporal_gaps_seconds"] or len(e["temporal_gaps_seconds"]) != len(set(e["temporal_gaps_seconds"])) or any(not math.isfinite(g) or g <= 0 for g in e["temporal_gaps_seconds"]):
         raise ValueError("Temporal gaps must be distinct and positive")
-    if any(t < 0 or t > 1 for t in e["ssim_thresholds"]) or e["gap_tolerance_seconds"] < 0:
+    if not e["ssim_thresholds"] or any(not math.isfinite(t) or t < 0 or t > 1 for t in e["ssim_thresholds"]) or len({f"{t:.2f}" for t in e["ssim_thresholds"]}) != len(e["ssim_thresholds"]) or not math.isfinite(e["gap_tolerance_seconds"]) or e["gap_tolerance_seconds"] < 0:
         raise ValueError("Invalid similarity threshold or gap tolerance")
     w, h = e["analysis_resize"]
     rows, cols = e["patch_grid"]
@@ -163,6 +165,19 @@ def selected_scenes(nusc, cfg):
     return sorted(scenes[:cfg["experiment"]["max_scenes"]], key=lambda s: s["name"])
 
 
+def git_provenance():
+    """Source hashes remain authoritative if Git is unavailable in a mounted repo."""
+    result = {}
+    for key, command in (("git_commit", ["rev-parse", "HEAD"]), ("git_status", ["status", "--short"])):
+        try:
+            proc = subprocess.run(["git", *command], cwd=ROOT, text=True, capture_output=True, check=True)
+            result[key] = proc.stdout.strip()
+        except (OSError, subprocess.CalledProcessError) as exc:
+            result[key] = None
+            result[key + "_unavailable_reason"] = getattr(exc, "stderr", None) or str(exc)
+    return result
+
+
 def initialize(cfg, args):
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
     logging.getLogger("fontTools").setLevel(logging.WARNING)
@@ -204,7 +219,7 @@ def initialize(cfg, args):
         if changed and args.existing == "overwrite":
             # Never label stale outputs with new provenance. Clear experiment-
             # owned products only; user files and unrelated directories survive.
-            owned = {"camera_manifest.csv", "temporal_pairs.csv", "temporal_similarity.csv", "patch_similarity.csv", "object_persistence.csv", "profiling_samples.csv", "matched_profile_pairs.csv", "scene_statistics.csv", "experiment_report.md", "model_metadata.json", "output_equivalence.json", "aggregate_summary.json", "profiling_summary.json", "manifest_summary.json", "manifest_issues.json", "similarity_issues.json", "object_issues.json", "matched_profile_issues.json", "figure_metadata.json", "invocation_status.json", "verification_results.json"}
+            owned = {"camera_manifest.csv", "temporal_pairs.csv", "temporal_similarity.csv", "patch_similarity.csv", "object_persistence.csv", "profiling_samples.csv", "matched_profile_pairs.csv", "matched_object_pairs.csv", "scene_statistics.csv", "experiment_report.md", "model_metadata.json", "output_equivalence.json", "aggregate_summary.json", "profiling_summary.json", "manifest_summary.json", "manifest_issues.json", "similarity_issues.json", "object_issues.json", "matched_profile_issues.json", "figure_metadata.json", "invocation_status.json", "verification_results.json", "implementation_audit.json", "reuse_provenance.json"}
             for p in out.iterdir():
                 if p.is_file() and (p.name in owned or p.name.endswith("_status.json")):
                     p.unlink()
@@ -213,9 +228,12 @@ def initialize(cfg, args):
                     for p in (out / folder).glob(pattern):
                         p.unlink()
             LOG.info("Configuration/code/data changed: cleared owned experiment outputs before overwrite")
-    metadata = {**identity, "fingerprint": fingerprint, "git_commit": subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip(),
-                "git_status": subprocess.check_output(["git", "status", "--short"], cwd=ROOT, text=True).strip(),
-                "python": sys.version, "argv": sys.argv, "data_kind": "real_dataset", "camera_order": CAMERAS}
+    old_metadata = json.loads(old.read_text()) if old.exists() else {}
+    metadata = {**identity, "fingerprint": fingerprint, **git_provenance(),
+                "python": sys.version, "argv": sys.argv, "data_kind": "real_dataset", "camera_order": CAMERAS,
+                "updated_at_utc": datetime.now(timezone.utc).isoformat()}
+    if old_metadata.get("reused_artifacts") and old_metadata.get("fingerprint") == fingerprint:
+        metadata["reused_artifacts"] = old_metadata["reused_artifacts"]
     write_json(old, metadata)
     (out / "resolved_config.yaml").write_text(yaml.safe_dump(cfg, sort_keys=False))
     return out

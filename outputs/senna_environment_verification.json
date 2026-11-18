@@ -1,0 +1,42 @@
+{
+  "verified_at": "2026-11-17T17:36:38.403703+08:00",
+  "environment_name": "Senna",
+  "python": "/data/miniconda3/envs/Senna/bin/python",
+  "python_version": "3.10.22",
+  "packages": {
+    "torch": "2.0.1+cu118",
+    "torchvision": "0.15.2+cu118",
+    "torchaudio": "2.0.2+cu118",
+    "transformers": "4.31.0",
+    "tokenizers": "0.13.3",
+    "accelerate": "0.29.2",
+    "numpy": "1.26.4",
+    "nuscenes-devkit": "1.2.0",
+    "peft": "0.4.0",
+    "sentencepiece": "0.2.0"
+  },
+  "dataroot": "/data/dataset/v1.0-trainval",
+  "model_path": "/data/qh/phdCode/work4/models/Senna",
+  "vision_model_path": "/data/qh/phdCode/work4/models/clip-vit-large-patch14-336",
+  "physical_gpu": 1,
+  "gpu_name": "NVIDIA GeForce RTX 3090",
+  "cuda_runtime": "11.8",
+  "checks": {
+    "pip_check": "passed",
+    "regression_tests_passed": 5,
+    "validated_samples": 5119,
+    "validated_images": 30714,
+    "offline_real_inference": "passed"
+  },
+  "inference": {
+    "sample_token": "e93e98b63d3b40209056d129dc53ceee",
+    "answer": "KEEP, LEFT_TURN",
+    "parsed_plan": {
+      "speed": "KEEP",
+      "path": "LEFT_TURN",
+      "valid": true
+    },
+    "result_file": "outputs/senna_environment_sample.json"
+  },
+  "scope": "Environment and single-sample generation verified; no full validation inference run performed."
+}

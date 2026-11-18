@@ -1,0 +1,3746 @@
+[
+  {
+    "scene_token": "0e7ede02718341558414865d5c604745",
+    "sample_token": "d2b3be57f76a43a9a06b56c1ceaa221f",
+    "prev_sample_token": "029af235f15d4f6f80713b778edc3c61",
+    "next_sample_token": "66e594111d0e44fe8ef57d222f1830a7",
+    "timestamp": 1535730401446845,
+    "query_id": "category_v1",
+    "query_type": "category",
+    "query_text": "What is the category of the nearest vehicle (excluding vehicle.bicycle, vehicle.motorcycle) ahead within 40 meters and 35 degrees of the forward axis, beyond 0 meters forward? Answer only its nuScenes category name.",
+    "ground_truth": "vehicle.car",
+    "dependency_instance_tokens": [
+      "509727ab37f744d8bf765134fc25af7d"
+    ],
+    "dependency_attributes": {
+      "annotation_token": "60c8b295809d4df4b6b7e5d019ef0a25",
+      "instance_token": "509727ab37f744d8bf765134fc25af7d",
+      "category": "vehicle.car",
+      "position_lidar_m": [
+        -3.8896487936202506,
+        5.96394897715951,
+        -0.6361722110998345
+      ],
+      "position_label": "FRONT_LEFT",
+      "selection_rule": "nearest_in_scope_vehicle_then_instance_token",
+      "sensor_points": 857
+    },
+    "dependency_signature": [
+      "509727ab37f744d8bf765134fc25af7d",
+      "vehicle.car"
+    ],
+    "state_facts": {
+      "selected_vehicle": "509727ab37f744d8bf765134fc25af7d",
+      "category:509727ab37f744d8bf765134fc25af7d": "vehicle.car"
+    },
+    "image_paths": [
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT/n008-2018-08-31-11-37-23-0400__CAM_FRONT__1535730401412404.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_LEFT/n008-2018-08-31-11-37-23-0400__CAM_FRONT_LEFT__1535730401404799.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_RIGHT/n008-2018-08-31-11-37-23-0400__CAM_FRONT_RIGHT__1535730401420482.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_LEFT/n008-2018-08-31-11-37-23-0400__CAM_BACK_LEFT__1535730401447415.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_RIGHT/n008-2018-08-31-11-37-23-0400__CAM_BACK_RIGHT__1535730401428113.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK/n008-2018-08-31-11-37-23-0400__CAM_BACK__1535730401437558.jpg"
+    ],
+    "input_protocol": {
+      "version": "nuscenes_senna_v2",
+      "camera_order": [
+        "CAM_FRONT",
+        "CAM_FRONT_LEFT",
+        "CAM_FRONT_RIGHT",
+        "CAM_BACK_LEFT",
+        "CAM_BACK_RIGHT",
+        "CAM_BACK"
+      ],
+      "legacy_camera_order": false,
+      "legacy_navigation": false,
+      "navigation_source": "none",
+      "future_label_in_prompt": false
+    },
+    "offline_ground_truth": {},
+    "record_id": "a687f248549af8052131b398",
+    "sequence_id": "scene-0559_5_fixed_category",
+    "sequence_length": 5,
+    "workload": "fixed",
+    "frame_index": 0,
+    "scene_name": "scene-0559"
+  },
+  {
+    "scene_token": "0e7ede02718341558414865d5c604745",
+    "sample_token": "66e594111d0e44fe8ef57d222f1830a7",
+    "prev_sample_token": "d2b3be57f76a43a9a06b56c1ceaa221f",
+    "next_sample_token": "2a21a555004043768a6da4f645f67896",
+    "timestamp": 1535730401947814,
+    "query_id": "category_v1",
+    "query_type": "category",
+    "query_text": "What is the category of the nearest vehicle (excluding vehicle.bicycle, vehicle.motorcycle) ahead within 40 meters and 35 degrees of the forward axis, beyond 0 meters forward? Answer only its nuScenes category name.",
+    "ground_truth": "vehicle.car",
+    "dependency_instance_tokens": [
+      "d3a5b6a955864d8cb608f66d8282dce7"
+    ],
+    "dependency_attributes": {
+      "annotation_token": "c4b1253d46ad4ce5afdcb97f71c708fc",
+      "instance_token": "d3a5b6a955864d8cb608f66d8282dce7",
+      "category": "vehicle.car",
+      "position_lidar_m": [
+        -4.830646838981114,
+        9.799826697273756,
+        -0.5427106476937622
+      ],
+      "position_label": "FRONT_LEFT",
+      "selection_rule": "nearest_in_scope_vehicle_then_instance_token",
+      "sensor_points": 186
+    },
+    "dependency_signature": [
+      "d3a5b6a955864d8cb608f66d8282dce7",
+      "vehicle.car"
+    ],
+    "state_facts": {
+      "selected_vehicle": "d3a5b6a955864d8cb608f66d8282dce7",
+      "category:d3a5b6a955864d8cb608f66d8282dce7": "vehicle.car"
+    },
+    "image_paths": [
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT/n008-2018-08-31-11-37-23-0400__CAM_FRONT__1535730401912404.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_LEFT/n008-2018-08-31-11-37-23-0400__CAM_FRONT_LEFT__1535730401904799.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_RIGHT/n008-2018-08-31-11-37-23-0400__CAM_FRONT_RIGHT__1535730401920482.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_LEFT/n008-2018-08-31-11-37-23-0400__CAM_BACK_LEFT__1535730401947405.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_RIGHT/n008-2018-08-31-11-37-23-0400__CAM_BACK_RIGHT__1535730401928113.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK/n008-2018-08-31-11-37-23-0400__CAM_BACK__1535730401937739.jpg"
+    ],
+    "input_protocol": {
+      "version": "nuscenes_senna_v2",
+      "camera_order": [
+        "CAM_FRONT",
+        "CAM_FRONT_LEFT",
+        "CAM_FRONT_RIGHT",
+        "CAM_BACK_LEFT",
+        "CAM_BACK_RIGHT",
+        "CAM_BACK"
+      ],
+      "legacy_camera_order": false,
+      "legacy_navigation": false,
+      "navigation_source": "none",
+      "future_label_in_prompt": false
+    },
+    "offline_ground_truth": {},
+    "record_id": "31419b5c3a68515ee4c26f81",
+    "sequence_id": "scene-0559_5_fixed_category",
+    "sequence_length": 5,
+    "workload": "fixed",
+    "frame_index": 1,
+    "scene_name": "scene-0559"
+  },
+  {
+    "scene_token": "0e7ede02718341558414865d5c604745",
+    "sample_token": "2a21a555004043768a6da4f645f67896",
+    "prev_sample_token": "66e594111d0e44fe8ef57d222f1830a7",
+    "next_sample_token": "4ffbb8951b9841429bfd3aee39c6a2be",
+    "timestamp": 1535730402448243,
+    "query_id": "category_v1",
+    "query_type": "category",
+    "query_text": "What is the category of the nearest vehicle (excluding vehicle.bicycle, vehicle.motorcycle) ahead within 40 meters and 35 degrees of the forward axis, beyond 0 meters forward? Answer only its nuScenes category name.",
+    "ground_truth": "vehicle.bus.rigid",
+    "dependency_instance_tokens": [
+      "fe7d95b5c2bd4aabae3e36495cd95d21"
+    ],
+    "dependency_attributes": {
+      "annotation_token": "8408c173be0e4a69b19f06805a9cb51d",
+      "instance_token": "fe7d95b5c2bd4aabae3e36495cd95d21",
+      "category": "vehicle.bus.rigid",
+      "position_lidar_m": [
+        3.527092266114132,
+        18.715703776102757,
+        0.47980078919145935
+      ],
+      "position_label": "FRONT_RIGHT",
+      "selection_rule": "nearest_in_scope_vehicle_then_instance_token",
+      "sensor_points": 188
+    },
+    "dependency_signature": [
+      "fe7d95b5c2bd4aabae3e36495cd95d21",
+      "vehicle.bus.rigid"
+    ],
+    "state_facts": {
+      "selected_vehicle": "fe7d95b5c2bd4aabae3e36495cd95d21",
+      "category:fe7d95b5c2bd4aabae3e36495cd95d21": "vehicle.bus.rigid"
+    },
+    "image_paths": [
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT/n008-2018-08-31-11-37-23-0400__CAM_FRONT__1535730402412404.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_LEFT/n008-2018-08-31-11-37-23-0400__CAM_FRONT_LEFT__1535730402404799.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_RIGHT/n008-2018-08-31-11-37-23-0400__CAM_FRONT_RIGHT__1535730402420482.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_LEFT/n008-2018-08-31-11-37-23-0400__CAM_BACK_LEFT__1535730402447405.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_RIGHT/n008-2018-08-31-11-37-23-0400__CAM_BACK_RIGHT__1535730402428113.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK/n008-2018-08-31-11-37-23-0400__CAM_BACK__1535730402437558.jpg"
+    ],
+    "input_protocol": {
+      "version": "nuscenes_senna_v2",
+      "camera_order": [
+        "CAM_FRONT",
+        "CAM_FRONT_LEFT",
+        "CAM_FRONT_RIGHT",
+        "CAM_BACK_LEFT",
+        "CAM_BACK_RIGHT",
+        "CAM_BACK"
+      ],
+      "legacy_camera_order": false,
+      "legacy_navigation": false,
+      "navigation_source": "none",
+      "future_label_in_prompt": false
+    },
+    "offline_ground_truth": {},
+    "record_id": "96c2730785a4a952432390d7",
+    "sequence_id": "scene-0559_5_fixed_category",
+    "sequence_length": 5,
+    "workload": "fixed",
+    "frame_index": 2,
+    "scene_name": "scene-0559"
+  },
+  {
+    "scene_token": "0e7ede02718341558414865d5c604745",
+    "sample_token": "4ffbb8951b9841429bfd3aee39c6a2be",
+    "prev_sample_token": "2a21a555004043768a6da4f645f67896",
+    "next_sample_token": "9229caee2885435ebf71e46d997e7070",
+    "timestamp": 1535730402948746,
+    "query_id": "category_v1",
+    "query_type": "category",
+    "query_text": "What is the category of the nearest vehicle (excluding vehicle.bicycle, vehicle.motorcycle) ahead within 40 meters and 35 degrees of the forward axis, beyond 0 meters forward? Answer only its nuScenes category name.",
+    "ground_truth": "vehicle.bus.rigid",
+    "dependency_instance_tokens": [
+      "fe7d95b5c2bd4aabae3e36495cd95d21"
+    ],
+    "dependency_attributes": {
+      "annotation_token": "012d1def975945648d48f90f16fafe8f",
+      "instance_token": "fe7d95b5c2bd4aabae3e36495cd95d21",
+      "category": "vehicle.bus.rigid",
+      "position_lidar_m": [
+        3.4965066656898296,
+        18.94684024662243,
+        0.5136005748513933
+      ],
+      "position_label": "FRONT_RIGHT",
+      "selection_rule": "nearest_in_scope_vehicle_then_instance_token",
+      "sensor_points": 187
+    },
+    "dependency_signature": [
+      "fe7d95b5c2bd4aabae3e36495cd95d21",
+      "vehicle.bus.rigid"
+    ],
+    "state_facts": {
+      "selected_vehicle": "fe7d95b5c2bd4aabae3e36495cd95d21",
+      "category:fe7d95b5c2bd4aabae3e36495cd95d21": "vehicle.bus.rigid"
+    },
+    "image_paths": [
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT/n008-2018-08-31-11-37-23-0400__CAM_FRONT__1535730402912404.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_LEFT/n008-2018-08-31-11-37-23-0400__CAM_FRONT_LEFT__1535730402904799.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_RIGHT/n008-2018-08-31-11-37-23-0400__CAM_FRONT_RIGHT__1535730402920482.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_LEFT/n008-2018-08-31-11-37-23-0400__CAM_BACK_LEFT__1535730402947412.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_RIGHT/n008-2018-08-31-11-37-23-0400__CAM_BACK_RIGHT__1535730402928113.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK/n008-2018-08-31-11-37-23-0400__CAM_BACK__1535730402937558.jpg"
+    ],
+    "input_protocol": {
+      "version": "nuscenes_senna_v2",
+      "camera_order": [
+        "CAM_FRONT",
+        "CAM_FRONT_LEFT",
+        "CAM_FRONT_RIGHT",
+        "CAM_BACK_LEFT",
+        "CAM_BACK_RIGHT",
+        "CAM_BACK"
+      ],
+      "legacy_camera_order": false,
+      "legacy_navigation": false,
+      "navigation_source": "none",
+      "future_label_in_prompt": false
+    },
+    "offline_ground_truth": {},
+    "record_id": "48255ae0d24885c6b2103c8e",
+    "sequence_id": "scene-0559_5_fixed_category",
+    "sequence_length": 5,
+    "workload": "fixed",
+    "frame_index": 3,
+    "scene_name": "scene-0559"
+  },
+  {
+    "scene_token": "0e7ede02718341558414865d5c604745",
+    "sample_token": "9229caee2885435ebf71e46d997e7070",
+    "prev_sample_token": "4ffbb8951b9841429bfd3aee39c6a2be",
+    "next_sample_token": "2e3b7f9ff9ea40e883ba169c575e1283",
+    "timestamp": 1535730403399332,
+    "query_id": "category_v1",
+    "query_type": "category",
+    "query_text": "What is the category of the nearest vehicle (excluding vehicle.bicycle, vehicle.motorcycle) ahead within 40 meters and 35 degrees of the forward axis, beyond 0 meters forward? Answer only its nuScenes category name.",
+    "ground_truth": "vehicle.bus.rigid",
+    "dependency_instance_tokens": [
+      "fe7d95b5c2bd4aabae3e36495cd95d21"
+    ],
+    "dependency_attributes": {
+      "annotation_token": "b6e2debd3df646e581d065d53e8e742e",
+      "instance_token": "fe7d95b5c2bd4aabae3e36495cd95d21",
+      "category": "vehicle.bus.rigid",
+      "position_lidar_m": [
+        3.4836723715806506,
+        19.1184337166512,
+        0.5527499622622329
+      ],
+      "position_label": "FRONT_RIGHT",
+      "selection_rule": "nearest_in_scope_vehicle_then_instance_token",
+      "sensor_points": 207
+    },
+    "dependency_signature": [
+      "fe7d95b5c2bd4aabae3e36495cd95d21",
+      "vehicle.bus.rigid"
+    ],
+    "state_facts": {
+      "selected_vehicle": "fe7d95b5c2bd4aabae3e36495cd95d21",
+      "category:fe7d95b5c2bd4aabae3e36495cd95d21": "vehicle.bus.rigid"
+    },
+    "image_paths": [
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT/n008-2018-08-31-11-37-23-0400__CAM_FRONT__1535730403362404.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_LEFT/n008-2018-08-31-11-37-23-0400__CAM_FRONT_LEFT__1535730403354799.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_RIGHT/n008-2018-08-31-11-37-23-0400__CAM_FRONT_RIGHT__1535730403370482.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_LEFT/n008-2018-08-31-11-37-23-0400__CAM_BACK_LEFT__1535730403397405.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_RIGHT/n008-2018-08-31-11-37-23-0400__CAM_BACK_RIGHT__1535730403378113.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK/n008-2018-08-31-11-37-23-0400__CAM_BACK__1535730403387558.jpg"
+    ],
+    "input_protocol": {
+      "version": "nuscenes_senna_v2",
+      "camera_order": [
+        "CAM_FRONT",
+        "CAM_FRONT_LEFT",
+        "CAM_FRONT_RIGHT",
+        "CAM_BACK_LEFT",
+        "CAM_BACK_RIGHT",
+        "CAM_BACK"
+      ],
+      "legacy_camera_order": false,
+      "legacy_navigation": false,
+      "navigation_source": "none",
+      "future_label_in_prompt": false
+    },
+    "offline_ground_truth": {},
+    "record_id": "dfcb864b4ac028e6540a69e6",
+    "sequence_id": "scene-0559_5_fixed_category",
+    "sequence_length": 5,
+    "workload": "fixed",
+    "frame_index": 4,
+    "scene_name": "scene-0559"
+  },
+  {
+    "scene_token": "0e7ede02718341558414865d5c604745",
+    "sample_token": "d2b3be57f76a43a9a06b56c1ceaa221f",
+    "prev_sample_token": "029af235f15d4f6f80713b778edc3c61",
+    "next_sample_token": "66e594111d0e44fe8ef57d222f1830a7",
+    "timestamp": 1535730401446845,
+    "query_id": "existence_v1",
+    "query_type": "existence",
+    "query_text": "Do you see any vulnerable road users within 20 meters ahead of you, such as cyclists, motorcyclists, or pedestrians? Consider the 35-degree half-angle forward sector, beyond 0 meters forward, and these nuScenes category prefixes: ['human.pedestrian.', 'vehicle.bicycle', 'vehicle.motorcycle']. Answer only YES or NO.",
+    "ground_truth": "NO",
+    "dependency_instance_tokens": [],
+    "dependency_attributes": {
+      "scope": {
+        "prefixes": [
+          "human.pedestrian.",
+          "vehicle.bicycle",
+          "vehicle.motorcycle"
+        ],
+        "radius_m": 20.0,
+        "forward_min_m": 0.0,
+        "half_angle_degrees": 35.0
+      },
+      "members": [],
+      "annotation_coverage": "official_sample_annotation_table"
+    },
+    "dependency_signature": [
+      {
+        "prefixes": [
+          "human.pedestrian.",
+          "vehicle.bicycle",
+          "vehicle.motorcycle"
+        ],
+        "radius_m": 20.0,
+        "forward_min_m": 0.0,
+        "half_angle_degrees": 35.0
+      },
+      []
+    ],
+    "state_facts": {
+      "existence_scope:{\"forward_min_m\":0.0,\"half_angle_degrees\":35.0,\"prefixes\":[\"human.pedestrian.\",\"vehicle.bicycle\",\"vehicle.motorcycle\"],\"radius_m\":20.0}": []
+    },
+    "image_paths": [
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT/n008-2018-08-31-11-37-23-0400__CAM_FRONT__1535730401412404.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_LEFT/n008-2018-08-31-11-37-23-0400__CAM_FRONT_LEFT__1535730401404799.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_RIGHT/n008-2018-08-31-11-37-23-0400__CAM_FRONT_RIGHT__1535730401420482.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_LEFT/n008-2018-08-31-11-37-23-0400__CAM_BACK_LEFT__1535730401447415.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_RIGHT/n008-2018-08-31-11-37-23-0400__CAM_BACK_RIGHT__1535730401428113.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK/n008-2018-08-31-11-37-23-0400__CAM_BACK__1535730401437558.jpg"
+    ],
+    "input_protocol": {
+      "version": "nuscenes_senna_v2",
+      "camera_order": [
+        "CAM_FRONT",
+        "CAM_FRONT_LEFT",
+        "CAM_FRONT_RIGHT",
+        "CAM_BACK_LEFT",
+        "CAM_BACK_RIGHT",
+        "CAM_BACK"
+      ],
+      "legacy_camera_order": false,
+      "legacy_navigation": false,
+      "navigation_source": "none",
+      "future_label_in_prompt": false
+    },
+    "offline_ground_truth": {},
+    "record_id": "3be61c9fae705ad0c5c0efb4",
+    "sequence_id": "scene-0559_5_fixed_existence",
+    "sequence_length": 5,
+    "workload": "fixed",
+    "frame_index": 0,
+    "scene_name": "scene-0559"
+  },
+  {
+    "scene_token": "0e7ede02718341558414865d5c604745",
+    "sample_token": "66e594111d0e44fe8ef57d222f1830a7",
+    "prev_sample_token": "d2b3be57f76a43a9a06b56c1ceaa221f",
+    "next_sample_token": "2a21a555004043768a6da4f645f67896",
+    "timestamp": 1535730401947814,
+    "query_id": "existence_v1",
+    "query_type": "existence",
+    "query_text": "Do you see any vulnerable road users within 20 meters ahead of you, such as cyclists, motorcyclists, or pedestrians? Consider the 35-degree half-angle forward sector, beyond 0 meters forward, and these nuScenes category prefixes: ['human.pedestrian.', 'vehicle.bicycle', 'vehicle.motorcycle']. Answer only YES or NO.",
+    "ground_truth": "NO",
+    "dependency_instance_tokens": [],
+    "dependency_attributes": {
+      "scope": {
+        "prefixes": [
+          "human.pedestrian.",
+          "vehicle.bicycle",
+          "vehicle.motorcycle"
+        ],
+        "radius_m": 20.0,
+        "forward_min_m": 0.0,
+        "half_angle_degrees": 35.0
+      },
+      "members": [],
+      "annotation_coverage": "official_sample_annotation_table"
+    },
+    "dependency_signature": [
+      {
+        "prefixes": [
+          "human.pedestrian.",
+          "vehicle.bicycle",
+          "vehicle.motorcycle"
+        ],
+        "radius_m": 20.0,
+        "forward_min_m": 0.0,
+        "half_angle_degrees": 35.0
+      },
+      []
+    ],
+    "state_facts": {
+      "existence_scope:{\"forward_min_m\":0.0,\"half_angle_degrees\":35.0,\"prefixes\":[\"human.pedestrian.\",\"vehicle.bicycle\",\"vehicle.motorcycle\"],\"radius_m\":20.0}": []
+    },
+    "image_paths": [
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT/n008-2018-08-31-11-37-23-0400__CAM_FRONT__1535730401912404.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_LEFT/n008-2018-08-31-11-37-23-0400__CAM_FRONT_LEFT__1535730401904799.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_RIGHT/n008-2018-08-31-11-37-23-0400__CAM_FRONT_RIGHT__1535730401920482.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_LEFT/n008-2018-08-31-11-37-23-0400__CAM_BACK_LEFT__1535730401947405.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_RIGHT/n008-2018-08-31-11-37-23-0400__CAM_BACK_RIGHT__1535730401928113.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK/n008-2018-08-31-11-37-23-0400__CAM_BACK__1535730401937739.jpg"
+    ],
+    "input_protocol": {
+      "version": "nuscenes_senna_v2",
+      "camera_order": [
+        "CAM_FRONT",
+        "CAM_FRONT_LEFT",
+        "CAM_FRONT_RIGHT",
+        "CAM_BACK_LEFT",
+        "CAM_BACK_RIGHT",
+        "CAM_BACK"
+      ],
+      "legacy_camera_order": false,
+      "legacy_navigation": false,
+      "navigation_source": "none",
+      "future_label_in_prompt": false
+    },
+    "offline_ground_truth": {},
+    "record_id": "1f8fac2fa328d7d539398438",
+    "sequence_id": "scene-0559_5_fixed_existence",
+    "sequence_length": 5,
+    "workload": "fixed",
+    "frame_index": 1,
+    "scene_name": "scene-0559"
+  },
+  {
+    "scene_token": "0e7ede02718341558414865d5c604745",
+    "sample_token": "2a21a555004043768a6da4f645f67896",
+    "prev_sample_token": "66e594111d0e44fe8ef57d222f1830a7",
+    "next_sample_token": "4ffbb8951b9841429bfd3aee39c6a2be",
+    "timestamp": 1535730402448243,
+    "query_id": "existence_v1",
+    "query_type": "existence",
+    "query_text": "Do you see any vulnerable road users within 20 meters ahead of you, such as cyclists, motorcyclists, or pedestrians? Consider the 35-degree half-angle forward sector, beyond 0 meters forward, and these nuScenes category prefixes: ['human.pedestrian.', 'vehicle.bicycle', 'vehicle.motorcycle']. Answer only YES or NO.",
+    "ground_truth": "NO",
+    "dependency_instance_tokens": [],
+    "dependency_attributes": {
+      "scope": {
+        "prefixes": [
+          "human.pedestrian.",
+          "vehicle.bicycle",
+          "vehicle.motorcycle"
+        ],
+        "radius_m": 20.0,
+        "forward_min_m": 0.0,
+        "half_angle_degrees": 35.0
+      },
+      "members": [],
+      "annotation_coverage": "official_sample_annotation_table"
+    },
+    "dependency_signature": [
+      {
+        "prefixes": [
+          "human.pedestrian.",
+          "vehicle.bicycle",
+          "vehicle.motorcycle"
+        ],
+        "radius_m": 20.0,
+        "forward_min_m": 0.0,
+        "half_angle_degrees": 35.0
+      },
+      []
+    ],
+    "state_facts": {
+      "existence_scope:{\"forward_min_m\":0.0,\"half_angle_degrees\":35.0,\"prefixes\":[\"human.pedestrian.\",\"vehicle.bicycle\",\"vehicle.motorcycle\"],\"radius_m\":20.0}": []
+    },
+    "image_paths": [
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT/n008-2018-08-31-11-37-23-0400__CAM_FRONT__1535730402412404.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_LEFT/n008-2018-08-31-11-37-23-0400__CAM_FRONT_LEFT__1535730402404799.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_RIGHT/n008-2018-08-31-11-37-23-0400__CAM_FRONT_RIGHT__1535730402420482.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_LEFT/n008-2018-08-31-11-37-23-0400__CAM_BACK_LEFT__1535730402447405.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_RIGHT/n008-2018-08-31-11-37-23-0400__CAM_BACK_RIGHT__1535730402428113.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK/n008-2018-08-31-11-37-23-0400__CAM_BACK__1535730402437558.jpg"
+    ],
+    "input_protocol": {
+      "version": "nuscenes_senna_v2",
+      "camera_order": [
+        "CAM_FRONT",
+        "CAM_FRONT_LEFT",
+        "CAM_FRONT_RIGHT",
+        "CAM_BACK_LEFT",
+        "CAM_BACK_RIGHT",
+        "CAM_BACK"
+      ],
+      "legacy_camera_order": false,
+      "legacy_navigation": false,
+      "navigation_source": "none",
+      "future_label_in_prompt": false
+    },
+    "offline_ground_truth": {},
+    "record_id": "c3dcbd2a3439fa48b1a2a420",
+    "sequence_id": "scene-0559_5_fixed_existence",
+    "sequence_length": 5,
+    "workload": "fixed",
+    "frame_index": 2,
+    "scene_name": "scene-0559"
+  },
+  {
+    "scene_token": "0e7ede02718341558414865d5c604745",
+    "sample_token": "4ffbb8951b9841429bfd3aee39c6a2be",
+    "prev_sample_token": "2a21a555004043768a6da4f645f67896",
+    "next_sample_token": "9229caee2885435ebf71e46d997e7070",
+    "timestamp": 1535730402948746,
+    "query_id": "existence_v1",
+    "query_type": "existence",
+    "query_text": "Do you see any vulnerable road users within 20 meters ahead of you, such as cyclists, motorcyclists, or pedestrians? Consider the 35-degree half-angle forward sector, beyond 0 meters forward, and these nuScenes category prefixes: ['human.pedestrian.', 'vehicle.bicycle', 'vehicle.motorcycle']. Answer only YES or NO.",
+    "ground_truth": "NO",
+    "dependency_instance_tokens": [],
+    "dependency_attributes": {
+      "scope": {
+        "prefixes": [
+          "human.pedestrian.",
+          "vehicle.bicycle",
+          "vehicle.motorcycle"
+        ],
+        "radius_m": 20.0,
+        "forward_min_m": 0.0,
+        "half_angle_degrees": 35.0
+      },
+      "members": [],
+      "annotation_coverage": "official_sample_annotation_table"
+    },
+    "dependency_signature": [
+      {
+        "prefixes": [
+          "human.pedestrian.",
+          "vehicle.bicycle",
+          "vehicle.motorcycle"
+        ],
+        "radius_m": 20.0,
+        "forward_min_m": 0.0,
+        "half_angle_degrees": 35.0
+      },
+      []
+    ],
+    "state_facts": {
+      "existence_scope:{\"forward_min_m\":0.0,\"half_angle_degrees\":35.0,\"prefixes\":[\"human.pedestrian.\",\"vehicle.bicycle\",\"vehicle.motorcycle\"],\"radius_m\":20.0}": []
+    },
+    "image_paths": [
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT/n008-2018-08-31-11-37-23-0400__CAM_FRONT__1535730402912404.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_LEFT/n008-2018-08-31-11-37-23-0400__CAM_FRONT_LEFT__1535730402904799.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_RIGHT/n008-2018-08-31-11-37-23-0400__CAM_FRONT_RIGHT__1535730402920482.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_LEFT/n008-2018-08-31-11-37-23-0400__CAM_BACK_LEFT__1535730402947412.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_RIGHT/n008-2018-08-31-11-37-23-0400__CAM_BACK_RIGHT__1535730402928113.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK/n008-2018-08-31-11-37-23-0400__CAM_BACK__1535730402937558.jpg"
+    ],
+    "input_protocol": {
+      "version": "nuscenes_senna_v2",
+      "camera_order": [
+        "CAM_FRONT",
+        "CAM_FRONT_LEFT",
+        "CAM_FRONT_RIGHT",
+        "CAM_BACK_LEFT",
+        "CAM_BACK_RIGHT",
+        "CAM_BACK"
+      ],
+      "legacy_camera_order": false,
+      "legacy_navigation": false,
+      "navigation_source": "none",
+      "future_label_in_prompt": false
+    },
+    "offline_ground_truth": {},
+    "record_id": "c149c4e59a1bd14a38527080",
+    "sequence_id": "scene-0559_5_fixed_existence",
+    "sequence_length": 5,
+    "workload": "fixed",
+    "frame_index": 3,
+    "scene_name": "scene-0559"
+  },
+  {
+    "scene_token": "0e7ede02718341558414865d5c604745",
+    "sample_token": "9229caee2885435ebf71e46d997e7070",
+    "prev_sample_token": "4ffbb8951b9841429bfd3aee39c6a2be",
+    "next_sample_token": "2e3b7f9ff9ea40e883ba169c575e1283",
+    "timestamp": 1535730403399332,
+    "query_id": "existence_v1",
+    "query_type": "existence",
+    "query_text": "Do you see any vulnerable road users within 20 meters ahead of you, such as cyclists, motorcyclists, or pedestrians? Consider the 35-degree half-angle forward sector, beyond 0 meters forward, and these nuScenes category prefixes: ['human.pedestrian.', 'vehicle.bicycle', 'vehicle.motorcycle']. Answer only YES or NO.",
+    "ground_truth": "NO",
+    "dependency_instance_tokens": [],
+    "dependency_attributes": {
+      "scope": {
+        "prefixes": [
+          "human.pedestrian.",
+          "vehicle.bicycle",
+          "vehicle.motorcycle"
+        ],
+        "radius_m": 20.0,
+        "forward_min_m": 0.0,
+        "half_angle_degrees": 35.0
+      },
+      "members": [],
+      "annotation_coverage": "official_sample_annotation_table"
+    },
+    "dependency_signature": [
+      {
+        "prefixes": [
+          "human.pedestrian.",
+          "vehicle.bicycle",
+          "vehicle.motorcycle"
+        ],
+        "radius_m": 20.0,
+        "forward_min_m": 0.0,
+        "half_angle_degrees": 35.0
+      },
+      []
+    ],
+    "state_facts": {
+      "existence_scope:{\"forward_min_m\":0.0,\"half_angle_degrees\":35.0,\"prefixes\":[\"human.pedestrian.\",\"vehicle.bicycle\",\"vehicle.motorcycle\"],\"radius_m\":20.0}": []
+    },
+    "image_paths": [
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT/n008-2018-08-31-11-37-23-0400__CAM_FRONT__1535730403362404.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_LEFT/n008-2018-08-31-11-37-23-0400__CAM_FRONT_LEFT__1535730403354799.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_RIGHT/n008-2018-08-31-11-37-23-0400__CAM_FRONT_RIGHT__1535730403370482.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_LEFT/n008-2018-08-31-11-37-23-0400__CAM_BACK_LEFT__1535730403397405.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_RIGHT/n008-2018-08-31-11-37-23-0400__CAM_BACK_RIGHT__1535730403378113.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK/n008-2018-08-31-11-37-23-0400__CAM_BACK__1535730403387558.jpg"
+    ],
+    "input_protocol": {
+      "version": "nuscenes_senna_v2",
+      "camera_order": [
+        "CAM_FRONT",
+        "CAM_FRONT_LEFT",
+        "CAM_FRONT_RIGHT",
+        "CAM_BACK_LEFT",
+        "CAM_BACK_RIGHT",
+        "CAM_BACK"
+      ],
+      "legacy_camera_order": false,
+      "legacy_navigation": false,
+      "navigation_source": "none",
+      "future_label_in_prompt": false
+    },
+    "offline_ground_truth": {},
+    "record_id": "64f436bafea5220d692c0f8c",
+    "sequence_id": "scene-0559_5_fixed_existence",
+    "sequence_length": 5,
+    "workload": "fixed",
+    "frame_index": 4,
+    "scene_name": "scene-0559"
+  },
+  {
+    "scene_token": "0e7ede02718341558414865d5c604745",
+    "sample_token": "d2b3be57f76a43a9a06b56c1ceaa221f",
+    "prev_sample_token": "029af235f15d4f6f80713b778edc3c61",
+    "next_sample_token": "66e594111d0e44fe8ef57d222f1830a7",
+    "timestamp": 1535730401446845,
+    "query_id": "position_v1",
+    "query_type": "position",
+    "query_text": "Where is the nearest vehicle (excluding vehicle.bicycle, vehicle.motorcycle) ahead within 40 meters and 35 degrees of the forward axis, beyond 0 meters forward relative to you? Answer only one of FRONT_LEFT, FRONT, FRONT_RIGHT; lateral boundaries in meters: [-2.0, 2.0] (x right).",
+    "ground_truth": "FRONT_LEFT",
+    "dependency_instance_tokens": [
+      "509727ab37f744d8bf765134fc25af7d"
+    ],
+    "dependency_attributes": {
+      "annotation_token": "60c8b295809d4df4b6b7e5d019ef0a25",
+      "instance_token": "509727ab37f744d8bf765134fc25af7d",
+      "category": "vehicle.car",
+      "position_lidar_m": [
+        -3.8896487936202506,
+        5.96394897715951,
+        -0.6361722110998345
+      ],
+      "position_label": "FRONT_LEFT",
+      "selection_rule": "nearest_in_scope_vehicle_then_instance_token",
+      "sensor_points": 857
+    },
+    "dependency_signature": [
+      "509727ab37f744d8bf765134fc25af7d",
+      "FRONT_LEFT"
+    ],
+    "state_facts": {
+      "selected_vehicle": "509727ab37f744d8bf765134fc25af7d",
+      "position:509727ab37f744d8bf765134fc25af7d": "FRONT_LEFT"
+    },
+    "image_paths": [
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT/n008-2018-08-31-11-37-23-0400__CAM_FRONT__1535730401412404.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_LEFT/n008-2018-08-31-11-37-23-0400__CAM_FRONT_LEFT__1535730401404799.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_RIGHT/n008-2018-08-31-11-37-23-0400__CAM_FRONT_RIGHT__1535730401420482.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_LEFT/n008-2018-08-31-11-37-23-0400__CAM_BACK_LEFT__1535730401447415.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_RIGHT/n008-2018-08-31-11-37-23-0400__CAM_BACK_RIGHT__1535730401428113.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK/n008-2018-08-31-11-37-23-0400__CAM_BACK__1535730401437558.jpg"
+    ],
+    "input_protocol": {
+      "version": "nuscenes_senna_v2",
+      "camera_order": [
+        "CAM_FRONT",
+        "CAM_FRONT_LEFT",
+        "CAM_FRONT_RIGHT",
+        "CAM_BACK_LEFT",
+        "CAM_BACK_RIGHT",
+        "CAM_BACK"
+      ],
+      "legacy_camera_order": false,
+      "legacy_navigation": false,
+      "navigation_source": "none",
+      "future_label_in_prompt": false
+    },
+    "offline_ground_truth": {},
+    "record_id": "19a6bc716648b1541e2feacb",
+    "sequence_id": "scene-0559_5_fixed_position",
+    "sequence_length": 5,
+    "workload": "fixed",
+    "frame_index": 0,
+    "scene_name": "scene-0559"
+  },
+  {
+    "scene_token": "0e7ede02718341558414865d5c604745",
+    "sample_token": "66e594111d0e44fe8ef57d222f1830a7",
+    "prev_sample_token": "d2b3be57f76a43a9a06b56c1ceaa221f",
+    "next_sample_token": "2a21a555004043768a6da4f645f67896",
+    "timestamp": 1535730401947814,
+    "query_id": "position_v1",
+    "query_type": "position",
+    "query_text": "Where is the nearest vehicle (excluding vehicle.bicycle, vehicle.motorcycle) ahead within 40 meters and 35 degrees of the forward axis, beyond 0 meters forward relative to you? Answer only one of FRONT_LEFT, FRONT, FRONT_RIGHT; lateral boundaries in meters: [-2.0, 2.0] (x right).",
+    "ground_truth": "FRONT_LEFT",
+    "dependency_instance_tokens": [
+      "d3a5b6a955864d8cb608f66d8282dce7"
+    ],
+    "dependency_attributes": {
+      "annotation_token": "c4b1253d46ad4ce5afdcb97f71c708fc",
+      "instance_token": "d3a5b6a955864d8cb608f66d8282dce7",
+      "category": "vehicle.car",
+      "position_lidar_m": [
+        -4.830646838981114,
+        9.799826697273756,
+        -0.5427106476937622
+      ],
+      "position_label": "FRONT_LEFT",
+      "selection_rule": "nearest_in_scope_vehicle_then_instance_token",
+      "sensor_points": 186
+    },
+    "dependency_signature": [
+      "d3a5b6a955864d8cb608f66d8282dce7",
+      "FRONT_LEFT"
+    ],
+    "state_facts": {
+      "selected_vehicle": "d3a5b6a955864d8cb608f66d8282dce7",
+      "position:d3a5b6a955864d8cb608f66d8282dce7": "FRONT_LEFT"
+    },
+    "image_paths": [
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT/n008-2018-08-31-11-37-23-0400__CAM_FRONT__1535730401912404.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_LEFT/n008-2018-08-31-11-37-23-0400__CAM_FRONT_LEFT__1535730401904799.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_RIGHT/n008-2018-08-31-11-37-23-0400__CAM_FRONT_RIGHT__1535730401920482.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_LEFT/n008-2018-08-31-11-37-23-0400__CAM_BACK_LEFT__1535730401947405.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_RIGHT/n008-2018-08-31-11-37-23-0400__CAM_BACK_RIGHT__1535730401928113.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK/n008-2018-08-31-11-37-23-0400__CAM_BACK__1535730401937739.jpg"
+    ],
+    "input_protocol": {
+      "version": "nuscenes_senna_v2",
+      "camera_order": [
+        "CAM_FRONT",
+        "CAM_FRONT_LEFT",
+        "CAM_FRONT_RIGHT",
+        "CAM_BACK_LEFT",
+        "CAM_BACK_RIGHT",
+        "CAM_BACK"
+      ],
+      "legacy_camera_order": false,
+      "legacy_navigation": false,
+      "navigation_source": "none",
+      "future_label_in_prompt": false
+    },
+    "offline_ground_truth": {},
+    "record_id": "e83f04c6dc0b1117d2e95c7a",
+    "sequence_id": "scene-0559_5_fixed_position",
+    "sequence_length": 5,
+    "workload": "fixed",
+    "frame_index": 1,
+    "scene_name": "scene-0559"
+  },
+  {
+    "scene_token": "0e7ede02718341558414865d5c604745",
+    "sample_token": "2a21a555004043768a6da4f645f67896",
+    "prev_sample_token": "66e594111d0e44fe8ef57d222f1830a7",
+    "next_sample_token": "4ffbb8951b9841429bfd3aee39c6a2be",
+    "timestamp": 1535730402448243,
+    "query_id": "position_v1",
+    "query_type": "position",
+    "query_text": "Where is the nearest vehicle (excluding vehicle.bicycle, vehicle.motorcycle) ahead within 40 meters and 35 degrees of the forward axis, beyond 0 meters forward relative to you? Answer only one of FRONT_LEFT, FRONT, FRONT_RIGHT; lateral boundaries in meters: [-2.0, 2.0] (x right).",
+    "ground_truth": "FRONT_RIGHT",
+    "dependency_instance_tokens": [
+      "fe7d95b5c2bd4aabae3e36495cd95d21"
+    ],
+    "dependency_attributes": {
+      "annotation_token": "8408c173be0e4a69b19f06805a9cb51d",
+      "instance_token": "fe7d95b5c2bd4aabae3e36495cd95d21",
+      "category": "vehicle.bus.rigid",
+      "position_lidar_m": [
+        3.527092266114132,
+        18.715703776102757,
+        0.47980078919145935
+      ],
+      "position_label": "FRONT_RIGHT",
+      "selection_rule": "nearest_in_scope_vehicle_then_instance_token",
+      "sensor_points": 188
+    },
+    "dependency_signature": [
+      "fe7d95b5c2bd4aabae3e36495cd95d21",
+      "FRONT_RIGHT"
+    ],
+    "state_facts": {
+      "selected_vehicle": "fe7d95b5c2bd4aabae3e36495cd95d21",
+      "position:fe7d95b5c2bd4aabae3e36495cd95d21": "FRONT_RIGHT"
+    },
+    "image_paths": [
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT/n008-2018-08-31-11-37-23-0400__CAM_FRONT__1535730402412404.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_LEFT/n008-2018-08-31-11-37-23-0400__CAM_FRONT_LEFT__1535730402404799.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_RIGHT/n008-2018-08-31-11-37-23-0400__CAM_FRONT_RIGHT__1535730402420482.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_LEFT/n008-2018-08-31-11-37-23-0400__CAM_BACK_LEFT__1535730402447405.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_RIGHT/n008-2018-08-31-11-37-23-0400__CAM_BACK_RIGHT__1535730402428113.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK/n008-2018-08-31-11-37-23-0400__CAM_BACK__1535730402437558.jpg"
+    ],
+    "input_protocol": {
+      "version": "nuscenes_senna_v2",
+      "camera_order": [
+        "CAM_FRONT",
+        "CAM_FRONT_LEFT",
+        "CAM_FRONT_RIGHT",
+        "CAM_BACK_LEFT",
+        "CAM_BACK_RIGHT",
+        "CAM_BACK"
+      ],
+      "legacy_camera_order": false,
+      "legacy_navigation": false,
+      "navigation_source": "none",
+      "future_label_in_prompt": false
+    },
+    "offline_ground_truth": {},
+    "record_id": "87cb8c7ec4e0abdc8a038542",
+    "sequence_id": "scene-0559_5_fixed_position",
+    "sequence_length": 5,
+    "workload": "fixed",
+    "frame_index": 2,
+    "scene_name": "scene-0559"
+  },
+  {
+    "scene_token": "0e7ede02718341558414865d5c604745",
+    "sample_token": "4ffbb8951b9841429bfd3aee39c6a2be",
+    "prev_sample_token": "2a21a555004043768a6da4f645f67896",
+    "next_sample_token": "9229caee2885435ebf71e46d997e7070",
+    "timestamp": 1535730402948746,
+    "query_id": "position_v1",
+    "query_type": "position",
+    "query_text": "Where is the nearest vehicle (excluding vehicle.bicycle, vehicle.motorcycle) ahead within 40 meters and 35 degrees of the forward axis, beyond 0 meters forward relative to you? Answer only one of FRONT_LEFT, FRONT, FRONT_RIGHT; lateral boundaries in meters: [-2.0, 2.0] (x right).",
+    "ground_truth": "FRONT_RIGHT",
+    "dependency_instance_tokens": [
+      "fe7d95b5c2bd4aabae3e36495cd95d21"
+    ],
+    "dependency_attributes": {
+      "annotation_token": "012d1def975945648d48f90f16fafe8f",
+      "instance_token": "fe7d95b5c2bd4aabae3e36495cd95d21",
+      "category": "vehicle.bus.rigid",
+      "position_lidar_m": [
+        3.4965066656898296,
+        18.94684024662243,
+        0.5136005748513933
+      ],
+      "position_label": "FRONT_RIGHT",
+      "selection_rule": "nearest_in_scope_vehicle_then_instance_token",
+      "sensor_points": 187
+    },
+    "dependency_signature": [
+      "fe7d95b5c2bd4aabae3e36495cd95d21",
+      "FRONT_RIGHT"
+    ],
+    "state_facts": {
+      "selected_vehicle": "fe7d95b5c2bd4aabae3e36495cd95d21",
+      "position:fe7d95b5c2bd4aabae3e36495cd95d21": "FRONT_RIGHT"
+    },
+    "image_paths": [
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT/n008-2018-08-31-11-37-23-0400__CAM_FRONT__1535730402912404.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_LEFT/n008-2018-08-31-11-37-23-0400__CAM_FRONT_LEFT__1535730402904799.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_RIGHT/n008-2018-08-31-11-37-23-0400__CAM_FRONT_RIGHT__1535730402920482.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_LEFT/n008-2018-08-31-11-37-23-0400__CAM_BACK_LEFT__1535730402947412.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_RIGHT/n008-2018-08-31-11-37-23-0400__CAM_BACK_RIGHT__1535730402928113.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK/n008-2018-08-31-11-37-23-0400__CAM_BACK__1535730402937558.jpg"
+    ],
+    "input_protocol": {
+      "version": "nuscenes_senna_v2",
+      "camera_order": [
+        "CAM_FRONT",
+        "CAM_FRONT_LEFT",
+        "CAM_FRONT_RIGHT",
+        "CAM_BACK_LEFT",
+        "CAM_BACK_RIGHT",
+        "CAM_BACK"
+      ],
+      "legacy_camera_order": false,
+      "legacy_navigation": false,
+      "navigation_source": "none",
+      "future_label_in_prompt": false
+    },
+    "offline_ground_truth": {},
+    "record_id": "b08cdf98927da09aa5d3997e",
+    "sequence_id": "scene-0559_5_fixed_position",
+    "sequence_length": 5,
+    "workload": "fixed",
+    "frame_index": 3,
+    "scene_name": "scene-0559"
+  },
+  {
+    "scene_token": "0e7ede02718341558414865d5c604745",
+    "sample_token": "9229caee2885435ebf71e46d997e7070",
+    "prev_sample_token": "4ffbb8951b9841429bfd3aee39c6a2be",
+    "next_sample_token": "2e3b7f9ff9ea40e883ba169c575e1283",
+    "timestamp": 1535730403399332,
+    "query_id": "position_v1",
+    "query_type": "position",
+    "query_text": "Where is the nearest vehicle (excluding vehicle.bicycle, vehicle.motorcycle) ahead within 40 meters and 35 degrees of the forward axis, beyond 0 meters forward relative to you? Answer only one of FRONT_LEFT, FRONT, FRONT_RIGHT; lateral boundaries in meters: [-2.0, 2.0] (x right).",
+    "ground_truth": "FRONT_RIGHT",
+    "dependency_instance_tokens": [
+      "fe7d95b5c2bd4aabae3e36495cd95d21"
+    ],
+    "dependency_attributes": {
+      "annotation_token": "b6e2debd3df646e581d065d53e8e742e",
+      "instance_token": "fe7d95b5c2bd4aabae3e36495cd95d21",
+      "category": "vehicle.bus.rigid",
+      "position_lidar_m": [
+        3.4836723715806506,
+        19.1184337166512,
+        0.5527499622622329
+      ],
+      "position_label": "FRONT_RIGHT",
+      "selection_rule": "nearest_in_scope_vehicle_then_instance_token",
+      "sensor_points": 207
+    },
+    "dependency_signature": [
+      "fe7d95b5c2bd4aabae3e36495cd95d21",
+      "FRONT_RIGHT"
+    ],
+    "state_facts": {
+      "selected_vehicle": "fe7d95b5c2bd4aabae3e36495cd95d21",
+      "position:fe7d95b5c2bd4aabae3e36495cd95d21": "FRONT_RIGHT"
+    },
+    "image_paths": [
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT/n008-2018-08-31-11-37-23-0400__CAM_FRONT__1535730403362404.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_LEFT/n008-2018-08-31-11-37-23-0400__CAM_FRONT_LEFT__1535730403354799.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_RIGHT/n008-2018-08-31-11-37-23-0400__CAM_FRONT_RIGHT__1535730403370482.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_LEFT/n008-2018-08-31-11-37-23-0400__CAM_BACK_LEFT__1535730403397405.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_RIGHT/n008-2018-08-31-11-37-23-0400__CAM_BACK_RIGHT__1535730403378113.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK/n008-2018-08-31-11-37-23-0400__CAM_BACK__1535730403387558.jpg"
+    ],
+    "input_protocol": {
+      "version": "nuscenes_senna_v2",
+      "camera_order": [
+        "CAM_FRONT",
+        "CAM_FRONT_LEFT",
+        "CAM_FRONT_RIGHT",
+        "CAM_BACK_LEFT",
+        "CAM_BACK_RIGHT",
+        "CAM_BACK"
+      ],
+      "legacy_camera_order": false,
+      "legacy_navigation": false,
+      "navigation_source": "none",
+      "future_label_in_prompt": false
+    },
+    "offline_ground_truth": {},
+    "record_id": "8341c6758ae0775acab5019b",
+    "sequence_id": "scene-0559_5_fixed_position",
+    "sequence_length": 5,
+    "workload": "fixed",
+    "frame_index": 4,
+    "scene_name": "scene-0559"
+  },
+  {
+    "scene_token": "0e7ede02718341558414865d5c604745",
+    "sample_token": "d2b3be57f76a43a9a06b56c1ceaa221f",
+    "prev_sample_token": "029af235f15d4f6f80713b778edc3c61",
+    "next_sample_token": "66e594111d0e44fe8ef57d222f1830a7",
+    "timestamp": 1535730401446845,
+    "query_id": "motion_prediction_v1",
+    "query_type": "motion_prediction",
+    "query_text": "You are driving, I will now provide you with the location and velocity information of dynamic objects in the front view image. Please predict their future driving behaviors, which can be divided into SPEED decisions and PATH decisions. SPEED includes KEEP, ACCELERATE, DECELERATE, and STOP, while PATH includes STRAIGHT, RIGHT_CHANGE, LEFT_CHANGE, RIGHT_TURN, and LEFT_TURN. I will now provide you with the position and velocity information of the dynamic objects: \nObject 1: vehicle, 5 meters ahead, 3 meters to the left, speed of 0 m/s.\nPlease predict the future driving behaviors of these objects based on the front view image. Answer only Object 1: SPEED, PATH.",
+    "ground_truth": "Object 1: STOP, STRAIGHT",
+    "dependency_instance_tokens": [
+      "509727ab37f744d8bf765134fc25af7d"
+    ],
+    "dependency_attributes": {
+      "annotation_token": "60c8b295809d4df4b6b7e5d019ef0a25",
+      "instance_token": "509727ab37f744d8bf765134fc25af7d",
+      "category": "vehicle.car",
+      "position_lidar_m": [
+        -3.8896487936202506,
+        5.96394897715951,
+        -0.6361722110998345
+      ],
+      "position_label": "FRONT_LEFT",
+      "selection_rule": "nearest_in_scope_vehicle_then_instance_token",
+      "sensor_points": 857,
+      "current_speed_mps": 0.23935398329219781,
+      "current_motion_state_bin": 0,
+      "prediction_label": "STOP, STRAIGHT",
+      "velocity_source": "previous_annotation_only"
+    },
+    "dependency_signature": [
+      "509727ab37f744d8bf765134fc25af7d",
+      0,
+      "STOP, STRAIGHT"
+    ],
+    "state_facts": {
+      "selected_vehicle": "509727ab37f744d8bf765134fc25af7d",
+      "motion_bin:509727ab37f744d8bf765134fc25af7d": 0,
+      "oracle_prediction:509727ab37f744d8bf765134fc25af7d": "STOP, STRAIGHT"
+    },
+    "image_paths": [
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT/n008-2018-08-31-11-37-23-0400__CAM_FRONT__1535730401412404.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_LEFT/n008-2018-08-31-11-37-23-0400__CAM_FRONT_LEFT__1535730401404799.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_RIGHT/n008-2018-08-31-11-37-23-0400__CAM_FRONT_RIGHT__1535730401420482.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_LEFT/n008-2018-08-31-11-37-23-0400__CAM_BACK_LEFT__1535730401447415.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_RIGHT/n008-2018-08-31-11-37-23-0400__CAM_BACK_RIGHT__1535730401428113.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK/n008-2018-08-31-11-37-23-0400__CAM_BACK__1535730401437558.jpg"
+    ],
+    "input_protocol": {
+      "version": "nuscenes_senna_v2",
+      "camera_order": [
+        "CAM_FRONT",
+        "CAM_FRONT_LEFT",
+        "CAM_FRONT_RIGHT",
+        "CAM_BACK_LEFT",
+        "CAM_BACK_RIGHT",
+        "CAM_BACK"
+      ],
+      "legacy_camera_order": false,
+      "legacy_navigation": false,
+      "navigation_source": "none",
+      "future_label_in_prompt": false
+    },
+    "offline_ground_truth": {
+      "future_annotation_tokens": [
+        "c17160d0f8a5460380c196ab884bfe4a",
+        "fb7c961bef8e41e9896a5b5c08ab2204",
+        "dec5d20fbfeb4bfb9153090f016b827c",
+        "f9c48b63ae194ecc8ff6b939b640efbe",
+        "33506666f9914229b3b6bbcd803fc614",
+        "ac3992262a0a4c3a86d84f4cc16cceaa"
+      ],
+      "future_timestamps": [
+        1535730401947814,
+        1535730402448243,
+        1535730402948746,
+        1535730403399332,
+        1535730403949527,
+        1535730404449401
+      ],
+      "future_global_positions": [
+        [
+          1345.516,
+          1108.724,
+          0.92
+        ],
+        [
+          1345.745,
+          1109.034,
+          1.014
+        ],
+        [
+          1345.721,
+          1109.048,
+          1.141
+        ],
+        [
+          1345.711,
+          1109.051,
+          1.156
+        ],
+        [
+          1345.676,
+          1109.063,
+          1.281
+        ],
+        [
+          1345.723,
+          1109.004,
+          1.486
+        ]
+      ],
+      "future_object_local_positions": [
+        [
+          0.04845009893069447,
+          -0.9608793917584941
+        ],
+        [
+          0.0479272621848277,
+          -0.5802270585499022
+        ],
+        [
+          0.01993173667271423,
+          -0.58910836124128
+        ],
+        [
+          0.010063835466643673,
+          -0.5933316634481106
+        ],
+        [
+          -0.025579938650276902,
+          -0.6102601877502661
+        ],
+        [
+          0.04668681460719796,
+          -0.639210109054463
+        ]
+      ]
+    },
+    "record_id": "23d53db4ab65fac6054ff406",
+    "sequence_id": "scene-0559_5_fixed_motion_prediction",
+    "sequence_length": 5,
+    "workload": "fixed",
+    "frame_index": 0,
+    "scene_name": "scene-0559"
+  },
+  {
+    "scene_token": "0e7ede02718341558414865d5c604745",
+    "sample_token": "66e594111d0e44fe8ef57d222f1830a7",
+    "prev_sample_token": "d2b3be57f76a43a9a06b56c1ceaa221f",
+    "next_sample_token": "2a21a555004043768a6da4f645f67896",
+    "timestamp": 1535730401947814,
+    "query_id": "motion_prediction_v1",
+    "query_type": "motion_prediction",
+    "query_text": "You are driving, I will now provide you with the location and velocity information of dynamic objects in the front view image. Please predict their future driving behaviors, which can be divided into SPEED decisions and PATH decisions. SPEED includes KEEP, ACCELERATE, DECELERATE, and STOP, while PATH includes STRAIGHT, RIGHT_CHANGE, LEFT_CHANGE, RIGHT_TURN, and LEFT_TURN. I will now provide you with the position and velocity information of the dynamic objects: \nObject 1: vehicle, 9 meters ahead, 4 meters to the left, speed of 0 m/s.\nPlease predict the future driving behaviors of these objects based on the front view image. Answer only Object 1: SPEED, PATH.",
+    "ground_truth": "Object 1: STOP, STRAIGHT",
+    "dependency_instance_tokens": [
+      "d3a5b6a955864d8cb608f66d8282dce7"
+    ],
+    "dependency_attributes": {
+      "annotation_token": "c4b1253d46ad4ce5afdcb97f71c708fc",
+      "instance_token": "d3a5b6a955864d8cb608f66d8282dce7",
+      "category": "vehicle.car",
+      "position_lidar_m": [
+        -4.830646838981114,
+        9.799826697273756,
+        -0.5427106476937622
+      ],
+      "position_label": "FRONT_LEFT",
+      "selection_rule": "nearest_in_scope_vehicle_then_instance_token",
+      "sensor_points": 186,
+      "current_speed_mps": 0.04732136955022595,
+      "current_motion_state_bin": 0,
+      "prediction_label": "STOP, STRAIGHT",
+      "velocity_source": "previous_annotation_only"
+    },
+    "dependency_signature": [
+      "d3a5b6a955864d8cb608f66d8282dce7",
+      0,
+      "STOP, STRAIGHT"
+    ],
+    "state_facts": {
+      "selected_vehicle": "d3a5b6a955864d8cb608f66d8282dce7",
+      "motion_bin:d3a5b6a955864d8cb608f66d8282dce7": 0,
+      "oracle_prediction:d3a5b6a955864d8cb608f66d8282dce7": "STOP, STRAIGHT"
+    },
+    "image_paths": [
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT/n008-2018-08-31-11-37-23-0400__CAM_FRONT__1535730401912404.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_LEFT/n008-2018-08-31-11-37-23-0400__CAM_FRONT_LEFT__1535730401904799.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_RIGHT/n008-2018-08-31-11-37-23-0400__CAM_FRONT_RIGHT__1535730401920482.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_LEFT/n008-2018-08-31-11-37-23-0400__CAM_BACK_LEFT__1535730401947405.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_RIGHT/n008-2018-08-31-11-37-23-0400__CAM_BACK_RIGHT__1535730401928113.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK/n008-2018-08-31-11-37-23-0400__CAM_BACK__1535730401937739.jpg"
+    ],
+    "input_protocol": {
+      "version": "nuscenes_senna_v2",
+      "camera_order": [
+        "CAM_FRONT",
+        "CAM_FRONT_LEFT",
+        "CAM_FRONT_RIGHT",
+        "CAM_BACK_LEFT",
+        "CAM_BACK_RIGHT",
+        "CAM_BACK"
+      ],
+      "legacy_camera_order": false,
+      "legacy_navigation": false,
+      "navigation_source": "none",
+      "future_label_in_prompt": false
+    },
+    "offline_ground_truth": {
+      "future_annotation_tokens": [
+        "6dae7ffdb1904a47a170f087b3e1dd4c",
+        "12ae59213ec24d1a8920916772da2243",
+        "98be9a7b5a654d889f2166cc75437cc2",
+        "ebf6fa600cff4e468109f960a49579cb",
+        "08900a81c58b447298e4ddbdbfe53c6c",
+        "19a69deb7e9b436fbeacc872b00c0216"
+      ],
+      "future_timestamps": [
+        1535730402448243,
+        1535730402948746,
+        1535730403399332,
+        1535730403949527,
+        1535730404449401,
+        1535730404949315
+      ],
+      "future_global_positions": [
+        [
+          1349.626,
+          1115.218,
+          0.745
+        ],
+        [
+          1349.636,
+          1115.239,
+          0.782
+        ],
+        [
+          1349.619,
+          1115.204,
+          0.899
+        ],
+        [
+          1349.598,
+          1115.163,
+          1.042
+        ],
+        [
+          1349.58,
+          1115.125,
+          1.172
+        ],
+        [
+          1349.589,
+          1115.152,
+          1.352
+        ]
+      ],
+      "future_object_local_positions": [
+        [
+          0.007078652967384192,
+          -0.8781733810145409
+        ],
+        [
+          0.008188002693172613,
+          -0.8566814636680598
+        ],
+        [
+          0.005503423096372839,
+          -0.900888410532843
+        ],
+        [
+          0.0013377262230097296,
+          -0.9533626403881522
+        ],
+        [
+          -0.0011632702376828893,
+          -1.0013217234413923
+        ],
+        [
+          -0.003692581841333023,
+          -0.9812830673727799
+        ]
+      ]
+    },
+    "record_id": "a5707a65564f2b30806bfcaa",
+    "sequence_id": "scene-0559_5_fixed_motion_prediction",
+    "sequence_length": 5,
+    "workload": "fixed",
+    "frame_index": 1,
+    "scene_name": "scene-0559"
+  },
+  {
+    "scene_token": "0e7ede02718341558414865d5c604745",
+    "sample_token": "2a21a555004043768a6da4f645f67896",
+    "prev_sample_token": "66e594111d0e44fe8ef57d222f1830a7",
+    "next_sample_token": "4ffbb8951b9841429bfd3aee39c6a2be",
+    "timestamp": 1535730402448243,
+    "query_id": "motion_prediction_v1",
+    "query_type": "motion_prediction",
+    "query_text": "You are driving, I will now provide you with the location and velocity information of dynamic objects in the front view image. Please predict their future driving behaviors, which can be divided into SPEED decisions and PATH decisions. SPEED includes KEEP, ACCELERATE, DECELERATE, and STOP, while PATH includes STRAIGHT, RIGHT_CHANGE, LEFT_CHANGE, RIGHT_TURN, and LEFT_TURN. I will now provide you with the position and velocity information of the dynamic objects: \nObject 1: vehicle, 18 meters ahead, 3 meters to the right, speed of 8 m/s.\nPlease predict the future driving behaviors of these objects based on the front view image. Answer only Object 1: SPEED, PATH.",
+    "ground_truth": "Object 1: KEEP, STRAIGHT",
+    "dependency_instance_tokens": [
+      "fe7d95b5c2bd4aabae3e36495cd95d21"
+    ],
+    "dependency_attributes": {
+      "annotation_token": "8408c173be0e4a69b19f06805a9cb51d",
+      "instance_token": "fe7d95b5c2bd4aabae3e36495cd95d21",
+      "category": "vehicle.bus.rigid",
+      "position_lidar_m": [
+        3.527092266114132,
+        18.715703776102757,
+        0.47980078919145935
+      ],
+      "position_label": "FRONT_RIGHT",
+      "selection_rule": "nearest_in_scope_vehicle_then_instance_token",
+      "sensor_points": 188,
+      "current_speed_mps": 8.701995668802988,
+      "current_motion_state_bin": 3,
+      "prediction_label": "KEEP, STRAIGHT",
+      "velocity_source": "previous_annotation_only"
+    },
+    "dependency_signature": [
+      "fe7d95b5c2bd4aabae3e36495cd95d21",
+      3,
+      "KEEP, STRAIGHT"
+    ],
+    "state_facts": {
+      "selected_vehicle": "fe7d95b5c2bd4aabae3e36495cd95d21",
+      "motion_bin:fe7d95b5c2bd4aabae3e36495cd95d21": 3,
+      "oracle_prediction:fe7d95b5c2bd4aabae3e36495cd95d21": "KEEP, STRAIGHT"
+    },
+    "image_paths": [
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT/n008-2018-08-31-11-37-23-0400__CAM_FRONT__1535730402412404.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_LEFT/n008-2018-08-31-11-37-23-0400__CAM_FRONT_LEFT__1535730402404799.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_RIGHT/n008-2018-08-31-11-37-23-0400__CAM_FRONT_RIGHT__1535730402420482.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_LEFT/n008-2018-08-31-11-37-23-0400__CAM_BACK_LEFT__1535730402447405.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_RIGHT/n008-2018-08-31-11-37-23-0400__CAM_BACK_RIGHT__1535730402428113.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK/n008-2018-08-31-11-37-23-0400__CAM_BACK__1535730402437558.jpg"
+    ],
+    "input_protocol": {
+      "version": "nuscenes_senna_v2",
+      "camera_order": [
+        "CAM_FRONT",
+        "CAM_FRONT_LEFT",
+        "CAM_FRONT_RIGHT",
+        "CAM_BACK_LEFT",
+        "CAM_BACK_RIGHT",
+        "CAM_BACK"
+      ],
+      "legacy_camera_order": false,
+      "legacy_navigation": false,
+      "navigation_source": "none",
+      "future_label_in_prompt": false
+    },
+    "offline_ground_truth": {
+      "future_annotation_tokens": [
+        "012d1def975945648d48f90f16fafe8f",
+        "b6e2debd3df646e581d065d53e8e742e",
+        "791bc15c69f941978b04f611060d97ea",
+        "d9dd02a8b3a7456e98f85e83768505ec",
+        "76a285690875456299d8745e91b0e23c",
+        "4bb37e259c0d4de6bd798c682a8714d1"
+      ],
+      "future_timestamps": [
+        1535730402948746,
+        1535730403399332,
+        1535730403949527,
+        1535730404449401,
+        1535730404949315,
+        1535730405449179
+      ],
+      "future_global_positions": [
+        [
+          1366.718,
+          1122.666,
+          0.825
+        ],
+        [
+          1369.072,
+          1125.212,
+          0.643
+        ],
+        [
+          1371.585,
+          1128.119,
+          0.693
+        ],
+        [
+          1373.75,
+          1130.53,
+          0.738
+        ],
+        [
+          1375.915,
+          1132.941,
+          0.784
+        ],
+        [
+          1377.781,
+          1135.021,
+          0.829
+        ]
+      ],
+      "future_object_local_positions": [
+        [
+          0.0896956395679776,
+          2.9591385833962116
+        ],
+        [
+          0.31417724826385,
+          6.424065090743336
+        ],
+        [
+          0.434003048684125,
+          10.258388812496705
+        ],
+        [
+          0.5960997342493842,
+          13.489155201234778
+        ],
+        [
+          0.7581934667392946,
+          16.719875359098683
+        ],
+        [
+          0.8966414579150199,
+          19.50569701797761
+        ]
+      ]
+    },
+    "record_id": "35cf423cd0499936e1947c21",
+    "sequence_id": "scene-0559_5_fixed_motion_prediction",
+    "sequence_length": 5,
+    "workload": "fixed",
+    "frame_index": 2,
+    "scene_name": "scene-0559"
+  },
+  {
+    "scene_token": "0e7ede02718341558414865d5c604745",
+    "sample_token": "4ffbb8951b9841429bfd3aee39c6a2be",
+    "prev_sample_token": "2a21a555004043768a6da4f645f67896",
+    "next_sample_token": "9229caee2885435ebf71e46d997e7070",
+    "timestamp": 1535730402948746,
+    "query_id": "motion_prediction_v1",
+    "query_type": "motion_prediction",
+    "query_text": "You are driving, I will now provide you with the location and velocity information of dynamic objects in the front view image. Please predict their future driving behaviors, which can be divided into SPEED decisions and PATH decisions. SPEED includes KEEP, ACCELERATE, DECELERATE, and STOP, while PATH includes STRAIGHT, RIGHT_CHANGE, LEFT_CHANGE, RIGHT_TURN, and LEFT_TURN. I will now provide you with the position and velocity information of the dynamic objects: \nObject 1: vehicle, 18 meters ahead, 3 meters to the right, speed of 7 m/s.\nPlease predict the future driving behaviors of these objects based on the front view image. Answer only Object 1: SPEED, PATH.",
+    "ground_truth": "Object 1: KEEP, STRAIGHT",
+    "dependency_instance_tokens": [
+      "fe7d95b5c2bd4aabae3e36495cd95d21"
+    ],
+    "dependency_attributes": {
+      "annotation_token": "012d1def975945648d48f90f16fafe8f",
+      "instance_token": "fe7d95b5c2bd4aabae3e36495cd95d21",
+      "category": "vehicle.bus.rigid",
+      "position_lidar_m": [
+        3.4965066656898296,
+        18.94684024662243,
+        0.5136005748513933
+      ],
+      "position_label": "FRONT_RIGHT",
+      "selection_rule": "nearest_in_scope_vehicle_then_instance_token",
+      "sensor_points": 187,
+      "current_speed_mps": 7.71160789951023,
+      "current_motion_state_bin": 3,
+      "prediction_label": "KEEP, STRAIGHT",
+      "velocity_source": "previous_annotation_only"
+    },
+    "dependency_signature": [
+      "fe7d95b5c2bd4aabae3e36495cd95d21",
+      3,
+      "KEEP, STRAIGHT"
+    ],
+    "state_facts": {
+      "selected_vehicle": "fe7d95b5c2bd4aabae3e36495cd95d21",
+      "motion_bin:fe7d95b5c2bd4aabae3e36495cd95d21": 3,
+      "oracle_prediction:fe7d95b5c2bd4aabae3e36495cd95d21": "KEEP, STRAIGHT"
+    },
+    "image_paths": [
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT/n008-2018-08-31-11-37-23-0400__CAM_FRONT__1535730402912404.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_LEFT/n008-2018-08-31-11-37-23-0400__CAM_FRONT_LEFT__1535730402904799.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_RIGHT/n008-2018-08-31-11-37-23-0400__CAM_FRONT_RIGHT__1535730402920482.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_LEFT/n008-2018-08-31-11-37-23-0400__CAM_BACK_LEFT__1535730402947412.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_RIGHT/n008-2018-08-31-11-37-23-0400__CAM_BACK_RIGHT__1535730402928113.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK/n008-2018-08-31-11-37-23-0400__CAM_BACK__1535730402937558.jpg"
+    ],
+    "input_protocol": {
+      "version": "nuscenes_senna_v2",
+      "camera_order": [
+        "CAM_FRONT",
+        "CAM_FRONT_LEFT",
+        "CAM_FRONT_RIGHT",
+        "CAM_BACK_LEFT",
+        "CAM_BACK_RIGHT",
+        "CAM_BACK"
+      ],
+      "legacy_camera_order": false,
+      "legacy_navigation": false,
+      "navigation_source": "none",
+      "future_label_in_prompt": false
+    },
+    "offline_ground_truth": {
+      "future_annotation_tokens": [
+        "b6e2debd3df646e581d065d53e8e742e",
+        "791bc15c69f941978b04f611060d97ea",
+        "d9dd02a8b3a7456e98f85e83768505ec",
+        "76a285690875456299d8745e91b0e23c",
+        "4bb37e259c0d4de6bd798c682a8714d1",
+        "b55a9bddb02744388d2633c7ce2f3c55"
+      ],
+      "future_timestamps": [
+        1535730403399332,
+        1535730403949527,
+        1535730404449401,
+        1535730404949315,
+        1535730405449179,
+        1535730405948483
+      ],
+      "future_global_positions": [
+        [
+          1369.072,
+          1125.212,
+          0.643
+        ],
+        [
+          1371.585,
+          1128.119,
+          0.693
+        ],
+        [
+          1373.75,
+          1130.53,
+          0.738
+        ],
+        [
+          1375.915,
+          1132.941,
+          0.784
+        ],
+        [
+          1377.781,
+          1135.021,
+          0.829
+        ],
+        [
+          1379.567,
+          1136.901,
+          0.874
+        ]
+      ],
+      "future_object_local_positions": [
+        [
+          0.23045091193755507,
+          2.565261208985893
+        ],
+        [
+          0.3502767123578304,
+          6.399584930739258
+        ],
+        [
+          0.5123733979230887,
+          9.630351319477334
+        ],
+        [
+          0.6744671304129992,
+          12.86107147734124
+        ],
+        [
+          0.8129151215887255,
+          15.64689313622017
+        ],
+        [
+          1.0152459140333596,
+          18.227210323474612
+        ]
+      ]
+    },
+    "record_id": "52b1e16048f2a25b9992f14b",
+    "sequence_id": "scene-0559_5_fixed_motion_prediction",
+    "sequence_length": 5,
+    "workload": "fixed",
+    "frame_index": 3,
+    "scene_name": "scene-0559"
+  },
+  {
+    "scene_token": "0e7ede02718341558414865d5c604745",
+    "sample_token": "9229caee2885435ebf71e46d997e7070",
+    "prev_sample_token": "4ffbb8951b9841429bfd3aee39c6a2be",
+    "next_sample_token": "2e3b7f9ff9ea40e883ba169c575e1283",
+    "timestamp": 1535730403399332,
+    "query_id": "motion_prediction_v1",
+    "query_type": "motion_prediction",
+    "query_text": "You are driving, I will now provide you with the location and velocity information of dynamic objects in the front view image. Please predict their future driving behaviors, which can be divided into SPEED decisions and PATH decisions. SPEED includes KEEP, ACCELERATE, DECELERATE, and STOP, while PATH includes STRAIGHT, RIGHT_CHANGE, LEFT_CHANGE, RIGHT_TURN, and LEFT_TURN. I will now provide you with the position and velocity information of the dynamic objects: \nObject 1: vehicle, 19 meters ahead, 3 meters to the right, speed of 7 m/s.\nPlease predict the future driving behaviors of these objects based on the front view image. Answer only Object 1: SPEED, PATH.",
+    "ground_truth": "Object 1: KEEP, STRAIGHT",
+    "dependency_instance_tokens": [
+      "fe7d95b5c2bd4aabae3e36495cd95d21"
+    ],
+    "dependency_attributes": {
+      "annotation_token": "b6e2debd3df646e581d065d53e8e742e",
+      "instance_token": "fe7d95b5c2bd4aabae3e36495cd95d21",
+      "category": "vehicle.bus.rigid",
+      "position_lidar_m": [
+        3.4836723715806506,
+        19.1184337166512,
+        0.5527499622622329
+      ],
+      "position_label": "FRONT_RIGHT",
+      "selection_rule": "nearest_in_scope_vehicle_then_instance_token",
+      "sensor_points": 207,
+      "current_speed_mps": 7.695494497359806,
+      "current_motion_state_bin": 3,
+      "prediction_label": "KEEP, STRAIGHT",
+      "velocity_source": "previous_annotation_only"
+    },
+    "dependency_signature": [
+      "fe7d95b5c2bd4aabae3e36495cd95d21",
+      3,
+      "KEEP, STRAIGHT"
+    ],
+    "state_facts": {
+      "selected_vehicle": "fe7d95b5c2bd4aabae3e36495cd95d21",
+      "motion_bin:fe7d95b5c2bd4aabae3e36495cd95d21": 3,
+      "oracle_prediction:fe7d95b5c2bd4aabae3e36495cd95d21": "KEEP, STRAIGHT"
+    },
+    "image_paths": [
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT/n008-2018-08-31-11-37-23-0400__CAM_FRONT__1535730403362404.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_LEFT/n008-2018-08-31-11-37-23-0400__CAM_FRONT_LEFT__1535730403354799.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_RIGHT/n008-2018-08-31-11-37-23-0400__CAM_FRONT_RIGHT__1535730403370482.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_LEFT/n008-2018-08-31-11-37-23-0400__CAM_BACK_LEFT__1535730403397405.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_RIGHT/n008-2018-08-31-11-37-23-0400__CAM_BACK_RIGHT__1535730403378113.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK/n008-2018-08-31-11-37-23-0400__CAM_BACK__1535730403387558.jpg"
+    ],
+    "input_protocol": {
+      "version": "nuscenes_senna_v2",
+      "camera_order": [
+        "CAM_FRONT",
+        "CAM_FRONT_LEFT",
+        "CAM_FRONT_RIGHT",
+        "CAM_BACK_LEFT",
+        "CAM_BACK_RIGHT",
+        "CAM_BACK"
+      ],
+      "legacy_camera_order": false,
+      "legacy_navigation": false,
+      "navigation_source": "none",
+      "future_label_in_prompt": false
+    },
+    "offline_ground_truth": {
+      "future_annotation_tokens": [
+        "791bc15c69f941978b04f611060d97ea",
+        "d9dd02a8b3a7456e98f85e83768505ec",
+        "76a285690875456299d8745e91b0e23c",
+        "4bb37e259c0d4de6bd798c682a8714d1",
+        "b55a9bddb02744388d2633c7ce2f3c55",
+        "eb1c1ae7c13547ab8a120f09d28701b1"
+      ],
+      "future_timestamps": [
+        1535730403949527,
+        1535730404449401,
+        1535730404949315,
+        1535730405449179,
+        1535730405948483,
+        1535730406448375
+      ],
+      "future_global_positions": [
+        [
+          1371.585,
+          1128.119,
+          0.693
+        ],
+        [
+          1373.75,
+          1130.53,
+          0.738
+        ],
+        [
+          1375.915,
+          1132.941,
+          0.784
+        ],
+        [
+          1377.781,
+          1135.021,
+          0.829
+        ],
+        [
+          1379.567,
+          1136.901,
+          0.874
+        ],
+        [
+          1381.356,
+          1138.783,
+          0.92
+        ]
+      ],
+      "future_object_local_positions": [
+        [
+          -0.07537819713982602,
+          2.9357001299235708
+        ],
+        [
+          -0.08287949164400726,
+          6.170540537076413
+        ],
+        [
+          -0.09038373922353789,
+          9.405334713355089
+        ],
+        [
+          -0.0981897176443171,
+          12.19460063026681
+        ],
+        [
+          -0.03143416265911748,
+          14.781982049662686
+        ],
+        [
+          0.036206370421893945,
+          17.372807886419054
+        ]
+      ]
+    },
+    "record_id": "24080ba6b1e0975a45585224",
+    "sequence_id": "scene-0559_5_fixed_motion_prediction",
+    "sequence_length": 5,
+    "workload": "fixed",
+    "frame_index": 4,
+    "scene_name": "scene-0559"
+  },
+  {
+    "scene_token": "0e7ede02718341558414865d5c604745",
+    "sample_token": "d2b3be57f76a43a9a06b56c1ceaa221f",
+    "prev_sample_token": "029af235f15d4f6f80713b778edc3c61",
+    "next_sample_token": "66e594111d0e44fe8ef57d222f1830a7",
+    "timestamp": 1535730401446845,
+    "query_id": "meta_action_planning_v1",
+    "query_type": "meta_action_planning",
+    "query_text": "Your current speed is 7 m/s, the navigation command is 'go straight', based on the understanding of the driving scene and the navigation information, what is your plan for the next three seconds? Please answer your SPEED plan and your PATH plan. SPEED includes KEEP, ACCELERATE and DECELERATE, and STOP, PATH includes STRAIGHT, RIGHT_CHANGE, LEFT_CHANGE, RIGHT_TURN, LEFT_TURN. For example, a correct answer format is like 'KEEP, LEFT_CHANGE'.",
+    "ground_truth": "KEEP, STRAIGHT",
+    "dependency_instance_tokens": [],
+    "dependency_attributes": {
+      "navigation": "go straight",
+      "current_speed_mps": 7.042087671816096,
+      "current_speed_prompt_mps": 7,
+      "driving_state_bin": 3,
+      "planning_label": "KEEP, STRAIGHT",
+      "navigation_source": "offline_future_route_6s"
+    },
+    "dependency_signature": [
+      "go straight",
+      7,
+      3,
+      "KEEP, STRAIGHT"
+    ],
+    "state_facts": {
+      "navigation": "go straight",
+      "ego_speed_prompt": 7,
+      "driving_state_bin": 3,
+      "oracle_plan": "KEEP, STRAIGHT"
+    },
+    "image_paths": [
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT/n008-2018-08-31-11-37-23-0400__CAM_FRONT__1535730401412404.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_LEFT/n008-2018-08-31-11-37-23-0400__CAM_FRONT_LEFT__1535730401404799.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_RIGHT/n008-2018-08-31-11-37-23-0400__CAM_FRONT_RIGHT__1535730401420482.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_LEFT/n008-2018-08-31-11-37-23-0400__CAM_BACK_LEFT__1535730401447415.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_RIGHT/n008-2018-08-31-11-37-23-0400__CAM_BACK_RIGHT__1535730401428113.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK/n008-2018-08-31-11-37-23-0400__CAM_BACK__1535730401437558.jpg"
+    ],
+    "input_protocol": {
+      "version": "nuscenes_senna_v2",
+      "camera_order": [
+        "CAM_FRONT",
+        "CAM_FRONT_LEFT",
+        "CAM_FRONT_RIGHT",
+        "CAM_BACK_LEFT",
+        "CAM_BACK_RIGHT",
+        "CAM_BACK"
+      ],
+      "legacy_camera_order": false,
+      "legacy_navigation": false,
+      "navigation_source": "offline_future_route_6s",
+      "future_label_in_prompt": false,
+      "navigation_is_offline_future_route_condition": true
+    },
+    "offline_ground_truth": {
+      "future_ego_lidar_positions": [
+        [
+          1.6032354973211124e-14,
+          1.362249213548959e-13,
+          8.130227267199848e-15
+        ],
+        [
+          0.025698280489079264,
+          3.7134988045789843,
+          0.2144147391893604
+        ],
+        [
+          0.03877961770167326,
+          7.545919533483718,
+          0.4323882370133046
+        ],
+        [
+          0.07094128143241439,
+          11.178914333120199,
+          0.641601930860048
+        ],
+        [
+          0.11825291621200776,
+          14.501341760898516,
+          0.8270559082009674
+        ],
+        [
+          0.20828322516419995,
+          18.46679535042685,
+          1.0613953450529865
+        ],
+        [
+          0.28856047715736716,
+          22.1296785278184,
+          1.2682086647770547
+        ]
+      ],
+      "label_source": "official_ego_pose_3s"
+    },
+    "record_id": "3271be45cabc5bd3ded574cc",
+    "sequence_id": "scene-0559_5_fixed_meta_action_planning",
+    "sequence_length": 5,
+    "workload": "fixed",
+    "frame_index": 0,
+    "scene_name": "scene-0559"
+  },
+  {
+    "scene_token": "0e7ede02718341558414865d5c604745",
+    "sample_token": "66e594111d0e44fe8ef57d222f1830a7",
+    "prev_sample_token": "d2b3be57f76a43a9a06b56c1ceaa221f",
+    "next_sample_token": "2a21a555004043768a6da4f645f67896",
+    "timestamp": 1535730401947814,
+    "query_id": "meta_action_planning_v1",
+    "query_type": "meta_action_planning",
+    "query_text": "Your current speed is 7 m/s, the navigation command is 'go straight', based on the understanding of the driving scene and the navigation information, what is your plan for the next three seconds? Please answer your SPEED plan and your PATH plan. SPEED includes KEEP, ACCELERATE and DECELERATE, and STOP, PATH includes STRAIGHT, RIGHT_CHANGE, LEFT_CHANGE, RIGHT_TURN, LEFT_TURN. For example, a correct answer format is like 'KEEP, LEFT_CHANGE'.",
+    "ground_truth": "KEEP, STRAIGHT",
+    "dependency_instance_tokens": [],
+    "dependency_attributes": {
+      "navigation": "go straight",
+      "current_speed_mps": 7.264060821617904,
+      "current_speed_prompt_mps": 7,
+      "driving_state_bin": 3,
+      "planning_label": "KEEP, STRAIGHT",
+      "navigation_source": "offline_future_route_6s"
+    },
+    "dependency_signature": [
+      "go straight",
+      7,
+      3,
+      "KEEP, STRAIGHT"
+    ],
+    "state_facts": {
+      "navigation": "go straight",
+      "ego_speed_prompt": 7,
+      "driving_state_bin": 3,
+      "oracle_plan": "KEEP, STRAIGHT"
+    },
+    "image_paths": [
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT/n008-2018-08-31-11-37-23-0400__CAM_FRONT__1535730401912404.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_LEFT/n008-2018-08-31-11-37-23-0400__CAM_FRONT_LEFT__1535730401904799.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_RIGHT/n008-2018-08-31-11-37-23-0400__CAM_FRONT_RIGHT__1535730401920482.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_LEFT/n008-2018-08-31-11-37-23-0400__CAM_BACK_LEFT__1535730401947405.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_RIGHT/n008-2018-08-31-11-37-23-0400__CAM_BACK_RIGHT__1535730401928113.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK/n008-2018-08-31-11-37-23-0400__CAM_BACK__1535730401937739.jpg"
+    ],
+    "input_protocol": {
+      "version": "nuscenes_senna_v2",
+      "camera_order": [
+        "CAM_FRONT",
+        "CAM_FRONT_LEFT",
+        "CAM_FRONT_RIGHT",
+        "CAM_BACK_LEFT",
+        "CAM_BACK_RIGHT",
+        "CAM_BACK"
+      ],
+      "legacy_camera_order": false,
+      "legacy_navigation": false,
+      "navigation_source": "offline_future_route_6s",
+      "future_label_in_prompt": false,
+      "navigation_is_offline_future_route_condition": true
+    },
+    "offline_ground_truth": {
+      "future_ego_lidar_positions": [
+        [
+          1.08233117247823e-13,
+          5.648668527179802e-15,
+          1.6928038252349063e-15
+        ],
+        [
+          0.017778953969826088,
+          3.8312946937983474,
+          0.2366370396704364
+        ],
+        [
+          0.05439009274356158,
+          7.463183541002909,
+          0.4635709123325627
+        ],
+        [
+          0.10577912421591462,
+          10.784604630045042,
+          0.6652555623712813
+        ],
+        [
+          0.20065751351827676,
+          14.748749845051266,
+          0.9190141178604726
+        ],
+        [
+          0.2854265935094388,
+          18.410475181850025,
+          1.1437609054779396
+        ],
+        [
+          0.3782983917969402,
+          22.041218177716942,
+          1.3760695856307417
+        ]
+      ],
+      "label_source": "official_ego_pose_3s"
+    },
+    "record_id": "66a4319662e23cbda3c6c634",
+    "sequence_id": "scene-0559_5_fixed_meta_action_planning",
+    "sequence_length": 5,
+    "workload": "fixed",
+    "frame_index": 1,
+    "scene_name": "scene-0559"
+  },
+  {
+    "scene_token": "0e7ede02718341558414865d5c604745",
+    "sample_token": "2a21a555004043768a6da4f645f67896",
+    "prev_sample_token": "66e594111d0e44fe8ef57d222f1830a7",
+    "next_sample_token": "4ffbb8951b9841429bfd3aee39c6a2be",
+    "timestamp": 1535730402448243,
+    "query_id": "meta_action_planning_v1",
+    "query_type": "meta_action_planning",
+    "query_text": "Your current speed is 7 m/s, the navigation command is 'go straight', based on the understanding of the driving scene and the navigation information, what is your plan for the next three seconds? Please answer your SPEED plan and your PATH plan. SPEED includes KEEP, ACCELERATE and DECELERATE, and STOP, PATH includes STRAIGHT, RIGHT_CHANGE, LEFT_CHANGE, RIGHT_TURN, LEFT_TURN. For example, a correct answer format is like 'KEEP, LEFT_CHANGE'.",
+    "ground_truth": "KEEP, STRAIGHT",
+    "dependency_instance_tokens": [],
+    "dependency_attributes": {
+      "navigation": "go straight",
+      "current_speed_mps": 7.34331880255625,
+      "current_speed_prompt_mps": 7,
+      "driving_state_bin": 3,
+      "planning_label": "KEEP, STRAIGHT",
+      "navigation_source": "offline_future_route_6s"
+    },
+    "dependency_signature": [
+      "go straight",
+      7,
+      3,
+      "KEEP, STRAIGHT"
+    ],
+    "state_facts": {
+      "navigation": "go straight",
+      "ego_speed_prompt": 7,
+      "driving_state_bin": 3,
+      "oracle_plan": "KEEP, STRAIGHT"
+    },
+    "image_paths": [
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT/n008-2018-08-31-11-37-23-0400__CAM_FRONT__1535730402412404.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_LEFT/n008-2018-08-31-11-37-23-0400__CAM_FRONT_LEFT__1535730402404799.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_RIGHT/n008-2018-08-31-11-37-23-0400__CAM_FRONT_RIGHT__1535730402420482.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_LEFT/n008-2018-08-31-11-37-23-0400__CAM_BACK_LEFT__1535730402447405.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_RIGHT/n008-2018-08-31-11-37-23-0400__CAM_BACK_RIGHT__1535730402428113.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK/n008-2018-08-31-11-37-23-0400__CAM_BACK__1535730402437558.jpg"
+    ],
+    "input_protocol": {
+      "version": "nuscenes_senna_v2",
+      "camera_order": [
+        "CAM_FRONT",
+        "CAM_FRONT_LEFT",
+        "CAM_FRONT_RIGHT",
+        "CAM_BACK_LEFT",
+        "CAM_BACK_RIGHT",
+        "CAM_BACK"
+      ],
+      "legacy_camera_order": false,
+      "legacy_navigation": false,
+      "navigation_source": "offline_future_route_6s",
+      "future_label_in_prompt": false,
+      "navigation_is_offline_future_route_condition": true
+    },
+    "offline_ground_truth": {
+      "future_ego_lidar_positions": [
+        [
+          -5.856219506772248e-14,
+          4.495178229060661e-14,
+          3.0186854515791806e-15
+        ],
+        [
+          0.038475599931736576,
+          3.629918512208623,
+          0.25625608173852915
+        ],
+        [
+          0.09156311317354102,
+          6.9495772399544915,
+          0.48473634038073043
+        ],
+        [
+          0.1884833160237622,
+          10.911498994755851,
+          0.7704373764455898
+        ],
+        [
+          0.27512757860412174,
+          14.571249809599635,
+          1.0246933550047024
+        ],
+        [
+          0.36986933930245436,
+          18.199954626975288,
+          1.286251270126173
+        ],
+        [
+          0.4764812216006646,
+          21.59090238492465,
+          1.526666470912945
+        ]
+      ],
+      "label_source": "official_ego_pose_3s"
+    },
+    "record_id": "7a8f83f2f8caa96278990e93",
+    "sequence_id": "scene-0559_5_fixed_meta_action_planning",
+    "sequence_length": 5,
+    "workload": "fixed",
+    "frame_index": 2,
+    "scene_name": "scene-0559"
+  },
+  {
+    "scene_token": "0e7ede02718341558414865d5c604745",
+    "sample_token": "4ffbb8951b9841429bfd3aee39c6a2be",
+    "prev_sample_token": "2a21a555004043768a6da4f645f67896",
+    "next_sample_token": "9229caee2885435ebf71e46d997e7070",
+    "timestamp": 1535730402948746,
+    "query_id": "meta_action_planning_v1",
+    "query_type": "meta_action_planning",
+    "query_text": "Your current speed is 7 m/s, the navigation command is 'go straight', based on the understanding of the driving scene and the navigation information, what is your plan for the next three seconds? Please answer your SPEED plan and your PATH plan. SPEED includes KEEP, ACCELERATE and DECELERATE, and STOP, PATH includes STRAIGHT, RIGHT_CHANGE, LEFT_CHANGE, RIGHT_TURN, LEFT_TURN. For example, a correct answer format is like 'KEEP, LEFT_CHANGE'.",
+    "ground_truth": "KEEP, STRAIGHT",
+    "dependency_instance_tokens": [],
+    "dependency_attributes": {
+      "navigation": "go straight",
+      "current_speed_mps": 7.306514281306992,
+      "current_speed_prompt_mps": 7,
+      "driving_state_bin": 3,
+      "planning_label": "KEEP, STRAIGHT",
+      "navigation_source": "offline_future_route_6s"
+    },
+    "dependency_signature": [
+      "go straight",
+      7,
+      3,
+      "KEEP, STRAIGHT"
+    ],
+    "state_facts": {
+      "navigation": "go straight",
+      "ego_speed_prompt": 7,
+      "driving_state_bin": 3,
+      "oracle_plan": "KEEP, STRAIGHT"
+    },
+    "image_paths": [
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT/n008-2018-08-31-11-37-23-0400__CAM_FRONT__1535730402912404.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_LEFT/n008-2018-08-31-11-37-23-0400__CAM_FRONT_LEFT__1535730402904799.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_RIGHT/n008-2018-08-31-11-37-23-0400__CAM_FRONT_RIGHT__1535730402920482.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_LEFT/n008-2018-08-31-11-37-23-0400__CAM_BACK_LEFT__1535730402947412.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_RIGHT/n008-2018-08-31-11-37-23-0400__CAM_BACK_RIGHT__1535730402928113.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK/n008-2018-08-31-11-37-23-0400__CAM_BACK__1535730402937558.jpg"
+    ],
+    "input_protocol": {
+      "version": "nuscenes_senna_v2",
+      "camera_order": [
+        "CAM_FRONT",
+        "CAM_FRONT_LEFT",
+        "CAM_FRONT_RIGHT",
+        "CAM_BACK_LEFT",
+        "CAM_BACK_RIGHT",
+        "CAM_BACK"
+      ],
+      "legacy_camera_order": false,
+      "legacy_navigation": false,
+      "navigation_source": "offline_future_route_6s",
+      "future_label_in_prompt": false,
+      "navigation_is_offline_future_route_condition": true
+    },
+    "offline_ground_truth": {
+      "future_ego_lidar_positions": [
+        [
+          2.304530709066874e-14,
+          1.1738240577000177e-13,
+          9.50174956912433e-15
+        ],
+        [
+          0.04566564219963686,
+          3.3185282053312437,
+          0.24584706810334214
+        ],
+        [
+          0.13371562654557562,
+          7.279105458233045,
+          0.5523068908384564
+        ],
+        [
+          0.21217534151935138,
+          10.937658460810646,
+          0.8257357811876398
+        ],
+        [
+          0.2987930037922873,
+          14.565145386714784,
+          1.106312292686926
+        ],
+        [
+          0.39781682993300715,
+          17.955015102670803,
+          1.3645173469733056
+        ],
+        [
+          0.5149595809428876,
+          21.276458121339513,
+          1.6280997616717794
+        ]
+      ],
+      "label_source": "official_ego_pose_3s"
+    },
+    "record_id": "4dfbd1b1d9e8298a800c279a",
+    "sequence_id": "scene-0559_5_fixed_meta_action_planning",
+    "sequence_length": 5,
+    "workload": "fixed",
+    "frame_index": 3,
+    "scene_name": "scene-0559"
+  },
+  {
+    "scene_token": "0e7ede02718341558414865d5c604745",
+    "sample_token": "9229caee2885435ebf71e46d997e7070",
+    "prev_sample_token": "4ffbb8951b9841429bfd3aee39c6a2be",
+    "next_sample_token": "2e3b7f9ff9ea40e883ba169c575e1283",
+    "timestamp": 1535730403399332,
+    "query_id": "meta_action_planning_v1",
+    "query_type": "meta_action_planning",
+    "query_text": "Your current speed is 7 m/s, the navigation command is 'go straight', based on the understanding of the driving scene and the navigation information, what is your plan for the next three seconds? Please answer your SPEED plan and your PATH plan. SPEED includes KEEP, ACCELERATE and DECELERATE, and STOP, PATH includes STRAIGHT, RIGHT_CHANGE, LEFT_CHANGE, RIGHT_TURN, LEFT_TURN. For example, a correct answer format is like 'KEEP, LEFT_CHANGE'.",
+    "ground_truth": "KEEP, STRAIGHT",
+    "dependency_instance_tokens": [],
+    "dependency_attributes": {
+      "navigation": "go straight",
+      "current_speed_mps": 7.241673553432654,
+      "current_speed_prompt_mps": 7,
+      "driving_state_bin": 3,
+      "planning_label": "KEEP, STRAIGHT",
+      "navigation_source": "offline_future_route_6s"
+    },
+    "dependency_signature": [
+      "go straight",
+      7,
+      3,
+      "KEEP, STRAIGHT"
+    ],
+    "state_facts": {
+      "navigation": "go straight",
+      "ego_speed_prompt": 7,
+      "driving_state_bin": 3,
+      "oracle_plan": "KEEP, STRAIGHT"
+    },
+    "image_paths": [
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT/n008-2018-08-31-11-37-23-0400__CAM_FRONT__1535730403362404.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_LEFT/n008-2018-08-31-11-37-23-0400__CAM_FRONT_LEFT__1535730403354799.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_RIGHT/n008-2018-08-31-11-37-23-0400__CAM_FRONT_RIGHT__1535730403370482.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_LEFT/n008-2018-08-31-11-37-23-0400__CAM_BACK_LEFT__1535730403397405.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_RIGHT/n008-2018-08-31-11-37-23-0400__CAM_BACK_RIGHT__1535730403378113.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK/n008-2018-08-31-11-37-23-0400__CAM_BACK__1535730403387558.jpg"
+    ],
+    "input_protocol": {
+      "version": "nuscenes_senna_v2",
+      "camera_order": [
+        "CAM_FRONT",
+        "CAM_FRONT_LEFT",
+        "CAM_FRONT_RIGHT",
+        "CAM_BACK_LEFT",
+        "CAM_BACK_RIGHT",
+        "CAM_BACK"
+      ],
+      "legacy_camera_order": false,
+      "legacy_navigation": false,
+      "navigation_source": "offline_future_route_6s",
+      "future_label_in_prompt": false,
+      "navigation_is_offline_future_route_condition": true
+    },
+    "offline_ground_truth": {
+      "future_ego_lidar_positions": [
+        [
+          -4.151439845678674e-14,
+          1.4833976595555418e-14,
+          7.860810873025638e-16
+        ],
+        [
+          0.05621228501637746,
+          3.957757260348169,
+          0.34762083664827675
+        ],
+        [
+          0.10525928441052838,
+          7.613782596341873,
+          0.6590730674052165
+        ],
+        [
+          0.16271661617554206,
+          11.238736002908112,
+          0.9773475575524638
+        ],
+        [
+          0.2344884298118527,
+          14.626425483675487,
+          1.2707773583971036
+        ],
+        [
+          0.3249318765519473,
+          17.945784390741782,
+          1.5688683994181734
+        ],
+        [
+          0.40157640351627927,
+          21.23059182251621,
+          1.857924447259631
+        ]
+      ],
+      "label_source": "official_ego_pose_3s"
+    },
+    "record_id": "a163af34a75dc7a0b002ccf3",
+    "sequence_id": "scene-0559_5_fixed_meta_action_planning",
+    "sequence_length": 5,
+    "workload": "fixed",
+    "frame_index": 4,
+    "scene_name": "scene-0559"
+  },
+  {
+    "scene_token": "0e7ede02718341558414865d5c604745",
+    "sample_token": "d2b3be57f76a43a9a06b56c1ceaa221f",
+    "prev_sample_token": "029af235f15d4f6f80713b778edc3c61",
+    "next_sample_token": "66e594111d0e44fe8ef57d222f1830a7",
+    "timestamp": 1535730401446845,
+    "query_id": "category_v1",
+    "query_type": "category",
+    "query_text": "What is the category of the nearest vehicle (excluding vehicle.bicycle, vehicle.motorcycle) ahead within 40 meters and 35 degrees of the forward axis, beyond 0 meters forward? Answer only its nuScenes category name.",
+    "ground_truth": "vehicle.car",
+    "dependency_instance_tokens": [
+      "509727ab37f744d8bf765134fc25af7d"
+    ],
+    "dependency_attributes": {
+      "annotation_token": "60c8b295809d4df4b6b7e5d019ef0a25",
+      "instance_token": "509727ab37f744d8bf765134fc25af7d",
+      "category": "vehicle.car",
+      "position_lidar_m": [
+        -3.8896487936202506,
+        5.96394897715951,
+        -0.6361722110998345
+      ],
+      "position_label": "FRONT_LEFT",
+      "selection_rule": "nearest_in_scope_vehicle_then_instance_token",
+      "sensor_points": 857
+    },
+    "dependency_signature": [
+      "509727ab37f744d8bf765134fc25af7d",
+      "vehicle.car"
+    ],
+    "state_facts": {
+      "selected_vehicle": "509727ab37f744d8bf765134fc25af7d",
+      "category:509727ab37f744d8bf765134fc25af7d": "vehicle.car"
+    },
+    "image_paths": [
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT/n008-2018-08-31-11-37-23-0400__CAM_FRONT__1535730401412404.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_LEFT/n008-2018-08-31-11-37-23-0400__CAM_FRONT_LEFT__1535730401404799.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_RIGHT/n008-2018-08-31-11-37-23-0400__CAM_FRONT_RIGHT__1535730401420482.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_LEFT/n008-2018-08-31-11-37-23-0400__CAM_BACK_LEFT__1535730401447415.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_RIGHT/n008-2018-08-31-11-37-23-0400__CAM_BACK_RIGHT__1535730401428113.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK/n008-2018-08-31-11-37-23-0400__CAM_BACK__1535730401437558.jpg"
+    ],
+    "input_protocol": {
+      "version": "nuscenes_senna_v2",
+      "camera_order": [
+        "CAM_FRONT",
+        "CAM_FRONT_LEFT",
+        "CAM_FRONT_RIGHT",
+        "CAM_BACK_LEFT",
+        "CAM_BACK_RIGHT",
+        "CAM_BACK"
+      ],
+      "legacy_camera_order": false,
+      "legacy_navigation": false,
+      "navigation_source": "none",
+      "future_label_in_prompt": false
+    },
+    "offline_ground_truth": {},
+    "record_id": "544afe8053ec013e8a8ea8a0",
+    "sequence_id": "scene-0559_5_mixed_alternating",
+    "sequence_length": 5,
+    "workload": "mixed",
+    "frame_index": 0,
+    "scene_name": "scene-0559"
+  },
+  {
+    "scene_token": "0e7ede02718341558414865d5c604745",
+    "sample_token": "66e594111d0e44fe8ef57d222f1830a7",
+    "prev_sample_token": "d2b3be57f76a43a9a06b56c1ceaa221f",
+    "next_sample_token": "2a21a555004043768a6da4f645f67896",
+    "timestamp": 1535730401947814,
+    "query_id": "existence_v1",
+    "query_type": "existence",
+    "query_text": "Do you see any vulnerable road users within 20 meters ahead of you, such as cyclists, motorcyclists, or pedestrians? Consider the 35-degree half-angle forward sector, beyond 0 meters forward, and these nuScenes category prefixes: ['human.pedestrian.', 'vehicle.bicycle', 'vehicle.motorcycle']. Answer only YES or NO.",
+    "ground_truth": "NO",
+    "dependency_instance_tokens": [],
+    "dependency_attributes": {
+      "scope": {
+        "prefixes": [
+          "human.pedestrian.",
+          "vehicle.bicycle",
+          "vehicle.motorcycle"
+        ],
+        "radius_m": 20.0,
+        "forward_min_m": 0.0,
+        "half_angle_degrees": 35.0
+      },
+      "members": [],
+      "annotation_coverage": "official_sample_annotation_table"
+    },
+    "dependency_signature": [
+      {
+        "prefixes": [
+          "human.pedestrian.",
+          "vehicle.bicycle",
+          "vehicle.motorcycle"
+        ],
+        "radius_m": 20.0,
+        "forward_min_m": 0.0,
+        "half_angle_degrees": 35.0
+      },
+      []
+    ],
+    "state_facts": {
+      "existence_scope:{\"forward_min_m\":0.0,\"half_angle_degrees\":35.0,\"prefixes\":[\"human.pedestrian.\",\"vehicle.bicycle\",\"vehicle.motorcycle\"],\"radius_m\":20.0}": []
+    },
+    "image_paths": [
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT/n008-2018-08-31-11-37-23-0400__CAM_FRONT__1535730401912404.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_LEFT/n008-2018-08-31-11-37-23-0400__CAM_FRONT_LEFT__1535730401904799.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_RIGHT/n008-2018-08-31-11-37-23-0400__CAM_FRONT_RIGHT__1535730401920482.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_LEFT/n008-2018-08-31-11-37-23-0400__CAM_BACK_LEFT__1535730401947405.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_RIGHT/n008-2018-08-31-11-37-23-0400__CAM_BACK_RIGHT__1535730401928113.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK/n008-2018-08-31-11-37-23-0400__CAM_BACK__1535730401937739.jpg"
+    ],
+    "input_protocol": {
+      "version": "nuscenes_senna_v2",
+      "camera_order": [
+        "CAM_FRONT",
+        "CAM_FRONT_LEFT",
+        "CAM_FRONT_RIGHT",
+        "CAM_BACK_LEFT",
+        "CAM_BACK_RIGHT",
+        "CAM_BACK"
+      ],
+      "legacy_camera_order": false,
+      "legacy_navigation": false,
+      "navigation_source": "none",
+      "future_label_in_prompt": false
+    },
+    "offline_ground_truth": {},
+    "record_id": "1f0ab7491503ca76177ed48b",
+    "sequence_id": "scene-0559_5_mixed_alternating",
+    "sequence_length": 5,
+    "workload": "mixed",
+    "frame_index": 1,
+    "scene_name": "scene-0559"
+  },
+  {
+    "scene_token": "0e7ede02718341558414865d5c604745",
+    "sample_token": "2a21a555004043768a6da4f645f67896",
+    "prev_sample_token": "66e594111d0e44fe8ef57d222f1830a7",
+    "next_sample_token": "4ffbb8951b9841429bfd3aee39c6a2be",
+    "timestamp": 1535730402448243,
+    "query_id": "position_v1",
+    "query_type": "position",
+    "query_text": "Where is the nearest vehicle (excluding vehicle.bicycle, vehicle.motorcycle) ahead within 40 meters and 35 degrees of the forward axis, beyond 0 meters forward relative to you? Answer only one of FRONT_LEFT, FRONT, FRONT_RIGHT; lateral boundaries in meters: [-2.0, 2.0] (x right).",
+    "ground_truth": "FRONT_RIGHT",
+    "dependency_instance_tokens": [
+      "fe7d95b5c2bd4aabae3e36495cd95d21"
+    ],
+    "dependency_attributes": {
+      "annotation_token": "8408c173be0e4a69b19f06805a9cb51d",
+      "instance_token": "fe7d95b5c2bd4aabae3e36495cd95d21",
+      "category": "vehicle.bus.rigid",
+      "position_lidar_m": [
+        3.527092266114132,
+        18.715703776102757,
+        0.47980078919145935
+      ],
+      "position_label": "FRONT_RIGHT",
+      "selection_rule": "nearest_in_scope_vehicle_then_instance_token",
+      "sensor_points": 188
+    },
+    "dependency_signature": [
+      "fe7d95b5c2bd4aabae3e36495cd95d21",
+      "FRONT_RIGHT"
+    ],
+    "state_facts": {
+      "selected_vehicle": "fe7d95b5c2bd4aabae3e36495cd95d21",
+      "position:fe7d95b5c2bd4aabae3e36495cd95d21": "FRONT_RIGHT"
+    },
+    "image_paths": [
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT/n008-2018-08-31-11-37-23-0400__CAM_FRONT__1535730402412404.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_LEFT/n008-2018-08-31-11-37-23-0400__CAM_FRONT_LEFT__1535730402404799.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_RIGHT/n008-2018-08-31-11-37-23-0400__CAM_FRONT_RIGHT__1535730402420482.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_LEFT/n008-2018-08-31-11-37-23-0400__CAM_BACK_LEFT__1535730402447405.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_RIGHT/n008-2018-08-31-11-37-23-0400__CAM_BACK_RIGHT__1535730402428113.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK/n008-2018-08-31-11-37-23-0400__CAM_BACK__1535730402437558.jpg"
+    ],
+    "input_protocol": {
+      "version": "nuscenes_senna_v2",
+      "camera_order": [
+        "CAM_FRONT",
+        "CAM_FRONT_LEFT",
+        "CAM_FRONT_RIGHT",
+        "CAM_BACK_LEFT",
+        "CAM_BACK_RIGHT",
+        "CAM_BACK"
+      ],
+      "legacy_camera_order": false,
+      "legacy_navigation": false,
+      "navigation_source": "none",
+      "future_label_in_prompt": false
+    },
+    "offline_ground_truth": {},
+    "record_id": "d4f22962009d26874ae63d68",
+    "sequence_id": "scene-0559_5_mixed_alternating",
+    "sequence_length": 5,
+    "workload": "mixed",
+    "frame_index": 2,
+    "scene_name": "scene-0559"
+  },
+  {
+    "scene_token": "0e7ede02718341558414865d5c604745",
+    "sample_token": "4ffbb8951b9841429bfd3aee39c6a2be",
+    "prev_sample_token": "2a21a555004043768a6da4f645f67896",
+    "next_sample_token": "9229caee2885435ebf71e46d997e7070",
+    "timestamp": 1535730402948746,
+    "query_id": "motion_prediction_v1",
+    "query_type": "motion_prediction",
+    "query_text": "You are driving, I will now provide you with the location and velocity information of dynamic objects in the front view image. Please predict their future driving behaviors, which can be divided into SPEED decisions and PATH decisions. SPEED includes KEEP, ACCELERATE, DECELERATE, and STOP, while PATH includes STRAIGHT, RIGHT_CHANGE, LEFT_CHANGE, RIGHT_TURN, and LEFT_TURN. I will now provide you with the position and velocity information of the dynamic objects: \nObject 1: vehicle, 18 meters ahead, 3 meters to the right, speed of 7 m/s.\nPlease predict the future driving behaviors of these objects based on the front view image. Answer only Object 1: SPEED, PATH.",
+    "ground_truth": "Object 1: KEEP, STRAIGHT",
+    "dependency_instance_tokens": [
+      "fe7d95b5c2bd4aabae3e36495cd95d21"
+    ],
+    "dependency_attributes": {
+      "annotation_token": "012d1def975945648d48f90f16fafe8f",
+      "instance_token": "fe7d95b5c2bd4aabae3e36495cd95d21",
+      "category": "vehicle.bus.rigid",
+      "position_lidar_m": [
+        3.4965066656898296,
+        18.94684024662243,
+        0.5136005748513933
+      ],
+      "position_label": "FRONT_RIGHT",
+      "selection_rule": "nearest_in_scope_vehicle_then_instance_token",
+      "sensor_points": 187,
+      "current_speed_mps": 7.71160789951023,
+      "current_motion_state_bin": 3,
+      "prediction_label": "KEEP, STRAIGHT",
+      "velocity_source": "previous_annotation_only"
+    },
+    "dependency_signature": [
+      "fe7d95b5c2bd4aabae3e36495cd95d21",
+      3,
+      "KEEP, STRAIGHT"
+    ],
+    "state_facts": {
+      "selected_vehicle": "fe7d95b5c2bd4aabae3e36495cd95d21",
+      "motion_bin:fe7d95b5c2bd4aabae3e36495cd95d21": 3,
+      "oracle_prediction:fe7d95b5c2bd4aabae3e36495cd95d21": "KEEP, STRAIGHT"
+    },
+    "image_paths": [
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT/n008-2018-08-31-11-37-23-0400__CAM_FRONT__1535730402912404.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_LEFT/n008-2018-08-31-11-37-23-0400__CAM_FRONT_LEFT__1535730402904799.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_RIGHT/n008-2018-08-31-11-37-23-0400__CAM_FRONT_RIGHT__1535730402920482.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_LEFT/n008-2018-08-31-11-37-23-0400__CAM_BACK_LEFT__1535730402947412.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_RIGHT/n008-2018-08-31-11-37-23-0400__CAM_BACK_RIGHT__1535730402928113.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK/n008-2018-08-31-11-37-23-0400__CAM_BACK__1535730402937558.jpg"
+    ],
+    "input_protocol": {
+      "version": "nuscenes_senna_v2",
+      "camera_order": [
+        "CAM_FRONT",
+        "CAM_FRONT_LEFT",
+        "CAM_FRONT_RIGHT",
+        "CAM_BACK_LEFT",
+        "CAM_BACK_RIGHT",
+        "CAM_BACK"
+      ],
+      "legacy_camera_order": false,
+      "legacy_navigation": false,
+      "navigation_source": "none",
+      "future_label_in_prompt": false
+    },
+    "offline_ground_truth": {
+      "future_annotation_tokens": [
+        "b6e2debd3df646e581d065d53e8e742e",
+        "791bc15c69f941978b04f611060d97ea",
+        "d9dd02a8b3a7456e98f85e83768505ec",
+        "76a285690875456299d8745e91b0e23c",
+        "4bb37e259c0d4de6bd798c682a8714d1",
+        "b55a9bddb02744388d2633c7ce2f3c55"
+      ],
+      "future_timestamps": [
+        1535730403399332,
+        1535730403949527,
+        1535730404449401,
+        1535730404949315,
+        1535730405449179,
+        1535730405948483
+      ],
+      "future_global_positions": [
+        [
+          1369.072,
+          1125.212,
+          0.643
+        ],
+        [
+          1371.585,
+          1128.119,
+          0.693
+        ],
+        [
+          1373.75,
+          1130.53,
+          0.738
+        ],
+        [
+          1375.915,
+          1132.941,
+          0.784
+        ],
+        [
+          1377.781,
+          1135.021,
+          0.829
+        ],
+        [
+          1379.567,
+          1136.901,
+          0.874
+        ]
+      ],
+      "future_object_local_positions": [
+        [
+          0.23045091193755507,
+          2.565261208985893
+        ],
+        [
+          0.3502767123578304,
+          6.399584930739258
+        ],
+        [
+          0.5123733979230887,
+          9.630351319477334
+        ],
+        [
+          0.6744671304129992,
+          12.86107147734124
+        ],
+        [
+          0.8129151215887255,
+          15.64689313622017
+        ],
+        [
+          1.0152459140333596,
+          18.227210323474612
+        ]
+      ]
+    },
+    "record_id": "f28925a7764fc04d84ef3a83",
+    "sequence_id": "scene-0559_5_mixed_alternating",
+    "sequence_length": 5,
+    "workload": "mixed",
+    "frame_index": 3,
+    "scene_name": "scene-0559"
+  },
+  {
+    "scene_token": "0e7ede02718341558414865d5c604745",
+    "sample_token": "9229caee2885435ebf71e46d997e7070",
+    "prev_sample_token": "4ffbb8951b9841429bfd3aee39c6a2be",
+    "next_sample_token": "2e3b7f9ff9ea40e883ba169c575e1283",
+    "timestamp": 1535730403399332,
+    "query_id": "meta_action_planning_v1",
+    "query_type": "meta_action_planning",
+    "query_text": "Your current speed is 7 m/s, the navigation command is 'go straight', based on the understanding of the driving scene and the navigation information, what is your plan for the next three seconds? Please answer your SPEED plan and your PATH plan. SPEED includes KEEP, ACCELERATE and DECELERATE, and STOP, PATH includes STRAIGHT, RIGHT_CHANGE, LEFT_CHANGE, RIGHT_TURN, LEFT_TURN. For example, a correct answer format is like 'KEEP, LEFT_CHANGE'.",
+    "ground_truth": "KEEP, STRAIGHT",
+    "dependency_instance_tokens": [],
+    "dependency_attributes": {
+      "navigation": "go straight",
+      "current_speed_mps": 7.241673553432654,
+      "current_speed_prompt_mps": 7,
+      "driving_state_bin": 3,
+      "planning_label": "KEEP, STRAIGHT",
+      "navigation_source": "offline_future_route_6s"
+    },
+    "dependency_signature": [
+      "go straight",
+      7,
+      3,
+      "KEEP, STRAIGHT"
+    ],
+    "state_facts": {
+      "navigation": "go straight",
+      "ego_speed_prompt": 7,
+      "driving_state_bin": 3,
+      "oracle_plan": "KEEP, STRAIGHT"
+    },
+    "image_paths": [
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT/n008-2018-08-31-11-37-23-0400__CAM_FRONT__1535730403362404.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_LEFT/n008-2018-08-31-11-37-23-0400__CAM_FRONT_LEFT__1535730403354799.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_RIGHT/n008-2018-08-31-11-37-23-0400__CAM_FRONT_RIGHT__1535730403370482.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_LEFT/n008-2018-08-31-11-37-23-0400__CAM_BACK_LEFT__1535730403397405.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_RIGHT/n008-2018-08-31-11-37-23-0400__CAM_BACK_RIGHT__1535730403378113.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK/n008-2018-08-31-11-37-23-0400__CAM_BACK__1535730403387558.jpg"
+    ],
+    "input_protocol": {
+      "version": "nuscenes_senna_v2",
+      "camera_order": [
+        "CAM_FRONT",
+        "CAM_FRONT_LEFT",
+        "CAM_FRONT_RIGHT",
+        "CAM_BACK_LEFT",
+        "CAM_BACK_RIGHT",
+        "CAM_BACK"
+      ],
+      "legacy_camera_order": false,
+      "legacy_navigation": false,
+      "navigation_source": "offline_future_route_6s",
+      "future_label_in_prompt": false,
+      "navigation_is_offline_future_route_condition": true
+    },
+    "offline_ground_truth": {
+      "future_ego_lidar_positions": [
+        [
+          -4.151439845678674e-14,
+          1.4833976595555418e-14,
+          7.860810873025638e-16
+        ],
+        [
+          0.05621228501637746,
+          3.957757260348169,
+          0.34762083664827675
+        ],
+        [
+          0.10525928441052838,
+          7.613782596341873,
+          0.6590730674052165
+        ],
+        [
+          0.16271661617554206,
+          11.238736002908112,
+          0.9773475575524638
+        ],
+        [
+          0.2344884298118527,
+          14.626425483675487,
+          1.2707773583971036
+        ],
+        [
+          0.3249318765519473,
+          17.945784390741782,
+          1.5688683994181734
+        ],
+        [
+          0.40157640351627927,
+          21.23059182251621,
+          1.857924447259631
+        ]
+      ],
+      "label_source": "official_ego_pose_3s"
+    },
+    "record_id": "f9b5a5d3a3ec068ac9d451cd",
+    "sequence_id": "scene-0559_5_mixed_alternating",
+    "sequence_length": 5,
+    "workload": "mixed",
+    "frame_index": 4,
+    "scene_name": "scene-0559"
+  },
+  {
+    "scene_token": "64bfc5edd71147858ce7446892d7f864",
+    "sample_token": "75385bf352fe4743a8cbf576b1e184fb",
+    "prev_sample_token": "45c4bd03ee6f4a369dd42abf08dc3957",
+    "next_sample_token": "956027b87e5242ec9d9d22c8be48b7ac",
+    "timestamp": 1537853014698833,
+    "query_id": "existence_v1",
+    "query_type": "existence",
+    "query_text": "Do you see any vulnerable road users within 20 meters ahead of you, such as cyclists, motorcyclists, or pedestrians? Consider the 35-degree half-angle forward sector, beyond 0 meters forward, and these nuScenes category prefixes: ['human.pedestrian.', 'vehicle.bicycle', 'vehicle.motorcycle']. Answer only YES or NO.",
+    "ground_truth": "NO",
+    "dependency_instance_tokens": [],
+    "dependency_attributes": {
+      "scope": {
+        "prefixes": [
+          "human.pedestrian.",
+          "vehicle.bicycle",
+          "vehicle.motorcycle"
+        ],
+        "radius_m": 20.0,
+        "forward_min_m": 0.0,
+        "half_angle_degrees": 35.0
+      },
+      "members": [],
+      "annotation_coverage": "official_sample_annotation_table"
+    },
+    "dependency_signature": [
+      {
+        "prefixes": [
+          "human.pedestrian.",
+          "vehicle.bicycle",
+          "vehicle.motorcycle"
+        ],
+        "radius_m": 20.0,
+        "forward_min_m": 0.0,
+        "half_angle_degrees": 35.0
+      },
+      []
+    ],
+    "state_facts": {
+      "existence_scope:{\"forward_min_m\":0.0,\"half_angle_degrees\":35.0,\"prefixes\":[\"human.pedestrian.\",\"vehicle.bicycle\",\"vehicle.motorcycle\"],\"radius_m\":20.0}": []
+    },
+    "image_paths": [
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT/n015-2018-09-25-13-17-43+0800__CAM_FRONT__1537853014662460.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_LEFT/n015-2018-09-25-13-17-43+0800__CAM_FRONT_LEFT__1537853014654844.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_RIGHT/n015-2018-09-25-13-17-43+0800__CAM_FRONT_RIGHT__1537853014670339.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_LEFT/n015-2018-09-25-13-17-43+0800__CAM_BACK_LEFT__1537853014697423.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_RIGHT/n015-2018-09-25-13-17-43+0800__CAM_BACK_RIGHT__1537853014677893.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK/n015-2018-09-25-13-17-43+0800__CAM_BACK__1537853014687536.jpg"
+    ],
+    "input_protocol": {
+      "version": "nuscenes_senna_v2",
+      "camera_order": [
+        "CAM_FRONT",
+        "CAM_FRONT_LEFT",
+        "CAM_FRONT_RIGHT",
+        "CAM_BACK_LEFT",
+        "CAM_BACK_RIGHT",
+        "CAM_BACK"
+      ],
+      "legacy_camera_order": false,
+      "legacy_navigation": false,
+      "navigation_source": "none",
+      "future_label_in_prompt": false
+    },
+    "offline_ground_truth": {},
+    "record_id": "482261446357192733cc5e66",
+    "sequence_id": "scene-0971_5_fixed_existence",
+    "sequence_length": 5,
+    "workload": "fixed",
+    "frame_index": 0,
+    "scene_name": "scene-0971"
+  },
+  {
+    "scene_token": "64bfc5edd71147858ce7446892d7f864",
+    "sample_token": "956027b87e5242ec9d9d22c8be48b7ac",
+    "prev_sample_token": "75385bf352fe4743a8cbf576b1e184fb",
+    "next_sample_token": "a2229d223c19406f9f71cb7a92b9ef54",
+    "timestamp": 1537853015198764,
+    "query_id": "existence_v1",
+    "query_type": "existence",
+    "query_text": "Do you see any vulnerable road users within 20 meters ahead of you, such as cyclists, motorcyclists, or pedestrians? Consider the 35-degree half-angle forward sector, beyond 0 meters forward, and these nuScenes category prefixes: ['human.pedestrian.', 'vehicle.bicycle', 'vehicle.motorcycle']. Answer only YES or NO.",
+    "ground_truth": "NO",
+    "dependency_instance_tokens": [],
+    "dependency_attributes": {
+      "scope": {
+        "prefixes": [
+          "human.pedestrian.",
+          "vehicle.bicycle",
+          "vehicle.motorcycle"
+        ],
+        "radius_m": 20.0,
+        "forward_min_m": 0.0,
+        "half_angle_degrees": 35.0
+      },
+      "members": [],
+      "annotation_coverage": "official_sample_annotation_table"
+    },
+    "dependency_signature": [
+      {
+        "prefixes": [
+          "human.pedestrian.",
+          "vehicle.bicycle",
+          "vehicle.motorcycle"
+        ],
+        "radius_m": 20.0,
+        "forward_min_m": 0.0,
+        "half_angle_degrees": 35.0
+      },
+      []
+    ],
+    "state_facts": {
+      "existence_scope:{\"forward_min_m\":0.0,\"half_angle_degrees\":35.0,\"prefixes\":[\"human.pedestrian.\",\"vehicle.bicycle\",\"vehicle.motorcycle\"],\"radius_m\":20.0}": []
+    },
+    "image_paths": [
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT/n015-2018-09-25-13-17-43+0800__CAM_FRONT__1537853015162460.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_LEFT/n015-2018-09-25-13-17-43+0800__CAM_FRONT_LEFT__1537853015154844.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_RIGHT/n015-2018-09-25-13-17-43+0800__CAM_FRONT_RIGHT__1537853015170339.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_LEFT/n015-2018-09-25-13-17-43+0800__CAM_BACK_LEFT__1537853015197423.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_RIGHT/n015-2018-09-25-13-17-43+0800__CAM_BACK_RIGHT__1537853015177893.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK/n015-2018-09-25-13-17-43+0800__CAM_BACK__1537853015187525.jpg"
+    ],
+    "input_protocol": {
+      "version": "nuscenes_senna_v2",
+      "camera_order": [
+        "CAM_FRONT",
+        "CAM_FRONT_LEFT",
+        "CAM_FRONT_RIGHT",
+        "CAM_BACK_LEFT",
+        "CAM_BACK_RIGHT",
+        "CAM_BACK"
+      ],
+      "legacy_camera_order": false,
+      "legacy_navigation": false,
+      "navigation_source": "none",
+      "future_label_in_prompt": false
+    },
+    "offline_ground_truth": {},
+    "record_id": "eafba66364e154848aef713c",
+    "sequence_id": "scene-0971_5_fixed_existence",
+    "sequence_length": 5,
+    "workload": "fixed",
+    "frame_index": 1,
+    "scene_name": "scene-0971"
+  },
+  {
+    "scene_token": "64bfc5edd71147858ce7446892d7f864",
+    "sample_token": "a2229d223c19406f9f71cb7a92b9ef54",
+    "prev_sample_token": "956027b87e5242ec9d9d22c8be48b7ac",
+    "next_sample_token": "deefc5673f374152b60cb36fff7439a9",
+    "timestamp": 1537853015699308,
+    "query_id": "existence_v1",
+    "query_type": "existence",
+    "query_text": "Do you see any vulnerable road users within 20 meters ahead of you, such as cyclists, motorcyclists, or pedestrians? Consider the 35-degree half-angle forward sector, beyond 0 meters forward, and these nuScenes category prefixes: ['human.pedestrian.', 'vehicle.bicycle', 'vehicle.motorcycle']. Answer only YES or NO.",
+    "ground_truth": "NO",
+    "dependency_instance_tokens": [],
+    "dependency_attributes": {
+      "scope": {
+        "prefixes": [
+          "human.pedestrian.",
+          "vehicle.bicycle",
+          "vehicle.motorcycle"
+        ],
+        "radius_m": 20.0,
+        "forward_min_m": 0.0,
+        "half_angle_degrees": 35.0
+      },
+      "members": [],
+      "annotation_coverage": "official_sample_annotation_table"
+    },
+    "dependency_signature": [
+      {
+        "prefixes": [
+          "human.pedestrian.",
+          "vehicle.bicycle",
+          "vehicle.motorcycle"
+        ],
+        "radius_m": 20.0,
+        "forward_min_m": 0.0,
+        "half_angle_degrees": 35.0
+      },
+      []
+    ],
+    "state_facts": {
+      "existence_scope:{\"forward_min_m\":0.0,\"half_angle_degrees\":35.0,\"prefixes\":[\"human.pedestrian.\",\"vehicle.bicycle\",\"vehicle.motorcycle\"],\"radius_m\":20.0}": []
+    },
+    "image_paths": [
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT/n015-2018-09-25-13-17-43+0800__CAM_FRONT__1537853015662461.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_LEFT/n015-2018-09-25-13-17-43+0800__CAM_FRONT_LEFT__1537853015654844.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_RIGHT/n015-2018-09-25-13-17-43+0800__CAM_FRONT_RIGHT__1537853015670339.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_LEFT/n015-2018-09-25-13-17-43+0800__CAM_BACK_LEFT__1537853015697423.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_RIGHT/n015-2018-09-25-13-17-43+0800__CAM_BACK_RIGHT__1537853015677893.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK/n015-2018-09-25-13-17-43+0800__CAM_BACK__1537853015687525.jpg"
+    ],
+    "input_protocol": {
+      "version": "nuscenes_senna_v2",
+      "camera_order": [
+        "CAM_FRONT",
+        "CAM_FRONT_LEFT",
+        "CAM_FRONT_RIGHT",
+        "CAM_BACK_LEFT",
+        "CAM_BACK_RIGHT",
+        "CAM_BACK"
+      ],
+      "legacy_camera_order": false,
+      "legacy_navigation": false,
+      "navigation_source": "none",
+      "future_label_in_prompt": false
+    },
+    "offline_ground_truth": {},
+    "record_id": "9ff71f3bcf9b1ef38cef6e46",
+    "sequence_id": "scene-0971_5_fixed_existence",
+    "sequence_length": 5,
+    "workload": "fixed",
+    "frame_index": 2,
+    "scene_name": "scene-0971"
+  },
+  {
+    "scene_token": "64bfc5edd71147858ce7446892d7f864",
+    "sample_token": "deefc5673f374152b60cb36fff7439a9",
+    "prev_sample_token": "a2229d223c19406f9f71cb7a92b9ef54",
+    "next_sample_token": "d95a0f0adf7945c5aaf2fbd3dc110dcc",
+    "timestamp": 1537853016199732,
+    "query_id": "existence_v1",
+    "query_type": "existence",
+    "query_text": "Do you see any vulnerable road users within 20 meters ahead of you, such as cyclists, motorcyclists, or pedestrians? Consider the 35-degree half-angle forward sector, beyond 0 meters forward, and these nuScenes category prefixes: ['human.pedestrian.', 'vehicle.bicycle', 'vehicle.motorcycle']. Answer only YES or NO.",
+    "ground_truth": "NO",
+    "dependency_instance_tokens": [],
+    "dependency_attributes": {
+      "scope": {
+        "prefixes": [
+          "human.pedestrian.",
+          "vehicle.bicycle",
+          "vehicle.motorcycle"
+        ],
+        "radius_m": 20.0,
+        "forward_min_m": 0.0,
+        "half_angle_degrees": 35.0
+      },
+      "members": [],
+      "annotation_coverage": "official_sample_annotation_table"
+    },
+    "dependency_signature": [
+      {
+        "prefixes": [
+          "human.pedestrian.",
+          "vehicle.bicycle",
+          "vehicle.motorcycle"
+        ],
+        "radius_m": 20.0,
+        "forward_min_m": 0.0,
+        "half_angle_degrees": 35.0
+      },
+      []
+    ],
+    "state_facts": {
+      "existence_scope:{\"forward_min_m\":0.0,\"half_angle_degrees\":35.0,\"prefixes\":[\"human.pedestrian.\",\"vehicle.bicycle\",\"vehicle.motorcycle\"],\"radius_m\":20.0}": []
+    },
+    "image_paths": [
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT/n015-2018-09-25-13-17-43+0800__CAM_FRONT__1537853016162460.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_LEFT/n015-2018-09-25-13-17-43+0800__CAM_FRONT_LEFT__1537853016154844.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_RIGHT/n015-2018-09-25-13-17-43+0800__CAM_FRONT_RIGHT__1537853016170339.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_LEFT/n015-2018-09-25-13-17-43+0800__CAM_BACK_LEFT__1537853016197423.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_RIGHT/n015-2018-09-25-13-17-43+0800__CAM_BACK_RIGHT__1537853016177893.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK/n015-2018-09-25-13-17-43+0800__CAM_BACK__1537853016187525.jpg"
+    ],
+    "input_protocol": {
+      "version": "nuscenes_senna_v2",
+      "camera_order": [
+        "CAM_FRONT",
+        "CAM_FRONT_LEFT",
+        "CAM_FRONT_RIGHT",
+        "CAM_BACK_LEFT",
+        "CAM_BACK_RIGHT",
+        "CAM_BACK"
+      ],
+      "legacy_camera_order": false,
+      "legacy_navigation": false,
+      "navigation_source": "none",
+      "future_label_in_prompt": false
+    },
+    "offline_ground_truth": {},
+    "record_id": "3fad09594ba768ffaef56616",
+    "sequence_id": "scene-0971_5_fixed_existence",
+    "sequence_length": 5,
+    "workload": "fixed",
+    "frame_index": 3,
+    "scene_name": "scene-0971"
+  },
+  {
+    "scene_token": "64bfc5edd71147858ce7446892d7f864",
+    "sample_token": "d95a0f0adf7945c5aaf2fbd3dc110dcc",
+    "prev_sample_token": "deefc5673f374152b60cb36fff7439a9",
+    "next_sample_token": "5e89b644b90d4955a33ffeb69a7ab62a",
+    "timestamp": 1537853016701995,
+    "query_id": "existence_v1",
+    "query_type": "existence",
+    "query_text": "Do you see any vulnerable road users within 20 meters ahead of you, such as cyclists, motorcyclists, or pedestrians? Consider the 35-degree half-angle forward sector, beyond 0 meters forward, and these nuScenes category prefixes: ['human.pedestrian.', 'vehicle.bicycle', 'vehicle.motorcycle']. Answer only YES or NO.",
+    "ground_truth": "NO",
+    "dependency_instance_tokens": [],
+    "dependency_attributes": {
+      "scope": {
+        "prefixes": [
+          "human.pedestrian.",
+          "vehicle.bicycle",
+          "vehicle.motorcycle"
+        ],
+        "radius_m": 20.0,
+        "forward_min_m": 0.0,
+        "half_angle_degrees": 35.0
+      },
+      "members": [],
+      "annotation_coverage": "official_sample_annotation_table"
+    },
+    "dependency_signature": [
+      {
+        "prefixes": [
+          "human.pedestrian.",
+          "vehicle.bicycle",
+          "vehicle.motorcycle"
+        ],
+        "radius_m": 20.0,
+        "forward_min_m": 0.0,
+        "half_angle_degrees": 35.0
+      },
+      []
+    ],
+    "state_facts": {
+      "existence_scope:{\"forward_min_m\":0.0,\"half_angle_degrees\":35.0,\"prefixes\":[\"human.pedestrian.\",\"vehicle.bicycle\",\"vehicle.motorcycle\"],\"radius_m\":20.0}": []
+    },
+    "image_paths": [
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT/n015-2018-09-25-13-17-43+0800__CAM_FRONT__1537853016662460.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_LEFT/n015-2018-09-25-13-17-43+0800__CAM_FRONT_LEFT__1537853016654844.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_RIGHT/n015-2018-09-25-13-17-43+0800__CAM_FRONT_RIGHT__1537853016670339.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_LEFT/n015-2018-09-25-13-17-43+0800__CAM_BACK_LEFT__1537853016697423.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_RIGHT/n015-2018-09-25-13-17-43+0800__CAM_BACK_RIGHT__1537853016677893.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK/n015-2018-09-25-13-17-43+0800__CAM_BACK__1537853016687525.jpg"
+    ],
+    "input_protocol": {
+      "version": "nuscenes_senna_v2",
+      "camera_order": [
+        "CAM_FRONT",
+        "CAM_FRONT_LEFT",
+        "CAM_FRONT_RIGHT",
+        "CAM_BACK_LEFT",
+        "CAM_BACK_RIGHT",
+        "CAM_BACK"
+      ],
+      "legacy_camera_order": false,
+      "legacy_navigation": false,
+      "navigation_source": "none",
+      "future_label_in_prompt": false
+    },
+    "offline_ground_truth": {},
+    "record_id": "2a9b208f337b58afc12bd3b4",
+    "sequence_id": "scene-0971_5_fixed_existence",
+    "sequence_length": 5,
+    "workload": "fixed",
+    "frame_index": 4,
+    "scene_name": "scene-0971"
+  },
+  {
+    "scene_token": "64bfc5edd71147858ce7446892d7f864",
+    "sample_token": "75385bf352fe4743a8cbf576b1e184fb",
+    "prev_sample_token": "45c4bd03ee6f4a369dd42abf08dc3957",
+    "next_sample_token": "956027b87e5242ec9d9d22c8be48b7ac",
+    "timestamp": 1537853014698833,
+    "query_id": "meta_action_planning_v1",
+    "query_type": "meta_action_planning",
+    "query_text": "Your current speed is 0 m/s, the navigation command is 'go straight', based on the understanding of the driving scene and the navigation information, what is your plan for the next three seconds? Please answer your SPEED plan and your PATH plan. SPEED includes KEEP, ACCELERATE and DECELERATE, and STOP, PATH includes STRAIGHT, RIGHT_CHANGE, LEFT_CHANGE, RIGHT_TURN, LEFT_TURN. For example, a correct answer format is like 'KEEP, LEFT_CHANGE'.",
+    "ground_truth": "KEEP, STRAIGHT",
+    "dependency_instance_tokens": [],
+    "dependency_attributes": {
+      "navigation": "go straight",
+      "current_speed_mps": 0.002975592296352358,
+      "current_speed_prompt_mps": 0,
+      "driving_state_bin": 0,
+      "planning_label": "KEEP, STRAIGHT",
+      "navigation_source": "offline_future_route_6s"
+    },
+    "dependency_signature": [
+      "go straight",
+      0,
+      0,
+      "KEEP, STRAIGHT"
+    ],
+    "state_facts": {
+      "navigation": "go straight",
+      "ego_speed_prompt": 0,
+      "driving_state_bin": 0,
+      "oracle_plan": "KEEP, STRAIGHT"
+    },
+    "image_paths": [
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT/n015-2018-09-25-13-17-43+0800__CAM_FRONT__1537853014662460.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_LEFT/n015-2018-09-25-13-17-43+0800__CAM_FRONT_LEFT__1537853014654844.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_RIGHT/n015-2018-09-25-13-17-43+0800__CAM_FRONT_RIGHT__1537853014670339.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_LEFT/n015-2018-09-25-13-17-43+0800__CAM_BACK_LEFT__1537853014697423.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_RIGHT/n015-2018-09-25-13-17-43+0800__CAM_BACK_RIGHT__1537853014677893.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK/n015-2018-09-25-13-17-43+0800__CAM_BACK__1537853014687536.jpg"
+    ],
+    "input_protocol": {
+      "version": "nuscenes_senna_v2",
+      "camera_order": [
+        "CAM_FRONT",
+        "CAM_FRONT_LEFT",
+        "CAM_FRONT_RIGHT",
+        "CAM_BACK_LEFT",
+        "CAM_BACK_RIGHT",
+        "CAM_BACK"
+      ],
+      "legacy_camera_order": false,
+      "legacy_navigation": false,
+      "navigation_source": "offline_future_route_6s",
+      "future_label_in_prompt": false,
+      "navigation_is_offline_future_route_condition": true
+    },
+    "offline_ground_truth": {
+      "future_ego_lidar_positions": [
+        [
+          4.981432179863574e-14,
+          -8.90693406687641e-16,
+          4.945045153429185e-16
+        ],
+        [
+          0.004377480569608438,
+          -0.01447479697478588,
+          1.609405193704834e-05
+        ],
+        [
+          0.00786056852640429,
+          -0.0277569704311156,
+          0.0061600834801489
+        ],
+        [
+          0.010874703470730183,
+          0.21919482395015558,
+          0.010830295336606793
+        ],
+        [
+          0.05107142190416585,
+          0.8738679314399271,
+          0.023982303537202758
+        ],
+        [
+          0.19801300853324055,
+          1.9348530206772954,
+          0.05142928976511579
+        ],
+        [
+          0.5378675883605256,
+          3.3641991590136553,
+          0.09312247726667751
+        ]
+      ],
+      "label_source": "official_ego_pose_3s"
+    },
+    "record_id": "d48d8c851938c86a643f2d2a",
+    "sequence_id": "scene-0971_5_fixed_meta_action_planning",
+    "sequence_length": 5,
+    "workload": "fixed",
+    "frame_index": 0,
+    "scene_name": "scene-0971"
+  },
+  {
+    "scene_token": "64bfc5edd71147858ce7446892d7f864",
+    "sample_token": "956027b87e5242ec9d9d22c8be48b7ac",
+    "prev_sample_token": "75385bf352fe4743a8cbf576b1e184fb",
+    "next_sample_token": "a2229d223c19406f9f71cb7a92b9ef54",
+    "timestamp": 1537853015198764,
+    "query_id": "meta_action_planning_v1",
+    "query_type": "meta_action_planning",
+    "query_text": "Your current speed is 0 m/s, the navigation command is 'turn right', based on the understanding of the driving scene and the navigation information, what is your plan for the next three seconds? Please answer your SPEED plan and your PATH plan. SPEED includes KEEP, ACCELERATE and DECELERATE, and STOP, PATH includes STRAIGHT, RIGHT_CHANGE, LEFT_CHANGE, RIGHT_TURN, LEFT_TURN. For example, a correct answer format is like 'KEEP, LEFT_CHANGE'.",
+    "ground_truth": "ACCELERATE, STRAIGHT",
+    "dependency_instance_tokens": [],
+    "dependency_attributes": {
+      "navigation": "turn right",
+      "current_speed_mps": 1.0231928523295935e-07,
+      "current_speed_prompt_mps": 0,
+      "driving_state_bin": 0,
+      "planning_label": "ACCELERATE, STRAIGHT",
+      "navigation_source": "offline_future_route_6s"
+    },
+    "dependency_signature": [
+      "turn right",
+      0,
+      0,
+      "ACCELERATE, STRAIGHT"
+    ],
+    "state_facts": {
+      "navigation": "turn right",
+      "ego_speed_prompt": 0,
+      "driving_state_bin": 0,
+      "oracle_plan": "ACCELERATE, STRAIGHT"
+    },
+    "image_paths": [
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT/n015-2018-09-25-13-17-43+0800__CAM_FRONT__1537853015162460.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_LEFT/n015-2018-09-25-13-17-43+0800__CAM_FRONT_LEFT__1537853015154844.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_RIGHT/n015-2018-09-25-13-17-43+0800__CAM_FRONT_RIGHT__1537853015170339.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_LEFT/n015-2018-09-25-13-17-43+0800__CAM_BACK_LEFT__1537853015197423.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_RIGHT/n015-2018-09-25-13-17-43+0800__CAM_BACK_RIGHT__1537853015177893.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK/n015-2018-09-25-13-17-43+0800__CAM_BACK__1537853015187525.jpg"
+    ],
+    "input_protocol": {
+      "version": "nuscenes_senna_v2",
+      "camera_order": [
+        "CAM_FRONT",
+        "CAM_FRONT_LEFT",
+        "CAM_FRONT_RIGHT",
+        "CAM_BACK_LEFT",
+        "CAM_BACK_RIGHT",
+        "CAM_BACK"
+      ],
+      "legacy_camera_order": false,
+      "legacy_navigation": false,
+      "navigation_source": "offline_future_route_6s",
+      "future_label_in_prompt": false,
+      "navigation_is_offline_future_route_condition": true
+    },
+    "offline_ground_truth": {
+      "future_ego_lidar_positions": [
+        [
+          1.5872153232364407e-14,
+          -1.3464315473881033e-14,
+          -2.3266393016854275e-16
+        ],
+        [
+          0.00348961167776096,
+          -0.013278788416113721,
+          0.006147603441323484
+        ],
+        [
+          0.006399625842223974,
+          0.23367569905557464,
+          0.010740812726242905
+        ],
+        [
+          0.04632042663476422,
+          0.8883698505472479,
+          0.023684028305109694
+        ],
+        [
+          0.19281572974575956,
+          1.9494256535945298,
+          0.05078080863416623
+        ],
+        [
+          0.5320697491439422,
+          3.3789287276843725,
+          0.09198168217540222
+        ],
+        [
+          1.1853528847388888,
+          5.064521239328664,
+          0.13932989137451202
+        ]
+      ],
+      "label_source": "official_ego_pose_3s"
+    },
+    "record_id": "51f1c57d0bd5606453431c46",
+    "sequence_id": "scene-0971_5_fixed_meta_action_planning",
+    "sequence_length": 5,
+    "workload": "fixed",
+    "frame_index": 1,
+    "scene_name": "scene-0971"
+  },
+  {
+    "scene_token": "64bfc5edd71147858ce7446892d7f864",
+    "sample_token": "a2229d223c19406f9f71cb7a92b9ef54",
+    "prev_sample_token": "956027b87e5242ec9d9d22c8be48b7ac",
+    "next_sample_token": "deefc5673f374152b60cb36fff7439a9",
+    "timestamp": 1537853015699308,
+    "query_id": "meta_action_planning_v1",
+    "query_type": "meta_action_planning",
+    "query_text": "Your current speed is 0 m/s, the navigation command is 'turn right', based on the understanding of the driving scene and the navigation information, what is your plan for the next three seconds? Please answer your SPEED plan and your PATH plan. SPEED includes KEEP, ACCELERATE and DECELERATE, and STOP, PATH includes STRAIGHT, RIGHT_CHANGE, LEFT_CHANGE, RIGHT_TURN, LEFT_TURN. For example, a correct answer format is like 'KEEP, LEFT_CHANGE'.",
+    "ground_truth": "ACCELERATE, STRAIGHT",
+    "dependency_instance_tokens": [],
+    "dependency_attributes": {
+      "navigation": "turn right",
+      "current_speed_mps": 0.13960106106592504,
+      "current_speed_prompt_mps": 0,
+      "driving_state_bin": 0,
+      "planning_label": "ACCELERATE, STRAIGHT",
+      "navigation_source": "offline_future_route_6s"
+    },
+    "dependency_signature": [
+      "turn right",
+      0,
+      0,
+      "ACCELERATE, STRAIGHT"
+    ],
+    "state_facts": {
+      "navigation": "turn right",
+      "ego_speed_prompt": 0,
+      "driving_state_bin": 0,
+      "oracle_plan": "ACCELERATE, STRAIGHT"
+    },
+    "image_paths": [
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT/n015-2018-09-25-13-17-43+0800__CAM_FRONT__1537853015662461.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_LEFT/n015-2018-09-25-13-17-43+0800__CAM_FRONT_LEFT__1537853015654844.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_RIGHT/n015-2018-09-25-13-17-43+0800__CAM_FRONT_RIGHT__1537853015670339.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_LEFT/n015-2018-09-25-13-17-43+0800__CAM_BACK_LEFT__1537853015697423.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_RIGHT/n015-2018-09-25-13-17-43+0800__CAM_BACK_RIGHT__1537853015677893.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK/n015-2018-09-25-13-17-43+0800__CAM_BACK__1537853015687525.jpg"
+    ],
+    "input_protocol": {
+      "version": "nuscenes_senna_v2",
+      "camera_order": [
+        "CAM_FRONT",
+        "CAM_FRONT_LEFT",
+        "CAM_FRONT_RIGHT",
+        "CAM_BACK_LEFT",
+        "CAM_BACK_RIGHT",
+        "CAM_BACK"
+      ],
+      "legacy_camera_order": false,
+      "legacy_navigation": false,
+      "navigation_source": "offline_future_route_6s",
+      "future_label_in_prompt": false,
+      "navigation_is_offline_future_route_condition": true
+    },
+    "offline_ground_truth": {
+      "future_ego_lidar_positions": [
+        [
+          2.0214417969337917e-14,
+          -6.808983838606064e-15,
+          -2.6784722052441167e-16
+        ],
+        [
+          0.0029383456781683585,
+          0.24697978396352974,
+          0.002904664245170052
+        ],
+        [
+          0.0429342682914942,
+          0.9017425490410768,
+          0.01137087976067173
+        ],
+        [
+          0.1895514250134001,
+          1.9629420266346411,
+          0.031210351226039598
+        ],
+        [
+          0.5289696908110186,
+          3.3926545146224467,
+          0.06263141144605508
+        ],
+        [
+          1.182446473988236,
+          5.078456519321388,
+          0.09844367582332615
+        ],
+        [
+          2.4500034778921727,
+          7.117804048318498,
+          0.15339644274991873
+        ]
+      ],
+      "label_source": "official_ego_pose_3s"
+    },
+    "record_id": "b663629e24b68a071ab38a3e",
+    "sequence_id": "scene-0971_5_fixed_meta_action_planning",
+    "sequence_length": 5,
+    "workload": "fixed",
+    "frame_index": 2,
+    "scene_name": "scene-0971"
+  },
+  {
+    "scene_token": "64bfc5edd71147858ce7446892d7f864",
+    "sample_token": "deefc5673f374152b60cb36fff7439a9",
+    "prev_sample_token": "a2229d223c19406f9f71cb7a92b9ef54",
+    "next_sample_token": "d95a0f0adf7945c5aaf2fbd3dc110dcc",
+    "timestamp": 1537853016199732,
+    "query_id": "meta_action_planning_v1",
+    "query_type": "meta_action_planning",
+    "query_text": "Your current speed is 1 m/s, the navigation command is 'turn right', based on the understanding of the driving scene and the navigation information, what is your plan for the next three seconds? Please answer your SPEED plan and your PATH plan. SPEED includes KEEP, ACCELERATE and DECELERATE, and STOP, PATH includes STRAIGHT, RIGHT_CHANGE, LEFT_CHANGE, RIGHT_TURN, LEFT_TURN. For example, a correct answer format is like 'KEEP, LEFT_CHANGE'.",
+    "ground_truth": "KEEP, STRAIGHT",
+    "dependency_instance_tokens": [],
+    "dependency_attributes": {
+      "navigation": "turn right",
+      "current_speed_mps": 1.0035160697478929,
+      "current_speed_prompt_mps": 1,
+      "driving_state_bin": 1,
+      "planning_label": "KEEP, STRAIGHT",
+      "navigation_source": "offline_future_route_6s"
+    },
+    "dependency_signature": [
+      "turn right",
+      1,
+      1,
+      "KEEP, STRAIGHT"
+    ],
+    "state_facts": {
+      "navigation": "turn right",
+      "ego_speed_prompt": 1,
+      "driving_state_bin": 1,
+      "oracle_plan": "KEEP, STRAIGHT"
+    },
+    "image_paths": [
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT/n015-2018-09-25-13-17-43+0800__CAM_FRONT__1537853016162460.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_LEFT/n015-2018-09-25-13-17-43+0800__CAM_FRONT_LEFT__1537853016154844.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_RIGHT/n015-2018-09-25-13-17-43+0800__CAM_FRONT_RIGHT__1537853016170339.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_LEFT/n015-2018-09-25-13-17-43+0800__CAM_BACK_LEFT__1537853016197423.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_RIGHT/n015-2018-09-25-13-17-43+0800__CAM_BACK_RIGHT__1537853016177893.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK/n015-2018-09-25-13-17-43+0800__CAM_BACK__1537853016187525.jpg"
+    ],
+    "input_protocol": {
+      "version": "nuscenes_senna_v2",
+      "camera_order": [
+        "CAM_FRONT",
+        "CAM_FRONT_LEFT",
+        "CAM_FRONT_RIGHT",
+        "CAM_BACK_LEFT",
+        "CAM_BACK_RIGHT",
+        "CAM_BACK"
+      ],
+      "legacy_camera_order": false,
+      "legacy_navigation": false,
+      "navigation_source": "offline_future_route_6s",
+      "future_label_in_prompt": false,
+      "navigation_is_offline_future_route_condition": true
+    },
+    "offline_ground_truth": {
+      "future_ego_lidar_positions": [
+        [
+          1.8029463280733535e-14,
+          -8.379620552420222e-15,
+          5.696456572868853e-16
+        ],
+        [
+          0.03871308039758131,
+          0.6548286382813051,
+          0.00929414092927678
+        ],
+        [
+          0.1832585555781484,
+          1.7162883985379034,
+          0.030372790765646487
+        ],
+        [
+          0.5198912385658565,
+          3.1466257877682824,
+          0.06328525352394065
+        ],
+        [
+          1.1700812362624828,
+          4.833666987451162,
+          0.10053818557296164
+        ],
+        [
+          2.4336754716153974,
+          6.875441133806765,
+          0.15663499851414395
+        ],
+        [
+          3.9572723486539423,
+          8.43567501352211,
+          0.20906927139115497
+        ]
+      ],
+      "label_source": "official_ego_pose_3s"
+    },
+    "record_id": "cf52b42574f3cffda238418e",
+    "sequence_id": "scene-0971_5_fixed_meta_action_planning",
+    "sequence_length": 5,
+    "workload": "fixed",
+    "frame_index": 3,
+    "scene_name": "scene-0971"
+  },
+  {
+    "scene_token": "64bfc5edd71147858ce7446892d7f864",
+    "sample_token": "d95a0f0adf7945c5aaf2fbd3dc110dcc",
+    "prev_sample_token": "deefc5673f374152b60cb36fff7439a9",
+    "next_sample_token": "5e89b644b90d4955a33ffeb69a7ab62a",
+    "timestamp": 1537853016701995,
+    "query_id": "meta_action_planning_v1",
+    "query_type": "meta_action_planning",
+    "query_text": "Your current speed is 1 m/s, the navigation command is 'turn right', based on the understanding of the driving scene and the navigation information, what is your plan for the next three seconds? Please answer your SPEED plan and your PATH plan. SPEED includes KEEP, ACCELERATE and DECELERATE, and STOP, PATH includes STRAIGHT, RIGHT_CHANGE, LEFT_CHANGE, RIGHT_TURN, LEFT_TURN. For example, a correct answer format is like 'KEEP, LEFT_CHANGE'.",
+    "ground_truth": "KEEP, RIGHT_TURN",
+    "dependency_instance_tokens": [],
+    "dependency_attributes": {
+      "navigation": "turn right",
+      "current_speed_mps": 1.7402293412087269,
+      "current_speed_prompt_mps": 1,
+      "driving_state_bin": 1,
+      "planning_label": "KEEP, RIGHT_TURN",
+      "navigation_source": "offline_future_route_6s"
+    },
+    "dependency_signature": [
+      "turn right",
+      1,
+      1,
+      "KEEP, RIGHT_TURN"
+    ],
+    "state_facts": {
+      "navigation": "turn right",
+      "ego_speed_prompt": 1,
+      "driving_state_bin": 1,
+      "oracle_plan": "KEEP, RIGHT_TURN"
+    },
+    "image_paths": [
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT/n015-2018-09-25-13-17-43+0800__CAM_FRONT__1537853016662460.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_LEFT/n015-2018-09-25-13-17-43+0800__CAM_FRONT_LEFT__1537853016654844.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_RIGHT/n015-2018-09-25-13-17-43+0800__CAM_FRONT_RIGHT__1537853016670339.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_LEFT/n015-2018-09-25-13-17-43+0800__CAM_BACK_LEFT__1537853016697423.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_RIGHT/n015-2018-09-25-13-17-43+0800__CAM_BACK_RIGHT__1537853016677893.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK/n015-2018-09-25-13-17-43+0800__CAM_BACK__1537853016687525.jpg"
+    ],
+    "input_protocol": {
+      "version": "nuscenes_senna_v2",
+      "camera_order": [
+        "CAM_FRONT",
+        "CAM_FRONT_LEFT",
+        "CAM_FRONT_RIGHT",
+        "CAM_BACK_LEFT",
+        "CAM_BACK_RIGHT",
+        "CAM_BACK"
+      ],
+      "legacy_camera_order": false,
+      "legacy_navigation": false,
+      "navigation_source": "offline_future_route_6s",
+      "future_label_in_prompt": false,
+      "navigation_is_offline_future_route_condition": true
+    },
+    "offline_ground_truth": {
+      "future_ego_lidar_positions": [
+        [
+          9.672091505928391e-15,
+          3.5252515868740806e-15,
+          3.6463453684992324e-16
+        ],
+        [
+          0.11175446201673617,
+          1.0653486138730928,
+          0.024037421994299257
+        ],
+        [
+          0.4041364685204251,
+          2.5052888627999934,
+          0.0608434307958815
+        ],
+        [
+          1.002012414560531,
+          4.211468829053016,
+          0.10252195502494425
+        ],
+        [
+          2.2020738731533087,
+          6.291077790974951,
+          0.16366089400460723
+        ],
+        [
+          3.676863323171922,
+          7.897407653380758,
+          0.21958054495552673
+        ],
+        [
+          5.001969742870837,
+          8.928116902061946,
+          0.27099664137592266
+        ]
+      ],
+      "label_source": "official_ego_pose_3s"
+    },
+    "record_id": "ee128ef13ad0fa14f51d8492",
+    "sequence_id": "scene-0971_5_fixed_meta_action_planning",
+    "sequence_length": 5,
+    "workload": "fixed",
+    "frame_index": 4,
+    "scene_name": "scene-0971"
+  },
+  {
+    "scene_token": "64bfc5edd71147858ce7446892d7f864",
+    "sample_token": "956027b87e5242ec9d9d22c8be48b7ac",
+    "prev_sample_token": "75385bf352fe4743a8cbf576b1e184fb",
+    "next_sample_token": "a2229d223c19406f9f71cb7a92b9ef54",
+    "timestamp": 1537853015198764,
+    "query_id": "existence_v1",
+    "query_type": "existence",
+    "query_text": "Do you see any vulnerable road users within 20 meters ahead of you, such as cyclists, motorcyclists, or pedestrians? Consider the 35-degree half-angle forward sector, beyond 0 meters forward, and these nuScenes category prefixes: ['human.pedestrian.', 'vehicle.bicycle', 'vehicle.motorcycle']. Answer only YES or NO.",
+    "ground_truth": "NO",
+    "dependency_instance_tokens": [],
+    "dependency_attributes": {
+      "scope": {
+        "prefixes": [
+          "human.pedestrian.",
+          "vehicle.bicycle",
+          "vehicle.motorcycle"
+        ],
+        "radius_m": 20.0,
+        "forward_min_m": 0.0,
+        "half_angle_degrees": 35.0
+      },
+      "members": [],
+      "annotation_coverage": "official_sample_annotation_table"
+    },
+    "dependency_signature": [
+      {
+        "prefixes": [
+          "human.pedestrian.",
+          "vehicle.bicycle",
+          "vehicle.motorcycle"
+        ],
+        "radius_m": 20.0,
+        "forward_min_m": 0.0,
+        "half_angle_degrees": 35.0
+      },
+      []
+    ],
+    "state_facts": {
+      "existence_scope:{\"forward_min_m\":0.0,\"half_angle_degrees\":35.0,\"prefixes\":[\"human.pedestrian.\",\"vehicle.bicycle\",\"vehicle.motorcycle\"],\"radius_m\":20.0}": []
+    },
+    "image_paths": [
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT/n015-2018-09-25-13-17-43+0800__CAM_FRONT__1537853015162460.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_LEFT/n015-2018-09-25-13-17-43+0800__CAM_FRONT_LEFT__1537853015154844.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_RIGHT/n015-2018-09-25-13-17-43+0800__CAM_FRONT_RIGHT__1537853015170339.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_LEFT/n015-2018-09-25-13-17-43+0800__CAM_BACK_LEFT__1537853015197423.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_RIGHT/n015-2018-09-25-13-17-43+0800__CAM_BACK_RIGHT__1537853015177893.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK/n015-2018-09-25-13-17-43+0800__CAM_BACK__1537853015187525.jpg"
+    ],
+    "input_protocol": {
+      "version": "nuscenes_senna_v2",
+      "camera_order": [
+        "CAM_FRONT",
+        "CAM_FRONT_LEFT",
+        "CAM_FRONT_RIGHT",
+        "CAM_BACK_LEFT",
+        "CAM_BACK_RIGHT",
+        "CAM_BACK"
+      ],
+      "legacy_camera_order": false,
+      "legacy_navigation": false,
+      "navigation_source": "none",
+      "future_label_in_prompt": false
+    },
+    "offline_ground_truth": {},
+    "record_id": "70dfdbac987d964c965d61bd",
+    "sequence_id": "scene-0971_5_mixed_alternating",
+    "sequence_length": 5,
+    "workload": "mixed",
+    "frame_index": 1,
+    "scene_name": "scene-0971"
+  },
+  {
+    "scene_token": "64bfc5edd71147858ce7446892d7f864",
+    "sample_token": "d95a0f0adf7945c5aaf2fbd3dc110dcc",
+    "prev_sample_token": "deefc5673f374152b60cb36fff7439a9",
+    "next_sample_token": "5e89b644b90d4955a33ffeb69a7ab62a",
+    "timestamp": 1537853016701995,
+    "query_id": "meta_action_planning_v1",
+    "query_type": "meta_action_planning",
+    "query_text": "Your current speed is 1 m/s, the navigation command is 'turn right', based on the understanding of the driving scene and the navigation information, what is your plan for the next three seconds? Please answer your SPEED plan and your PATH plan. SPEED includes KEEP, ACCELERATE and DECELERATE, and STOP, PATH includes STRAIGHT, RIGHT_CHANGE, LEFT_CHANGE, RIGHT_TURN, LEFT_TURN. For example, a correct answer format is like 'KEEP, LEFT_CHANGE'.",
+    "ground_truth": "KEEP, RIGHT_TURN",
+    "dependency_instance_tokens": [],
+    "dependency_attributes": {
+      "navigation": "turn right",
+      "current_speed_mps": 1.7402293412087269,
+      "current_speed_prompt_mps": 1,
+      "driving_state_bin": 1,
+      "planning_label": "KEEP, RIGHT_TURN",
+      "navigation_source": "offline_future_route_6s"
+    },
+    "dependency_signature": [
+      "turn right",
+      1,
+      1,
+      "KEEP, RIGHT_TURN"
+    ],
+    "state_facts": {
+      "navigation": "turn right",
+      "ego_speed_prompt": 1,
+      "driving_state_bin": 1,
+      "oracle_plan": "KEEP, RIGHT_TURN"
+    },
+    "image_paths": [
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT/n015-2018-09-25-13-17-43+0800__CAM_FRONT__1537853016662460.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_LEFT/n015-2018-09-25-13-17-43+0800__CAM_FRONT_LEFT__1537853016654844.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_FRONT_RIGHT/n015-2018-09-25-13-17-43+0800__CAM_FRONT_RIGHT__1537853016670339.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_LEFT/n015-2018-09-25-13-17-43+0800__CAM_BACK_LEFT__1537853016697423.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK_RIGHT/n015-2018-09-25-13-17-43+0800__CAM_BACK_RIGHT__1537853016677893.jpg",
+      "/data/dataset/v1.0-trainval/samples/CAM_BACK/n015-2018-09-25-13-17-43+0800__CAM_BACK__1537853016687525.jpg"
+    ],
+    "input_protocol": {
+      "version": "nuscenes_senna_v2",
+      "camera_order": [
+        "CAM_FRONT",
+        "CAM_FRONT_LEFT",
+        "CAM_FRONT_RIGHT",
+        "CAM_BACK_LEFT",
+        "CAM_BACK_RIGHT",
+        "CAM_BACK"
+      ],
+      "legacy_camera_order": false,
+      "legacy_navigation": false,
+      "navigation_source": "offline_future_route_6s",
+      "future_label_in_prompt": false,
+      "navigation_is_offline_future_route_condition": true
+    },
+    "offline_ground_truth": {
+      "future_ego_lidar_positions": [
+        [
+          9.672091505928391e-15,
+          3.5252515868740806e-15,
+          3.6463453684992324e-16
+        ],
+        [
+          0.11175446201673617,
+          1.0653486138730928,
+          0.024037421994299257
+        ],
+        [
+          0.4041364685204251,
+          2.5052888627999934,
+          0.0608434307958815
+        ],
+        [
+          1.002012414560531,
+          4.211468829053016,
+          0.10252195502494425
+        ],
+        [
+          2.2020738731533087,
+          6.291077790974951,
+          0.16366089400460723
+        ],
+        [
+          3.676863323171922,
+          7.897407653380758,
+          0.21958054495552673
+        ],
+        [
+          5.001969742870837,
+          8.928116902061946,
+          0.27099664137592266
+        ]
+      ],
+      "label_source": "official_ego_pose_3s"
+    },
+    "record_id": "6c531e6f8e09a7f79d5c6c77",
+    "sequence_id": "scene-0971_5_mixed_alternating",
+    "sequence_length": 5,
+    "workload": "mixed",
+    "frame_index": 4,
+    "scene_name": "scene-0971"
+  }
+]

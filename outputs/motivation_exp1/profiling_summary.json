@@ -158,6 +158,7 @@
     }
   },
   "detailed_records_excluded": 1,
+  "invalid_decomposition_records": 0,
   "speedup_caveat": "Ideal bound removes measured Vision Tower + Projector + img_adapter only, assumes zero added management cost; not an achievable or measured speedup",
   "prefill_decode": "CUDA events around original model.forward: prefill consumes full multimodal prompt with empty incoming KV cache and produces token one; decode sums subsequent single-token forwards with nonempty KV cache. Generation setup, token selection, cache bookkeeping, stopping checks and dispatch outside forward remain llm_generation_overhead_ms (plotted in Other). These are current-stream forward intervals, not pure kernel times or time to first token."
 }

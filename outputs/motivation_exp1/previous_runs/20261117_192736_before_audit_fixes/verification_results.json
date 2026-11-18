@@ -1,0 +1,228 @@
+{
+  "unit_tests": {
+    "runner": "Senna python -m unittest discover -s experiments/motivation_exp1/tests -v",
+    "passed": 30,
+    "failed": 0
+  },
+  "compileall": "passed",
+  "configured_full_run": "passed; original 10 scenes, 500 pairs, 100 requests x 3 repeats and one detailed trace",
+  "previous_results_backup": "/data/qh/phdCode/work4/Senna/outputs/motivation_exp1_before_llm_split_20261011_215902",
+  "unchanged_scientific_configuration_data_model_dependencies": true,
+  "unchanged_data_csv_hashes": {
+    "camera_manifest.csv": true,
+    "temporal_pairs.csv": true,
+    "temporal_similarity.csv": true,
+    "patch_similarity.csv": true,
+    "object_persistence.csv": true
+  },
+  "real_data_audit": "passed; all five data CSVs match the previous verified run byte-for-byte",
+  "profiling_records": 300,
+  "detailed_records_excluded": 1,
+  "matched_front_pairs": 90,
+  "equivalence_samples_passed": 2,
+  "generation_matches_previous_run": {
+    "unique_samples": 100,
+    "timing_rows": 300,
+    "detailed_rows": 1,
+    "all_token_ids_and_predictions_equal": true
+  },
+  "latency_partition_max_absolute_error_ms": 0.0,
+  "llm_split": {
+    "valid_timing_records": 300,
+    "valid_detailed_records": 1,
+    "exactly_one_prefill_per_request": true,
+    "decode_calls_equal_output_tokens_minus_one": true,
+    "single_token_decode_and_monotonic_kv_cache_verified": true,
+    "prefill_input_tokens": [
+      999,
+      1002
+    ],
+    "prefill_matches_raw_forward_max_absolute_error_ms": 0.0,
+    "decode_matches_raw_forward_max_absolute_error_ms": 0.0,
+    "generation_parent_max_absolute_error_ms": 0.0,
+    "overhead_plotted_in": "Other",
+    "by_output_tokens": {
+      "8": {
+        "records": 57,
+        "cached_decode_calls": 7,
+        "llm_prefill_ms": {
+          "n": 57,
+          "mean": 287.5476379394531,
+          "p50": 287.660888671875,
+          "p95": 288.6082336425781,
+          "p99": 288.72626708984376
+        },
+        "llm_decode_ms": {
+          "n": 57,
+          "mean": 166.5020364794815,
+          "p50": 166.55548858642578,
+          "p95": 166.66360168457032,
+          "p99": 166.6746697998047
+        },
+        "llm_generation_overhead_ms": {
+          "n": 57,
+          "mean": 1.6691443794652034,
+          "p50": 1.6637458801269531,
+          "p95": 1.778390121459961,
+          "p99": 1.8027587890624999
+        },
+        "llm_decode_ms_per_token": {
+          "n": 57,
+          "mean": 23.786005211354496,
+          "p50": 23.793641226632253,
+          "p95": 23.809085954938617,
+          "p99": 23.810667114257814
+        }
+      },
+      "9": {
+        "records": 219,
+        "cached_decode_calls": 8,
+        "llm_prefill_ms": {
+          "n": 219,
+          "mean": 287.7375259747788,
+          "p50": 287.8421936035156,
+          "p95": 288.60707702636716,
+          "p99": 289.59519958496094
+        },
+        "llm_decode_ms": {
+          "n": 219,
+          "mean": 190.26290188967909,
+          "p50": 190.2630386352539,
+          "p95": 190.580393409729,
+          "p99": 190.7143902206421
+        },
+        "llm_generation_overhead_ms": {
+          "n": 219,
+          "mean": 1.8252129141054196,
+          "p50": 1.8079471588134766,
+          "p95": 1.9262266159057617,
+          "p99": 2.0895015335083005
+        },
+        "llm_decode_ms_per_token": {
+          "n": 219,
+          "mean": 23.782862736209886,
+          "p50": 23.78287982940674,
+          "p95": 23.822549176216125,
+          "p99": 23.83929877758026
+        }
+      },
+      "11": {
+        "records": 24,
+        "cached_decode_calls": 10,
+        "llm_prefill_ms": {
+          "n": 24,
+          "mean": 287.2190907796224,
+          "p50": 287.5453338623047,
+          "p95": 288.54593048095705,
+          "p99": 288.9510986328125
+        },
+        "llm_decode_ms": {
+          "n": 24,
+          "mean": 237.66435043017069,
+          "p50": 237.61086559295654,
+          "p95": 238.00564289093018,
+          "p99": 238.0928785133362
+        },
+        "llm_generation_overhead_ms": {
+          "n": 24,
+          "mean": 2.211315711339315,
+          "p50": 2.1351966857910156,
+          "p95": 2.566262817382812,
+          "p99": 3.2030453491210933
+        },
+        "llm_decode_ms_per_token": {
+          "n": 24,
+          "mean": 23.76643504301707,
+          "p50": 23.761086559295656,
+          "p95": 23.800564289093018,
+          "p99": 23.809287851333618
+        }
+      }
+    }
+  },
+  "source_provenance": "passed; all 24 recorded source hashes match",
+  "trace_audit": {
+    "passed": true,
+    "prefill_ranges": 1,
+    "decode_ranges": 8,
+    "kernel_events": 14439,
+    "cpu_op_events": 61785,
+    "memory_events": 31406
+  },
+  "figure_audit": "passed; 6 available figures, PNG 300 DPI and PDF headers valid; M1d shows 12 requests, 300 measurements in summaries",
+  "overall_gap_ssim_scene_bootstrap": {
+    "adjacent": {
+      "scenes": 10,
+      "scene_equal_weight_mean": 0.6560912292613486,
+      "ci95": [
+        0.5974471615920142,
+        0.7177154940747535
+      ],
+      "bootstrap_unit": "scene mean",
+      "scene_means": {
+        "0e7ede02718341558414865d5c604745": 0.5994643807569089,
+        "201b7c65a61f4bc1a2333ea90ba9a932": 0.6060310317735306,
+        "3f90afe9f7dc49399347ae1626502aed": 0.814628099629201,
+        "55b3a17359014f398b6bbd90e94a8e1b": 0.7553657877262947,
+        "64bfc5edd71147858ce7446892d7f864": 0.5347155252386303,
+        "6776b91389394ff18e57b269863b4dbf": 0.6579097160132592,
+        "8377abf77f464a9cb62eacf63f383422": 0.7687097967013199,
+        "9709626638f5406f9f773348150d02fd": 0.5435721945465203,
+        "b789de07180846cc972118ee6d1fb027": 0.7229381104159349,
+        "e005041f659c47e194cd5b18ea6fc346": 0.5575776498118858
+      }
+    },
+    "0.25s": {
+      "scenes": 10,
+      "scene_equal_weight_mean": 0.5597629346273976,
+      "ci95": [
+        0.48286240641355044,
+        0.6345763351150974
+      ],
+      "bootstrap_unit": "scene mean",
+      "scene_means": {
+        "0e7ede02718341558414865d5c604745": 0.5197996721099958,
+        "201b7c65a61f4bc1a2333ea90ba9a932": 0.4419202155003963,
+        "3f90afe9f7dc49399347ae1626502aed": 0.7609807087392025,
+        "55b3a17359014f398b6bbd90e94a8e1b": 0.6832338356661753,
+        "64bfc5edd71147858ce7446892d7f864": 0.5588485137102105,
+        "6776b91389394ff18e57b269863b4dbf": 0.5430486120967346,
+        "8377abf77f464a9cb62eacf63f383422": 0.6045949350664481,
+        "9709626638f5406f9f773348150d02fd": 0.40291409782918886,
+        "b789de07180846cc972118ee6d1fb027": 0.6881231862082523,
+        "e005041f659c47e194cd5b18ea6fc346": 0.3941655693473711
+      }
+    },
+    "0.5s": {
+      "scenes": 10,
+      "scene_equal_weight_mean": 0.49338814832799455,
+      "ci95": [
+        0.41965743485352786,
+        0.5615697208340459
+      ],
+      "bootstrap_unit": "scene mean",
+      "scene_means": {
+        "0e7ede02718341558414865d5c604745": 0.45974015458048356,
+        "201b7c65a61f4bc1a2333ea90ba9a932": 0.41227638825723373,
+        "3f90afe9f7dc49399347ae1626502aed": 0.5644016017015929,
+        "55b3a17359014f398b6bbd90e94a8e1b": 0.6682346269522657,
+        "64bfc5edd71147858ce7446892d7f864": 0.48796870371967577,
+        "6776b91389394ff18e57b269863b4dbf": 0.3909997129304104,
+        "8377abf77f464a9cb62eacf63f383422": 0.606922179979643,
+        "9709626638f5406f9f773348150d02fd": 0.34236402209229,
+        "b789de07180846cc972118ee6d1fb027": 0.6462124631075706,
+        "e005041f659c47e194cd5b18ea6fc346": 0.3547616299587795
+      }
+    }
+  },
+  "previous_run_checks": {
+    "verification_file": "/data/qh/phdCode/work4/Senna/outputs/motivation_exp1_before_llm_split_20261011_215902/verification_results.json",
+    "note": "Earlier dry-run, smoke, interruption and completed-resume checks are archived; current split checks are above."
+  },
+  "remaining_unmeasured": [
+    "camera-specific object visibility",
+    "cross-device stage decomposition",
+    "any WorldStream optimization or speedup"
+  ],
+  "audit_script_sha256": "57cc9fbdb697899d852eaf519a819dfd56c900841eb1fbc44fe8616075b35715"
+}

@@ -55,7 +55,27 @@ def inference_args(sample, cfg):
 def profile_summary(rows):
     timing = [r for r in rows if r["measurement_mode"] == "timing"]
     metrics = ("image_file_loading_ms", "image_preprocessing_ms", "host_to_device_ms", "vision_tower_ms", "projector_ms", "img_adapter_ms", "multimodal_preparation_ms", "llm_generation_ms", "llm_prefill_ms", "llm_decode_ms", "llm_generation_overhead_ms", "llm_decode_ms_per_token", "other_ms", "end_to_end_ms", "vision_latency_ratio", "projector_latency_ratio", "visual_path_latency_ratio", "llm_generation_latency_ratio", "llm_prefill_latency_ratio", "llm_decode_latency_ratio", "llm_generation_overhead_latency_ratio", "ideal_visual_path_speedup_bound")
-    return {"timing_records": len(timing), "unique_samples": len({r["sample_token"] for r in timing}), "metrics": {key: distribution([r.get(key) for r in timing]) for key in metrics}, "detailed_records_excluded": sum(r["measurement_mode"] != "timing" for r in rows), "speedup_caveat": "Ideal bound removes measured Vision Tower + Projector + img_adapter only, assumes zero added management cost; not an achievable or measured speedup", "prefill_decode": "CUDA events around original model.forward: prefill consumes full multimodal prompt with empty incoming KV cache and produces token one; decode sums subsequent single-token forwards with nonempty KV cache. Generation setup, token selection, cache bookkeeping, stopping checks and dispatch outside forward remain llm_generation_overhead_ms (plotted in Other). These are current-stream forward intervals, not pure kernel times or time to first token."}
+    timing = valid_timing_values(timing)
+    return {"timing_records": len(timing), "unique_samples": len({r["sample_token"] for r in timing}), "metrics": {key: distribution([r.get(key) for r in timing]) for key in metrics}, "detailed_records_excluded": sum(r["measurement_mode"] != "timing" for r in rows), "invalid_decomposition_records": sum(str(r.get("timing_decomposition_valid", False)).lower() != "true" for r in timing), "speedup_caveat": "Ideal bound removes measured Vision Tower + Projector + img_adapter only, assumes zero added management cost; not an achievable or measured speedup", "prefill_decode": "CUDA events around original model.forward: prefill consumes full multimodal prompt with empty incoming KV cache and produces token one; decode sums subsequent single-token forwards with nonempty KV cache. Generation setup, token selection, cache bookkeeping, stopping checks and dispatch outside forward remain llm_generation_overhead_ms (plotted in Other). These are current-stream forward intervals, not pure kernel times or time to first token."}
+
+
+def valid_timing_values(rows):
+    """Retain wall time; mark unreliable CUDA components unavailable in summaries."""
+    result = []
+    safe = {"end_to_end_ms", "image_file_loading_ms", "image_preprocessing_ms", "host_to_device_ms", "generation_wall_ms"}
+    for original in rows:
+        row = dict(original)
+        valid = str(row.get("timing_decomposition_valid", False)).lower() == "true"
+        split = valid and str(row.get("llm_split_valid", False)).lower() == "true"
+        for key in row:
+            if key in safe:
+                continue
+            if not valid and (key.endswith("_ms") or key.endswith("_ratio") or key == "ideal_visual_path_speedup_bound"):
+                row[key] = ""
+            elif not split and key.startswith(("llm_prefill_", "llm_decode_", "llm_generation_overhead_")) and key.endswith(("_ms", "_ratio", "_per_token")):
+                row[key] = ""
+        result.append(row)
+    return result
 
 
 def matched_results(samples, linked, rows, cfg, out):

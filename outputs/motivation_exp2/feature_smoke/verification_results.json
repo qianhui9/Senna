@@ -1,0 +1,13 @@
+{
+  "maps_match_summary": true,
+  "cdf_matches_threshold_ratios": true,
+  "normalized_l2_identity": true,
+  "gini_pairwise_identity": true,
+  "feature_tests_exit_code": 0,
+  "smoke_pairs": 36,
+  "smoke_failed_pairs": 0,
+  "resume_without_model_reload": "2026-11-17 12:05:44,326 INFO Reusing 36 checksum-validated measured pairs\n",
+  "e1_regression": "38 tests passed in Senna",
+  "legacy_geometry_regression": "4 module import errors: pandas absent in Senna; 33 tests passed, 1 feature real-run test skipped in that invocation",
+  "feature_tests_passed": 14
+}

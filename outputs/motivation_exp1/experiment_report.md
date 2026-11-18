@@ -6,18 +6,18 @@ Continuous driving observations may contain persistent visual content while the 
 
 ## Reproduction and provenance
 
-- Senna commit: `63368f1d0da31940d3e7a2c3099923cb942ad6f6`; local source SHA256 hashes and working-tree changes are recorded in `run_metadata.json`.
+- Senna commit: `unavailable; source SHA256 recorded`; local source SHA256 hashes and working-tree changes are recorded in `run_metadata.json`.
 - Checkpoint: `/data/qh/phdCode/work4/models/Senna`; original base weights, no LoRA or weight changes.
-- nuScenes: `v1.0-trainval` at `/data/qh/nuscenes/v1.0-trainval`.
+- nuScenes: `v1.0-trainval` at `/data/dataset/v1.0-trainval`.
 - Evaluation JSON: `/data/qh/phdCode/work4/Senna/data/senna_nusc_val_plan_corrected.json`; SHA256 `5d974da8bffd6bd2668efb9fd92ea4b7c7f906a429016597dfd4ddc51b176c5b`.
 - Seed: 42; resolved settings in `resolved_config.yaml`.
-- Python: `3.10.22 (main, Oct  1 2026, 20:14:04) [GCC 14.3.0]`.
+- Python: `3.10.22 (main, Oct 29 2026, 20:33:25) [GCC 14.3.0]`.
 - Camera order: `CAM_FRONT, CAM_FRONT_LEFT, CAM_FRONT_RIGHT, CAM_BACK_LEFT, CAM_BACK_RIGHT, CAM_BACK`.
 - Local fork contains corrected camera ordering/navigation and validated evaluation inputs. The experiment invokes this local `eval_multi_img_model_wo_init` directly. Official reference: https://github.com/hustvl/Senna.
 
 ## Workload and indexing
 
-`sample_data.next` is followed separately for all six cameras, including non-keyframe sweeps. Scene boundaries, calibrated sensor channels, cycles, file existence, reciprocal links and timestamp anomalies are checked. The first gap group uses direct adjacent links; remaining targets use nearest actual timestamps within the configured tolerance. Pairs are selected with seeded content-independent hashes, round-robin over Scene/Camera/gap strata.
+`sample_data.next` is followed separately for all six cameras, including non-keyframe sweeps. Scene boundaries, calibrated sensor channels, cycles, file existence, reciprocal links and timestamp anomalies are checked. The 0.083s target uses direct adjacent camera links within the configured tolerance; the 0.5s target uses successive keyframes only. Other targets use nearest later timestamps within tolerance. Actual camera timestamps are always retained. Pairs are selected with seeded content-independent hashes, round-robin over Scene/Camera/gap strata.
 
 | Quantity | Recorded count |
 |---|---:|
@@ -42,23 +42,23 @@ Unweighted mean of within-scene means; 95% percentile bootstrap over scene means
 | Camera | Gap | Pairs | Scenes | Actual Δt ms (scene mean) | SSIM scene mean | Scene bootstrap 95% CI |
 |---|---|---:|---:|---:|---:|---|
 | CAM_BACK | 0.25s | 29 | 10 | 250 | 0.717 | [0.6226, 0.8066] |
-| CAM_BACK | 0.5s | 28 | 10 | 500 | 0.6141 | [0.5202, 0.698] |
+| CAM_BACK | 0.5s | 28 | 10 | 500 | 0.5944 | [0.4984, 0.6987] |
 | CAM_BACK | adjacent | 29 | 10 | 78.33 | 0.7984 | [0.7545, 0.8455] |
 | CAM_BACK_LEFT | 0.25s | 27 | 10 | 250 | 0.4735 | [0.3766, 0.5943] |
-| CAM_BACK_LEFT | 0.5s | 29 | 10 | 500.1 | 0.4436 | [0.362, 0.5291] |
-| CAM_BACK_LEFT | adjacent | 26 | 10 | 77.5 | 0.5593 | [0.4742, 0.6755] |
+| CAM_BACK_LEFT | 0.5s | 29 | 10 | 500 | 0.4431 | [0.3588, 0.5348] |
+| CAM_BACK_LEFT | adjacent | 26 | 10 | 75.83 | 0.5571 | [0.4734, 0.6727] |
 | CAM_BACK_RIGHT | 0.25s | 28 | 10 | 250 | 0.5118 | [0.4109, 0.6039] |
-| CAM_BACK_RIGHT | 0.5s | 27 | 10 | 500 | 0.4269 | [0.3431, 0.5015] |
-| CAM_BACK_RIGHT | adjacent | 27 | 10 | 90 | 0.5859 | [0.4871, 0.6835] |
+| CAM_BACK_RIGHT | 0.5s | 27 | 10 | 500 | 0.4017 | [0.3125, 0.5055] |
+| CAM_BACK_RIGHT | adjacent | 27 | 10 | 85 | 0.5955 | [0.5085, 0.685] |
 | CAM_FRONT | 0.25s | 30 | 10 | 250.1 | 0.6364 | [0.5704, 0.7073] |
-| CAM_FRONT | 0.5s | 26 | 10 | 500 | 0.5584 | [0.4788, 0.6371] |
+| CAM_FRONT | 0.5s | 26 | 10 | 500 | 0.5776 | [0.4988, 0.655] |
 | CAM_FRONT | adjacent | 29 | 10 | 81.71 | 0.7307 | [0.6687, 0.7989] |
 | CAM_FRONT_LEFT | 0.25s | 27 | 10 | 250 | 0.4868 | [0.4029, 0.5825] |
-| CAM_FRONT_LEFT | 0.5s | 29 | 10 | 500 | 0.4381 | [0.3301, 0.551] |
+| CAM_FRONT_LEFT | 0.5s | 29 | 10 | 500 | 0.4339 | [0.3502, 0.5154] |
 | CAM_FRONT_LEFT | adjacent | 27 | 10 | 90.83 | 0.6336 | [0.5329, 0.747] |
 | CAM_FRONT_RIGHT | 0.25s | 28 | 10 | 250 | 0.524 | [0.4096, 0.6444] |
-| CAM_FRONT_RIGHT | 0.5s | 25 | 10 | 500 | 0.4804 | [0.3731, 0.5822] |
-| CAM_FRONT_RIGHT | adjacent | 29 | 10 | 79.09 | 0.6167 | [0.5445, 0.6823] |
+| CAM_FRONT_RIGHT | 0.5s | 25 | 10 | 500 | 0.4781 | [0.3805, 0.5757] |
+| CAM_FRONT_RIGHT | adjacent | 29 | 10 | 79.18 | 0.6128 | [0.5378, 0.6806] |
 
 All PSNR, normalized difference and patch threshold statistics, including confidence intervals, are in `scene_statistics.csv` and `aggregate_summary.json`. Thresholds are sensitivity analyses; high patch similarity is not object identity or a FLOPs-saving fraction.
 
@@ -67,6 +67,41 @@ All PSNR, normalized difference and patch threshold statistics, including confid
 Scope: global official 3D annotations at adjacent keyframes. Persistence ratio = size(intersection of instance tokens) / previous instance count; an empty previous set is undefined. Jaccard is also recorded. These are neither per-camera visibility estimates nor fabricated sweep annotations.
 
 393 annotated keyframe pairs, 10 scenes; scene-equal persistence mean 0.9531, scene bootstrap 95% CI [0.9374, 0.9673].
+
+| Global metric | Scene-equal mean | 95% scene-bootstrap CI |
+|---|---:|---|
+| instance_jaccard | 0.9063 | [0.8788, 0.9306] |
+| new_instance_count | 2.139 | [1.277, 3.183] |
+| disappeared_instance_count | 2.02 | [1.173, 2.958] |
+
+## High visual similarity with global identity-set changes
+
+High per-camera image SSIM co-occurring with a GLOBAL annotated instance-set change. This does not establish that a changed object is visible in that camera. Motion of persistent identities is not measured; unchanged identity sets do not imply unchanged object states.
+
+This joins the same scene and the exact pair of annotated keyframe sample tokens. Camera exposure times and annotation timestamps are recorded separately. Sweep sample_token fields alone are not accepted as keyframe evidence.
+
+| Camera | SSIM ≥ | Matched transitions | With global identity-set changes | Scene-equal changed fraction | Scene-bootstrap 95% CI |
+|---|---:|---:|---:|---:|---|
+| CAM_BACK | 0.70 | 8 | 7 | 0.9167 | [0.75, 1] |
+| CAM_BACK | 0.80 | 3 | 2 | 0.75 | [0.5, 1] |
+| CAM_BACK | 0.90 | 2 | 1 | 0.5 | undefined (<2 scenes) |
+| CAM_BACK_LEFT | 0.70 | 2 | 1 | 0.5 | [0, 1] |
+| CAM_BACK_LEFT | 0.80 | 2 | 1 | 0.5 | [0, 1] |
+| CAM_BACK_LEFT | 0.90 | 2 | 1 | 0.5 | [0, 1] |
+| CAM_BACK_RIGHT | 0.70 | 4 | 2 | 0.6667 | [0.3333, 1] |
+| CAM_BACK_RIGHT | 0.80 | 2 | 2 | 1 | [1, 1] |
+| CAM_BACK_RIGHT | 0.90 | 1 | 1 | 1 | undefined (<2 scenes) |
+| CAM_FRONT | 0.70 | 8 | 7 | 0.8 | [0.4, 1] |
+| CAM_FRONT | 0.80 | 3 | 2 | 0.6667 | [0, 1] |
+| CAM_FRONT | 0.90 | 2 | 1 | 0.5 | [0, 1] |
+| CAM_FRONT_LEFT | 0.70 | 1 | 1 | 1 | undefined (<2 scenes) |
+| CAM_FRONT_LEFT | 0.80 | 1 | 1 | 1 | undefined (<2 scenes) |
+| CAM_FRONT_LEFT | 0.90 | 1 | 1 | 1 | undefined (<2 scenes) |
+| CAM_FRONT_RIGHT | 0.70 | 5 | 4 | 0.875 | [0.625, 1] |
+| CAM_FRONT_RIGHT | 0.80 | 2 | 2 | 1 | [1, 1] |
+| CAM_FRONT_RIGHT | 0.90 | 2 | 2 | 1 | [1, 1] |
+
+Verified existing raw artifacts were reused with their original provenance. Profiling values below are the archived measurements, not new timings in the current environment. See `reuse_provenance.json` for original source/package identities, artifact SHA256 checks and the allowed derivation changes.
 
 ## Original Senna architecture and runtime
 
@@ -145,14 +180,17 @@ Similarity and original inference use distinct input sources. Sample-level compa
 
 [Vector PDF](figures/matched_similarity_latency.pdf). Availability: True. 
 
-M1(d) replaces the former LLM Generation bar with measured LLM Prefill and LLM Decode. Other includes img_adapter, loading, transfer, exclusive preparation, generation overhead and residual costs. Its stacked segments still sum to synchronized end-to-end latency. The first 12 requests are shown, averaging 3 repeats per request; full-workload statistics use all timing records. Parent timings are never stacked with their children. M1(e) has no fabricated values when exact linkage is absent.
+M1(d) replaces the former LLM Generation bar with measured LLM Prefill and LLM Decode. Image Adapter is displayed separately. Other includes loading, transfer, exclusive preparation, generation overhead and residual costs. Its stacked segments still sum to synchronized end-to-end latency. Up to the first 12 requests are shown, averaging the recorded repeats per request; full-workload statistics use all timing records. Parent timings are never stacked with their children. M1(e) has no fabricated values when exact linkage is absent.
 
 ## Missing data, anomalies and limitations
 
+- aggregate: complete; 
 - index: complete; 
 - objects: complete; 
+- plot: complete; 
 - profile: complete; 
 - redundancy: complete; 
+- report: complete; 
 - manifest_issues: 7 recorded issues; inspect `manifest_issues.json`.
 - similarity_issues: 0 recorded issues; inspect `similarity_issues.json`.
 - object_issues: 0 recorded issues; inspect `object_issues.json`.
@@ -164,7 +202,7 @@ M1(d) replaces the former LLM Generation bar with measured LLM Prefill and LLM D
 
 ## Observation Supported by Evidence
 
-Measured group-level scene-mean SSIM spans 0.4269–0.7984; the tables and M1(a/b) quantify content similarity and its variation with actual interval and camera. The measurements, rather than a preset redundancy assumption, determine the observation.
+Measured group-level scene-mean SSIM spans 0.4017–0.7984; the tables and M1(a/b) quantify content similarity and its variation with actual interval and camera. The measurements, rather than a preset redundancy assumption, determine the observation.
 
 Global annotated instances persist at the recorded ratio of 0.9531; camera-visible persistence remains unmeasured.
 

@@ -2,12 +2,13 @@
 from bisect import bisect_left
 from collections import defaultdict
 import hashlib
+import math
 from pathlib import Path
 
 from .utils.data_utils import CAMERAS, LOG, completed, load_nuscenes, mark, selected_scenes, write_csv, write_json
 
 FRAME_FIELDS = ["scene_name", "scene_token", "camera_channel", "sample_data_token", "sample_token", "timestamp_us", "image_path", "is_key_frame", "ego_pose_token", "calibrated_sensor_token", "prev_sample_data_token", "next_sample_data_token", "file_exists"]
-PAIR_FIELDS = ["pair_id", "scene_name", "scene_token", "camera_channel", "previous_sample_data_token", "current_sample_data_token", "previous_sample_token", "current_sample_token", "previous_image_path", "current_image_path", "previous_timestamp_us", "current_timestamp_us", "actual_delta_t_ms", "gap_group", "target_delta_t_ms"]
+PAIR_FIELDS = ["pair_id", "scene_name", "scene_token", "camera_channel", "previous_sample_data_token", "current_sample_data_token", "previous_sample_token", "current_sample_token", "previous_image_path", "current_image_path", "previous_timestamp_us", "current_timestamp_us", "actual_delta_t_ms", "gap_group", "target_delta_t_ms", "pair_kind"]
 
 
 def collect_frames(nusc, scenes, cfg):
@@ -62,13 +63,26 @@ def make_pairs(frames, cfg):
     for group in sorted(groups):
         seq = sorted(groups[group], key=lambda r: (int(r["timestamp_us"]), r["sample_data_token"]))
         times = [int(r["timestamp_us"]) for r in seq]
-        for gap_index, gap in enumerate(gaps):
-            name = "adjacent" if gap_index == 0 else f"{gap:g}s"
+        keyframes = [i for i, r in enumerate(seq) if str(r.get("is_key_frame", False)).lower() == "true"]
+        next_keyframe = dict(zip(keyframes, keyframes[1:]))
+        for gap in gaps:
+            adjacent = math.isclose(gap, .083, abs_tol=1e-6)
+            keyframe_gap = math.isclose(gap, .5, abs_tol=1e-6)
+            name = "adjacent" if adjacent else f"{gap:g}s"
+            kind = "adjacent_camera_observations" if adjacent else "adjacent_keyframes" if keyframe_gap else "nearest_timestamp"
             for i, previous in enumerate(seq[:-1]):
-                if gap_index == 0:
+                if adjacent:
                     j = i + 1
                     # Missing frames never create fictitious adjacent observations.
                     if previous["next_sample_data_token"] != seq[j]["sample_data_token"]:
+                        continue
+                    if abs(times[j] - times[i] - gap * 1e6) > tolerance:
+                        continue
+                elif keyframe_gap:
+                    # The 0.5s experiment concerns successive annotated keyframes,
+                    # not arbitrary sweep endpoints separated by half a second.
+                    j = next_keyframe.get(i)
+                    if j is None or abs(times[j] - times[i] - gap * 1e6) > tolerance:
                         continue
                 else:
                     k = bisect_left(times, times[i] + gap * 1e6, lo=i + 1)
@@ -83,7 +97,7 @@ def make_pairs(frames, cfg):
                 if delta <= 0 or not all(str(x["file_exists"]).lower() == "true" for x in (previous, current)):
                     continue
                 pair_id = hashlib.sha256(f"{previous['sample_data_token']}:{current['sample_data_token']}:{name}".encode()).hexdigest()[:24]
-                candidates.append(dict(zip(PAIR_FIELDS, [pair_id, previous["scene_name"], group[0], group[1], previous["sample_data_token"], current["sample_data_token"], previous["sample_token"], current["sample_token"], previous["image_path"], current["image_path"], times[i], times[j], delta / 1000, name, gap * 1000])))
+                candidates.append(dict(zip(PAIR_FIELDS, [pair_id, previous["scene_name"], group[0], group[1], previous["sample_data_token"], current["sample_data_token"], previous["sample_token"], current["sample_token"], previous["image_path"], current["image_path"], times[i], times[j], delta / 1000, name, gap * 1000, kind])))
     # Balanced round-robin over scene/camera/gap, with seeded hash ordering within
     # each stratum. Content and measured similarity never influence selection.
     strata = defaultdict(list)

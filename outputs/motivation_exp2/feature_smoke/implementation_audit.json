@@ -1,0 +1,20 @@
+{
+  "model_and_preprocess_sources_match_e1": {
+    "llava/model/builder.py": true,
+    "llava/senna/senna_llava_llama.py": true,
+    "llava/senna/senna_llava_arch.py": true,
+    "llava/model/multimodal_encoder/clip_encoder.py": true,
+    "data_tools/senna_qa_utils.py": true
+  },
+  "index_hashes_match_e1_inputs": {
+    "camera_manifest.csv": true,
+    "temporal_pairs.csv": true
+  },
+  "pair_artifacts_contain_only_distance_arrays_and_metadata": true,
+  "notes": [
+    "No model or preprocessing implementation edits",
+    "All real feature tensors released after each pair",
+    "Content-region analysis does not modify the execution graph",
+    "No intermediate CLIP layer extension requested or required; the actual selected Tower output is analyzed"
+  ]
+}

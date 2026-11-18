@@ -10,8 +10,8 @@ def config():
     return configuration(parser().parse_args([]))
 
 
-def frame(scene, camera, token, timestamp, next_token="", exists=True):
-    return {"scene_name": scene, "scene_token": scene, "camera_channel": camera, "sample_data_token": token, "sample_token": token, "timestamp_us": timestamp, "image_path": token + ".jpg", "next_sample_data_token": next_token, "file_exists": exists}
+def frame(scene, camera, token, timestamp, next_token="", exists=True, keyframe=False):
+    return {"scene_name": scene, "scene_token": scene, "camera_channel": camera, "sample_data_token": token, "sample_token": token, "timestamp_us": timestamp, "image_path": token + ".jpg", "next_sample_data_token": next_token, "file_exists": exists, "is_key_frame": keyframe}
 
 
 class ManifestTests(unittest.TestCase):
@@ -35,12 +35,35 @@ class ManifestTests(unittest.TestCase):
     def test_reproducible_stratification(self):
         cfg = config()
         cfg["experiment"]["max_temporal_pairs"] = 12
-        frames = [frame(s, c, f"{s}{c}{i}", i * 83000, f"{s}{c}{i + 1}" if i < 11 else "") for s in ("a", "b") for c in ("CAM_FRONT", "CAM_BACK") for i in range(12)]
+        frames = [frame(s, c, f"{s}{c}{i}", i * 83000, f"{s}{c}{i + 1}" if i < 12 else "", keyframe=i % 6 == 0) for s in ("a", "b") for c in ("CAM_FRONT", "CAM_BACK") for i in range(13)]
         a, _ = make_pairs(frames, cfg)
         b, _ = make_pairs(list(reversed(frames)), cfg)
         self.assertEqual(a, b)
         self.assertEqual(len(a), 12)
         self.assertEqual(len({(r["scene_token"], r["camera_channel"], r["gap_group"]) for r in a}), 12)
+
+    def test_half_second_requires_successive_keyframes(self):
+        cfg = config()
+        cfg["experiment"]["temporal_gaps_seconds"] = [.5]
+        frames = [frame("a", "CAM_FRONT", str(i), i * 83000, str(i + 1), keyframe=i % 6 == 0) for i in range(13)]
+        pairs, _ = make_pairs(frames, cfg)
+        self.assertEqual({(p["previous_sample_data_token"], p["current_sample_data_token"]) for p in pairs}, {("0", "6"), ("6", "12")})
+        self.assertTrue(all(p["pair_kind"] == "adjacent_keyframes" for p in pairs))
+        frames[6]["file_exists"] = False
+        self.assertFalse(make_pairs(frames, cfg)[0])
+
+    def test_gap_order_does_not_redefine_adjacent(self):
+        cfg = config()
+        cfg["experiment"]["temporal_gaps_seconds"] = [.25, .083]
+        frames = [frame("a", "CAM_FRONT", str(i), i * 83000, str(i + 1)) for i in range(5)]
+        pairs, _ = make_pairs(frames, cfg)
+        for pair in pairs:
+            self.assertAlmostEqual(pair["actual_delta_t_ms"], 83 if pair["gap_group"] == "adjacent" else 249)
+
+    def test_adjacent_outside_timestamp_tolerance_is_excluded(self):
+        cfg = config()
+        cfg["experiment"]["temporal_gaps_seconds"] = [.083]
+        self.assertFalse(make_pairs([frame("a", "CAM_FRONT", "1", 0, "2"), frame("a", "CAM_FRONT", "2", 150000)], cfg)[0])
 
     def test_sweep_link_cycle_and_boundary(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -64,6 +87,11 @@ class ManifestTests(unittest.TestCase):
     def test_configuration_invalid_grid(self):
         with self.assertRaises(ValueError):
             configuration(parser().parse_args(["--analysis-resize", "8", "8", "--patch-grid", "8", "8"]))
+
+    def test_nonfinite_gaps_and_colliding_threshold_labels_rejected(self):
+        for options in (["--temporal-gaps-seconds", "nan"], ["--ssim-thresholds", ".701", ".704"]):
+            with self.assertRaises(ValueError):
+                configuration(parser().parse_args(options))
 
 
 if __name__ == "__main__":

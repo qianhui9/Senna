@@ -1,0 +1,144 @@
+{
+  "status": "passed",
+  "archive": "/data/qh/phdCode/work4/Senna/outputs/motivation_exp1/previous_runs/20261117_192736_before_audit_fixes",
+  "original_fingerprint": "ee75a9421fa293b2fa25a27f7f495621e15b8bcc07ae4d65b064d15c4753d8d8",
+  "original_metadata_sha256": "0445d2bf4f5797a96170eba72c3a4df5d50472cedb556cd69a2c0489d347e271",
+  "archived_artifacts_verified": 44,
+  "inference_and_instrumentation_source_hashes_unchanged": [
+    "data_tools/senna_qa_utils.py",
+    "data_tools/senna_inputs.py",
+    "llava/model/builder.py",
+    "llava/senna/senna_llava_llama.py",
+    "llava/senna/senna_llava_arch.py",
+    "llava/model/multimodal_encoder/clip_encoder.py",
+    "experiments/motivation_exp1/utils/profiling_utils.py"
+  ],
+  "reused_producer_function_hashes_unchanged": {
+    "experiments/motivation_exp1/build_nuscenes_manifest.py": {
+      "collect_frames": "c5ded26d2c7ca4591ec30de36de978bbcf8846d64a2e1128784fe86c2cacd9a3"
+    },
+    "experiments/motivation_exp1/analyze_object_persistence.py": {
+      "counts": "ebb5b92c8e874f142bc6fc2c7d021e838b0f9d9407b97c813a85783988093bb4",
+      "run": "6f14a732dec6a0df6ecba5b404832c2a8a7a8c953a430df3d605f7f703b62756"
+    },
+    "experiments/motivation_exp1/profile_senna.py": {
+      "select_samples": "566040d9ee7888db07b91586836c83da54013b6a083cc7805dc80781e37ed7f0",
+      "inference_args": "269174c9a3f9684b1bfa0491f23c07c6da6903abd9ac58fcb5c074140d77da4c",
+      "matched_results": "5261af52d1b7a28b65cad8e8a2c3d1150ea5708dd4f229ef40067469e2227fcb",
+      "run": "297fa2248504cf126b2220a0089d5192d80a03779fc2e66530a110b816b6b2c6"
+    }
+  },
+  "dataset_and_model_size_mtime_identity_unchanged": true,
+  "identity_limit": "Original provenance records table/model size and mtime, not full weight/table content SHA256. No stronger identity claim is made.",
+  "package_changes": {
+    "nuscenes-devkit": {
+      "original": "1.1.11",
+      "current": "1.2.0"
+    }
+  },
+  "reuse_policy": "Preserve original SDK provenance for camera/object tables. Model timing uses unchanged numerical/profiling packages, sources, prompts and weights. Recompute pair selection, all image metrics, aggregations and figures in the current environment.",
+  "timing_records": 300,
+  "unique_profile_samples": 100,
+  "max_partition_error_ms": 0.0,
+  "equivalence_samples": 2,
+  "archived_artifact_sha256": {
+    "patch_similarity.csv": "ad35e5e458cd65c6fc9049daff39625dbdf90382121a3df0e8773e9adc4f13fe",
+    "profile_status.json": "1b670a13e946d5489c23dfb2f3d598cc45eececa0e19cde26b06418573eb2e7f",
+    "camera_manifest.csv": "b8016736c8d0ee82bd69ff8cab9ba9c0f1ed0433334b158744ab900098bb39c1",
+    "temporal_similarity.csv": "733a0271b1b02f6265a50925604957d6a378e5def315eb7618f43e919d91e1c4",
+    "figure_metadata.json": "c2d00a4aa44139eaee0b9c6dbb99fbaeae6331937fbb41dcdb350b590d642d22",
+    "invocation_status.json": "72671de929e81b3b28df2c2f6a8cbdb6f25fa56ec15342e7de001573239415bb",
+    "matched_profile_issues.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "report_status.json": "c53e9111a25e1bc7a3e3d99467432279ee5267848114b84deb069d59b0f8429d",
+    "object_issues.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "aggregate_status.json": "c53e9111a25e1bc7a3e3d99467432279ee5267848114b84deb069d59b0f8429d",
+    "experiment_report.md": "62c3cddf3204c8971a9cbb518cb650105187bf8c0b4447b71975407a5a85dce9",
+    "object_persistence.csv": "71fb40d49d3ab83c6e572ea0eb45be53f0b594b6719fe5ffd65c2b6f098fd412",
+    "manifest_summary.json": "5049d59a39f2700b90ed024687eccc7055330ba22f286fef3bce9571c8393a1c",
+    "objects_status.json": "c9aaee02c35d07a311eb402067fcda3120707f85d6c1da775f4b45bace62fab3",
+    "resolved_config.yaml": "aaafa086374f12cb3a8b07a1d5441d4ae295d2d731ce480b2f8f018cd74f56e4",
+    "profiling_summary.json": "197ce9590fdd54b4b2012350a367f1cff64a71161efd9fd38208172f11d6bb9f",
+    "temporal_pairs.csv": "3683e6e0deecc2041fbc5cd7e04127e26aeac0bfa28a4f8d3dda426550fa9a69",
+    "manifest_issues.json": "9d467cdbb777d71fb7fb530f0e3b059e830ed79e4ad8bf8255775bab8f6d7817",
+    "plot_status.json": "c53e9111a25e1bc7a3e3d99467432279ee5267848114b84deb069d59b0f8429d",
+    "redundancy_status.json": "8879080fc2b6b907f20382dbb65404cf583fc64cb65a66389f26257ac11f0288",
+    "index_status.json": "5dfae2086ddf772f1dde312a2be3d1e920789c586b49603d5e99189e2bbd4003",
+    "run_metadata.json": "0445d2bf4f5797a96170eba72c3a4df5d50472cedb556cd69a2c0489d347e271",
+    "similarity_issues.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "matched_profile_pairs.csv": "4680cd2dbd99617fea0fab41a18b4952839d1e634b4f808f5d5fdf303312c541",
+    "scene_statistics.csv": "d7f5bb6181ee8ca1376af255162fa08459bdd2ae12b1c685ce73349cd74b93f5",
+    "aggregate_summary.json": "c38c4a76a5e6a3eda1a30529d253022aa67216d33ee07cfc8ecb787c8ec81d42",
+    "output_equivalence.json": "3a7065a97b92f8cf60d10ca5ebf14b25ff13e30e35f992ed2899766ab141fe71",
+    "profiling_samples.csv": "e16212f68b200bb581c79cc5580322969a12a47fb59e12d0fb6e9017f7c9863a",
+    "model_metadata.json": "88d15fd453c3ee2cb2f675e09583d1963806a4db9f81303cf7a4b9d935deb2f8",
+    "verification_results.json": "2477d899f2e55154e9fd6fcbeee59cabcbf3f0374a4a55250b1b9c5ff5448d85",
+    "figures/M1b_patch_similarity.png": "bac4fba6dd145a3d79a3525fdd0939170b0379eea429fb4889c32dbbf8c14b87",
+    "figures/M1a_temporal_similarity.png": "138231a08cdc755ab772bff73bb04a79ffd73fcefcbe66a6f3b957dea7cfa24b",
+    "figures/matched_similarity_latency.png": "d9d25ade6518a8118c7e49798cc99501e54000c171ce9e750cfb3c705828a011",
+    "figures/M1d_latency_breakdown.png": "1542ec5166b7e7b5b89e1e77fa0266e752c45818e238567128bed63a164a7a98",
+    "figures/M1c_object_persistence.png": "560537d889607ad83c7f914e9ae81f38ee6cb0b4e85466ec3979e4b8cf4502ac",
+    "figures/M1d_latency_breakdown.pdf": "897b00b8bfad1e6472a31e5ec47810a271fa1575336d7686e5d949cbf9e54bc7",
+    "figures/M1b_patch_similarity.pdf": "569711a6f6e285ecceed8797e16be94a476f403a2fe05e9a1fa22bec1f35cbdc",
+    "figures/M1a_temporal_similarity.pdf": "c220e0f185f74c3eb7b345681aee058bcb48a4deaae9d8262268f60aa0f7e1d4",
+    "figures/matched_similarity_latency.pdf": "364a08c2af40824252ac47b52a4192ec0802ca6647c2e874523b0d11d2615939",
+    "figures/M1c_object_persistence.pdf": "78c2fda615cf0ba9bea3a2c9574ea98c1c5de27515b42cd3e8a4c332abe86c72",
+    "figures/M1e_repeated_execution.pdf": "bb9bb4852dc4a1090dea36c4e116d7d4896265f3aa6d6847eb2d2ca7903d416e",
+    "figures/M1e_repeated_execution.png": "de76457e4f0115dfd74721256ac79358dd3348011fa97850bace7d4b7a2b99b8",
+    "profiler_trace/040a956bf0c04ad09fffc286cab5bc56.json": "b0b577fd838f132171d087e5639ca76bd08e8f278f1677244be061bc85b696d6",
+    "profiler_trace/040a956bf0c04ad09fffc286cab5bc56_operators.txt": "49698c7b4a51d7cacbe6e665bac11651c6fe330fac0a9fd35d821a361c0b77cb"
+  },
+  "reused_artifacts": {
+    "camera_manifest.csv": {
+      "sha256": "b8016736c8d0ee82bd69ff8cab9ba9c0f1ed0433334b158744ab900098bb39c1",
+      "origin": "/data/qh/phdCode/work4/Senna/outputs/motivation_exp1/previous_runs/20261117_192736_before_audit_fixes/camera_manifest.csv"
+    },
+    "object_persistence.csv": {
+      "sha256": "71fb40d49d3ab83c6e572ea0eb45be53f0b594b6719fe5ffd65c2b6f098fd412",
+      "origin": "/data/qh/phdCode/work4/Senna/outputs/motivation_exp1/previous_runs/20261117_192736_before_audit_fixes/object_persistence.csv"
+    },
+    "object_issues.json": {
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "origin": "/data/qh/phdCode/work4/Senna/outputs/motivation_exp1/previous_runs/20261117_192736_before_audit_fixes/object_issues.json"
+    },
+    "manifest_issues.json": {
+      "sha256": "9d467cdbb777d71fb7fb530f0e3b059e830ed79e4ad8bf8255775bab8f6d7817",
+      "origin": "/data/qh/phdCode/work4/Senna/outputs/motivation_exp1/previous_runs/20261117_192736_before_audit_fixes/manifest_issues.json"
+    },
+    "profiling_samples.csv": {
+      "sha256": "e16212f68b200bb581c79cc5580322969a12a47fb59e12d0fb6e9017f7c9863a",
+      "origin": "/data/qh/phdCode/work4/Senna/outputs/motivation_exp1/previous_runs/20261117_192736_before_audit_fixes/profiling_samples.csv"
+    },
+    "matched_profile_pairs.csv": {
+      "sha256": "4680cd2dbd99617fea0fab41a18b4952839d1e634b4f808f5d5fdf303312c541",
+      "origin": "/data/qh/phdCode/work4/Senna/outputs/motivation_exp1/previous_runs/20261117_192736_before_audit_fixes/matched_profile_pairs.csv"
+    },
+    "matched_profile_issues.json": {
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "origin": "/data/qh/phdCode/work4/Senna/outputs/motivation_exp1/previous_runs/20261117_192736_before_audit_fixes/matched_profile_issues.json"
+    },
+    "model_metadata.json": {
+      "sha256": "88d15fd453c3ee2cb2f675e09583d1963806a4db9f81303cf7a4b9d935deb2f8",
+      "origin": "/data/qh/phdCode/work4/Senna/outputs/motivation_exp1/previous_runs/20261117_192736_before_audit_fixes/model_metadata.json"
+    },
+    "output_equivalence.json": {
+      "sha256": "3a7065a97b92f8cf60d10ca5ebf14b25ff13e30e35f992ed2899766ab141fe71",
+      "origin": "/data/qh/phdCode/work4/Senna/outputs/motivation_exp1/previous_runs/20261117_192736_before_audit_fixes/output_equivalence.json"
+    },
+    "profile_status.json": {
+      "sha256": "1b670a13e946d5489c23dfb2f3d598cc45eececa0e19cde26b06418573eb2e7f",
+      "origin": "/data/qh/phdCode/work4/Senna/outputs/motivation_exp1/previous_runs/20261117_192736_before_audit_fixes/profile_status.json"
+    },
+    "objects_status.json": {
+      "sha256": "c9aaee02c35d07a311eb402067fcda3120707f85d6c1da775f4b45bace62fab3",
+      "origin": "/data/qh/phdCode/work4/Senna/outputs/motivation_exp1/previous_runs/20261117_192736_before_audit_fixes/objects_status.json"
+    },
+    "profiler_trace/040a956bf0c04ad09fffc286cab5bc56.json": {
+      "sha256": "b0b577fd838f132171d087e5639ca76bd08e8f278f1677244be061bc85b696d6",
+      "origin": "/data/qh/phdCode/work4/Senna/outputs/motivation_exp1/previous_runs/20261117_192736_before_audit_fixes/profiler_trace/040a956bf0c04ad09fffc286cab5bc56.json"
+    },
+    "profiler_trace/040a956bf0c04ad09fffc286cab5bc56_operators.txt": {
+      "sha256": "49698c7b4a51d7cacbe6e665bac11651c6fe330fac0a9fd35d821a361c0b77cb",
+      "origin": "/data/qh/phdCode/work4/Senna/outputs/motivation_exp1/previous_runs/20261117_192736_before_audit_fixes/profiler_trace/040a956bf0c04ad09fffc286cab5bc56_operators.txt"
+    }
+  }
+}

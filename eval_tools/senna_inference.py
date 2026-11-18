@@ -20,7 +20,7 @@ def parse_args():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--model-path", default=os.environ.get("SENNA_MODEL_PATH", "/data/qh/phdCode/work4/models/Senna"))
     parser.add_argument("--lora-path", help="Fine-tuned LoRA checkpoint; keep --model-path set to the base weights")
-    parser.add_argument("--dataroot", default=os.environ.get("NUSCENES_ROOT", "/data/qh/nuscenes/v1.0-trainval"))
+    parser.add_argument("--dataroot", default=os.environ.get("NUSCENES_ROOT", "/data/dataset/v1.0-trainval"))
     parser.add_argument("--version", default="v1.0-trainval")
     sample = parser.add_mutually_exclusive_group()
     sample.add_argument("--sample-token")

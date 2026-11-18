@@ -1,0 +1,17 @@
+{
+  "reason": "Move explanatory text and legends above measured bars/boxes; no data or numerical changes.",
+  "previous_fingerprint": "8b2451719866cadaea13c5fd00db0e1a75e57a439735052987d45aac3956b540",
+  "previous_plot_source_sha256": "ef8d0d815da7a424fee024693bceeb13870f745329f25a345a323a1877d881a1",
+  "new_plot_source_sha256": "38f2d4d9e17716c4208c27004cb3e4f28bcb138420dbd0a714e501ec488fba46",
+  "time_utc": "2026-11-17T11:41:08.415854+00:00",
+  "raw_and_aggregate_hashes_unchanged": {
+    "camera_manifest.csv": "ebb35e876b7e4a4c329b46cd2fca47098265b00b4131edd5a4bbf9b3f50e6f3f",
+    "temporal_pairs.csv": "887ae6c8868ea23a6d19101d413e4d777d15b8b4cc2d6ecc5819ad2d10334bc8",
+    "temporal_similarity.csv": "21fe23809cba56f3c89a4a9ba4942c2459639590783f61f1d0c50ac3816ea0f9",
+    "patch_similarity.csv": "cbc1165169d5f068b78349aeafb1d8e600609026d9ab6a9c8c60bef3f637eeca",
+    "object_persistence.csv": "4d0a125175f1e33cb667ba0dfbe7b136accca579d3fef751fd4c7dfb9f316717",
+    "profiling_samples.csv": "1d53be63bfa47a16d72298a6d0f2930be1c69291c5217e35e69f2c122405e920",
+    "matched_profile_pairs.csv": "e66a959cf3f87b62c2146adf4168c0837748ca03a6bb9e2a3ee6b321bd8e6c85",
+    "aggregate_summary.json": "c9259314a61880507e51fd56204905dad0edff23b5bca805b01d903083bb345a"
+  }
+}

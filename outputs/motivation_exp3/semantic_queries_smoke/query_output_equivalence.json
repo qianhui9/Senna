@@ -1,0 +1,487 @@
+[
+  {
+    "query_type": "category",
+    "sample_token": "d2b3be57f76a43a9a06b56c1ceaa221f",
+    "passed": true,
+    "original_answer": "The nearest vehicle is a white van, and it appears to be stationary or moving very slowly. The van is positioned to the right of the forward axis, and it is not directly in front of the vehicle from which the photo is taken. The van is not a bicycle or a motorcycle, and",
+    "instrumented_answer": "The nearest vehicle is a white van, and it appears to be stationary or moving very slowly. The van is positioned to the right of the forward axis, and it is not directly in front of the vehicle from which the photo is taken. The van is not a bicycle or a motorcycle, and",
+    "original_input": {
+      "input_ids_sha256": "7f28ed7780fe8a455993e6e177c7860680c1f85cc739faa7c32b9cb3204ebdf9",
+      "images_sha256": "a9933678921c45fb2a923f417e3aafd223c644dbf48a47d3204e191264ae8d35",
+      "image_shape": [
+        1,
+        6,
+        3,
+        336,
+        336
+      ],
+      "image_sizes": [
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ]
+      ],
+      "generation": {
+        "do_sample": false,
+        "temperature": 0,
+        "top_p": null,
+        "num_beams": 1,
+        "max_new_tokens": 64,
+        "use_cache": true
+      }
+    },
+    "instrumented_input": {
+      "input_ids_sha256": "7f28ed7780fe8a455993e6e177c7860680c1f85cc739faa7c32b9cb3204ebdf9",
+      "images_sha256": "a9933678921c45fb2a923f417e3aafd223c644dbf48a47d3204e191264ae8d35",
+      "image_shape": [
+        1,
+        6,
+        3,
+        336,
+        336
+      ],
+      "image_sizes": [
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ]
+      ],
+      "generation": {
+        "do_sample": false,
+        "temperature": 0,
+        "top_p": null,
+        "num_beams": 1,
+        "max_new_tokens": 64,
+        "use_cache": true
+      }
+    }
+  },
+  {
+    "query_type": "existence",
+    "sample_token": "956027b87e5242ec9d9d22c8be48b7ac",
+    "passed": true,
+    "original_answer": "No.",
+    "instrumented_answer": "No.",
+    "original_input": {
+      "input_ids_sha256": "635f06c9c8a04f2e32344720adb0635ab9e4515e773c09d860ae8cd958f18479",
+      "images_sha256": "289d3ab2ee97d009f1f3593d9211b75b4715c05d2abbf5375b3a6b436518b427",
+      "image_shape": [
+        1,
+        6,
+        3,
+        336,
+        336
+      ],
+      "image_sizes": [
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ]
+      ],
+      "generation": {
+        "do_sample": false,
+        "temperature": 0,
+        "top_p": null,
+        "num_beams": 1,
+        "max_new_tokens": 64,
+        "use_cache": true
+      }
+    },
+    "instrumented_input": {
+      "input_ids_sha256": "635f06c9c8a04f2e32344720adb0635ab9e4515e773c09d860ae8cd958f18479",
+      "images_sha256": "289d3ab2ee97d009f1f3593d9211b75b4715c05d2abbf5375b3a6b436518b427",
+      "image_shape": [
+        1,
+        6,
+        3,
+        336,
+        336
+      ],
+      "image_sizes": [
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ]
+      ],
+      "generation": {
+        "do_sample": false,
+        "temperature": 0,
+        "top_p": null,
+        "num_beams": 1,
+        "max_new_tokens": 64,
+        "use_cache": true
+      }
+    }
+  },
+  {
+    "query_type": "position",
+    "sample_token": "2a21a555004043768a6da4f645f67896",
+    "passed": true,
+    "original_answer": "The nearest vehicle ahead is a white van, which is currently stopped at a traffic light. The traffic light is red, indicating that the vehicle is waiting for the signal to change. The road appears to be clear and dry, with no visible obstacles or hazards. The sky is clear, suggesting good weather conditions",
+    "instrumented_answer": "The nearest vehicle ahead is a white van, which is currently stopped at a traffic light. The traffic light is red, indicating that the vehicle is waiting for the signal to change. The road appears to be clear and dry, with no visible obstacles or hazards. The sky is clear, suggesting good weather conditions",
+    "original_input": {
+      "input_ids_sha256": "f1ed379f3713cf1972e52bd72c0966578a3d6f64cc22c9ad33569e7443b9106d",
+      "images_sha256": "fa5570d8881875cde8b2f6a3cc5eba22200cbdb59f1e166734a8bae8b88c899a",
+      "image_shape": [
+        1,
+        6,
+        3,
+        336,
+        336
+      ],
+      "image_sizes": [
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ]
+      ],
+      "generation": {
+        "do_sample": false,
+        "temperature": 0,
+        "top_p": null,
+        "num_beams": 1,
+        "max_new_tokens": 64,
+        "use_cache": true
+      }
+    },
+    "instrumented_input": {
+      "input_ids_sha256": "f1ed379f3713cf1972e52bd72c0966578a3d6f64cc22c9ad33569e7443b9106d",
+      "images_sha256": "fa5570d8881875cde8b2f6a3cc5eba22200cbdb59f1e166734a8bae8b88c899a",
+      "image_shape": [
+        1,
+        6,
+        3,
+        336,
+        336
+      ],
+      "image_sizes": [
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ]
+      ],
+      "generation": {
+        "do_sample": false,
+        "temperature": 0,
+        "top_p": null,
+        "num_beams": 1,
+        "max_new_tokens": 64,
+        "use_cache": true
+      }
+    }
+  },
+  {
+    "query_type": "motion_prediction",
+    "sample_token": "4ffbb8951b9841429bfd3aee39c6a2be",
+    "passed": true,
+    "original_answer": "Object 1: KEEP, STRAIGHT",
+    "instrumented_answer": "Object 1: KEEP, STRAIGHT",
+    "original_input": {
+      "input_ids_sha256": "393d79d604bb8e321590e66152d9b16af33546168be1ef976cba244141a30d10",
+      "images_sha256": "3567635bcb7f3c57bf0e45b88988f721ae6a37a03b7704c40949e01d04ea5925",
+      "image_shape": [
+        1,
+        6,
+        3,
+        336,
+        336
+      ],
+      "image_sizes": [
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ]
+      ],
+      "generation": {
+        "do_sample": false,
+        "temperature": 0,
+        "top_p": null,
+        "num_beams": 1,
+        "max_new_tokens": 64,
+        "use_cache": true
+      }
+    },
+    "instrumented_input": {
+      "input_ids_sha256": "393d79d604bb8e321590e66152d9b16af33546168be1ef976cba244141a30d10",
+      "images_sha256": "3567635bcb7f3c57bf0e45b88988f721ae6a37a03b7704c40949e01d04ea5925",
+      "image_shape": [
+        1,
+        6,
+        3,
+        336,
+        336
+      ],
+      "image_sizes": [
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ]
+      ],
+      "generation": {
+        "do_sample": false,
+        "temperature": 0,
+        "top_p": null,
+        "num_beams": 1,
+        "max_new_tokens": 64,
+        "use_cache": true
+      }
+    }
+  },
+  {
+    "query_type": "meta_action_planning",
+    "sample_token": "d95a0f0adf7945c5aaf2fbd3dc110dcc",
+    "passed": true,
+    "original_answer": "KEEP, STRAIGHT",
+    "instrumented_answer": "KEEP, STRAIGHT",
+    "original_input": {
+      "input_ids_sha256": "c3315166df364d2a32c8174e599f963d40980e97344afc59c33cd0b058316281",
+      "images_sha256": "215726d5d9ad8a4fd92c44814a3ce26ff5a73bdb6810123170e4f9c7a8a76470",
+      "image_shape": [
+        1,
+        6,
+        3,
+        336,
+        336
+      ],
+      "image_sizes": [
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ]
+      ],
+      "generation": {
+        "do_sample": false,
+        "temperature": 0,
+        "top_p": null,
+        "num_beams": 1,
+        "max_new_tokens": 64,
+        "use_cache": true
+      }
+    },
+    "instrumented_input": {
+      "input_ids_sha256": "c3315166df364d2a32c8174e599f963d40980e97344afc59c33cd0b058316281",
+      "images_sha256": "215726d5d9ad8a4fd92c44814a3ce26ff5a73bdb6810123170e4f9c7a8a76470",
+      "image_shape": [
+        1,
+        6,
+        3,
+        336,
+        336
+      ],
+      "image_sizes": [
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ],
+        [
+          1600,
+          900
+        ]
+      ],
+      "generation": {
+        "do_sample": false,
+        "temperature": 0,
+        "top_p": null,
+        "num_beams": 1,
+        "max_new_tokens": 64,
+        "use_cache": true
+      }
+    }
+  }
+]

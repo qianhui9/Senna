@@ -1,0 +1,38 @@
+{
+  "model_and_preprocess_sources_match_e1": {
+    "llava/model/builder.py": true,
+    "llava/senna/senna_llava_llama.py": true,
+    "llava/senna/senna_llava_arch.py": true,
+    "llava/model/multimodal_encoder/clip_encoder.py": true,
+    "data_tools/senna_qa_utils.py": true
+  },
+  "index_hashes_match_e1_inputs": {
+    "camera_manifest.csv": true,
+    "temporal_pairs.csv": true
+  },
+  "model_files_unchanged": true,
+  "vision_files_unchanged": true,
+  "pair_artifacts_contain_only_distance_arrays_and_metadata": true,
+  "profiling_reuse_checks": {
+    "class": true,
+    "gpu": true,
+    "torch": true,
+    "transformers": true,
+    "cuda_version": true,
+    "vision_config": true,
+    "processor": true,
+    "weight_files": true,
+    "model_config": true,
+    "vision_files": true,
+    "device": true,
+    "precision": true,
+    "llava/model/builder.py": true,
+    "llava/senna/senna_llava_llama.py": true,
+    "llava/senna/senna_llava_arch.py": true,
+    "llava/model/multimodal_encoder/clip_encoder.py": true,
+    "data_tools/senna_qa_utils.py": true,
+    "all_observed_shapes": true
+  },
+  "feature_history_saved": false,
+  "intermediate_layer_extension": false
+}

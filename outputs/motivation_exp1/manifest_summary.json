@@ -54,8 +54,8 @@
   "frames": 13857,
   "missing_images": 0,
   "non_key_frames": 11439,
-  "candidate_pairs": 40471,
+  "candidate_pairs": 28876,
   "selected_pairs": 500,
   "issues": 7,
-  "selection": "seeded scene selection; scene/camera/gap round-robin with seeded content-independent pair hashes; first gap denotes adjacent sample_data links"
+  "selection": "seeded scene/camera/gap strata; 0.083s adjacent camera links within tolerance; 0.5s successive keyframes only; real timestamps"
 }

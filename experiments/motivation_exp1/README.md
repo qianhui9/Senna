@@ -25,8 +25,9 @@ This machine's known paths can be supplied explicitly:
 
 ```bash
 export SENNA_MODEL_PATH=/data/qh/phdCode/work4/models/Senna
-export NUSCENES_ROOT=/data/qh/nuscenes/v1.0-trainval
+export NUSCENES_ROOT=/data/dataset/v1.0-trainval
 export MPLCONFIGDIR=/tmp/senna_motivation_matplotlib
+export CUDA_VISIBLE_DEVICES=1  # Choose an available physical GPU; logical device remains cuda:0.
 ```
 
 The actual dataroot contains `samples/`, `sweeps/`, and the metadata subdirectory
@@ -48,7 +49,7 @@ Run a genuine minimum workload (2 scenes, 36 pairs, 2 requests, 1 warmup,
 
 ```bash
 python -m experiments.motivation_exp1.run --smoke-test --profile-mode both \
-  --output-dir outputs/motivation_exp1_smoke --existing overwrite
+  --output-dir outputs/motivation_exp1/smoke --existing resume
 ```
 
 Run the full configured E1 (10 scenes, 500 pairs, 100 original requests,
@@ -56,7 +57,7 @@ Run the full configured E1 (10 scenes, 500 pairs, 100 original requests,
 
 ```bash
 python -m experiments.motivation_exp1.run --profile-mode both \
-  --output-dir outputs/motivation_exp1 --existing overwrite
+  --output-dir outputs/motivation_exp1 --existing resume
 ```
 
 Run only data analysis, aggregation, plots, and a partial report (no GPU needed):
@@ -189,9 +190,12 @@ zero added management cost and does not establish achievable reuse or accelerati
 The official nuScenes devkit follows each camera's `sample_data.next` links from
 the scene's first keyframe, with scene/sensor checks. It includes sweeps, uses
 real asynchronous camera exposure timestamps, records missing files and interval
-anomalies, and never pairs across scenes. The first configured target means
-direct adjacent sweep links (it does not impose a 1/12-second interval).
+anomalies, and never pairs across scenes. The 0.083s target uses direct adjacent
+camera links within ±0.035 seconds; actual exposure intervals are retained, and
+out-of-tolerance links are excluded rather than relabelled as 0.083s.
+The 0.5s target pairs successive camera keyframes only, also within tolerance.
 Other gaps choose the nearest strictly later timestamp within ±0.035 seconds.
+Reordering the configured gaps does not change these meanings.
 Sampling balances Scene/Camera/gap strata with seeded hashes unrelated to image
 content. Adjacent missing files never turn a non-adjacent pair into an adjacent one.
 
@@ -202,7 +206,7 @@ Analysis resize is separate from model preprocessing. Metrics:
 - PSNR: `10 log10(1 / MSE)` on RGB scaled to [0,1], +infinity for identical images;
 - normalized pixel difference: mean absolute RGB difference on [0,1];
 - patch similarity: same metrics on complete regular-grid partitions (including
-  non-divisible edges); fractions passing SSIM 0.70, 0.80, 0.90;
+  non-divisible edges); mean patch SSIM and fractions passing SSIM 0.70, 0.80, 0.90;
 - instance persistence: intersection / previous annotated keyframe instance set;
   undefined if previous set is empty; new/disappeared counts and Jaccard retained.
 
@@ -210,6 +214,13 @@ Global 3D instance persistence is not per-camera visibility or sweep-level groun
 truth. Scene-equal means and 95% percentile bootstrap confidence intervals resample
 scene means, avoiding independent-frame assumptions. CI is undefined with one
 scene. Infinite PSNR is retained in raw results and excluded from finite quantiles.
+
+`matched_object_pairs.csv` joins exact camera keyframes to the same pair of global
+annotated samples. The report evaluates the fraction with new/disappeared instance
+tokens conditional on camera SSIM thresholds. Cameras are summarized separately;
+global transitions are deduplicated in total counts. A global annotation change
+does not establish visibility of that object in the camera, and an unchanged
+identity set does not establish unchanged positions or other object states.
 
 Profiling samples are existing planning records; they are not arbitrary sweeps
 with invented questions. If index linkage exists, requests are chosen in successive
@@ -226,6 +237,7 @@ unavailable. No unrelated average is used to infer a sample-level correlation.
 | `temporal_pairs.csv` | Same-scene, same-camera paths/tokens, actual timestamps and gap groups |
 | `temporal_similarity.csv`, `patch_similarity.csv` | Traceable raw image and patch metrics |
 | `object_persistence.csv`, `object_issues.json` | Global keyframe instance statistics and annotation errors |
+| `matched_object_pairs.csv` | Exact camera-keyframe/global-transition join; conditional evidence and explicit scope |
 | `profiling_samples.csv`, `profiling_summary.json` | Timings, shapes, tokens, predictions, request/repeat/mode, GPU memory |
 | `model_metadata.json`, `output_equivalence.json` | Model/processor/config, loading time, original/instrumented equivalence |
 | `matched_profile_pairs.csv` | Exact matched inputs, measured similarity and repeated execution |
@@ -234,6 +246,14 @@ unavailable. No unrelated average is used to infer a sample-level correlation.
 | `figures/M1[a-e]*.png`, `*.pdf`, `figure_metadata.json` | PNG 300 DPI, vector plot PDF, honest unavailable panels |
 | `experiment_report.md` | Evidence, figures, limitations, supported observations and unestablished claims |
 | `run_metadata.json`, `resolved_config.yaml`, `*_status.json` | Provenance, exact configuration, checkpoints and failures |
+| `implementation_audit.json`, `reuse_provenance.json`, `previous_runs/` | Checked artifact origins, unchanged inference sources, archived original results |
+
+`aggregate_summary.json` additionally exports `per_scene_similarity` (Scene ×
+Camera × gap), `per_scene_objects`, and `matched_visual_objects`. M1(b) now shows
+per-camera distributions of scene-mean stable-patch fractions for every threshold
+and gap; M1(c) includes new/disappeared counts by scene; M1(d) displays Image Adapter
+separately. Unreliable stage timings are unavailable in summaries while measured
+end-to-end wall time remains available.
 
 PDF plots/text are vector. M1(e)'s original photographs remain raster image
 content inside the PDF. Missing annotations/profiling/linkage produce clearly
@@ -245,7 +265,7 @@ null for non-finite summary values; raw CSV retains infinite identical-image PSN
 ```bash
 python -m unittest discover -s experiments/motivation_exp1/tests -v
 python -m experiments.motivation_exp1.run --smoke-test --profile-mode both \
-  --output-dir outputs/motivation_exp1_smoke --existing overwrite
+  --output-dir outputs/motivation_exp1/smoke --existing resume
 ```
 
 Tests use synthetic fixtures only to verify timestamps/boundaries, missing files,
@@ -278,3 +298,34 @@ table/model file identities, environment versions, and original evaluation JSON.
 Warmup and profiling hardware conditions affect numerical timings. Treat smoke
 results as functional validation; conclusions about a representative driving
 workload require the configured multi-scene run and its reported uncertainty.
+
+## Audit and verified reuse (2026-11-17)
+
+See [AUDIT.md](AUDIT.md). The original 10-scene, 500-pair, 100-request × 3-repeat
+run is archived under `outputs/motivation_exp1/previous_runs/`. Original camera,
+object and profiling producers, input identities and timing partitions were
+checked before reuse. The SDK differs (original 1.1.11; current 1.2.0), so reused
+raw tables retain their original provenance. Numerical/model profiling dependencies
+and inference instrumentation match. Pair selection, all image metrics and derived
+outputs are recomputed; historical GPU timings are explicitly labelled as reused.
+`audit_existing_results.py --archive PATH` independently verifies that archive;
+`--refresh-derived` is a guarded one-time migration which refuses changed sources,
+inputs or nonmatching destination artifacts. It is not a substitute for a new GPU
+run when the inference code, dependencies, model or workload changes.
+
+Reproduce the complete configured pipeline (completed stages are verified and skipped):
+
+```bash
+cd /data/qh/phdCode/work4/Senna
+SENNA_MODEL_PATH=/data/qh/phdCode/work4/models/Senna \
+NUSCENES_ROOT=/data/dataset/v1.0-trainval CUDA_VISIBLE_DEVICES=1 \
+HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 \
+/data/miniconda3/envs/Senna/bin/python -m experiments.motivation_exp1.run \
+  --profile-mode both --output-dir outputs/motivation_exp1 --existing resume
+```
+
+For a fresh measurement, use a new output directory (for example
+`outputs/motivation_exp1/fresh_run`) on an idle GPU. A complete existing run should
+not be deleted just to verify that the command works. Git metadata may be
+unavailable due to mounted-directory ownership; this is recorded explicitly and
+does not suppress the exact source hashes or block real data processing.

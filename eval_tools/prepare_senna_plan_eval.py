@@ -41,7 +41,7 @@ class CachedCanBus(NuScenesCanBus):
 
 def parse_args():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--dataroot", default="/data/qh/nuscenes/v1.0-trainval")
+    parser.add_argument("--dataroot", default="/data/dataset/v1.0-trainval")
     parser.add_argument("--version", default="v1.0-trainval")
     parser.add_argument("--split", choices=("train", "val"), default="val")
     parser.add_argument("--output", default="data/senna_nusc_val_plan_corrected.json")

@@ -58,6 +58,7 @@ def similarity_metrics(a, b, grid, thresholds):
             patches.append({"patch_row": y, "patch_col": x, "pixel_y0": ys[y], "pixel_y1": ys[y + 1], "pixel_x0": xs[x], "pixel_x1": xs[x + 1], "ssim_window": window - int(window % 2 == 0), "patch_ssim": ssim(aa, bb), "patch_normalized_pixel_difference": float(np.abs(aa - bb).mean())})
     for t in thresholds:
         result[f"high_similarity_ratio_{t:.2f}"] = sum(p["patch_ssim"] >= t for p in patches) / len(patches)
+    result["patch_ssim_mean"] = float(np.mean([p["patch_ssim"] for p in patches]))
     return result, patches
 
 
@@ -69,14 +70,18 @@ def run(cfg, args, out):
         raise ValueError("Run --mode index first")
     previous = read_csv(out / "temporal_similarity.csv") if args.existing == "resume" else []
     patch_rows = read_csv(out / "patch_similarity.csv") if args.existing == "resume" else []
-    seen = {r["pair_id"] for r in previous if r.get("status") == "ok"}
+    pair_lookup = {r["pair_id"]: r for r in pairs}
+    seen = {r["pair_id"] for r in previous if r.get("status") == "ok" and r["pair_id"] in pair_lookup}
     results = [r for r in previous if r["pair_id"] in seen]
     patch_rows = [r for r in patch_rows if r["pair_id"] in seen]
     # A pair is committed only together with its complete patch set.
     expected = np.prod(cfg["experiment"]["patch_grid"])
-    valid_seen = {k for k in seen if sum(r["pair_id"] == k for r in patch_rows) == expected}
+    coordinates = {(y, x) for y in range(cfg["experiment"]["patch_grid"][0]) for x in range(cfg["experiment"]["patch_grid"][1])}
+    valid_seen = {k for k in seen if sum(r["pair_id"] == k for r in patch_rows) == expected and {(int(r["patch_row"]), int(r["patch_col"])) for r in patch_rows if r["pair_id"] == k} == coordinates}
     results = [r for r in results if r["pair_id"] in valid_seen]
     patch_rows = [r for r in patch_rows if r["pair_id"] in valid_seen]
+    results = [{**r, **pair_lookup[r["pair_id"]], "patch_ssim_mean": float(np.mean([float(p["patch_ssim"]) for p in patch_rows if p["pair_id"] == r["pair_id"]]))} for r in results]
+    patch_rows = [{**r, **pair_lookup[r["pair_id"]]} for r in patch_rows]
     issues = []
     for index, pair in enumerate(pairs):
         if pair["pair_id"] in valid_seen:
@@ -90,7 +95,7 @@ def run(cfg, args, out):
             results.append({**pair, "status": "ok", "previous_original_size": str(size_a), "current_original_size": str(size_b), **metrics, "error": ""})
             patch_rows.extend({**pair, **p} for p in patches)
         except (OSError, ValueError) as exc:
-            results.append({**pair, "status": "error", "previous_original_size": "", "current_original_size": "", "ssim": "", "psnr_db": "", "normalized_pixel_difference": "", "identical_pixels": "", **{f"high_similarity_ratio_{t:.2f}": "" for t in cfg["experiment"]["ssim_thresholds"]}, "error": str(exc)})
+            results.append({**pair, "status": "error", "previous_original_size": "", "current_original_size": "", "ssim": "", "psnr_db": "", "normalized_pixel_difference": "", "identical_pixels": "", **{f"high_similarity_ratio_{t:.2f}": "" for t in cfg["experiment"]["ssim_thresholds"]}, "patch_ssim_mean": "", "error": str(exc)})
             issues.append({"pair_id": pair["pair_id"], "reason": str(exc)})
         if (index + 1) % 25 == 0:
             write_csv(out / "patch_similarity.csv", patch_rows)

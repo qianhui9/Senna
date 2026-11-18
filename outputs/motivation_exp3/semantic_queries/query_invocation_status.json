@@ -1,0 +1,10 @@
+{
+  "mode": "all",
+  "phase": "automatic_wait_cancelled_by_user",
+  "device": "cuda:1",
+  "hardware_snapshot": "0, GPU-174678e7-9442-e990-ec4a-2208b906ffc6, NVIDIA GeForce RTX 3090, 5659 MiB, 24576 MiB, 27 %, 57, 152.92 W\n1, GPU-b5ef7776-5b2c-5b84-3aa9-c0b1a604e7f0, NVIDIA GeForce RTX 3090, 5659 MiB, 24576 MiB, 72 %, 68, 294.87 W",
+  "consecutive_idle_snapshots": 0,
+  "updated_utc": "2026-11-17T13:20:50.734044+00:00",
+  "poll_seconds": 30,
+  "note": "Automatic GPU polling stopped at user request before model loading. User will manually launch a GPU-specific command."
+}

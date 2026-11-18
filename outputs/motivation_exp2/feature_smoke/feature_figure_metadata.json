@@ -1,0 +1,53 @@
+{
+  "style_source": "experiments/motivation_exp1/plot_results.py",
+  "figures": {
+    "E2_drift_cdf": {
+      "png_dpi": 300,
+      "pdf": "vector",
+      "description": "Exact empirical token CDF; pairs averaged within scenes, then scenes equally"
+    },
+    "E2_stable_thresholds": {
+      "png_dpi": 300,
+      "pdf": "vector",
+      "description": "All configured thresholds; no threshold chosen after observing results"
+    },
+    "E2_camera_distributions": {
+      "png_dpi": 300,
+      "pdf": "vector",
+      "description": "Six camera CDFs with equal scene weighting"
+    },
+    "E2_topk_contribution": {
+      "png_dpi": 300,
+      "pdf": "vector",
+      "description": "K=ceil(N*fraction), actual uniform k/N baseline shown"
+    },
+    "E2_scene_concentration": {
+      "png_dpi": 300,
+      "pdf": "vector",
+      "description": "Scene means; magnitude inequality is not a claim of spatial contiguity"
+    },
+    "E2_mean_spatial_maps": {
+      "png_dpi": 300,
+      "pdf": "vector",
+      "description": "Equal-scene average; model padded/resized coordinates; shared color scale"
+    },
+    "E2_stable_spatial_maps": {
+      "png_dpi": 300,
+      "pdf": "vector",
+      "description": "Equal-scene average; model padded/resized coordinates; shared color scale"
+    },
+    "E2_representative_heatmaps": {
+      "png_dpi": 300,
+      "pdf": "vector",
+      "description": "Earliest measured pair per camera in first scene; not synchronized across cameras"
+    }
+  },
+  "representative_pair_ids": [
+    "0dd21d2e900a320d235d9bd7",
+    "8f3d23d78c32c517f881c794",
+    "459dfcbdc25949d3084da137",
+    "02ec9ad85ca23d3ae1498963",
+    "0af5f4465bbfcafd5eac25b4",
+    "51d0d89c9c72e6f7f0592e33"
+  ]
+}

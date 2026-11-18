@@ -1,0 +1,6 @@
+{
+  "status": "complete",
+  "pairs": 393,
+  "issues": 0,
+  "definition": "intersection / previous instance count; empty previous set is undefined, not zero"
+}

@@ -1,0 +1,38 @@
+{
+  "answer_stability": {
+    "png_dpi": 300,
+    "pdf": "vector",
+    "statistics": "scene-equal-weight means with scene-bootstrap CI where available"
+  },
+  "dependency_stability": {
+    "png_dpi": 300,
+    "pdf": "vector",
+    "statistics": "scene-equal-weight means with scene-bootstrap CI where available"
+  },
+  "answer_vs_dependency": {
+    "png_dpi": 300,
+    "pdf": "vector",
+    "statistics": "scene-equal-weight means with scene-bootstrap CI where available"
+  },
+  "oracle_safe_reuse": {
+    "png_dpi": 300,
+    "pdf": "vector",
+    "statistics": "scene-equal-weight means with scene-bootstrap CI where available"
+  },
+  "dependency_overlap": {
+    "png_dpi": 300,
+    "pdf": "vector",
+    "statistics": "scene-equal-weight means with scene-bootstrap CI where available"
+  },
+  "latency_breakdown": {
+    "png_dpi": 300,
+    "pdf": "vector",
+    "statistics": "scene-equal-weight means with scene-bootstrap CI where available",
+    "available": true
+  },
+  "cumulative_llm_cost": {
+    "png_dpi": 300,
+    "pdf": "vector",
+    "statistics": "scene-equal-weight means with scene-bootstrap CI where available"
+  }
+}

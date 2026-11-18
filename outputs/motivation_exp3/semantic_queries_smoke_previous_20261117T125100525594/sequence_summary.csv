@@ -1,0 +1,13 @@
+sequence_id,scene_token,scene_name,sequence_length,workload,query_type,valid_queries,excluded_queries,profiled_query_events,annotation_complete,all_valid_queries_measured,total_end_to_end_ms,total_llm_prefill_ms,total_llm_decode_ms,total_llm_generation_ms,total_llm_forward_ms,oracle_safe_reuse_count,stale_answer_count,dependency_change_count,state_information_unavailable_count
+scene-0559_5_fixed_category,0e7ede02718341558414865d5c604745,scene-0559,5,fixed,category,5,0,0,True,False,,,,,,2,0,2,3
+scene-0559_5_fixed_existence,0e7ede02718341558414865d5c604745,scene-0559,5,fixed,existence,5,0,0,True,False,,,,,,4,0,0,1
+scene-0559_5_fixed_position,0e7ede02718341558414865d5c604745,scene-0559,5,fixed,position,5,0,0,True,False,,,,,,2,0,2,3
+scene-0559_5_fixed_motion_prediction,0e7ede02718341558414865d5c604745,scene-0559,5,fixed,motion_prediction,5,0,0,True,False,,,,,,2,0,2,3
+scene-0559_5_fixed_meta_action_planning,0e7ede02718341558414865d5c604745,scene-0559,5,fixed,meta_action_planning,5,0,0,True,False,,,,,,4,0,0,1
+scene-0559_5_mixed_alternating,0e7ede02718341558414865d5c604745,scene-0559,5,mixed,alternating,5,0,0,True,False,,,,,,0,0,0,5
+scene-0971_5_fixed_category,64bfc5edd71147858ce7446892d7f864,scene-0971,5,fixed,category,0,5,0,False,False,,,,,,0,0,0,0
+scene-0971_5_fixed_existence,64bfc5edd71147858ce7446892d7f864,scene-0971,5,fixed,existence,5,0,0,True,False,,,,,,4,0,0,1
+scene-0971_5_fixed_position,64bfc5edd71147858ce7446892d7f864,scene-0971,5,fixed,position,0,5,0,False,False,,,,,,0,0,0,0
+scene-0971_5_fixed_motion_prediction,64bfc5edd71147858ce7446892d7f864,scene-0971,5,fixed,motion_prediction,0,5,0,False,False,,,,,,0,0,0,0
+scene-0971_5_fixed_meta_action_planning,64bfc5edd71147858ce7446892d7f864,scene-0971,5,fixed,meta_action_planning,5,0,0,True,False,,,,,,1,3,3,1
+scene-0971_5_mixed_alternating,64bfc5edd71147858ce7446892d7f864,scene-0971,5,mixed,alternating,2,3,0,False,False,,,,,,0,0,0,2

@@ -1,5 +1,6 @@
 {
   "status": "complete",
   "frames": 13857,
-  "pairs": 500
+  "pairs": 500,
+  "camera_manifest_origin": "verified archived official SDK index"
 }

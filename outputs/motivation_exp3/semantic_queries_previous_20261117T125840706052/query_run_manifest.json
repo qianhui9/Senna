@@ -1,0 +1,272 @@
+{
+  "identity": {
+    "sha256": "36037cbaee304782c61efeb5a5651f3ca7025f23b8aa1ac38cc40e3f4aeacc4b",
+    "inputs": {
+      "configuration": {
+        "senna": {
+          "checkpoint_path": "/data/qh/phdCode/work4/models/Senna",
+          "device": "cuda:1",
+          "max_new_tokens": 64,
+          "warmup_iterations": 5,
+          "profile_repeats": 1
+        },
+        "nuscenes": {
+          "dataroot": "/data/dataset/v1.0-trainval",
+          "version": "v1.0-trainval",
+          "split": "val"
+        },
+        "experiment": {
+          "seed": 42,
+          "max_scenes": 3,
+          "sequence_lengths": [
+            5,
+            10,
+            20
+          ],
+          "workloads": [
+            "fixed",
+            "mixed"
+          ],
+          "query_types": [
+            "category",
+            "existence",
+            "position",
+            "motion_prediction",
+            "meta_action_planning"
+          ],
+          "bootstrap_iterations": 2000
+        },
+        "selection": {
+          "vehicle_prefix": "vehicle.",
+          "excluded_vehicle_categories": [
+            "vehicle.bicycle",
+            "vehicle.motorcycle"
+          ],
+          "max_distance_m": 40.0,
+          "forward_min_m": 0.0,
+          "front_half_angle_degrees": 35.0,
+          "min_sensor_points": 1,
+          "existence_prefixes": [
+            "human.pedestrian.",
+            "vehicle.bicycle",
+            "vehicle.motorcycle"
+          ],
+          "existence_distance_m": 20.0,
+          "position_lateral_edges_m": [
+            -2.0,
+            2.0
+          ],
+          "position_labels": [
+            "FRONT_LEFT",
+            "FRONT",
+            "FRONT_RIGHT"
+          ],
+          "future_steps": 6,
+          "expected_interval_s": 0.5,
+          "interval_tolerance_s": 0.1,
+          "current_speed_bins_mps": [
+            0.5,
+            2.0,
+            5.0,
+            10.0
+          ]
+        },
+        "output": {
+          "directory": "/data/qh/phdCode/work4/Senna/outputs/motivation_exp3/semantic_queries"
+        }
+      },
+      "source_sha256": {
+        "data_tools/senna_inputs.py": "9a259bfa5afec398b55701019dd21597c66f2de4dd4e9950aa568fd2a2178a53",
+        "data_tools/senna_qa_utils.py": "722f251b1e40056c8a2036f80a827e0fb0362911a8bc69ee6abfa54df6309116",
+        "eval_tools/prepare_senna_plan_eval.py": "ae9900a82411d8c814714aa4fd502796795b2d4b942ef39e37b7a2652e59161b",
+        "experiments/motivation_exp1/profile_senna.py": "37c53641d2d6ad1fd5e6a5d85f1bfcbe4d39d720eb6fde0f287cb642f2758dd6",
+        "experiments/motivation_exp1/utils/__init__.py": "bec2b379b27e664672d459303c122ba604ccccd2735bbb808fea648c2fd0c4e4",
+        "experiments/motivation_exp1/utils/data_utils.py": "01a3a7f6223a8f50985a48be52e211478ca3aad5e27f2108676f308fe703920d",
+        "experiments/motivation_exp1/utils/profiling_utils.py": "84c59a1d1c5d489210cb1d6296cd2f321853a024d417749b90a2c9a12ce2b07f",
+        "experiments/motivation_exp1/utils/stats_utils.py": "04871fc9c52637182ed935906b223b293286131e7a42b6ae8d52e608b4147b00",
+        "experiments/motivation_exp3/analyze_query_dependencies.py": "82de8d670c27bb76d8a3e3e61e42092cb427ee4ad48663721cfcd9ae367f8c13",
+        "experiments/motivation_exp3/build_query_sequences.py": "d99aad652c02a62092e1c493cbf35be2c64601512fc2b67ff9eee241f43d616a",
+        "experiments/motivation_exp3/profile_queries.py": "eec71a18e12b2b6c80df1ff4b2eab03cc93e780ab1febde26486f39bab56cddd",
+        "experiments/motivation_exp3/query_reporting.py": "4e90b296f17cc7525faf0d229bb74e41f399c5befe1770ca228b502a06fdf140",
+        "experiments/motivation_exp3/run_queries.py": "a077de5423fcbad4f5fa634ece42a8ecf83393c25dd6d39b2cdacf8945f60671",
+        "llava/constants.py": "05caa532060f61b30cada5ba23da0f4bf640c898298913f768653583482e5901",
+        "llava/conversation.py": "8683d5847623ff7430136497c50990db167e03ec4749c0079b27141d197b9943",
+        "llava/llava_trainer.py": "33424ae5e186a5e4e65bb43511a5337af5d55085134dcaab0d895ede3aec219b",
+        "llava/mm_utils.py": "5551c1a52ea5e7d6e4ae5ad5da430271b0cd648b044a9b812127a49f46895bcf",
+        "llava/model/__init__.py": "ee39b249ed24855167f1d22459f04a8c13aa06d06f3778573175013d5b5fecd5",
+        "llava/model/apply_delta.py": "ddf4b680787dd76e659806c96e6cee5c156b913ff6f6e78aa70a347594b8ad79",
+        "llava/model/builder.py": "508b9a9905e39ca2185d8de4dead114c588e8874ecf6eafab7913106c875fe6d",
+        "llava/model/consolidate.py": "d7d8c75a1173ab3b616a84093c98e7d1e04783de7489644a34816c3e7d88df9f",
+        "llava/model/language_model/llava_llama.py": "00ab011e0543bb502e3ce26d402899022a4bc866364de1d645678cba853d05cc",
+        "llava/model/language_model/llava_mistral.py": "2fbd8141fee2cf00f9a3e5485d18b88199c5221a3f4952acdad65c8ebe0fe913",
+        "llava/model/language_model/llava_mpt.py": "1a4a8e900501299dcae2839053c45a6cfe3ab601189010952f4bba5b85c5e3e8",
+        "llava/model/llava_arch.py": "358e10bacea509218477ba8468b550a61c622577eb3af84a517a5e52818e0ae4",
+        "llava/model/make_delta.py": "c315a9bf0c288cff8a5de1aba46ad348ae544de94439b0e8c36ad6fc260fdad2",
+        "llava/model/multimodal_encoder/builder.py": "cfd991512d808afd8fb0639b9231dd768da1c8ab800c7539c8ed1545b7b25f76",
+        "llava/model/multimodal_encoder/clip_encoder.py": "47a3759c277d34447535dc3b950f7025ef20828b082254a959d2db276091601f",
+        "llava/model/multimodal_projector/Qformer.py": "80c6473884671bb96468f11f8d9172ab164f0eef5faacd380d9f112cf1b027f9",
+        "llava/model/multimodal_projector/builder.py": "f38df14b52d084127405d82594e6a6c48e9a0882cfc736ece0a66d8760ac65bc",
+        "llava/model/utils.py": "a6beb41c51d7a124547188d10bf0b7f4ea613b1ecccf165601b96de525664241",
+        "llava/senna/senna_llava_arch.py": "e26a4180b858ce7bd198394fa738d3b9abae36e13d7e515304a60b8b9002d07b",
+        "llava/senna/senna_llava_llama.py": "7d8fbe67e06d7a10a208f1340aa777abea562698321bf31539a35cd1feba192f",
+        "llava/senna/senna_llava_trainer.py": "c629fa97dbe9510832acbc3a3230c156757583f58e7e8d7dce923d8ab4c1720d",
+        "llava/senna/train_senna_llava_laion_pretrain.py": "6015d20b5ee818fdb792d4f72bb47c78960dcbc7cd748811a7c17d9c1df27255",
+        "llava/senna/train_senna_llava_multi_img.py": "77f9430f1c5ea50ca0ba40c1ea7dbcd1495c4a41905be1fad3942a589025ed5c",
+        "llava/train.py": "33cc530b67312a75a8c54becbde82a08bc33dba7744f85ed9590e85a95ac4bfc",
+        "llava/utils.py": "b51a3ef996597b7d8b7a54e280529985a7154992bd863209bdbc761b8b397102"
+      },
+      "model_files": [
+        {
+          "path": "/data/qh/phdCode/work4/models/Senna/README.md",
+          "size": 1243,
+          "mtime_ns": 1791628255000000000
+        },
+        {
+          "path": "/data/qh/phdCode/work4/models/Senna/config.json",
+          "size": 1242,
+          "mtime_ns": 1791638606728965109
+        },
+        {
+          "path": "/data/qh/phdCode/work4/models/Senna/generation_config.json",
+          "size": 162,
+          "mtime_ns": 1791628262000000000
+        },
+        {
+          "path": "/data/qh/phdCode/work4/models/Senna/gitattributes",
+          "size": 1519,
+          "mtime_ns": 1791628250000000000
+        },
+        {
+          "path": "/data/qh/phdCode/work4/models/Senna/pytorch_model-00001-of-00002.bin",
+          "size": 9976631486,
+          "mtime_ns": 1791630170000000000
+        },
+        {
+          "path": "/data/qh/phdCode/work4/models/Senna/pytorch_model-00002-of-00002.bin",
+          "size": 4149654020,
+          "mtime_ns": 1791629119000000000
+        },
+        {
+          "path": "/data/qh/phdCode/work4/models/Senna/pytorch_model.bin.index.json",
+          "size": 76452,
+          "mtime_ns": 1791628276000000000
+        },
+        {
+          "path": "/data/qh/phdCode/work4/models/Senna/special_tokens_map.json",
+          "size": 438,
+          "mtime_ns": 1791628293000000000
+        },
+        {
+          "path": "/data/qh/phdCode/work4/models/Senna/tokenizer.model",
+          "size": 499723,
+          "mtime_ns": 1791628299000000000
+        },
+        {
+          "path": "/data/qh/phdCode/work4/models/Senna/tokenizer_config.json",
+          "size": 749,
+          "mtime_ns": 1791628302000000000
+        }
+      ],
+      "nuscenes_tables": [
+        {
+          "path": "/data/dataset/v1.0-trainval/v1.0-trainval/attribute.json",
+          "size": 1147,
+          "mtime_ns": 1553285904000000000
+        },
+        {
+          "path": "/data/dataset/v1.0-trainval/v1.0-trainval/calibrated_sensor.json",
+          "size": 3268133,
+          "mtime_ns": 1553285904000000000
+        },
+        {
+          "path": "/data/dataset/v1.0-trainval/v1.0-trainval/category.json",
+          "size": 4747,
+          "mtime_ns": 1553285904000000000
+        },
+        {
+          "path": "/data/dataset/v1.0-trainval/v1.0-trainval/ego_pose.json",
+          "size": 645746265,
+          "mtime_ns": 1553285910000000000
+        },
+        {
+          "path": "/data/dataset/v1.0-trainval/v1.0-trainval/instance.json",
+          "size": 16012833,
+          "mtime_ns": 1553285910000000000
+        },
+        {
+          "path": "/data/dataset/v1.0-trainval/v1.0-trainval/log.json",
+          "size": 11968,
+          "mtime_ns": 1553285910000000000
+        },
+        {
+          "path": "/data/dataset/v1.0-trainval/v1.0-trainval/map.json",
+          "size": 3606,
+          "mtime_ns": 1553285910000000000
+        },
+        {
+          "path": "/data/dataset/v1.0-trainval/v1.0-trainval/sample.json",
+          "size": 14628865,
+          "mtime_ns": 1767576831446518902
+        },
+        {
+          "path": "/data/dataset/v1.0-trainval/v1.0-trainval/sample_annotation.json",
+          "size": 583417244,
+          "mtime_ns": 1767576939520274190
+        },
+        {
+          "path": "/data/dataset/v1.0-trainval/v1.0-trainval/sample_annotationKey.json",
+          "size": 120711598,
+          "mtime_ns": 1766654506173437603
+        },
+        {
+          "path": "/data/dataset/v1.0-trainval/v1.0-trainval/sample_data.json",
+          "size": 1345678379,
+          "mtime_ns": 1553285927000000000
+        },
+        {
+          "path": "/data/dataset/v1.0-trainval/v1.0-trainval/scene.json",
+          "size": 285132,
+          "mtime_ns": 1553285927000000000
+        },
+        {
+          "path": "/data/dataset/v1.0-trainval/v1.0-trainval/sensor.json",
+          "size": 1185,
+          "mtime_ns": 1553285927000000000
+        },
+        {
+          "path": "/data/dataset/v1.0-trainval/v1.0-trainval/visibility.json",
+          "size": 418,
+          "mtime_ns": 1553285927000000000
+        }
+      ],
+      "model_config_sha256": "4360f459f0db97c2facde2aeae4d1e77059d8dec95181bae80bfe71dc4c7dca2",
+      "vision_files": [
+        {
+          "path": "/data/qh/phdCode/work4/models/clip-vit-large-patch14-336/config.json",
+          "size": 4757,
+          "mtime_ns": 1791628685000000000
+        },
+        {
+          "path": "/data/qh/phdCode/work4/models/clip-vit-large-patch14-336/preprocessor_config.json",
+          "size": 316,
+          "mtime_ns": 1791628695000000000
+        },
+        {
+          "path": "/data/qh/phdCode/work4/models/clip-vit-large-patch14-336/pytorch_model.bin",
+          "size": 1711974081,
+          "mtime_ns": 1791629766000000000
+        }
+      ]
+    }
+  },
+  "artifacts": {
+    "queries.json": "d1085bcbc283543ecd5706cde51beebc05e69854c9127962f428cde6628d9555",
+    "base_queries.json": "dba3a795b8af027ef1ca1d70ab63b9414e0f74f3ca249fdb99c5f3386b5a1dba",
+    "sequences.json": "a476f5d231700f7094ec43b1f9c6c9672fb6f441dccc8800f55c9f558012116f",
+    "query_traces.csv": "6a2991386074bd5eb7123b7bea9474ad3e00f87af3b52778e30cff3cc2e99cbc",
+    "query_dependencies.csv": "5373df38c95f7a3f49eefff7ecaade8e7a000de13efb78c91dce9535a704530e",
+    "excluded_queries.csv": "c0a062f283f78451700a21b34d4e9eb40fc6841bc2ac2045c6d6caad63a7b44e",
+    "query_build_summary.json": "d6a92d9e6bb22407fc75b393b189b791ba72c238ff0a61ede075e2c80df7dd4f"
+  },
+  "build_complete": true
+}

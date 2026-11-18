@@ -1,0 +1,84 @@
+{
+  "verified_at_utc": "2026-11-17T12:15:47.930745+00:00",
+  "full_run": {
+    "scenes": 10,
+    "pairs": 500,
+    "failed_pairs": 0,
+    "token_comparisons": 288000
+  },
+  "feature_tests": {
+    "passed": true,
+    "tests": 14,
+    "log": "test_feature_drift.log",
+    "log_sha256": "20ed2e6a1255710b5f0c1ce7dd29970c57cf95899cc4ce8be1ff17b39af68d1e",
+    "test_source_sha256": "b0bc850045f0bb2ba4b7974ca0cdb8bc8421ae1dd47af9f9f99d30bb86ddc03b"
+  },
+  "smoke": {
+    "scenes": 2,
+    "pairs": 36,
+    "failed_pairs": 0,
+    "tests_passed": 14,
+    "log": "feature_smoke/test_feature_drift.log"
+  },
+  "e1_regression": {
+    "tests_passed": 38,
+    "log": "test_exp1_regression.log"
+  },
+  "legacy_geometry_regression": {
+    "status": "environment_dependency_missing",
+    "module_import_errors": 4,
+    "reason": "pandas is not installed in Senna; feature drift implementation has no pandas dependency",
+    "log": "test_legacy_geometry.log"
+  },
+  "checks": [
+    "Known angle / zero norm / Gini / threshold / top-k rounding math",
+    "Cross-scene/camera/path/timestamp mismatch rejection",
+    "Manifest companion exposure bounds and camera order",
+    "Balanced content-independent pair selection",
+    "Missing E1 index delegates only to original index stage, including stale complete status",
+    "Checkpoint corruption recorded",
+    "Original Senna helper bitwise feature and image SHA256 equivalence",
+    "Actual patch convolution / raw CLS / row-major layout",
+    "Independent raw-distance Gini and normalized L2 identities for all 500 pairs",
+    "Equal-scene aggregation matches raw distances",
+    "Spatial map means match camera-gap summaries",
+    "CDF threshold values match stable ratios",
+    "8 PNG figures verified at 300 DPI with corresponding PDFs",
+    "Full and smoke resume validate SHA256 without loading model"
+  ],
+  "required_artifacts": {
+    "feature_drift_samples.csv": {
+      "exists": true,
+      "sha256": "9528378029a5cef6c1bc931dcd033b7b4b54dfa44d6f7d08deeab8f76e405144"
+    },
+    "feature_drift_summary.csv": {
+      "exists": true,
+      "sha256": "3d08f8dcaa3adad4d53b5671f28799324096685ce6de2cbe926ac831d810513f"
+    },
+    "camera_drift_summary.csv": {
+      "exists": true,
+      "sha256": "867ababb5f05284aa3a0c55f9dd495dbd56ceb2b4460a6dfdea81fa064bea817"
+    },
+    "temporal_gap_summary.csv": {
+      "exists": true,
+      "sha256": "4fdd6deff72e827a07043080635a0c0f77fc3f7f641a0500de2d9063ea15e75d"
+    },
+    "spatial_drift_maps.csv": {
+      "exists": true,
+      "sha256": "2a9eb91c37f9da29ad73fa9625207a91a13cbe966349292e49e68947be734d70"
+    },
+    "aggregate_summary.json": {
+      "exists": true,
+      "sha256": "9bc0924b5722969e66ba247f7a681b91064f8facee8d262d96c3e96db6f148e3"
+    },
+    "run_metadata.json": {
+      "exists": true,
+      "sha256": "b7e31b697d2919b15f26fb809de3542e909fba88e03fa1333bdb84161fbaf2ee"
+    },
+    "experiment_report.md": {
+      "exists": true,
+      "sha256": "3101a20c72d81150058c61a03078e4593911119bc4deef440854bf51aa629ce4"
+    }
+  },
+  "full_resume_log": "2026-11-17 12:15:04,445 INFO Reusing 500 checksum-validated measured pairs\n"
+}

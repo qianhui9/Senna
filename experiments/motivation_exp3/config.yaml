@@ -44,3 +44,43 @@ output:
   save_object_features: true
   save_visualizations: true
   visualization_samples: 30
+
+# Independent Experiment 3 semantic-query pipeline (run_queries.py).
+# The original feature experiment above remains available via run_exp3.py.
+semantic_queries:
+  senna:
+    checkpoint_path: /data/qh/phdCode/work4/models/Senna
+    device: cuda:1
+    max_new_tokens: 64
+    warmup_iterations: 5
+    profile_repeats: 1
+  nuscenes:
+    dataroot: /data/dataset/v1.0-trainval
+    version: v1.0-trainval
+    split: val
+  experiment:
+    seed: 42
+    max_scenes: 3
+    sequence_lengths: [5, 10, 20]
+    workloads: [fixed, mixed]
+    query_types: [category, existence, position, motion_prediction, meta_action_planning]
+    bootstrap_iterations: 2000
+  selection:
+    # Current LiDAR coordinates: x right, y forward; radial XY distance.
+    vehicle_prefix: vehicle.
+    excluded_vehicle_categories: [vehicle.bicycle, vehicle.motorcycle]
+    max_distance_m: 40.0
+    forward_min_m: 0.0
+    front_half_angle_degrees: 35.0
+    min_sensor_points: 1
+    # Negative existence answers require complete official annotation records.
+    existence_prefixes: [human.pedestrian., vehicle.bicycle, vehicle.motorcycle]
+    existence_distance_m: 20.0
+    position_lateral_edges_m: [-2.0, 2.0]
+    position_labels: [FRONT_LEFT, FRONT, FRONT_RIGHT]
+    future_steps: 6
+    expected_interval_s: 0.5
+    interval_tolerance_s: 0.1
+    current_speed_bins_mps: [0.5, 2.0, 5.0, 10.0]
+  output:
+    directory: outputs/motivation_exp3/semantic_queries

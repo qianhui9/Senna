@@ -11,7 +11,7 @@
       "detailed_samples": 1
     },
     "nuscenes": {
-      "dataroot": "/data/qh/nuscenes/v1.0-trainval",
+      "dataroot": "/data/dataset/v1.0-trainval",
       "version": "v1.0-trainval"
     },
     "experiment": {
@@ -59,21 +59,23 @@
     "llava/senna/senna_llava_arch.py": "e26a4180b858ce7bd198394fa738d3b9abae36e13d7e515304a60b8b9002d07b",
     "llava/model/multimodal_encoder/clip_encoder.py": "47a3759c277d34447535dc3b950f7025ef20828b082254a959d2db276091601f",
     "experiments/motivation_exp1/__init__.py": "4c59e7515876cd898d1a83cacf62f1c1b8af545a15e22721c9406e1a4e09f95d",
-    "experiments/motivation_exp1/aggregate_results.py": "63161aa47b1b7d9c7283444e42feeb42af383285ef4cbac8a827650c43515b1e",
+    "experiments/motivation_exp1/aggregate_results.py": "afa1f53b1a570eb145e0bbe1c3d9db8476b48197fac1914fbbeb59b751f455b3",
     "experiments/motivation_exp1/analyze_object_persistence.py": "1b0856ab482a5cdf63e6f9492040dc087e1a0f4a344fb5098ece60d0e19d248a",
-    "experiments/motivation_exp1/analyze_temporal_redundancy.py": "141a48cff0e539b932da14440315c2fd3e49ee995b9bc2c9393c8c709f144699",
-    "experiments/motivation_exp1/build_nuscenes_manifest.py": "2dbe165b54b05cd29abb0fc349d872b52fe69bfed09b4f129e6a676f43b1cd46",
-    "experiments/motivation_exp1/generate_report.py": "500c21a908fa6466e72f093421e560076b6d71112edc49598d8dabe89dca4565",
-    "experiments/motivation_exp1/plot_results.py": "a84ff8d285bf12d1007de58e0b80f3c5816e58377e7626ddd8b099bfa1cf3843",
-    "experiments/motivation_exp1/profile_senna.py": "afe5999986190ff8b7768f6cdecdb66c937c83ba7c284cb2612f552e1f4470c2",
+    "experiments/motivation_exp1/analyze_temporal_redundancy.py": "3cad99506c7c17202d539ed1f957023148a09b87fe4df319c6ece6daa5e7ccff",
+    "experiments/motivation_exp1/audit_existing_results.py": "0a74c39270699adb5828aac8f3f2d9ef1adc70dbff59241142ae30d264344bc6",
+    "experiments/motivation_exp1/build_nuscenes_manifest.py": "25b2b16e1a51b68b30cba3d09473fa0bf6ec3bed9f5a14d6ba7d557a6fa018d9",
+    "experiments/motivation_exp1/generate_report.py": "091078883d0189a67e2baf2f01efcef5437af022cffccb0c21fcf5afddc2c28c",
+    "experiments/motivation_exp1/match_visual_objects.py": "1b13dc74d6da6bc33f79bf5439e5e8cd676754797ae326a750d8811cc8b230d1",
+    "experiments/motivation_exp1/plot_results.py": "38f2d4d9e17716c4208c27004cb3e4f28bcb138420dbd0a714e501ec488fba46",
+    "experiments/motivation_exp1/profile_senna.py": "37c53641d2d6ad1fd5e6a5d85f1bfcbe4d39d720eb6fde0f287cb642f2758dd6",
     "experiments/motivation_exp1/run.py": "812d92730c11bb93ea34366722b01c84405b2d09247a55b19923d6d4926720ba",
     "experiments/motivation_exp1/tests/__init__.py": "c8a8e472472797725edeac1eee77fbdc47c5c2f45e8688560eb1cef6f40fc7e5",
-    "experiments/motivation_exp1/tests/test_aggregation.py": "125f8281c00f5a501eef9d7b82506e3dfeea0f4d5106d4157b893ecf400af936",
-    "experiments/motivation_exp1/tests/test_manifest.py": "9301313b0c1233f500dcbaa0df7aa40e97912a3b84b16b9dacbfb86b66736a7a",
+    "experiments/motivation_exp1/tests/test_aggregation.py": "af630474373bf469009e1890ba421f5b093a329320cf5389e91f47ba0f1c7c64",
+    "experiments/motivation_exp1/tests/test_manifest.py": "cf6c36deebd3dcbe43290a116631af8d386323c8314742cc0eb7d9173576b23d",
     "experiments/motivation_exp1/tests/test_profiling_utils.py": "932c20ff3bc9ec3f0265926e332b370a1055730877d3dabcfe0c0b589576649e",
-    "experiments/motivation_exp1/tests/test_similarity.py": "73da686f1d06edc214c6ee936a9eb8ac4ec56d9be5877b0e8b90c887d9a8031b",
+    "experiments/motivation_exp1/tests/test_similarity.py": "166263ddc261972437998d7380bb5b9a896b98a340ccddce47f106eb59d988dc",
     "experiments/motivation_exp1/utils/__init__.py": "bec2b379b27e664672d459303c122ba604ccccd2735bbb808fea648c2fd0c4e4",
-    "experiments/motivation_exp1/utils/data_utils.py": "1dff75fd09747beff9fc56d40712dd91fdd4c51f03977efbf44d208fdeeabd1c",
+    "experiments/motivation_exp1/utils/data_utils.py": "01a3a7f6223a8f50985a48be52e211478ca3aad5e27f2108676f308fe703920d",
     "experiments/motivation_exp1/utils/profiling_utils.py": "84c59a1d1c5d489210cb1d6296cd2f321853a024d417749b90a2c9a12ce2b07f",
     "experiments/motivation_exp1/utils/stats_utils.py": "04871fc9c52637182ed935906b223b293286131e7a42b6ae8d52e608b4147b00"
   },
@@ -83,40 +85,36 @@
     "numpy": "1.26.4",
     "scipy": "1.13.1",
     "Pillow": "10.3.0",
-    "nuscenes-devkit": "1.1.11",
+    "nuscenes-devkit": "1.2.0",
     "matplotlib": "3.8.4",
     "PyYAML": "6.0.1"
   },
   "eval_json_path_sha256": "5d974da8bffd6bd2668efb9fd92ea4b7c7f906a429016597dfd4ddc51b176c5b",
   "checkpoint_path_sha256": "4360f459f0db97c2facde2aeae4d1e77059d8dec95181bae80bfe71dc4c7dca2",
   "model_files": {
-    "gitattributes": {
-      "size": 1519,
-      "mtime_ns": 1791628250000000000
-    },
     "pytorch_model.bin.index.json": {
       "size": 76452,
       "mtime_ns": 1791628276000000000
     },
-    "config.json": {
-      "size": 1242,
-      "mtime_ns": 1791638606728965109
-    },
-    "generation_config.json": {
-      "size": 162,
-      "mtime_ns": 1791628262000000000
-    },
-    "pytorch_model-00002-of-00002.bin": {
-      "size": 4149654020,
-      "mtime_ns": 1791629119000000000
+    "README.md": {
+      "size": 1243,
+      "mtime_ns": 1791628255000000000
     },
     "special_tokens_map.json": {
       "size": 438,
       "mtime_ns": 1791628293000000000
     },
-    "README.md": {
-      "size": 1243,
-      "mtime_ns": 1791628255000000000
+    "tokenizer_config.json": {
+      "size": 749,
+      "mtime_ns": 1791628302000000000
+    },
+    "generation_config.json": {
+      "size": 162,
+      "mtime_ns": 1791628262000000000
+    },
+    "config.json": {
+      "size": 1242,
+      "mtime_ns": 1791638606728965109
     },
     "pytorch_model-00001-of-00002.bin": {
       "size": 9976631486,
@@ -126,12 +124,20 @@
       "size": 499723,
       "mtime_ns": 1791628299000000000
     },
-    "tokenizer_config.json": {
-      "size": 749,
-      "mtime_ns": 1791628302000000000
+    "pytorch_model-00002-of-00002.bin": {
+      "size": 4149654020,
+      "mtime_ns": 1791629119000000000
+    },
+    "gitattributes": {
+      "size": 1519,
+      "mtime_ns": 1791628250000000000
     }
   },
   "vision_files": {
+    "pytorch_model.bin": {
+      "size": 1711974081,
+      "mtime_ns": 1791629766000000000
+    },
     "config.json": {
       "size": 4757,
       "mtime_ns": 1791628685000000000
@@ -139,48 +145,32 @@
     "preprocessor_config.json": {
       "size": 316,
       "mtime_ns": 1791628695000000000
-    },
-    "pytorch_model.bin": {
-      "size": 1711974081,
-      "mtime_ns": 1791629766000000000
     }
   },
   "dataset_tables": {
-    "sample_data.json": {
-      "size": 1345678379,
-      "mtime_ns": 1553285927000000000
-    },
-    "sensor.json": {
-      "size": 1185,
-      "mtime_ns": 1553285927000000000
+    "sample_annotation.json": {
+      "size": 583417244,
+      "mtime_ns": 1767576939520274190
     },
     "category.json": {
       "size": 4747,
       "mtime_ns": 1553285904000000000
     },
-    "map.json": {
-      "size": 3606,
-      "mtime_ns": 1553285910000000000
+    "sample_data.json": {
+      "size": 1345678379,
+      "mtime_ns": 1553285927000000000
     },
-    "sample_annotation.json": {
-      "size": 583417244,
-      "mtime_ns": 1767576939520274190
-    },
-    "scene.json": {
-      "size": 285132,
+    "visibility.json": {
+      "size": 418,
       "mtime_ns": 1553285927000000000
     },
     "log.json": {
       "size": 11968,
       "mtime_ns": 1553285910000000000
     },
-    "sample.json": {
-      "size": 14628865,
-      "mtime_ns": 1767576831446518902
-    },
-    "sample_annotationKey.json": {
-      "size": 120711598,
-      "mtime_ns": 1766654506173437603
+    "instance.json": {
+      "size": 16012833,
+      "mtime_ns": 1553285910000000000
     },
     "ego_pose.json": {
       "size": 645746265,
@@ -190,31 +180,45 @@
       "size": 3268133,
       "mtime_ns": 1553285904000000000
     },
-    "visibility.json": {
-      "size": 418,
-      "mtime_ns": 1553285927000000000
+    "sample_annotationKey.json": {
+      "size": 120711598,
+      "mtime_ns": 1766654506173437603
     },
     "attribute.json": {
       "size": 1147,
       "mtime_ns": 1553285904000000000
     },
-    "instance.json": {
-      "size": 16012833,
+    "scene.json": {
+      "size": 285132,
+      "mtime_ns": 1553285927000000000
+    },
+    "map.json": {
+      "size": 3606,
       "mtime_ns": 1553285910000000000
+    },
+    "sample.json": {
+      "size": 14628865,
+      "mtime_ns": 1767576831446518902
+    },
+    "sensor.json": {
+      "size": 1185,
+      "mtime_ns": 1553285927000000000
     }
   },
-  "fingerprint": "ee75a9421fa293b2fa25a27f7f495621e15b8bcc07ae4d65b064d15c4753d8d8",
-  "git_commit": "63368f1d0da31940d3e7a2c3099923cb942ad6f6",
-  "git_status": "M experiments/motivation_exp1/README.md\n M experiments/motivation_exp1/generate_report.py\n M experiments/motivation_exp1/plot_results.py\n M experiments/motivation_exp1/profile_senna.py\n M experiments/motivation_exp1/tests/test_aggregation.py\n M experiments/motivation_exp1/tests/test_profiling_utils.py\n M experiments/motivation_exp1/utils/data_utils.py\n M experiments/motivation_exp1/utils/profiling_utils.py\n M experiments/motivation_exp1/utils/stats_utils.py\n D outputs/motivation_exp1/aggregate_status.json\n D outputs/motivation_exp1/aggregate_summary.json\n D outputs/motivation_exp1/camera_manifest.csv\n D outputs/motivation_exp1/experiment_report.md\n D outputs/motivation_exp1/figure_metadata.json\n D outputs/motivation_exp1/figures/M1a_temporal_similarity.pdf\n D outputs/motivation_exp1/figures/M1a_temporal_similarity.png\n D outputs/motivation_exp1/figures/M1b_patch_similarity.pdf\n D outputs/motivation_exp1/figures/M1b_patch_similarity.png\n D outputs/motivation_exp1/figures/M1c_object_persistence.pdf\n D outputs/motivation_exp1/figures/M1c_object_persistence.png\n D outputs/motivation_exp1/figures/M1d_latency_breakdown.pdf\n D outputs/motivation_exp1/figures/M1d_latency_breakdown.png\n D outputs/motivation_exp1/figures/M1e_repeated_execution.pdf\n D outputs/motivation_exp1/figures/M1e_repeated_execution.png\n D outputs/motivation_exp1/figures/matched_similarity_latency.pdf\n D outputs/motivation_exp1/figures/matched_similarity_latency.png\n D outputs/motivation_exp1/index_status.json\n D outputs/motivation_exp1/invocation_status.json\n D outputs/motivation_exp1/manifest_issues.json\n D outputs/motivation_exp1/manifest_summary.json\n D outputs/motivation_exp1/matched_profile_issues.json\n D outputs/motivation_exp1/matched_profile_pairs.csv\n D outputs/motivation_exp1/model_metadata.json\n D outputs/motivation_exp1/object_issues.json\n D outputs/motivation_exp1/object_persistence.csv\n D outputs/motivation_exp1/objects_status.json\n D outputs/motivation_exp1/output_equivalence.json\n D outputs/motivation_exp1/patch_similarity.csv\n D outputs/motivation_exp1/plot_status.json\n D outputs/motivation_exp1/profile_status.json\n D outputs/motivation_exp1/profiling_samples.csv\n D outputs/motivation_exp1/profiling_summary.json\n D outputs/motivation_exp1/redundancy_status.json\n D outputs/motivation_exp1/report_status.json\n D outputs/motivation_exp1/scene_statistics.csv\n D outputs/motivation_exp1/similarity_issues.json\n D outputs/motivation_exp1/temporal_pairs.csv\n D outputs/motivation_exp1/temporal_similarity.csv\n D outputs/motivation_exp1/verification_results.json\n?? outputs/motivation_exp1_before_llm_split_20261011_215902/",
-  "python": "3.10.22 (main, Oct  1 2026, 20:14:04) [GCC 14.3.0]",
+  "fingerprint": "5f7799dc7a21b6708048f1774930c8e70f88d317085a3c7dc33702731c0fb1fb",
+  "git_commit": null,
+  "git_commit_unavailable_reason": "fatal: detected dubious ownership in repository at '/data/qh/phdCode/work4/Senna'\nTo add an exception for this directory, call:\n\n\tgit config --global --add safe.directory /data/qh/phdCode/work4/Senna\n",
+  "git_status": null,
+  "git_status_unavailable_reason": "fatal: detected dubious ownership in repository at '/data/qh/phdCode/work4/Senna'\nTo add an exception for this directory, call:\n\n\tgit config --global --add safe.directory /data/qh/phdCode/work4/Senna\n",
+  "python": "3.10.22 (main, Oct 29 2026, 20:33:25) [GCC 14.3.0]",
   "argv": [
     "/data/qh/phdCode/work4/Senna/experiments/motivation_exp1/run.py",
-    "--config",
-    "outputs/motivation_exp1/resolved_config.yaml",
     "--profile-mode",
     "both",
+    "--output-dir",
+    "outputs/motivation_exp1",
     "--existing",
-    "overwrite"
+    "resume"
   ],
   "data_kind": "real_dataset",
   "camera_order": [
@@ -224,5 +228,60 @@
     "CAM_BACK_LEFT",
     "CAM_BACK_RIGHT",
     "CAM_BACK"
-  ]
+  ],
+  "updated_at_utc": "2026-11-17T11:42:15.897883+00:00",
+  "reused_artifacts": {
+    "camera_manifest.csv": {
+      "sha256": "b8016736c8d0ee82bd69ff8cab9ba9c0f1ed0433334b158744ab900098bb39c1",
+      "origin": "/data/qh/phdCode/work4/Senna/outputs/motivation_exp1/previous_runs/20261117_192736_before_audit_fixes/camera_manifest.csv"
+    },
+    "object_persistence.csv": {
+      "sha256": "71fb40d49d3ab83c6e572ea0eb45be53f0b594b6719fe5ffd65c2b6f098fd412",
+      "origin": "/data/qh/phdCode/work4/Senna/outputs/motivation_exp1/previous_runs/20261117_192736_before_audit_fixes/object_persistence.csv"
+    },
+    "object_issues.json": {
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "origin": "/data/qh/phdCode/work4/Senna/outputs/motivation_exp1/previous_runs/20261117_192736_before_audit_fixes/object_issues.json"
+    },
+    "manifest_issues.json": {
+      "sha256": "9d467cdbb777d71fb7fb530f0e3b059e830ed79e4ad8bf8255775bab8f6d7817",
+      "origin": "/data/qh/phdCode/work4/Senna/outputs/motivation_exp1/previous_runs/20261117_192736_before_audit_fixes/manifest_issues.json"
+    },
+    "profiling_samples.csv": {
+      "sha256": "e16212f68b200bb581c79cc5580322969a12a47fb59e12d0fb6e9017f7c9863a",
+      "origin": "/data/qh/phdCode/work4/Senna/outputs/motivation_exp1/previous_runs/20261117_192736_before_audit_fixes/profiling_samples.csv"
+    },
+    "matched_profile_pairs.csv": {
+      "sha256": "4680cd2dbd99617fea0fab41a18b4952839d1e634b4f808f5d5fdf303312c541",
+      "origin": "/data/qh/phdCode/work4/Senna/outputs/motivation_exp1/previous_runs/20261117_192736_before_audit_fixes/matched_profile_pairs.csv"
+    },
+    "matched_profile_issues.json": {
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "origin": "/data/qh/phdCode/work4/Senna/outputs/motivation_exp1/previous_runs/20261117_192736_before_audit_fixes/matched_profile_issues.json"
+    },
+    "model_metadata.json": {
+      "sha256": "88d15fd453c3ee2cb2f675e09583d1963806a4db9f81303cf7a4b9d935deb2f8",
+      "origin": "/data/qh/phdCode/work4/Senna/outputs/motivation_exp1/previous_runs/20261117_192736_before_audit_fixes/model_metadata.json"
+    },
+    "output_equivalence.json": {
+      "sha256": "3a7065a97b92f8cf60d10ca5ebf14b25ff13e30e35f992ed2899766ab141fe71",
+      "origin": "/data/qh/phdCode/work4/Senna/outputs/motivation_exp1/previous_runs/20261117_192736_before_audit_fixes/output_equivalence.json"
+    },
+    "profile_status.json": {
+      "sha256": "1b670a13e946d5489c23dfb2f3d598cc45eececa0e19cde26b06418573eb2e7f",
+      "origin": "/data/qh/phdCode/work4/Senna/outputs/motivation_exp1/previous_runs/20261117_192736_before_audit_fixes/profile_status.json"
+    },
+    "objects_status.json": {
+      "sha256": "c9aaee02c35d07a311eb402067fcda3120707f85d6c1da775f4b45bace62fab3",
+      "origin": "/data/qh/phdCode/work4/Senna/outputs/motivation_exp1/previous_runs/20261117_192736_before_audit_fixes/objects_status.json"
+    },
+    "profiler_trace/040a956bf0c04ad09fffc286cab5bc56.json": {
+      "sha256": "b0b577fd838f132171d087e5639ca76bd08e8f278f1677244be061bc85b696d6",
+      "origin": "/data/qh/phdCode/work4/Senna/outputs/motivation_exp1/previous_runs/20261117_192736_before_audit_fixes/profiler_trace/040a956bf0c04ad09fffc286cab5bc56.json"
+    },
+    "profiler_trace/040a956bf0c04ad09fffc286cab5bc56_operators.txt": {
+      "sha256": "49698c7b4a51d7cacbe6e665bac11651c6fe330fac0a9fd35d821a361c0b77cb",
+      "origin": "/data/qh/phdCode/work4/Senna/outputs/motivation_exp1/previous_runs/20261117_192736_before_audit_fixes/profiler_trace/040a956bf0c04ad09fffc286cab5bc56_operators.txt"
+    }
+  }
 }

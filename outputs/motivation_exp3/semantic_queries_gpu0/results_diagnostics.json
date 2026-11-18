@@ -1,0 +1,315 @@
+{
+  "evidence_scope": {
+    "scenes": 3,
+    "sequences": 54,
+    "query_events": 436,
+    "unique_sample_templates": 228,
+    "unique_sample_tokens": 60,
+    "independent_bootstrap_units": 3
+  },
+  "by_query_type": {
+    "category": {
+      "unique_queries": 38,
+      "pairs": 35,
+      "base_label_counts": {
+        "vehicle.car": 23,
+        "vehicle.bus.rigid": 13,
+        "vehicle.truck": 2
+      },
+      "answer_stable_count": 27,
+      "dependency_stable_count": 24,
+      "same_answer_changed_dependency_count": 3,
+      "answer_scene_mean": 0.820662768031189,
+      "dependency_scene_mean": 0.7290448343079922,
+      "dependency_scene_ci95": [
+        0.5555555555555556,
+        1.0
+      ],
+      "profile_events": 63,
+      "strict_correct_count": 0,
+      "strict_accuracy_pooled": 0.0,
+      "strict_accuracy_scene_mean": 0.0,
+      "reached_max_new_tokens_count": 51,
+      "prefill_scene_mean_ms": 266.4222445210452,
+      "decode_scene_mean_ms": 1997.792859940302,
+      "e2e_scene_mean_ms": 2688.416823205198
+    },
+    "existence": {
+      "unique_queries": 60,
+      "pairs": 57,
+      "base_label_counts": {
+        "NO": 55,
+        "YES": 5
+      },
+      "answer_stable_count": 54,
+      "dependency_stable_count": 54,
+      "same_answer_changed_dependency_count": 0,
+      "answer_scene_mean": 0.9473684210526315,
+      "dependency_scene_mean": 0.9473684210526315,
+      "dependency_scene_ci95": [
+        0.8947368421052632,
+        1.0
+      ],
+      "profile_events": 126,
+      "strict_correct_count": 39,
+      "strict_accuracy_pooled": 0.30952380952380953,
+      "strict_accuracy_scene_mean": 0.30952380952380953,
+      "reached_max_new_tokens_count": 72,
+      "prefill_scene_mean_ms": 282.3674028184679,
+      "decode_scene_mean_ms": 1499.9561350988963,
+      "e2e_scene_mean_ms": 2199.946283736074
+    },
+    "position": {
+      "unique_queries": 38,
+      "pairs": 35,
+      "base_label_counts": {
+        "FRONT_LEFT": 12,
+        "FRONT_RIGHT": 26
+      },
+      "answer_stable_count": 34,
+      "dependency_stable_count": 24,
+      "same_answer_changed_dependency_count": 10,
+      "answer_scene_mean": 0.9824561403508771,
+      "dependency_scene_mean": 0.7290448343079922,
+      "dependency_scene_ci95": [
+        0.5555555555555556,
+        1.0
+      ],
+      "profile_events": 64,
+      "strict_correct_count": 0,
+      "strict_accuracy_pooled": 0.0,
+      "strict_accuracy_scene_mean": 0.0,
+      "reached_max_new_tokens_count": 64,
+      "prefill_scene_mean_ms": 278.6212873428587,
+      "decode_scene_mean_ms": 2558.6321603381443,
+      "e2e_scene_mean_ms": 3267.3161948957145
+    },
+    "motion_prediction": {
+      "unique_queries": 32,
+      "pairs": 28,
+      "base_label_counts": {
+        "Object 1: STOP, STRAIGHT": 18,
+        "Object 1: KEEP, STRAIGHT": 14
+      },
+      "answer_stable_count": 23,
+      "dependency_stable_count": 18,
+      "same_answer_changed_dependency_count": 5,
+      "answer_scene_mean": 0.8518518518518517,
+      "dependency_scene_mean": 0.6759259259259259,
+      "dependency_scene_ci95": [
+        0.4444444444444444,
+        1.0
+      ],
+      "profile_events": 57,
+      "strict_correct_count": 48,
+      "strict_accuracy_pooled": 0.8421052631578947,
+      "strict_accuracy_scene_mean": 0.9142857142857143,
+      "reached_max_new_tokens_count": 0,
+      "prefill_scene_mean_ms": 304.4056961786179,
+      "decode_scene_mean_ms": 470.1073205221267,
+      "e2e_scene_mean_ms": 1180.651783544038
+    },
+    "meta_action_planning": {
+      "unique_queries": 60,
+      "pairs": 57,
+      "base_label_counts": {
+        "KEEP, STRAIGHT": 50,
+        "ACCELERATE, STRAIGHT": 2,
+        "KEEP, RIGHT_TURN": 8
+      },
+      "answer_stable_count": 53,
+      "dependency_stable_count": 43,
+      "same_answer_changed_dependency_count": 10,
+      "answer_scene_mean": 0.9298245614035089,
+      "dependency_scene_mean": 0.7543859649122807,
+      "dependency_scene_ci95": [
+        0.47368421052631576,
+        0.9473684210526315
+      ],
+      "profile_events": 126,
+      "strict_correct_count": 47,
+      "strict_accuracy_pooled": 0.373015873015873,
+      "strict_accuracy_scene_mean": 0.373015873015873,
+      "reached_max_new_tokens_count": 0,
+      "prefill_scene_mean_ms": 288.2751615009611,
+      "decode_scene_mean_ms": 314.6802460503957,
+      "e2e_scene_mean_ms": 1005.0945331357301
+    }
+  },
+  "canonical_pairs": {
+    "n": 212,
+    "oracle_safe": 163,
+    "same_answer_changed_dependencies": 28
+  },
+  "factual_pairs": {
+    "n": 127,
+    "oracle_safe": 102
+  },
+  "inference": {
+    "all_valid_decompositions": true,
+    "one_prefill_every_request": true,
+    "sum_e2e_seconds": 869.2701021041721,
+    "sum_prefill_decode_seconds": 688.4001504135132
+  },
+  "workloads": {
+    "fixed": {
+      "query_events": 363,
+      "adjacent_query_pairs": 329,
+      "safe_fraction_all_query_events": 0.6942148760330579,
+      "unavailable_count_all_events": 80,
+      "adjacent_oracle_safe_mean": 0.7659574468085106
+    },
+    "mixed": {
+      "query_events": 73,
+      "adjacent_query_pairs": 48,
+      "safe_fraction_all_query_events": 0.0,
+      "unavailable_count_all_events": 73,
+      "adjacent_oracle_safe_mean": 0.0
+    }
+  },
+  "sequence_coverage": [
+    {
+      "length": 5,
+      "query_type": "category",
+      "total_sequences": 3,
+      "complete_measured_sequences": 1
+    },
+    {
+      "length": 5,
+      "query_type": "existence",
+      "total_sequences": 3,
+      "complete_measured_sequences": 3
+    },
+    {
+      "length": 5,
+      "query_type": "position",
+      "total_sequences": 3,
+      "complete_measured_sequences": 1
+    },
+    {
+      "length": 5,
+      "query_type": "motion_prediction",
+      "total_sequences": 3,
+      "complete_measured_sequences": 1
+    },
+    {
+      "length": 5,
+      "query_type": "meta_action_planning",
+      "total_sequences": 3,
+      "complete_measured_sequences": 3
+    },
+    {
+      "length": 5,
+      "query_type": "alternating",
+      "total_sequences": 3,
+      "complete_measured_sequences": 1
+    },
+    {
+      "length": 10,
+      "query_type": "category",
+      "total_sequences": 3,
+      "complete_measured_sequences": 1
+    },
+    {
+      "length": 10,
+      "query_type": "existence",
+      "total_sequences": 3,
+      "complete_measured_sequences": 3
+    },
+    {
+      "length": 10,
+      "query_type": "position",
+      "total_sequences": 3,
+      "complete_measured_sequences": 1
+    },
+    {
+      "length": 10,
+      "query_type": "motion_prediction",
+      "total_sequences": 3,
+      "complete_measured_sequences": 1
+    },
+    {
+      "length": 10,
+      "query_type": "meta_action_planning",
+      "total_sequences": 3,
+      "complete_measured_sequences": 3
+    },
+    {
+      "length": 10,
+      "query_type": "alternating",
+      "total_sequences": 3,
+      "complete_measured_sequences": 1
+    },
+    {
+      "length": 20,
+      "query_type": "category",
+      "total_sequences": 3,
+      "complete_measured_sequences": 1
+    },
+    {
+      "length": 20,
+      "query_type": "existence",
+      "total_sequences": 3,
+      "complete_measured_sequences": 3
+    },
+    {
+      "length": 20,
+      "query_type": "position",
+      "total_sequences": 3,
+      "complete_measured_sequences": 1
+    },
+    {
+      "length": 20,
+      "query_type": "motion_prediction",
+      "total_sequences": 3,
+      "complete_measured_sequences": 0
+    },
+    {
+      "length": 20,
+      "query_type": "meta_action_planning",
+      "total_sequences": 3,
+      "complete_measured_sequences": 3
+    },
+    {
+      "length": 20,
+      "query_type": "alternating",
+      "total_sequences": 3,
+      "complete_measured_sequences": 0
+    }
+  ],
+  "diagnostic_baselines": {
+    "existence": {
+      "empirical_global_majority_label": "NO",
+      "majority_pooled_accuracy": 0.9285714285714286,
+      "model_pooled_accuracy": 0.30952380952380953,
+      "note": "Descriptive class imbalance diagnostic, not a trained or independently validated baseline."
+    },
+    "motion_prediction": {
+      "empirical_global_majority_label": "Object 1: KEEP, STRAIGHT",
+      "majority_pooled_accuracy": 0.543859649122807,
+      "model_pooled_accuracy": 0.8421052631578947,
+      "note": "Descriptive class imbalance diagnostic, not a trained or independently validated baseline."
+    },
+    "meta_action_planning": {
+      "empirical_global_majority_label": "KEEP, STRAIGHT",
+      "majority_pooled_accuracy": 0.7936507936507936,
+      "model_pooled_accuracy": 0.373015873015873,
+      "note": "Descriptive class imbalance diagnostic, not a trained or independently validated baseline."
+    },
+    "motion_current_speed_rule": {
+      "rule": "Given prompt current speed <2 m/s => STOP, else KEEP; always STRAIGHT",
+      "correct": 54,
+      "n": 57,
+      "pooled_accuracy": 0.9473684210526315,
+      "scene_mean_accuracy": 0.9714285714285714,
+      "note": "Post-hoc rule using the same current GT velocity provided to Senna; no future input, no LLM run; not an implemented WorldStream system."
+    }
+  },
+  "note": "Post-hoc descriptive evidence analysis only. No new model execution, implementation of reuse, or acceleration measurement.",
+  "existence_pairs": {
+    "NO->NO": 51,
+    "NO->YES": 2,
+    "YES->YES": 3,
+    "YES->NO": 1
+  }
+}

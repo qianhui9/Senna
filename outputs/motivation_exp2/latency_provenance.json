@@ -1,0 +1,31 @@
+{
+  "source": "experiment1",
+  "reuse_checks": {
+    "class": true,
+    "gpu": true,
+    "torch": true,
+    "transformers": true,
+    "cuda_version": true,
+    "vision_config": true,
+    "processor": true,
+    "weight_files": true,
+    "model_config": true,
+    "vision_files": true,
+    "device": true,
+    "precision": true,
+    "llava/model/builder.py": true,
+    "llava/senna/senna_llava_llama.py": true,
+    "llava/senna/senna_llava_arch.py": true,
+    "llava/model/multimodal_encoder/clip_encoder.py": true,
+    "data_tools/senna_qa_utils.py": true,
+    "all_observed_shapes": true
+  },
+  "n": 300,
+  "vision_tower_mean_ms": 56.26973742167155,
+  "vision_tower_p95_ms": 56.911597442626956,
+  "six_view_complete_encoding_mean_ms": 56.26973742167155,
+  "source_path": "/data/qh/phdCode/work4/Senna/outputs/motivation_exp1/profiling_samples.csv",
+  "source_sha256": "e16212f68b200bb581c79cc5580322969a12a47fb59e12d0fb6e9017f7c9863a",
+  "scope": "One Tower call encodes all six views. Do not multiply by six.",
+  "hardware_identity_limit": "E1 recorded GPU model and device ordinal, not GPU serial/UUID; comparison is at that recorded granularity."
+}

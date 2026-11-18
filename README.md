@@ -44,9 +44,17 @@ https://github.com/user-attachments/assets/3fd172be-d78d-47ae-867d-a473a1e6ddd6
 ```shell
 git clone https://github.com/qianhui9/Senna.git
 cd Senna
-conda create -n senna python=3.10 -y
-conda activate senna
-pip install -r requirements.txt
+bash tools/setup_senna_env.sh
+source /data/miniconda3/etc/profile.d/conda.sh
+conda activate Senna
+```
+
+For inference on the current machine, use the pinned inference environment and
+the local nuScenes/Senna/CLIP paths documented in [运行文件.md](运行文件.md):
+
+```shell
+bash tools/setup_senna_env.sh
+SENNA_GPU=1 bash eval_tools/senna_inference.sh --sample-index 0 --save-path outputs/senna_environment_sample.json
 ```
 
 ### Experiments in this repository

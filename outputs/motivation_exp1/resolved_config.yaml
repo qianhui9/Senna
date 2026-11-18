@@ -8,7 +8,7 @@ senna:
   validation_samples: 2
   detailed_samples: 1
 nuscenes:
-  dataroot: /data/qh/nuscenes/v1.0-trainval
+  dataroot: /data/dataset/v1.0-trainval
   version: v1.0-trainval
 experiment:
   seed: 42

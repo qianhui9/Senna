@@ -1,0 +1,241 @@
+{
+  "config": {
+    "senna": {
+      "checkpoint_path": "/data/qh/phdCode/work4/models/Senna",
+      "eval_json_path": "/data/qh/phdCode/work4/Senna/data/senna_nusc_val_plan_corrected.json",
+      "device": "cuda:0",
+      "device_map": "single",
+      "precision": "fp16",
+      "max_new_tokens": 64,
+      "validation_samples": 2,
+      "detailed_samples": 1
+    },
+    "nuscenes": {
+      "dataroot": "/data/dataset/v1.0-trainval",
+      "version": "v1.0-trainval"
+    },
+    "experiment": {
+      "seed": 42,
+      "max_scenes": 2,
+      "max_temporal_pairs": 36,
+      "max_profile_samples": 2,
+      "warmup_iterations": 1,
+      "profile_repeats": 1,
+      "temporal_gaps_seconds": [
+        0.083,
+        0.25,
+        0.5
+      ],
+      "gap_tolerance_seconds": 0.035,
+      "abnormal_interval_seconds": [
+        0.02,
+        0.2
+      ],
+      "analysis_resize": [
+        320,
+        192
+      ],
+      "patch_grid": [
+        8,
+        8
+      ],
+      "ssim_thresholds": [
+        0.7,
+        0.8,
+        0.9
+      ],
+      "bootstrap_iterations": 2000,
+      "save_visualizations": true
+    },
+    "output": {
+      "directory": "/data/qh/phdCode/work4/Senna/outputs/motivation_exp1/smoke"
+    }
+  },
+  "sources": {
+    "data_tools/senna_qa_utils.py": "722f251b1e40056c8a2036f80a827e0fb0362911a8bc69ee6abfa54df6309116",
+    "data_tools/senna_inputs.py": "9a259bfa5afec398b55701019dd21597c66f2de4dd4e9950aa568fd2a2178a53",
+    "llava/model/builder.py": "508b9a9905e39ca2185d8de4dead114c588e8874ecf6eafab7913106c875fe6d",
+    "llava/senna/senna_llava_llama.py": "7d8fbe67e06d7a10a208f1340aa777abea562698321bf31539a35cd1feba192f",
+    "llava/senna/senna_llava_arch.py": "e26a4180b858ce7bd198394fa738d3b9abae36e13d7e515304a60b8b9002d07b",
+    "llava/model/multimodal_encoder/clip_encoder.py": "47a3759c277d34447535dc3b950f7025ef20828b082254a959d2db276091601f",
+    "experiments/motivation_exp1/__init__.py": "4c59e7515876cd898d1a83cacf62f1c1b8af545a15e22721c9406e1a4e09f95d",
+    "experiments/motivation_exp1/aggregate_results.py": "afa1f53b1a570eb145e0bbe1c3d9db8476b48197fac1914fbbeb59b751f455b3",
+    "experiments/motivation_exp1/analyze_object_persistence.py": "1b0856ab482a5cdf63e6f9492040dc087e1a0f4a344fb5098ece60d0e19d248a",
+    "experiments/motivation_exp1/analyze_temporal_redundancy.py": "3cad99506c7c17202d539ed1f957023148a09b87fe4df319c6ece6daa5e7ccff",
+    "experiments/motivation_exp1/audit_existing_results.py": "0a74c39270699adb5828aac8f3f2d9ef1adc70dbff59241142ae30d264344bc6",
+    "experiments/motivation_exp1/build_nuscenes_manifest.py": "25b2b16e1a51b68b30cba3d09473fa0bf6ec3bed9f5a14d6ba7d557a6fa018d9",
+    "experiments/motivation_exp1/generate_report.py": "091078883d0189a67e2baf2f01efcef5437af022cffccb0c21fcf5afddc2c28c",
+    "experiments/motivation_exp1/match_visual_objects.py": "1b13dc74d6da6bc33f79bf5439e5e8cd676754797ae326a750d8811cc8b230d1",
+    "experiments/motivation_exp1/plot_results.py": "38f2d4d9e17716c4208c27004cb3e4f28bcb138420dbd0a714e501ec488fba46",
+    "experiments/motivation_exp1/profile_senna.py": "37c53641d2d6ad1fd5e6a5d85f1bfcbe4d39d720eb6fde0f287cb642f2758dd6",
+    "experiments/motivation_exp1/run.py": "812d92730c11bb93ea34366722b01c84405b2d09247a55b19923d6d4926720ba",
+    "experiments/motivation_exp1/tests/__init__.py": "c8a8e472472797725edeac1eee77fbdc47c5c2f45e8688560eb1cef6f40fc7e5",
+    "experiments/motivation_exp1/tests/test_aggregation.py": "af630474373bf469009e1890ba421f5b093a329320cf5389e91f47ba0f1c7c64",
+    "experiments/motivation_exp1/tests/test_manifest.py": "cf6c36deebd3dcbe43290a116631af8d386323c8314742cc0eb7d9173576b23d",
+    "experiments/motivation_exp1/tests/test_profiling_utils.py": "932c20ff3bc9ec3f0265926e332b370a1055730877d3dabcfe0c0b589576649e",
+    "experiments/motivation_exp1/tests/test_similarity.py": "166263ddc261972437998d7380bb5b9a896b98a340ccddce47f106eb59d988dc",
+    "experiments/motivation_exp1/utils/__init__.py": "bec2b379b27e664672d459303c122ba604ccccd2735bbb808fea648c2fd0c4e4",
+    "experiments/motivation_exp1/utils/data_utils.py": "01a3a7f6223a8f50985a48be52e211478ca3aad5e27f2108676f308fe703920d",
+    "experiments/motivation_exp1/utils/profiling_utils.py": "84c59a1d1c5d489210cb1d6296cd2f321853a024d417749b90a2c9a12ce2b07f",
+    "experiments/motivation_exp1/utils/stats_utils.py": "04871fc9c52637182ed935906b223b293286131e7a42b6ae8d52e608b4147b00"
+  },
+  "packages": {
+    "torch": "2.0.1+cu118",
+    "transformers": "4.31.0",
+    "numpy": "1.26.4",
+    "scipy": "1.13.1",
+    "Pillow": "10.3.0",
+    "nuscenes-devkit": "1.2.0",
+    "matplotlib": "3.8.4",
+    "PyYAML": "6.0.1"
+  },
+  "eval_json_path_sha256": "5d974da8bffd6bd2668efb9fd92ea4b7c7f906a429016597dfd4ddc51b176c5b",
+  "checkpoint_path_sha256": "4360f459f0db97c2facde2aeae4d1e77059d8dec95181bae80bfe71dc4c7dca2",
+  "model_files": {
+    "pytorch_model.bin.index.json": {
+      "size": 76452,
+      "mtime_ns": 1791628276000000000
+    },
+    "README.md": {
+      "size": 1243,
+      "mtime_ns": 1791628255000000000
+    },
+    "special_tokens_map.json": {
+      "size": 438,
+      "mtime_ns": 1791628293000000000
+    },
+    "tokenizer_config.json": {
+      "size": 749,
+      "mtime_ns": 1791628302000000000
+    },
+    "generation_config.json": {
+      "size": 162,
+      "mtime_ns": 1791628262000000000
+    },
+    "config.json": {
+      "size": 1242,
+      "mtime_ns": 1791638606728965109
+    },
+    "pytorch_model-00001-of-00002.bin": {
+      "size": 9976631486,
+      "mtime_ns": 1791630170000000000
+    },
+    "tokenizer.model": {
+      "size": 499723,
+      "mtime_ns": 1791628299000000000
+    },
+    "pytorch_model-00002-of-00002.bin": {
+      "size": 4149654020,
+      "mtime_ns": 1791629119000000000
+    },
+    "gitattributes": {
+      "size": 1519,
+      "mtime_ns": 1791628250000000000
+    }
+  },
+  "vision_files": {
+    "pytorch_model.bin": {
+      "size": 1711974081,
+      "mtime_ns": 1791629766000000000
+    },
+    "config.json": {
+      "size": 4757,
+      "mtime_ns": 1791628685000000000
+    },
+    "preprocessor_config.json": {
+      "size": 316,
+      "mtime_ns": 1791628695000000000
+    }
+  },
+  "dataset_tables": {
+    "sample_annotation.json": {
+      "size": 583417244,
+      "mtime_ns": 1767576939520274190
+    },
+    "category.json": {
+      "size": 4747,
+      "mtime_ns": 1553285904000000000
+    },
+    "sample_data.json": {
+      "size": 1345678379,
+      "mtime_ns": 1553285927000000000
+    },
+    "visibility.json": {
+      "size": 418,
+      "mtime_ns": 1553285927000000000
+    },
+    "log.json": {
+      "size": 11968,
+      "mtime_ns": 1553285910000000000
+    },
+    "instance.json": {
+      "size": 16012833,
+      "mtime_ns": 1553285910000000000
+    },
+    "ego_pose.json": {
+      "size": 645746265,
+      "mtime_ns": 1553285910000000000
+    },
+    "calibrated_sensor.json": {
+      "size": 3268133,
+      "mtime_ns": 1553285904000000000
+    },
+    "sample_annotationKey.json": {
+      "size": 120711598,
+      "mtime_ns": 1766654506173437603
+    },
+    "attribute.json": {
+      "size": 1147,
+      "mtime_ns": 1553285904000000000
+    },
+    "scene.json": {
+      "size": 285132,
+      "mtime_ns": 1553285927000000000
+    },
+    "map.json": {
+      "size": 3606,
+      "mtime_ns": 1553285910000000000
+    },
+    "sample.json": {
+      "size": 14628865,
+      "mtime_ns": 1767576831446518902
+    },
+    "sensor.json": {
+      "size": 1185,
+      "mtime_ns": 1553285927000000000
+    }
+  },
+  "fingerprint": "78a4e19ff14986e41fab8d9d87c876f857258eb2a0cc69583c7becdfcdab835f",
+  "git_commit": null,
+  "git_commit_unavailable_reason": "fatal: detected dubious ownership in repository at '/data/qh/phdCode/work4/Senna'\nTo add an exception for this directory, call:\n\n\tgit config --global --add safe.directory /data/qh/phdCode/work4/Senna\n",
+  "git_status": null,
+  "git_status_unavailable_reason": "fatal: detected dubious ownership in repository at '/data/qh/phdCode/work4/Senna'\nTo add an exception for this directory, call:\n\n\tgit config --global --add safe.directory /data/qh/phdCode/work4/Senna\n",
+  "python": "3.10.22 (main, Oct 29 2026, 20:33:25) [GCC 14.3.0]",
+  "argv": [
+    "/data/qh/phdCode/work4/Senna/experiments/motivation_exp1/run.py",
+    "--smoke-test",
+    "--profile-mode",
+    "both",
+    "--output-dir",
+    "outputs/motivation_exp1/smoke",
+    "--existing",
+    "resume"
+  ],
+  "data_kind": "real_dataset",
+  "camera_order": [
+    "CAM_FRONT",
+    "CAM_FRONT_LEFT",
+    "CAM_FRONT_RIGHT",
+    "CAM_BACK_LEFT",
+    "CAM_BACK_RIGHT",
+    "CAM_BACK"
+  ],
+  "updated_at_utc": "2026-11-17T11:37:45.535667+00:00",
+  "presentation_refresh": {
+    "reason": "Move explanatory text and legends above measured bars/boxes; no data or numerical changes.",
+    "previous_fingerprint": "8b2451719866cadaea13c5fd00db0e1a75e57a439735052987d45aac3956b540",
+    "previous_plot_source_sha256": "ef8d0d815da7a424fee024693bceeb13870f745329f25a345a323a1877d881a1",
+    "new_plot_source_sha256": "38f2d4d9e17716c4208c27004cb3e4f28bcb138420dbd0a714e501ec488fba46",
+    "time_utc": "2026-11-17T11:41:08.415854+00:00"
+  }
+}

@@ -1,5 +1,9 @@
 # WorldStream Motivation Experiment 2
 
+For the **real Senna visual-feature drift experiment**, use
+[`FEATURE_DRIFT_README.md`](FEATURE_DRIFT_README.md) and `run_feature_drift.py`.
+The workflow below is the earlier geometry experiment, preserved separately.
+
 Offline nuScenes analysis of physical instance continuity versus image-coordinate
 movement. It loads no Senna/CLIP weights, executes no VLM, and needs no CUDA.
 All commands run from the Senna repository root in `conda activate Senna`.

@@ -1,0 +1,542 @@
+[
+  {
+    "sequence_id": "scene-0559_5_fixed_category",
+    "scene_token": "0e7ede02718341558414865d5c604745",
+    "scene_name": "scene-0559",
+    "sequence_length": 5,
+    "workload": "fixed",
+    "query_type": "category",
+    "valid_queries": 5,
+    "excluded_queries": 0
+  },
+  {
+    "sequence_id": "scene-0559_5_fixed_existence",
+    "scene_token": "0e7ede02718341558414865d5c604745",
+    "scene_name": "scene-0559",
+    "sequence_length": 5,
+    "workload": "fixed",
+    "query_type": "existence",
+    "valid_queries": 5,
+    "excluded_queries": 0
+  },
+  {
+    "sequence_id": "scene-0559_5_fixed_position",
+    "scene_token": "0e7ede02718341558414865d5c604745",
+    "scene_name": "scene-0559",
+    "sequence_length": 5,
+    "workload": "fixed",
+    "query_type": "position",
+    "valid_queries": 5,
+    "excluded_queries": 0
+  },
+  {
+    "sequence_id": "scene-0559_5_fixed_motion_prediction",
+    "scene_token": "0e7ede02718341558414865d5c604745",
+    "scene_name": "scene-0559",
+    "sequence_length": 5,
+    "workload": "fixed",
+    "query_type": "motion_prediction",
+    "valid_queries": 5,
+    "excluded_queries": 0
+  },
+  {
+    "sequence_id": "scene-0559_5_fixed_meta_action_planning",
+    "scene_token": "0e7ede02718341558414865d5c604745",
+    "scene_name": "scene-0559",
+    "sequence_length": 5,
+    "workload": "fixed",
+    "query_type": "meta_action_planning",
+    "valid_queries": 5,
+    "excluded_queries": 0
+  },
+  {
+    "sequence_id": "scene-0559_5_mixed_alternating",
+    "scene_token": "0e7ede02718341558414865d5c604745",
+    "scene_name": "scene-0559",
+    "sequence_length": 5,
+    "workload": "mixed",
+    "query_type": "alternating",
+    "valid_queries": 5,
+    "excluded_queries": 0
+  },
+  {
+    "sequence_id": "scene-0559_10_fixed_category",
+    "scene_token": "0e7ede02718341558414865d5c604745",
+    "scene_name": "scene-0559",
+    "sequence_length": 10,
+    "workload": "fixed",
+    "query_type": "category",
+    "valid_queries": 10,
+    "excluded_queries": 0
+  },
+  {
+    "sequence_id": "scene-0559_10_fixed_existence",
+    "scene_token": "0e7ede02718341558414865d5c604745",
+    "scene_name": "scene-0559",
+    "sequence_length": 10,
+    "workload": "fixed",
+    "query_type": "existence",
+    "valid_queries": 10,
+    "excluded_queries": 0
+  },
+  {
+    "sequence_id": "scene-0559_10_fixed_position",
+    "scene_token": "0e7ede02718341558414865d5c604745",
+    "scene_name": "scene-0559",
+    "sequence_length": 10,
+    "workload": "fixed",
+    "query_type": "position",
+    "valid_queries": 10,
+    "excluded_queries": 0
+  },
+  {
+    "sequence_id": "scene-0559_10_fixed_motion_prediction",
+    "scene_token": "0e7ede02718341558414865d5c604745",
+    "scene_name": "scene-0559",
+    "sequence_length": 10,
+    "workload": "fixed",
+    "query_type": "motion_prediction",
+    "valid_queries": 10,
+    "excluded_queries": 0
+  },
+  {
+    "sequence_id": "scene-0559_10_fixed_meta_action_planning",
+    "scene_token": "0e7ede02718341558414865d5c604745",
+    "scene_name": "scene-0559",
+    "sequence_length": 10,
+    "workload": "fixed",
+    "query_type": "meta_action_planning",
+    "valid_queries": 10,
+    "excluded_queries": 0
+  },
+  {
+    "sequence_id": "scene-0559_10_mixed_alternating",
+    "scene_token": "0e7ede02718341558414865d5c604745",
+    "scene_name": "scene-0559",
+    "sequence_length": 10,
+    "workload": "mixed",
+    "query_type": "alternating",
+    "valid_queries": 10,
+    "excluded_queries": 0
+  },
+  {
+    "sequence_id": "scene-0559_20_fixed_category",
+    "scene_token": "0e7ede02718341558414865d5c604745",
+    "scene_name": "scene-0559",
+    "sequence_length": 20,
+    "workload": "fixed",
+    "query_type": "category",
+    "valid_queries": 20,
+    "excluded_queries": 0
+  },
+  {
+    "sequence_id": "scene-0559_20_fixed_existence",
+    "scene_token": "0e7ede02718341558414865d5c604745",
+    "scene_name": "scene-0559",
+    "sequence_length": 20,
+    "workload": "fixed",
+    "query_type": "existence",
+    "valid_queries": 20,
+    "excluded_queries": 0
+  },
+  {
+    "sequence_id": "scene-0559_20_fixed_position",
+    "scene_token": "0e7ede02718341558414865d5c604745",
+    "scene_name": "scene-0559",
+    "sequence_length": 20,
+    "workload": "fixed",
+    "query_type": "position",
+    "valid_queries": 20,
+    "excluded_queries": 0
+  },
+  {
+    "sequence_id": "scene-0559_20_fixed_motion_prediction",
+    "scene_token": "0e7ede02718341558414865d5c604745",
+    "scene_name": "scene-0559",
+    "sequence_length": 20,
+    "workload": "fixed",
+    "query_type": "motion_prediction",
+    "valid_queries": 14,
+    "excluded_queries": 6
+  },
+  {
+    "sequence_id": "scene-0559_20_fixed_meta_action_planning",
+    "scene_token": "0e7ede02718341558414865d5c604745",
+    "scene_name": "scene-0559",
+    "sequence_length": 20,
+    "workload": "fixed",
+    "query_type": "meta_action_planning",
+    "valid_queries": 20,
+    "excluded_queries": 0
+  },
+  {
+    "sequence_id": "scene-0559_20_mixed_alternating",
+    "scene_token": "0e7ede02718341558414865d5c604745",
+    "scene_name": "scene-0559",
+    "sequence_length": 20,
+    "workload": "mixed",
+    "query_type": "alternating",
+    "valid_queries": 19,
+    "excluded_queries": 1
+  },
+  {
+    "sequence_id": "scene-0913_5_fixed_category",
+    "scene_token": "55b3a17359014f398b6bbd90e94a8e1b",
+    "scene_name": "scene-0913",
+    "sequence_length": 5,
+    "workload": "fixed",
+    "query_type": "category",
+    "valid_queries": 0,
+    "excluded_queries": 5
+  },
+  {
+    "sequence_id": "scene-0913_5_fixed_existence",
+    "scene_token": "55b3a17359014f398b6bbd90e94a8e1b",
+    "scene_name": "scene-0913",
+    "sequence_length": 5,
+    "workload": "fixed",
+    "query_type": "existence",
+    "valid_queries": 5,
+    "excluded_queries": 0
+  },
+  {
+    "sequence_id": "scene-0913_5_fixed_position",
+    "scene_token": "55b3a17359014f398b6bbd90e94a8e1b",
+    "scene_name": "scene-0913",
+    "sequence_length": 5,
+    "workload": "fixed",
+    "query_type": "position",
+    "valid_queries": 0,
+    "excluded_queries": 5
+  },
+  {
+    "sequence_id": "scene-0913_5_fixed_motion_prediction",
+    "scene_token": "55b3a17359014f398b6bbd90e94a8e1b",
+    "scene_name": "scene-0913",
+    "sequence_length": 5,
+    "workload": "fixed",
+    "query_type": "motion_prediction",
+    "valid_queries": 0,
+    "excluded_queries": 5
+  },
+  {
+    "sequence_id": "scene-0913_5_fixed_meta_action_planning",
+    "scene_token": "55b3a17359014f398b6bbd90e94a8e1b",
+    "scene_name": "scene-0913",
+    "sequence_length": 5,
+    "workload": "fixed",
+    "query_type": "meta_action_planning",
+    "valid_queries": 5,
+    "excluded_queries": 0
+  },
+  {
+    "sequence_id": "scene-0913_5_mixed_alternating",
+    "scene_token": "55b3a17359014f398b6bbd90e94a8e1b",
+    "scene_name": "scene-0913",
+    "sequence_length": 5,
+    "workload": "mixed",
+    "query_type": "alternating",
+    "valid_queries": 2,
+    "excluded_queries": 3
+  },
+  {
+    "sequence_id": "scene-0913_10_fixed_category",
+    "scene_token": "55b3a17359014f398b6bbd90e94a8e1b",
+    "scene_name": "scene-0913",
+    "sequence_length": 10,
+    "workload": "fixed",
+    "query_type": "category",
+    "valid_queries": 0,
+    "excluded_queries": 10
+  },
+  {
+    "sequence_id": "scene-0913_10_fixed_existence",
+    "scene_token": "55b3a17359014f398b6bbd90e94a8e1b",
+    "scene_name": "scene-0913",
+    "sequence_length": 10,
+    "workload": "fixed",
+    "query_type": "existence",
+    "valid_queries": 10,
+    "excluded_queries": 0
+  },
+  {
+    "sequence_id": "scene-0913_10_fixed_position",
+    "scene_token": "55b3a17359014f398b6bbd90e94a8e1b",
+    "scene_name": "scene-0913",
+    "sequence_length": 10,
+    "workload": "fixed",
+    "query_type": "position",
+    "valid_queries": 0,
+    "excluded_queries": 10
+  },
+  {
+    "sequence_id": "scene-0913_10_fixed_motion_prediction",
+    "scene_token": "55b3a17359014f398b6bbd90e94a8e1b",
+    "scene_name": "scene-0913",
+    "sequence_length": 10,
+    "workload": "fixed",
+    "query_type": "motion_prediction",
+    "valid_queries": 0,
+    "excluded_queries": 10
+  },
+  {
+    "sequence_id": "scene-0913_10_fixed_meta_action_planning",
+    "scene_token": "55b3a17359014f398b6bbd90e94a8e1b",
+    "scene_name": "scene-0913",
+    "sequence_length": 10,
+    "workload": "fixed",
+    "query_type": "meta_action_planning",
+    "valid_queries": 10,
+    "excluded_queries": 0
+  },
+  {
+    "sequence_id": "scene-0913_10_mixed_alternating",
+    "scene_token": "55b3a17359014f398b6bbd90e94a8e1b",
+    "scene_name": "scene-0913",
+    "sequence_length": 10,
+    "workload": "mixed",
+    "query_type": "alternating",
+    "valid_queries": 4,
+    "excluded_queries": 6
+  },
+  {
+    "sequence_id": "scene-0913_20_fixed_category",
+    "scene_token": "55b3a17359014f398b6bbd90e94a8e1b",
+    "scene_name": "scene-0913",
+    "sequence_length": 20,
+    "workload": "fixed",
+    "query_type": "category",
+    "valid_queries": 10,
+    "excluded_queries": 10
+  },
+  {
+    "sequence_id": "scene-0913_20_fixed_existence",
+    "scene_token": "55b3a17359014f398b6bbd90e94a8e1b",
+    "scene_name": "scene-0913",
+    "sequence_length": 20,
+    "workload": "fixed",
+    "query_type": "existence",
+    "valid_queries": 20,
+    "excluded_queries": 0
+  },
+  {
+    "sequence_id": "scene-0913_20_fixed_position",
+    "scene_token": "55b3a17359014f398b6bbd90e94a8e1b",
+    "scene_name": "scene-0913",
+    "sequence_length": 20,
+    "workload": "fixed",
+    "query_type": "position",
+    "valid_queries": 10,
+    "excluded_queries": 10
+  },
+  {
+    "sequence_id": "scene-0913_20_fixed_motion_prediction",
+    "scene_token": "55b3a17359014f398b6bbd90e94a8e1b",
+    "scene_name": "scene-0913",
+    "sequence_length": 20,
+    "workload": "fixed",
+    "query_type": "motion_prediction",
+    "valid_queries": 10,
+    "excluded_queries": 10
+  },
+  {
+    "sequence_id": "scene-0913_20_fixed_meta_action_planning",
+    "scene_token": "55b3a17359014f398b6bbd90e94a8e1b",
+    "scene_name": "scene-0913",
+    "sequence_length": 20,
+    "workload": "fixed",
+    "query_type": "meta_action_planning",
+    "valid_queries": 20,
+    "excluded_queries": 0
+  },
+  {
+    "sequence_id": "scene-0913_20_mixed_alternating",
+    "scene_token": "55b3a17359014f398b6bbd90e94a8e1b",
+    "scene_name": "scene-0913",
+    "sequence_length": 20,
+    "workload": "mixed",
+    "query_type": "alternating",
+    "valid_queries": 14,
+    "excluded_queries": 6
+  },
+  {
+    "sequence_id": "scene-0971_5_fixed_category",
+    "scene_token": "64bfc5edd71147858ce7446892d7f864",
+    "scene_name": "scene-0971",
+    "sequence_length": 5,
+    "workload": "fixed",
+    "query_type": "category",
+    "valid_queries": 0,
+    "excluded_queries": 5
+  },
+  {
+    "sequence_id": "scene-0971_5_fixed_existence",
+    "scene_token": "64bfc5edd71147858ce7446892d7f864",
+    "scene_name": "scene-0971",
+    "sequence_length": 5,
+    "workload": "fixed",
+    "query_type": "existence",
+    "valid_queries": 5,
+    "excluded_queries": 0
+  },
+  {
+    "sequence_id": "scene-0971_5_fixed_position",
+    "scene_token": "64bfc5edd71147858ce7446892d7f864",
+    "scene_name": "scene-0971",
+    "sequence_length": 5,
+    "workload": "fixed",
+    "query_type": "position",
+    "valid_queries": 0,
+    "excluded_queries": 5
+  },
+  {
+    "sequence_id": "scene-0971_5_fixed_motion_prediction",
+    "scene_token": "64bfc5edd71147858ce7446892d7f864",
+    "scene_name": "scene-0971",
+    "sequence_length": 5,
+    "workload": "fixed",
+    "query_type": "motion_prediction",
+    "valid_queries": 0,
+    "excluded_queries": 5
+  },
+  {
+    "sequence_id": "scene-0971_5_fixed_meta_action_planning",
+    "scene_token": "64bfc5edd71147858ce7446892d7f864",
+    "scene_name": "scene-0971",
+    "sequence_length": 5,
+    "workload": "fixed",
+    "query_type": "meta_action_planning",
+    "valid_queries": 5,
+    "excluded_queries": 0
+  },
+  {
+    "sequence_id": "scene-0971_5_mixed_alternating",
+    "scene_token": "64bfc5edd71147858ce7446892d7f864",
+    "scene_name": "scene-0971",
+    "sequence_length": 5,
+    "workload": "mixed",
+    "query_type": "alternating",
+    "valid_queries": 2,
+    "excluded_queries": 3
+  },
+  {
+    "sequence_id": "scene-0971_10_fixed_category",
+    "scene_token": "64bfc5edd71147858ce7446892d7f864",
+    "scene_name": "scene-0971",
+    "sequence_length": 10,
+    "workload": "fixed",
+    "query_type": "category",
+    "valid_queries": 0,
+    "excluded_queries": 10
+  },
+  {
+    "sequence_id": "scene-0971_10_fixed_existence",
+    "scene_token": "64bfc5edd71147858ce7446892d7f864",
+    "scene_name": "scene-0971",
+    "sequence_length": 10,
+    "workload": "fixed",
+    "query_type": "existence",
+    "valid_queries": 10,
+    "excluded_queries": 0
+  },
+  {
+    "sequence_id": "scene-0971_10_fixed_position",
+    "scene_token": "64bfc5edd71147858ce7446892d7f864",
+    "scene_name": "scene-0971",
+    "sequence_length": 10,
+    "workload": "fixed",
+    "query_type": "position",
+    "valid_queries": 0,
+    "excluded_queries": 10
+  },
+  {
+    "sequence_id": "scene-0971_10_fixed_motion_prediction",
+    "scene_token": "64bfc5edd71147858ce7446892d7f864",
+    "scene_name": "scene-0971",
+    "sequence_length": 10,
+    "workload": "fixed",
+    "query_type": "motion_prediction",
+    "valid_queries": 0,
+    "excluded_queries": 10
+  },
+  {
+    "sequence_id": "scene-0971_10_fixed_meta_action_planning",
+    "scene_token": "64bfc5edd71147858ce7446892d7f864",
+    "scene_name": "scene-0971",
+    "sequence_length": 10,
+    "workload": "fixed",
+    "query_type": "meta_action_planning",
+    "valid_queries": 10,
+    "excluded_queries": 0
+  },
+  {
+    "sequence_id": "scene-0971_10_mixed_alternating",
+    "scene_token": "64bfc5edd71147858ce7446892d7f864",
+    "scene_name": "scene-0971",
+    "sequence_length": 10,
+    "workload": "mixed",
+    "query_type": "alternating",
+    "valid_queries": 4,
+    "excluded_queries": 6
+  },
+  {
+    "sequence_id": "scene-0971_20_fixed_category",
+    "scene_token": "64bfc5edd71147858ce7446892d7f864",
+    "scene_name": "scene-0971",
+    "sequence_length": 20,
+    "workload": "fixed",
+    "query_type": "category",
+    "valid_queries": 8,
+    "excluded_queries": 12
+  },
+  {
+    "sequence_id": "scene-0971_20_fixed_existence",
+    "scene_token": "64bfc5edd71147858ce7446892d7f864",
+    "scene_name": "scene-0971",
+    "sequence_length": 20,
+    "workload": "fixed",
+    "query_type": "existence",
+    "valid_queries": 20,
+    "excluded_queries": 0
+  },
+  {
+    "sequence_id": "scene-0971_20_fixed_position",
+    "scene_token": "64bfc5edd71147858ce7446892d7f864",
+    "scene_name": "scene-0971",
+    "sequence_length": 20,
+    "workload": "fixed",
+    "query_type": "position",
+    "valid_queries": 8,
+    "excluded_queries": 12
+  },
+  {
+    "sequence_id": "scene-0971_20_fixed_motion_prediction",
+    "scene_token": "64bfc5edd71147858ce7446892d7f864",
+    "scene_name": "scene-0971",
+    "sequence_length": 20,
+    "workload": "fixed",
+    "query_type": "motion_prediction",
+    "valid_queries": 8,
+    "excluded_queries": 12
+  },
+  {
+    "sequence_id": "scene-0971_20_fixed_meta_action_planning",
+    "scene_token": "64bfc5edd71147858ce7446892d7f864",
+    "scene_name": "scene-0971",
+    "sequence_length": 20,
+    "workload": "fixed",
+    "query_type": "meta_action_planning",
+    "valid_queries": 20,
+    "excluded_queries": 0
+  },
+  {
+    "sequence_id": "scene-0971_20_mixed_alternating",
+    "scene_token": "64bfc5edd71147858ce7446892d7f864",
+    "scene_name": "scene-0971",
+    "sequence_length": 20,
+    "workload": "mixed",
+    "query_type": "alternating",
+    "valid_queries": 13,
+    "excluded_queries": 7
+  }
+]
